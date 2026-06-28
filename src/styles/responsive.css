@@ -147,6 +147,13 @@ html[data-device='phone'] .step-instructions {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   padding-block-end: 4px;
+  /* The instructions can overflow on a phone (long steps). The visual layer sits
+     above the tap-zones overlay (z-index:6), but is pointer-events:none so taps
+     fall through for swipe nav. Re-enable pointer events + vertical panning HERE
+     so the list actually scrolls by touch instead of the overlay eating it. */
+  pointer-events: auto;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
 }
 html[data-device='phone'] .step-title { font-size: clamp(23px, 6.4vw, 32px); }
 html[data-device='phone'] .step-list { gap: 10px; }
