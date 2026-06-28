@@ -7,7 +7,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 // Everything the kiosk needs (app shell, all 4 languages, all SVG/CSS
 // animations) is bundled into JS/CSS, so the default precache covers the
 // entire experience — it runs with no network once installed.
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  // Served from the repo subpath on GitHub Pages, but from root in local dev.
+  base: command === 'build' ? '/alfanar-catalogue-project/' : '/',
   plugins: [
     react(),
     VitePWA({
@@ -69,4 +71,4 @@ export default defineConfig({
     }),
   ],
   server: { host: true },
-})
+}))

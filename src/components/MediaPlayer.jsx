@@ -4,6 +4,7 @@ import { resolveAnimation } from '../animations/index.js'
 import { useReducedMotion } from '../hooks/useReducedMotion.js'
 import { useDevice } from '../device/DeviceProvider.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
+import { asset } from '../utils/asset.js'
 import Icon from './Icon.jsx'
 
 // Format-agnostic media slot. A step's `media` is either a single item
@@ -156,7 +157,7 @@ function Lightbox({ items, index, onClose }) {
 
       <img
         className="lightbox-img"
-        src={item.src}
+        src={asset(item.src)}
         alt={item.alt || ''}
         onClick={(e) => e.stopPropagation()}
       />
@@ -209,7 +210,7 @@ function MediaItem({ item, paused, reduced, zoom = false, onZoom }) {
   if (item.type === 'video') {
     return (
       <div className="media-stage">
-        <video className="media-video" src={item.src} poster={item.poster}
+        <video className="media-video" src={asset(item.src)} poster={asset(item.poster)}
           autoPlay={!paused} loop muted playsInline />
       </div>
     )
@@ -232,7 +233,7 @@ function MediaItem({ item, paused, reduced, zoom = false, onZoom }) {
       : {}
     return (
       <div className={`media-stage${zoom ? ' media-stage--zoom' : ''}`} {...stageProps}>
-        <img className="media-img" src={item.src} alt={item.alt || ''} loading="eager" />
+        <img className="media-img" src={asset(item.src)} alt={item.alt || ''} loading="eager" />
         {zoom && (
           <span className="media-film-zoom" aria-hidden="true">
             <Icon name="zoom" size={16} />
