@@ -1,0 +1,230 @@
+/* ============================================================================
+   Phone layout — opt-in via the device toggle (html[data-device="phone"]).
+   The kiosk (landscape wall panel) is the default; this rewrites each screen
+   into a comfortable single-column portrait experience for a worker's own
+   phone. Everything stays fixed-fill (no page bounce); long content scrolls
+   inside its own region.
+   ========================================================================== */
+
+/* The footer row on the gate that carries the "phone view" pill. */
+.gate-foot-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Phone nav bar is only rendered in phone mode, but default it hidden too. */
+.step-phone-nav { display: none; }
+
+/* ===========================================================================
+   PHONE MODE
+   ========================================================================== */
+html[data-device='phone'] .screen {
+  padding-inline: clamp(14px, 4.5vw, 22px);
+  padding-block: 14px;
+}
+
+/* Slightly tighter background grid reads better on a small screen. */
+html[data-device='phone'] body { background-size: 26px 26px; }
+
+/* ------------------------------ Top bar ---------------------------------- */
+html[data-device='phone'] .topbar { padding-block: 12px; gap: 10px; }
+html[data-device='phone'] .topbar-sub { display: none; }
+html[data-device='phone'] .topbar-name { font-size: 22px; }
+html[data-device='phone'] .topbar-controls { gap: 8px; }
+/* Compact the language switcher to an icon on a phone. */
+html[data-device='phone'] .lang-trigger-name,
+html[data-device='phone'] .lang-caret { display: none; }
+html[data-device='phone'] .lang-trigger { inline-size: 50px; padding-inline: 0; gap: 0; }
+html[data-device='phone'] .ctl-btn,
+html[data-device='phone'] .audio-btn { min-inline-size: 50px; block-size: 50px; }
+
+/* ----------------------------- Language gate ----------------------------- */
+html[data-device='phone'] .gate {
+  justify-content: flex-start;
+  gap: 20px;
+  padding-block: 28px 18px;
+  overflow-y: auto;
+}
+html[data-device='phone'] .gate-brand { gap: 12px; }
+html[data-device='phone'] .gate-heading { font-size: clamp(24px, 7vw, 32px); }
+html[data-device='phone'] .gate-heading-native { font-size: 13px; }
+html[data-device='phone'] .gate-grid {
+  grid-template-columns: repeat(2, 1fr);
+  inline-size: 100%;
+  max-inline-size: 460px;
+  gap: 12px;
+}
+html[data-device='phone'] .gate-card { min-block-size: 150px; gap: 8px; }
+html[data-device='phone'] .gate-flag { font-size: clamp(40px, 13vw, 56px); }
+html[data-device='phone'] .gate-native { font-size: clamp(20px, 6vw, 26px); }
+
+/* ------------------------------- Task grid ------------------------------- */
+html[data-device='phone'] .tasks { gap: 12px; }
+html[data-device='phone'] .tasks-head { align-items: flex-start; }
+html[data-device='phone'] .tasks-heading { font-size: clamp(24px, 7vw, 32px); }
+html[data-device='phone'] .tasks-grid {
+  grid-template-columns: 1fr;
+  align-content: start;
+  overflow-y: auto;
+  gap: 12px;
+  padding-block-end: 6px;
+  -webkit-overflow-scrolling: touch;
+}
+html[data-device='phone'] .task-card {
+  min-block-size: auto;
+  grid-template-columns: auto 1fr auto;
+  padding: 18px;
+  gap: 12px;
+}
+html[data-device='phone'] .task-card-icon { inline-size: 60px; block-size: 60px; }
+html[data-device='phone'] .task-card-title { font-size: 20px; }
+html[data-device='phone'] .task-card-summary { font-size: 13px; }
+html[data-device='phone'] .task-card-go { inline-size: 46px; block-size: 46px; }
+
+/* ================================ STEP ================================== */
+html[data-device='phone'] .step-visual {
+  padding-inline: clamp(14px, 4.5vw, 22px);
+  padding-block: 12px 92px; /* clear the bottom nav bar */
+}
+/* Header sits below the floating controls; no trailing reserve needed. */
+html[data-device='phone'] .step-header {
+  padding-inline-end: 0;
+  padding-block-start: 56px;
+}
+html[data-device='phone'] .step-body-wrap { margin-block-start: 12px; }
+html[data-device='phone'] .step-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: stretch;
+}
+html[data-device='phone'] .step-media-col {
+  flex: none;
+  /* plain block (not the kiosk's centered grid) so the media child's 100% height
+     resolves against this fixed box instead of ballooning to the photo's natural
+     height. The media-stage still centres its own content. */
+  display: block;
+  block-size: 36vh;
+  min-block-size: 190px;
+  padding: 10px;
+}
+
+/* The photos must be directly tappable (filmstrip swipe + tap-to-enlarge). The
+   kiosk keeps the tap-zones overlay on top; on a phone its taps are inert, so we
+   paint the visual layer above the overlay and re-enable pointer events only on
+   the interactive photo targets. Non-interactive areas stay pointer-events:none,
+   so they still fall through to the overlay for swipe/keyboard step navigation. */
+html[data-device='phone'] .step-visual { z-index: 6; }
+html[data-device='phone'] .media-film { pointer-events: auto; touch-action: pan-x; }
+html[data-device='phone'] .media-stage--zoom { pointer-events: auto; cursor: zoom-in; }
+
+/* Phone photo sizing: centre with flex + max-bounded image so the photo is
+   contained in its fixed box without depending on percentage heights (which the
+   nested centred grids resolve against an auto row, ballooning to the photo's
+   natural height). Scoped to phone photos — animations/video are untouched. */
+html[data-device='phone'] .media-film-cell .media-stage,
+html[data-device='phone'] .media-stage--zoom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html[data-device='phone'] .media-film-cell .media-img,
+html[data-device='phone'] .media-stage--zoom .media-img {
+  inline-size: auto;
+  block-size: auto;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+html[data-device='phone'] .step-instructions {
+  flex: 1;
+  justify-content: flex-start;
+  gap: 12px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-block-end: 4px;
+}
+html[data-device='phone'] .step-title { font-size: clamp(23px, 6.4vw, 32px); }
+html[data-device='phone'] .step-list { gap: 10px; }
+html[data-device='phone'] .step-list-text { font-size: clamp(16px, 4.4vw, 19px); }
+html[data-device='phone'] .step-list-num { inline-size: 32px; block-size: 32px; font-size: 14px; }
+html[data-device='phone'] .safety-banner-msg { font-size: 16px; }
+
+/* Floating controls pinned to the top-trailing corner. */
+html[data-device='phone'] .step-controls {
+  inset-block-start: 12px;
+  inset-inline-end: clamp(14px, 4.5vw, 22px);
+  gap: 8px;
+}
+
+/* The kiosk gesture affordances are replaced by explicit buttons on a phone. */
+html[data-device='phone'] .tz-aff,
+html[data-device='phone'] .tz-center-hint,
+html[data-device='phone'] .tz-quit-hint { display: none; }
+
+/* Bottom navigation bar. */
+html[data-device='phone'] .step-phone-nav {
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px clamp(14px, 4.5vw, 22px);
+  padding-block-end: max(12px, env(safe-area-inset-bottom));
+  background: linear-gradient(to top, var(--bg), color-mix(in srgb, var(--bg) 88%, transparent));
+  border-block-start: 1px solid var(--line-2);
+  pointer-events: auto;
+}
+.phone-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  block-size: 60px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-display-locale);
+  font-weight: 600;
+  font-size: 18px;
+  transition: transform var(--dur-fast) var(--ease-out), opacity var(--dur) var(--ease-out);
+}
+.phone-nav-btn:active { transform: scale(0.95); }
+.phone-nav-btn--ghost {
+  inline-size: 60px;
+  flex: none;
+  background: var(--panel-2);
+  border: 1.5px solid var(--line-2);
+  color: var(--ink);
+}
+.phone-nav-btn--ghost:disabled { opacity: 0.32; }
+.phone-nav-btn--primary {
+  flex: 1;
+  background: var(--accent);
+  color: var(--on-accent);
+  box-shadow: var(--shadow-glow);
+  padding-inline: 22px;
+}
+[dir='rtl'] .phone-nav-btn--primary { flex-direction: row; }
+
+/* ============================== COMPLETE =============================== */
+html[data-device='phone'] .complete-body { max-inline-size: 100%; gap: 10px; }
+html[data-device='phone'] .complete-mark { inline-size: 100px; block-size: 100px; }
+html[data-device='phone'] .complete-title { font-size: clamp(28px, 8vw, 40px); }
+html[data-device='phone'] .complete-stats { gap: 12px; }
+html[data-device='phone'] .complete-stat { min-inline-size: 130px; padding: 16px 22px; }
+html[data-device='phone'] .complete-actions { flex-direction: column; inline-size: 100%; max-inline-size: 320px; }
+html[data-device='phone'] .complete-actions .btn { inline-size: 100%; }
+
+/* ===========================================================================
+   Real-viewport safety net: if the toggle is left on 'kiosk' but the screen is
+   genuinely phone-sized, still avoid a broken landscape layout for the grids.
+   ========================================================================== */
+@media (max-width: 600px) {
+  html[data-device='kiosk'] .gate-grid { grid-template-columns: repeat(2, 1fr); }
+  html[data-device='kiosk'] .tasks-grid { grid-template-columns: 1fr; overflow-y: auto; align-content: start; }
+}

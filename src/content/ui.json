@@ -1,0 +1,419 @@
+{
+  "_note": "App-chrome strings ×4 languages. Arabic/Urdu/Hindi are MACHINE-DRAFTED and flagged for native-speaker review (esp. technical terms). Edit values freely; keep keys + {placeholders} intact.",
+  "en": {
+    "app": {
+      "title": "alfanar",
+      "subtitle": "Work Instructions"
+    },
+    "gate": {
+      "heading": "Choose your language",
+      "sub": "Select the language for these work instructions",
+      "phone": "Using a phone? Switch to phone view",
+      "kiosk": "Back to kiosk view"
+    },
+    "tasks": {
+      "heading": "Select a task",
+      "sub": "Pick a job to be guided through it, step by step",
+      "steps": "{n} steps",
+      "minutes": "{n} min",
+      "totalTime": "Total time",
+      "start": "Start"
+    },
+    "difficulty": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "step": {
+      "of": "Step {current} of {total}",
+      "estimated": "≈ {n} min",
+      "remaining": "{n} min left",
+      "elapsed": "{n} min elapsed",
+      "thisStep": "This step",
+      "replay": "Replay",
+      "paused": "Paused",
+      "warning": "Warning",
+      "ppe": "Required PPE",
+      "done": "Finish",
+      "tools": "Tools & materials",
+      "enlarge": "Tap to enlarge",
+      "photoOf": "Photo {n} of {total}",
+      "closePhoto": "Close photo"
+    },
+    "nav": {
+      "next": "Next",
+      "previous": "Back"
+    },
+    "quit": {
+      "title": "Quit task?",
+      "body": "Progress will be lost.",
+      "confirm": "Yes, quit",
+      "cancel": "No, stay"
+    },
+    "coach": {
+      "title": "How to navigate",
+      "tapRight": "Tap the right side for the next step",
+      "tapLeft": "Tap the left side to go back",
+      "tapForward": "Tap this side for the next step",
+      "tapBack": "Tap this side to go back",
+      "center": "Tap the center to replay the animation",
+      "quit": "Double-tap the corner to quit",
+      "gotIt": "Got it"
+    },
+    "complete": {
+      "title": "Task complete",
+      "sub": "Well done — the job is finished.",
+      "estimate": "Estimated",
+      "actual": "Your time",
+      "faster": "{n} min under estimate",
+      "slower": "{n} min over estimate",
+      "onTime": "Right on estimate",
+      "restart": "Do it again",
+      "tasks": "Back to tasks"
+    },
+    "ppe": {
+      "insulated_gloves": "Insulated gloves",
+      "safety_glasses": "Safety glasses",
+      "gloves": "Work gloves",
+      "fume_extraction": "Fume extraction",
+      "arc_flash_hood": "Arc-flash hood",
+      "hearing_protection": "Hearing protection",
+      "safety_boots": "Safety boots",
+      "dust_mask": "Dust mask",
+      "safety_helmet": "Safety helmet"
+    },
+    "a11y": {
+      "langSwitch": "Change language",
+      "themeToggle": "Toggle light or dark mode",
+      "lightMode": "Light mode",
+      "darkMode": "Dark mode",
+      "playAudio": "Read this step aloud",
+      "stopAudio": "Stop reading",
+      "audioUnavailable": "Audio narration is not available for this language on this device",
+      "quitHint": "Quit",
+      "progress": "Task progress",
+      "fullscreen": "Enter fullscreen",
+      "deviceToggle": "Switch between phone and kiosk view",
+      "phoneView": "Phone view",
+      "kioskView": "Kiosk view"
+    },
+    "common": {
+      "placeholder": "Placeholder content — pending SME review",
+      "offlineReady": "Ready to work offline",
+      "updateReady": "Update ready",
+      "reload": "Reload"
+    }
+  },
+  "ar": {
+    "app": {
+      "title": "الفنار",
+      "subtitle": "تعليمات العمل"
+    },
+    "gate": {
+      "heading": "اختر لغتك",
+      "sub": "اختر لغة تعليمات العمل هذه",
+      "phone": "تستخدم هاتفًا؟ انتقل إلى عرض الهاتف",
+      "kiosk": "العودة إلى عرض الكشك"
+    },
+    "tasks": {
+      "heading": "اختر المهمة",
+      "sub": "اختر عملاً ليتم إرشادك خطوة بخطوة",
+      "steps": "{n} خطوات",
+      "minutes": "{n} دقيقة",
+      "totalTime": "الوقت الإجمالي",
+      "start": "ابدأ"
+    },
+    "difficulty": {
+      "basic": "أساسي",
+      "intermediate": "متوسط",
+      "advanced": "متقدم"
+    },
+    "step": {
+      "of": "الخطوة {current} من {total}",
+      "estimated": "≈ {n} دقيقة",
+      "remaining": "{n} دقيقة متبقية",
+      "elapsed": "مضى {n} دقيقة",
+      "thisStep": "هذه الخطوة",
+      "replay": "إعادة",
+      "paused": "متوقّف",
+      "warning": "تحذير",
+      "ppe": "معدات الوقاية المطلوبة",
+      "done": "إنهاء",
+      "tools": "الأدوات والمواد",
+      "enlarge": "اضغط للتكبير",
+      "photoOf": "صورة {n} من {total}",
+      "closePhoto": "إغلاق الصورة"
+    },
+    "nav": {
+      "next": "التالي",
+      "previous": "السابق"
+    },
+    "quit": {
+      "title": "إنهاء المهمة؟",
+      "body": "سيتم فقدان التقدّم.",
+      "confirm": "نعم، أنهِ",
+      "cancel": "لا، ابقَ"
+    },
+    "coach": {
+      "title": "كيفية التنقّل",
+      "tapRight": "انقر على الجانب الأيمن للخطوة التالية",
+      "tapLeft": "انقر على الجانب الأيسر للرجوع",
+      "tapForward": "انقر هذا الجانب للخطوة التالية",
+      "tapBack": "انقر هذا الجانب للرجوع",
+      "center": "انقر في الوسط لإعادة تشغيل الحركة",
+      "quit": "انقر مرّتين على الزاوية للإنهاء",
+      "gotIt": "فهمت"
+    },
+    "complete": {
+      "title": "اكتملت المهمة",
+      "sub": "أحسنت — تم إنجاز العمل.",
+      "estimate": "المقدّر",
+      "actual": "وقتك",
+      "faster": "{n} دقيقة أقل من المقدّر",
+      "slower": "{n} دقيقة أكثر من المقدّر",
+      "onTime": "مطابق للمقدّر تماماً",
+      "restart": "أعد العمل",
+      "tasks": "العودة إلى المهام"
+    },
+    "ppe": {
+      "insulated_gloves": "قفازات عازلة",
+      "safety_glasses": "نظارات أمان",
+      "gloves": "قفازات عمل",
+      "fume_extraction": "شافط الأبخرة",
+      "arc_flash_hood": "غطاء الوميض القوسي",
+      "hearing_protection": "واقي السمع",
+      "safety_boots": "أحذية أمان",
+      "dust_mask": "كمامة غبار",
+      "safety_helmet": "خوذة أمان"
+    },
+    "a11y": {
+      "langSwitch": "تغيير اللغة",
+      "themeToggle": "تبديل الوضع الفاتح أو الداكن",
+      "lightMode": "الوضع الفاتح",
+      "darkMode": "الوضع الداكن",
+      "playAudio": "اقرأ هذه الخطوة بصوت عالٍ",
+      "stopAudio": "أوقف القراءة",
+      "audioUnavailable": "التعليق الصوتي غير متوفّر لهذه اللغة على هذا الجهاز",
+      "quitHint": "إنهاء",
+      "progress": "تقدّم المهمة",
+      "fullscreen": "ملء الشاشة",
+      "deviceToggle": "التبديل بين عرض الهاتف وعرض الكشك",
+      "phoneView": "عرض الهاتف",
+      "kioskView": "عرض الكشك"
+    },
+    "common": {
+      "placeholder": "محتوى مؤقت — بانتظار مراجعة الخبير المختص",
+      "offlineReady": "جاهز للعمل دون اتصال",
+      "updateReady": "التحديث جاهز",
+      "reload": "إعادة تحميل"
+    }
+  },
+  "ur": {
+    "app": {
+      "title": "الفنار",
+      "subtitle": "کام کی ہدایات"
+    },
+    "gate": {
+      "heading": "اپنی زبان منتخب کریں",
+      "sub": "ان کام کی ہدایات کے لیے زبان منتخب کریں",
+      "phone": "فون استعمال کر رہے ہیں؟ فون ویو پر جائیں",
+      "kiosk": "کیوسک ویو پر واپس جائیں"
+    },
+    "tasks": {
+      "heading": "کام منتخب کریں",
+      "sub": "رہنمائی کے لیے کوئی کام منتخب کریں، قدم بہ قدم",
+      "steps": "{n} مراحل",
+      "minutes": "{n} منٹ",
+      "totalTime": "کل وقت",
+      "start": "شروع کریں"
+    },
+    "difficulty": {
+      "basic": "بنیادی",
+      "intermediate": "درمیانہ",
+      "advanced": "اعلیٰ"
+    },
+    "step": {
+      "of": "مرحلہ {current} از {total}",
+      "estimated": "≈ {n} منٹ",
+      "remaining": "{n} منٹ باقی",
+      "elapsed": "{n} منٹ گزرے",
+      "thisStep": "یہ مرحلہ",
+      "replay": "دوبارہ چلائیں",
+      "paused": "رکا ہوا",
+      "warning": "انتباہ",
+      "ppe": "ضروری حفاظتی سامان",
+      "done": "مکمل کریں",
+      "tools": "اوزار اور مواد",
+      "enlarge": "بڑا کرنے کے لیے دبائیں",
+      "photoOf": "تصویر {n} از {total}",
+      "closePhoto": "تصویر بند کریں"
+    },
+    "nav": {
+      "next": "اگلا",
+      "previous": "پچھلا"
+    },
+    "quit": {
+      "title": "کام ختم کریں؟",
+      "body": "پیش رفت ضائع ہو جائے گی۔",
+      "confirm": "ہاں، ختم کریں",
+      "cancel": "نہیں، رکیں"
+    },
+    "coach": {
+      "title": "نیویگیشن کا طریقہ",
+      "tapRight": "اگلے مرحلے کے لیے دائیں طرف ٹیپ کریں",
+      "tapLeft": "واپس جانے کے لیے بائیں طرف ٹیپ کریں",
+      "tapForward": "اگلے مرحلے کے لیے اس طرف ٹیپ کریں",
+      "tapBack": "واپس جانے کے لیے اس طرف ٹیپ کریں",
+      "center": "حرکت دوبارہ چلانے کے لیے درمیان میں ٹیپ کریں",
+      "quit": "ختم کرنے کے لیے کونے پر دو بار ٹیپ کریں",
+      "gotIt": "سمجھ گیا"
+    },
+    "complete": {
+      "title": "کام مکمل",
+      "sub": "شاباش — کام مکمل ہو گیا۔",
+      "estimate": "تخمینہ",
+      "actual": "آپ کا وقت",
+      "faster": "{n} منٹ تخمینے سے کم",
+      "slower": "{n} منٹ تخمینے سے زیادہ",
+      "onTime": "تخمینے کے عین مطابق",
+      "restart": "دوبارہ کریں",
+      "tasks": "کاموں پر واپس"
+    },
+    "ppe": {
+      "insulated_gloves": "انسولیٹڈ دستانے",
+      "safety_glasses": "حفاظتی چشمہ",
+      "gloves": "کام کے دستانے",
+      "fume_extraction": "دھواں نکاسی",
+      "arc_flash_hood": "آرک فلیش ہڈ",
+      "hearing_protection": "کان کا تحفظ",
+      "safety_boots": "حفاظتی جوتے",
+      "dust_mask": "دھول ماسک",
+      "safety_helmet": "حفاظتی ہیلمٹ"
+    },
+    "a11y": {
+      "langSwitch": "زبان تبدیل کریں",
+      "themeToggle": "روشن یا تاریک موڈ تبدیل کریں",
+      "lightMode": "روشن موڈ",
+      "darkMode": "تاریک موڈ",
+      "playAudio": "یہ مرحلہ بلند آواز میں پڑھیں",
+      "stopAudio": "پڑھنا روکیں",
+      "audioUnavailable": "اس آلے پر اس زبان کے لیے آڈیو دستیاب نہیں",
+      "quitHint": "ختم",
+      "progress": "کام کی پیش رفت",
+      "fullscreen": "فل اسکرین",
+      "deviceToggle": "فون اور کیوسک ویو کے درمیان تبدیل کریں",
+      "phoneView": "فون ویو",
+      "kioskView": "کیوسک ویو"
+    },
+    "common": {
+      "placeholder": "عارضی مواد — ماہر کی نظرثانی کے منتظر",
+      "offlineReady": "آف لائن کام کے لیے تیار",
+      "updateReady": "اپ ڈیٹ تیار",
+      "reload": "دوبارہ لوڈ کریں"
+    }
+  },
+  "hi": {
+    "app": {
+      "title": "alfanar",
+      "subtitle": "कार्य निर्देश"
+    },
+    "gate": {
+      "heading": "अपनी भाषा चुनें",
+      "sub": "इन कार्य निर्देशों के लिए भाषा चुनें",
+      "phone": "फ़ोन इस्तेमाल कर रहे हैं? फ़ोन व्यू पर जाएँ",
+      "kiosk": "कियोस्क व्यू पर वापस जाएँ"
+    },
+    "tasks": {
+      "heading": "कार्य चुनें",
+      "sub": "चरण-दर-चरण मार्गदर्शन के लिए कोई कार्य चुनें",
+      "steps": "{n} चरण",
+      "minutes": "{n} मिनट",
+      "totalTime": "कुल समय",
+      "start": "शुरू करें"
+    },
+    "difficulty": {
+      "basic": "बुनियादी",
+      "intermediate": "मध्यम",
+      "advanced": "उन्नत"
+    },
+    "step": {
+      "of": "चरण {current} / {total}",
+      "estimated": "≈ {n} मिनट",
+      "remaining": "{n} मिनट शेष",
+      "elapsed": "{n} मिनट बीते",
+      "thisStep": "यह चरण",
+      "replay": "फिर चलाएँ",
+      "paused": "रुका हुआ",
+      "warning": "चेतावनी",
+      "ppe": "आवश्यक सुरक्षा उपकरण",
+      "done": "समाप्त करें",
+      "tools": "उपकरण और सामग्री",
+      "enlarge": "बड़ा करने के लिए टैप करें",
+      "photoOf": "फ़ोटो {n} / {total}",
+      "closePhoto": "फ़ोटो बंद करें"
+    },
+    "nav": {
+      "next": "आगे",
+      "previous": "पीछे"
+    },
+    "quit": {
+      "title": "कार्य छोड़ें?",
+      "body": "प्रगति खो जाएगी।",
+      "confirm": "हाँ, छोड़ें",
+      "cancel": "नहीं, रुकें"
+    },
+    "coach": {
+      "title": "नेविगेट कैसे करें",
+      "tapRight": "अगले चरण के लिए दाईं ओर टैप करें",
+      "tapLeft": "पीछे जाने के लिए बाईं ओर टैप करें",
+      "tapForward": "अगले चरण के लिए इस ओर टैप करें",
+      "tapBack": "पीछे जाने के लिए इस ओर टैप करें",
+      "center": "एनिमेशन फिर चलाने के लिए बीच में टैप करें",
+      "quit": "छोड़ने के लिए कोने पर दो बार टैप करें",
+      "gotIt": "समझ गया"
+    },
+    "complete": {
+      "title": "कार्य पूर्ण",
+      "sub": "शाबाश — काम पूरा हुआ।",
+      "estimate": "अनुमानित",
+      "actual": "आपका समय",
+      "faster": "अनुमान से {n} मिनट कम",
+      "slower": "अनुमान से {n} मिनट अधिक",
+      "onTime": "अनुमान के अनुसार",
+      "restart": "फिर से करें",
+      "tasks": "कार्यों पर वापस"
+    },
+    "ppe": {
+      "insulated_gloves": "इंसुलेटेड दस्ताने",
+      "safety_glasses": "सुरक्षा चश्मा",
+      "gloves": "कार्य दस्ताने",
+      "fume_extraction": "धुआँ निष्कासन",
+      "arc_flash_hood": "आर्क-फ्लैश हुड",
+      "hearing_protection": "श्रवण सुरक्षा",
+      "safety_boots": "सुरक्षा जूते",
+      "dust_mask": "धूल मास्क",
+      "safety_helmet": "सुरक्षा हेलमेट"
+    },
+    "a11y": {
+      "langSwitch": "भाषा बदलें",
+      "themeToggle": "लाइट या डार्क मोड बदलें",
+      "lightMode": "लाइट मोड",
+      "darkMode": "डार्क मोड",
+      "playAudio": "यह चरण ज़ोर से पढ़ें",
+      "stopAudio": "पढ़ना रोकें",
+      "audioUnavailable": "इस डिवाइस पर इस भाषा के लिए ऑडियो उपलब्ध नहीं",
+      "quitHint": "छोड़ें",
+      "progress": "कार्य प्रगति",
+      "fullscreen": "पूर्ण स्क्रीन",
+      "deviceToggle": "फ़ोन और कियोस्क व्यू के बीच बदलें",
+      "phoneView": "फ़ोन व्यू",
+      "kioskView": "कियोस्क व्यू"
+    },
+    "common": {
+      "placeholder": "प्लेसहोल्डर सामग्री — SME समीक्षा हेतु लंबित",
+      "offlineReady": "ऑफ़लाइन कार्य के लिए तैयार",
+      "updateReady": "अपडेट तैयार",
+      "reload": "पुनः लोड करें"
+    }
+  }
+}

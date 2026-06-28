@@ -1,0 +1,97 @@
+/* ============================================================================
+   alfanar SWI Kiosk — Design Tokens
+   Lifted from alfanar-brand-book.html (colors, fonts, grid, glow, radii).
+   "One decisive blue is the beacon. Navy gives depth; mist carries the space;
+    the accent stays rare so it stays powerful."
+   ========================================================================== */
+
+:root {
+  /* ---- Type families (brand book §06) ------------------------------------ */
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --font-ar: 'Tajawal', 'IBM Plex Sans', sans-serif;     /* Arabic */
+  --font-ur: 'Noto Nastaliq Urdu', 'Tajawal', serif;      /* Urdu (Nastaliq) */
+  --font-hi: 'Noto Sans Devanagari', 'IBM Plex Sans', sans-serif; /* Hindi */
+
+  /* The active locale swaps this; every text element uses --font-locale so a
+     single switch re-flows the whole app with no per-component logic. */
+  --font-locale: var(--font-body);
+
+  /* ---- Radii (brand book: 10–14 cards, 22–30 pills) ---------------------- */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  /* ---- Signature blue-glow shadow ---------------------------------------- */
+  --shadow-glow: 0 10px 30px -12px rgba(10, 130, 198, 0.45);
+  --shadow-glow-lg: 0 24px 60px -20px rgba(10, 130, 198, 0.55);
+  --shadow-card: 0 4px 18px -8px rgba(11, 33, 56, 0.25);
+
+  /* ---- Technical grid texture -------------------------------------------- */
+  --grid-size: 34px;
+
+  /* ---- Motion ------------------------------------------------------------ */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 140ms;
+  --dur: 260ms;
+  --dur-slow: 520ms;
+
+  /* ---- Fixed brand hues (mode-independent) ------------------------------- */
+  --warn: #C0392B;
+  --warn-tint: rgba(192, 57, 43, 0.12);
+  --ok: #1F9D6B;
+}
+
+/* ============================ LIGHT MODE ================================== */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --bg: #F4F8FC;          /* mist white — dominant surface */
+  --bg-2: #FFFFFF;        /* pure canvas */
+  --panel: #E9F2FA;       /* cards / secondary surface */
+  --panel-2: #FFFFFF;     /* raised card face */
+  --ink: #16202C;         /* primary text */
+  --ink2: #3C4B5B;        /* muted text */
+  --accent: #0A82C6;      /* alfanar blue — the beacon */
+  --accent2: #0869A0;     /* hover / pressed */
+  --sky: #37A7E0;         /* gradients, glow */
+  --navy: #0B2138;        /* deep contrast */
+  --slate: #6B7B8B;       /* captions / mono labels */
+
+  --line: rgba(10, 130, 198, 0.10);   /* grid + hairlines */
+  --line-2: rgba(11, 33, 56, 0.14);   /* card borders */
+  --beacon-glow: rgba(10, 130, 198, 0.40);
+  --beacon-soft: rgba(55, 167, 224, 0.22);
+  --scrim: rgba(11, 33, 56, 0.52);    /* dialog backdrop */
+  --on-accent: #FFFFFF;
+  --warn-surface: #FDECEA;
+}
+
+/* ============================ DARK MODE =================================== */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0B2138;          /* navy surface */
+  --bg-2: #0A1B2E;        /* deepest field */
+  --panel: #0F2F4D;       /* elevated cards */
+  --panel-2: #133A5C;     /* raised card face */
+  --ink: #EAF3FB;         /* primary text */
+  --ink2: #9FB6CC;        /* muted text */
+  --accent: #37A7E0;      /* brighter beacon for contrast */
+  --accent2: #5BBDEC;     /* hover / pressed */
+  --sky: #6FC6F0;
+  --navy: #04101F;
+  --slate: #7E96AC;
+
+  --line: rgba(55, 167, 224, 0.12);
+  --line-2: rgba(120, 170, 210, 0.18);
+  --beacon-glow: rgba(55, 167, 224, 0.55);
+  --beacon-soft: rgba(55, 167, 224, 0.28);
+  --scrim: rgba(2, 8, 16, 0.66);
+  --on-accent: #04101F;
+  --warn: #FF6B5A;
+  --warn-tint: rgba(255, 107, 90, 0.16);
+  --warn-surface: #2A1614;
+}
