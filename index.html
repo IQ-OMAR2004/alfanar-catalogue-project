@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/alfanar-catalogue-project/favicon.svg" />
+    <!-- Kiosk viewport: lock scale, disable user zoom; cover the notch on tablets. -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0A82C6" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>alfanar — Work Instructions</title>
+
+    <!-- Brand + script fonts. Latin (Poppins / IBM Plex Sans / Mono) and
+         Arabic (Tajawal) match the brand book; Noto Nastaliq Urdu + Noto Sans
+         Devanagari cover Urdu and Hindi. Preconnect for first online load;
+         the service worker caches these for offline use. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Tajawal:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Pre-paint theme: read saved/system preference before React mounts so
+         there is no light/dark flash on the kiosk. -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('alfanar.theme');
+          var sys = window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light';
+          document.documentElement.dataset.theme = saved || sys;
+          var lang = localStorage.getItem('alfanar.lang');
+          if (lang) {
+            var rtl = lang === 'ar' || lang === 'ur';
+            document.documentElement.lang = lang;
+            document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+          }
+          var dev = localStorage.getItem('alfanar.device');
+          if (dev !== 'phone' && dev !== 'kiosk') {
+            dev = window.innerWidth && window.innerWidth < 820 ? 'phone' : 'kiosk';
+          }
+          document.documentElement.dataset.device = dev;
+        } catch (e) {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/alfanar-catalogue-project/assets/index-Casgo_Gt.js"></script>
+    <link rel="stylesheet" crossorigin href="/alfanar-catalogue-project/assets/index-DVG4_pa3.css">
+  <link rel="manifest" href="/alfanar-catalogue-project/manifest.webmanifest"></head>
+  <body>
+    <div id="root"></div>
+    <noscript>This work-instruction kiosk requires JavaScript.</noscript>
+  </body>
+</html>
