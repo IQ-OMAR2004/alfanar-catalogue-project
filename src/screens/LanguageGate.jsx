@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Logo from '../components/Logo.jsx'
 import Icon from '../components/Icon.jsx'
 import DeviceToggle from '../components/DeviceToggle.jsx'
+import Credit from '../components/Credit.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
 import { LOCALES } from '../i18n/locales.js'
 
@@ -66,6 +67,7 @@ export default function LanguageGate({ onSelect }) {
       <div className="gate-foot-row">
         <DeviceToggle withLabel />
         <p className="gate-foot mono">EST. 1976 · THE POWER OF EXCELLENCE</p>
+        <Credit />
       </div>
     </motion.section>
   )

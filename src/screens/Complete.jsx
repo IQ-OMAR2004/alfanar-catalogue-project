@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import TopBar from '../components/TopBar.jsx'
 import Icon from '../components/Icon.jsx'
+import Credit from '../components/Credit.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
 
 // Completion screen: confirms the job is done and compares actual time to the
@@ -73,6 +74,8 @@ export default function Complete({ task, result, onRestart, onTasks }) {
           </button>
         </div>
       </motion.div>
+
+      <Credit />
     </section>
   )
 }

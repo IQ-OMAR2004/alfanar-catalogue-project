@@ -3,6 +3,18 @@
    Logical properties throughout so RTL mirrors with no per-rule overrides.
    ========================================================================== */
 
+/* ------------------------------ Site credit ------------------------------ */
+/* Authorship line pinned to the bottom of the browseable screens. */
+.site-credit {
+  flex: none;
+  margin-block-start: clamp(6px, 1.4vh, 14px);
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--slate);
+  opacity: 0.85;
+}
+
 /* ------------------------------- Buttons --------------------------------- */
 .btn {
   display: inline-flex;
