@@ -1,82 +1,129 @@
+// GIS Tank Modification — Step 25: "Fix the rear-side cover & apply the door labels"
+// Rear-side cover bolted on (bolts pop in around the perimeter), then a white
+// label with a red bar is applied straight onto the door along a dashed
+// alignment guide line; a serial-check badge confirms. ~5s loop.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+
+  const boltDelays = [0, 0.18, 0.36, 0.54, 0.72, 0.9]
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Install the CT support plate and torque the M12 bolts to 47.5 Newton metres">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Rear-side cover being bolted, then a door label applied straight along an alignment guide, serial verified"
+    >
       <style>{`
-        @keyframes ga25-seat { 0% { transform: translateY(-26px) } 45% { transform: translateY(0) } 100% { transform: translateY(0) } }
-        @keyframes ga25-down { 0% { opacity: 1; transform: translateY(-26px) } 44% { opacity: 1; transform: translateY(0) } 60% { opacity: 0 } 100% { opacity: 0 } }
-        @keyframes ga25-turn { 0% { transform: rotate(-24deg) } 8% { transform: rotate(-24deg) } 60% { transform: rotate(16deg) } 100% { transform: rotate(-24deg) } }
-        @keyframes ga25-spin { 0% { transform: rotate(0deg) } 8% { transform: rotate(0deg) } 100% { transform: rotate(280deg) } }
-        @keyframes ga25-arc { 0% { stroke-dashoffset: 150 } 8% { stroke-dashoffset: 150 } 60% { stroke-dashoffset: 40 } 100% { stroke-dashoffset: 40 } }
-        @keyframes ga25-click { 0% { opacity: 0; transform: scale(0.4) } 60% { opacity: 0 } 66% { opacity: 1; transform: scale(1.15) } 80% { opacity: 0; transform: scale(1.3) } 100% { opacity: 0 } }
-        .ga25-plate { transform-box: fill-box; transform-origin: 50% 50%; transform: translateY(-12px); }
-        .ga25-plate--anim { animation: ga25-seat 3.2s ease-in-out infinite; }
-        .ga25-arrow { transform-box: fill-box; transform-origin: 50% 50%; transform: translateY(-12px); }
-        .ga25-arrow--anim { animation: ga25-down 3.2s ease-in-out infinite; }
-        .ga25-wr { transform-box: fill-box; transform-origin: 16% 50%; transform: rotate(-24deg); }
-        .ga25-wr--anim { animation: ga25-turn 3.2s ease-in-out infinite; }
-        .ga25-nut { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga25-nut--anim { animation: ga25-spin 3.2s ease-in-out infinite; }
-        .ga25-arc--anim { animation: ga25-arc 3.2s ease-in-out infinite; }
-        .ga25-click { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga25-click--anim { animation: ga25-click 3.2s ease-in-out infinite; }
-        .ga25-stage[data-paused] * { animation-play-state: paused !important; }
+        .g25-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* cover slides onto the rear side, then bolts pop in */
+        .g25-cover--anim { animation: g25-cover 5s ease-in-out infinite; }
+        @keyframes g25-cover {
+          0%       { transform: translateX(-26px); opacity: 0.4; }
+          14%,100% { transform: translateX(0); opacity: 1; }
+        }
+        .g25-bolt--anim { animation: g25-bolt 5s ease-in-out infinite; }
+        @keyframes g25-bolt {
+          0%,16%   { opacity: 0; transform: scale(0.2); }
+          22%,100% { opacity: 1; transform: scale(1); }
+        }
+        /* dashed alignment guide appears on the door */
+        .g25-guide--anim { animation: g25-guide 5s ease-in-out infinite; }
+        @keyframes g25-guide {
+          0%,34%   { opacity: 0; }
+          42%,78%  { opacity: 0.9; }
+          86%,100% { opacity: 0; }
+        }
+        /* label floats down onto the door, level with the guide */
+        .g25-label--anim { animation: g25-label 5s ease-in-out infinite; }
+        @keyframes g25-label {
+          0%,38%   { transform: translateY(-34px) rotate(-6deg); opacity: 0; }
+          46%      { transform: translateY(-16px) rotate(-3deg); opacity: 1; }
+          58%,100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        }
+        /* serial-check badge after the label is on */
+        .g25-serial--anim { animation: g25-serial 5s ease-in-out infinite; }
+        @keyframes g25-serial {
+          0%,62%   { opacity: 0; transform: scale(0.6); }
+          70%,88%  { opacity: 1; transform: scale(1); }
+          96%,100% { opacity: 0; transform: scale(0.6); }
+        }
       `}</style>
-      <g className="ga25-stage" data-paused={paused ? '' : undefined}>
-        {/* tank wall / mounting boss the plate seats onto */}
-        <rect x="34" y="150" width="150" height="68" rx="12" fill="var(--navy)" />
-        <rect x="42" y="158" width="134" height="52" rx="8" fill="var(--panel-2)" />
-        {/* foam strip on the edge to avoid scratches */}
-        <rect x="44" y="146" width="130" height="9" rx="4.5" fill="var(--accent2)" opacity="0.9" />
-        <rect x="50" y="148" width="118" height="2.5" rx="1.25" fill="var(--on-accent)" opacity="0.4" />
 
-        {/* CT support plate seating down into place */}
-        <g className={anim('ga25-plate')}>
-          <rect x="58" y="120" width="100" height="22" rx="5" fill="var(--accent)" opacity="0.95" />
-          {/* four M12 bolt holes / heads on the plate */}
-          <circle cx="74" cy="131" r="3.6" fill="var(--navy)" opacity="0.55" />
-          <circle cx="100" cy="131" r="3.6" fill="var(--navy)" opacity="0.55" />
-          <circle cx="126" cy="131" r="3.6" fill="var(--navy)" opacity="0.55" />
-          <circle cx="148" cy="131" r="3.6" fill="var(--navy)" opacity="0.55" />
+      <rect x="0" y="0" width="320" height="240" fill="var(--panel)" rx="10" />
+      <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+      <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
+
+      {/* ===== rear/side tank body (left half) ===== */}
+      <rect x="24" y="34" width="118" height="180" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+      {/* upper bolted rectangular cover already in place */}
+      <rect x="38" y="44" width="90" height="66" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+      <g fill="#9BA19A">
+        {[46, 66, 86, 106].map((x) => (
+          <circle key={'t' + x} cx={x + 2} cy="50" r="2" />
+        ))}
+        {[46, 66, 86, 106].map((x) => (
+          <circle key={'b' + x} cx={x + 2} cy="104" r="2" />
+        ))}
+      </g>
+
+      {/* ===== door face (right half) where the label goes ===== */}
+      <rect x="176" y="34" width="120" height="180" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+      <rect x="188" y="46" width="96" height="156" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+      {/* door handle hint */}
+      <circle cx="276" cy="124" r="5" fill="#1E2226" />
+      {/* two pilot lights */}
+      <circle cx="200" cy="56" r="3.5" fill="#C0392B" stroke="#7C837B" strokeWidth="1" />
+      <circle cx="212" cy="56" r="3.5" fill="#C0392B" stroke="#7C837B" strokeWidth="1" />
+
+      <g className="g25-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== rear-side lower cover sliding into place ===== */}
+        <g className={anim('g25-cover')} style={reduced ? undefined : undefined}>
+          <rect x="38" y="126" width="90" height="76" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
         </g>
-
-        {/* down arrow showing the plate seating in */}
-        <g className={anim('ga25-arrow')}>
-          <path d="M28 110 v18 h-6 l9 12 9 -12 h-6 v-18 z" fill="var(--ok)" />
-        </g>
-
-        {/* torque target: socket on a bolt with arc filling to spec */}
-        <g transform="translate(238 132)">
-          <circle r="30" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2" />
-          {/* progress arc filling to 47.5 Nm target */}
-          <circle r="24" fill="none" stroke="var(--accent)" strokeWidth="6" strokeLinecap="round"
-            strokeDasharray="150" strokeDashoffset="150" transform="rotate(-90)" className={anim('ga25-arc')} />
-          {/* hex nut being driven */}
-          <g className={anim('ga25-nut')}>
-            <path d="M0 -13 l11 6.5 v13 l-11 6.5 l-11 -6.5 v-13 z" fill="var(--ink2)" />
-            <circle r="4" fill="var(--panel-2)" />
+        {/* bolts popping in around the cover */}
+        {[
+          [46, 134], [83, 134], [120, 134],
+          [46, 194], [83, 194], [120, 194],
+        ].map(([x, y], i) => (
+          <g
+            key={i}
+            className={anim('g25-bolt')}
+            style={
+              reduced
+                ? { opacity: 1 }
+                : { animationDelay: `${boltDelays[i]}s`, transformOrigin: `${x}px ${y}px` }
+            }
+          >
+            <circle cx={x} cy={y} r="3.2" fill="#AEB4B9" stroke="#6E767E" strokeWidth="1.2" />
           </g>
-          {/* click spark when target reached */}
-          <g className={anim('ga25-click')}>
-            <path d="M0 -34 v8 M24 -24 l-6 6 M34 0 h-8 M24 24 l-6 -6 M0 34 v-8 M-24 24 l6 -6 M-34 0 h8 M-24 -24 l6 6"
-              stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-          </g>
+        ))}
+
+        {/* ===== dashed alignment guide line on the door ===== */}
+        <line
+          className={anim('g25-guide')}
+          style={reduced ? { opacity: 0.9 } : undefined}
+          x1="196" y1="106" x2="276" y2="106"
+          stroke="var(--accent)" strokeWidth="1.8" strokeDasharray="6 5"
+        />
+
+        {/* ===== white label with red bar, applied straight ===== */}
+        <g className={anim('g25-label')} style={reduced ? undefined : undefined}>
+          <rect x="204" y="110" width="64" height="34" rx="2" fill="#FFFFFF" stroke="#8A9089" strokeWidth="1.5" />
+          <rect x="204" y="110" width="64" height="8" fill="#C0392B" />
+          <line x1="210" y1="126" x2="262" y2="126" stroke="#A9AEA6" strokeWidth="2.5" strokeLinecap="round" />
+          <line x1="210" y1="134" x2="248" y2="134" stroke="#C2C6BF" strokeWidth="2.5" strokeLinecap="round" />
         </g>
 
-        {/* Allen socket + spanner driving the bolt */}
-        <g className={anim('ga25-wr')}>
-          <rect x="252" y="125" width="48" height="13" rx="6.5" fill="var(--ink2)" />
-          <circle cx="261" cy="131.5" r="10" fill="var(--slate)" stroke="var(--ink2)" strokeWidth="3" />
+        {/* ===== serial-check badge ===== */}
+        <g className={anim('g25-serial')} style={reduced ? { opacity: 1 } : { transformOrigin: '236px 172px' }}>
+          <rect x="196" y="158" width="80" height="26" rx="6" fill="var(--accent)" />
+          <text x="230" y="176" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--on-accent)">S/N ✓</text>
         </g>
-
-        {/* spec badges */}
-        <rect x="22" y="24" width="84" height="24" rx="7" fill="var(--accent)" />
-        <text x="64" y="40" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--on-accent)">47.5 Nm</text>
-        <rect x="116" y="24" width="78" height="24" rx="7" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2" />
-        <text x="155" y="40" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--ink)">4x M12</text>
-        <rect x="204" y="24" width="92" height="24" rx="7" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2" />
-        <text x="250" y="40" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink)">10 mm HEX</text>
       </g>
     </svg>
   )

@@ -1,82 +1,165 @@
+// GIS Tank Modification — Step 1: "Transfer the tank to the modification area"
+// A grey ALFA-G tank on a red handling trolley rolls from the right toward the
+// GIS modification area (yellow floor stripe). QC-passed tag on the tank; a
+// warning triangle reminds the worker to keep his distance. Loop ~4.5s.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Bring the GIS tank in on the handling trolley and set it on the clean floor">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Grey GIS tank on a red handling trolley rolling to the modification area marked by a yellow floor line"
+    >
       <style>{`
-        @keyframes ga1-roll { 0% { transform: translateX(-34px) } 60% { transform: translateX(0) } 100% { transform: translateX(-34px) } }
-        @keyframes ga1-spin { 0% { transform: rotate(0deg) } 60% { transform: rotate(310deg) } 100% { transform: rotate(0deg) } }
-        @keyframes ga1-settle { 0% { transform: translateY(-2.5px) } 30% { transform: translateY(0) } 70% { transform: translateY(0) } 100% { transform: translateY(-2.5px) } }
-        @keyframes ga1-dash { 0% { transform: translateX(0) rotate(-6deg) } 60% { transform: translateX(72px) rotate(-6deg) } 100% { transform: translateX(0) rotate(-6deg) } }
-        @keyframes ga1-blink { 0%,72% { opacity: 0 } 80%,96% { opacity: 1 } 100% { opacity: 0 } }
-        @keyframes ga1-pulse { 0%,100% { opacity: 0.45 } 50% { opacity: 1 } }
-        .ga1-rig { transform: translateX(-34px); }
-        .ga1-rig--anim { animation: ga1-roll 3.2s ease-in-out infinite; }
-        .ga1-wheel { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga1-wheel--anim { animation: ga1-spin 3.2s ease-in-out infinite; }
-        .ga1-tank { transform-box: fill-box; transform-origin: 50% 100%; }
-        .ga1-tank--anim { animation: ga1-settle 3.2s ease-in-out infinite; }
-        .ga1-tag { transform-box: fill-box; transform-origin: 50% 0%; }
-        .ga1-tag--anim { animation: ga1-dash 3.2s ease-in-out infinite; }
-        .ga1-ok--anim { animation: ga1-blink 3.2s ease-in-out infinite; }
-        .ga1-warn--anim { animation: ga1-pulse 1.6s ease-in-out infinite; }
-        .ga1-stage[data-paused] * { animation-play-state: paused !important; }
+        .g1-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* trolley + tank roll in from the right and settle in the marked area */
+        .g1-roll--anim { animation: g1-roll 4.5s ease-in-out infinite; }
+        @keyframes g1-roll {
+          0%       { transform: translateX(96px); }
+          55%,80%  { transform: translateX(0); }
+          92%,100% { transform: translateX(96px); }
+        }
+        /* wheels spin while the trolley moves */
+        .g1-wheel--anim { animation: g1-wheel 4.5s ease-in-out infinite; }
+        @keyframes g1-wheel {
+          0%       { transform: rotate(0deg); }
+          55%      { transform: rotate(-540deg); }
+          80%      { transform: rotate(-540deg); }
+          100%     { transform: rotate(0deg); }
+        }
+        /* QC tag sways slightly with the motion */
+        .g1-tag--anim { animation: g1-tag 4.5s ease-in-out infinite; transform-origin: 0 0; }
+        @keyframes g1-tag {
+          0%,100% { transform: rotate(8deg); }
+          30%     { transform: rotate(-6deg); }
+          60%     { transform: rotate(3deg); }
+          80%     { transform: rotate(-2deg); }
+        }
+        /* destination marker pulses to show where the tank must go */
+        .g1-dest--anim { animation: g1-dest 4.5s ease-in-out infinite; }
+        @keyframes g1-dest {
+          0%,45%   { opacity: 0.9; }
+          60%,78%  { opacity: 0.2; }
+          95%,100% { opacity: 0.9; }
+        }
+        /* warning triangle gentle pulse */
+        .g1-warn--anim { animation: g1-warn 2.25s ease-in-out infinite; }
+        @keyframes g1-warn {
+          0%,100% { opacity: 0.65; }
+          50%     { opacity: 1; }
+        }
       `}</style>
-      <g className="ga1-stage" data-paused={paused ? '' : undefined}>
-        {/* floor */}
-        <line x1="22" y1="196" x2="298" y2="196" stroke="var(--ink2)" strokeWidth="3" strokeLinecap="round" />
-        <rect x="118" y="190" width="84" height="6" rx="3" fill="var(--ok)" opacity="0.4" />
 
-        {/* caution glyph */}
-        <g className={anim('ga1-warn')}>
-          <path d="M40 40 L58 72 L22 72 Z" fill="none" stroke="var(--warn)" strokeWidth="3.5" strokeLinejoin="round" />
-          <rect x="38.5" y="50" width="3" height="12" rx="1.5" fill="var(--warn)" />
-          <circle cx="40" cy="67" r="2" fill="var(--warn)" />
-        </g>
+      <rect x="0" y="0" width="320" height="240" fill="var(--panel)" />
 
-        {/* rolling rig: trolley + tank */}
-        <g className={anim('ga1-rig')}>
-          {/* tank */}
-          <g className={anim('ga1-tank')}>
-            <rect x="96" y="78" width="84" height="92" rx="14" fill="var(--accent)" />
-            <rect x="96" y="78" width="84" height="92" rx="14" fill="none" stroke="var(--navy)" strokeWidth="2.5" opacity="0.5" />
-            <rect x="110" y="62" width="56" height="18" rx="6" fill="var(--slate)" />
-            <circle cx="138" cy="116" r="15" fill="none" stroke="var(--on-accent)" strokeWidth="3" opacity="0.85" />
-            <text x="138" y="121" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11"
-              fill="var(--on-accent)" opacity="0.9">SF6</text>
+      {/* floor band + yellow GIS-area marking stripe */}
+      <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+      <rect x="0" y="212" width="320" height="3" fill="#A9AEA6" />
+      <rect x="14" y="216" width="120" height="6" rx="2" fill="#F2B826" />
+      <text x="30" y="236" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink2)">GIS AREA</text>
 
-            {/* QC passed tag flying onto the tank */}
-            <g className={anim('ga1-tag')}>
-              <rect x="150" y="86" width="40" height="26" rx="5" fill="var(--panel)" stroke="var(--ok)" strokeWidth="2.5" />
-              <path className={anim('ga1-ok')} d="M158 99 l5 6 l11 -12" fill="none" stroke="var(--ok)"
-                strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-              <text x="170" y="103" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="9"
-                fill="var(--ok)" className={anim('ga1-tag')} opacity="0">QC</text>
+      {/* destination target brackets in the GIS area */}
+      <g className={anim('g1-dest')} stroke="var(--accent)" strokeWidth="2.5" fill="none" strokeLinecap="round">
+        <path d="M 26 206 v 6 h 10" />
+        <path d="M 122 206 v 6 h -10" />
+        <path d="M 26 132 v -6 h 10" />
+        <path d="M 122 132 v -6 h -10" />
+      </g>
+
+      {/* warning triangle — keep distance during transfer */}
+      <g className={anim('g1-warn')} transform="translate(288 28)">
+        <path d="M 0 -13 L 13 10 L -13 10 Z" fill="var(--warn)" stroke="#7C837B" strokeWidth="1.5" strokeLinejoin="round" />
+        <rect x="-1.6" y="-5" width="3.2" height="8" rx="1.6" fill="#1E2226" />
+        <circle cx="0" cy="6.4" r="1.9" fill="#1E2226" />
+      </g>
+
+      <g className="g1-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== trolley + tank group (rolls right → left) ===== */}
+        <g className={anim('g1-roll')}>
+          {/* --- ALFA-G tank (mid section, side view: bolted covers) --- */}
+          <g transform="translate(30 58)">
+            <rect x="0" y="0" width="94" height="112" rx="4" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+            {/* top flange strip */}
+            <rect x="-3" y="-6" width="100" height="8" rx="2" fill="#C2C6BF" stroke="#7C837B" strokeWidth="2" />
+            {/* large bolted cover with stud row */}
+            <rect x="10" y="12" width="74" height="56" rx="4" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+            {[16, 30, 44, 58, 72].map((cx) => (
+              <circle key={'t' + cx} cx={cx + 3} cy="17" r="2" fill="#9BA19A" />
+            ))}
+            {[16, 30, 44, 58, 72].map((cx) => (
+              <circle key={'b' + cx} cx={cx + 3} cy="63" r="2" fill="#9BA19A" />
+            ))}
+            {[22, 40].map((cy) => (
+              <g key={'s' + cy}>
+                <circle cx="15" cy={cy + 6} r="2" fill="#9BA19A" />
+                <circle cx="79" cy={cy + 6} r="2" fill="#9BA19A" />
+              </g>
+            ))}
+            {/* two round CT terminal plates */}
+            <g>
+              <circle cx="30" cy="90" r="14" fill="#EDEFEA" stroke="#8A9089" strokeWidth="2" />
+              <circle cx="64" cy="90" r="14" fill="#EDEFEA" stroke="#8A9089" strokeWidth="2" />
+              {[0, 60, 120, 180, 240, 300].map((a) => (
+                <circle key={'p1' + a} cx={30 + 10 * Math.cos((a * Math.PI) / 180)} cy={90 + 10 * Math.sin((a * Math.PI) / 180)} r="1.5" fill="#A9AEA6" />
+              ))}
+              {[0, 60, 120, 180, 240, 300].map((a) => (
+                <circle key={'p2' + a} cx={64 + 10 * Math.cos((a * Math.PI) / 180)} cy={90 + 10 * Math.sin((a * Math.PI) / 180)} r="1.5" fill="#A9AEA6" />
+              ))}
+            </g>
+            {/* manufacturer label sticker */}
+            <rect x="14" y="74" width="22" height="8" rx="1" fill="#FFFFFF" stroke="#8A9089" strokeWidth="0.8" />
+            <rect x="14" y="74" width="4" height="8" fill="#0A82C6" />
+
+            {/* --- QC passed tag hanging off the flange --- */}
+            <g transform="translate(96 4)">
+              <g className={anim('g1-tag')} style={reduced ? { transform: 'rotate(4deg)', transformOrigin: '0 0' } : undefined}>
+                <line x1="0" y1="0" x2="4" y2="10" stroke="#6E767E" strokeWidth="1.8" strokeLinecap="round" />
+                <rect x="-6" y="10" width="22" height="30" rx="3" fill="#FFFFFF" stroke="#8A9089" strokeWidth="1.5" />
+                <rect x="-6" y="10" width="22" height="7" rx="3" fill="#2E9E4F" />
+                <circle cx="4" cy="14" r="1.8" fill="#FFFFFF" />
+                <text x="4" y="27" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="8" fill="#2E9E4F" fontWeight="bold">QC</text>
+                <path d="M 0 32 l 3 3.5 l 6 -7" fill="none" stroke="#2E9E4F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </g>
             </g>
           </g>
 
-          {/* trolley deck + handle */}
-          <rect x="84" y="170" width="108" height="11" rx="4" fill="var(--ink)" />
-          <path d="M84 175 L60 138" stroke="var(--ink)" strokeWidth="5" strokeLinecap="round" />
-          <circle cx="60" cy="136" r="5" fill="none" stroke="var(--ink)" strokeWidth="4" />
-
-          {/* wheels */}
-          <g className={anim('ga1-wheel')} style={{ transformOrigin: '108px 188px' }}>
-            <circle cx="108" cy="188" r="11" fill="var(--panel-2)" stroke="var(--ink)" strokeWidth="3" />
-            <line x1="108" y1="180" x2="108" y2="196" stroke="var(--ink)" strokeWidth="2" />
-            <line x1="100" y1="188" x2="116" y2="188" stroke="var(--ink)" strokeWidth="2" />
-          </g>
-          <g className={anim('ga1-wheel')} style={{ transformOrigin: '168px 188px' }}>
-            <circle cx="168" cy="188" r="11" fill="var(--panel-2)" stroke="var(--ink)" strokeWidth="3" />
-            <line x1="168" y1="180" x2="168" y2="196" stroke="var(--ink)" strokeWidth="2" />
-            <line x1="160" y1="188" x2="176" y2="188" stroke="var(--ink)" strokeWidth="2" />
+          {/* --- red handling trolley --- */}
+          <g transform="translate(22 172)">
+            <rect x="0" y="0" width="112" height="10" rx="3" fill="#D8452B" stroke="#8E2C1A" strokeWidth="2" />
+            <rect x="6" y="10" width="8" height="14" fill="#B93A22" />
+            <rect x="98" y="10" width="8" height="14" fill="#B93A22" />
+            {/* push handle */}
+            <path d="M 112 2 q 18 -4 20 -26" fill="none" stroke="#B93A22" strokeWidth="4" strokeLinecap="round" />
+            {/* wheels with spokes (spin while rolling) */}
+            <g transform="translate(16 32)">
+              <g className={anim('g1-wheel')}>
+                <circle cx="0" cy="0" r="9" fill="#2B2F33" stroke="#1E2226" strokeWidth="2" />
+                <circle cx="0" cy="0" r="3" fill="#AEB4B9" />
+                <line x1="-7" y1="0" x2="7" y2="0" stroke="#6E767E" strokeWidth="1.6" />
+                <line x1="0" y1="-7" x2="0" y2="7" stroke="#6E767E" strokeWidth="1.6" />
+              </g>
+            </g>
+            <g transform="translate(96 32)">
+              <g className={anim('g1-wheel')}>
+                <circle cx="0" cy="0" r="9" fill="#2B2F33" stroke="#1E2226" strokeWidth="2" />
+                <circle cx="0" cy="0" r="3" fill="#AEB4B9" />
+                <line x1="-7" y1="0" x2="7" y2="0" stroke="#6E767E" strokeWidth="1.6" />
+                <line x1="0" y1="-7" x2="0" y2="7" stroke="#6E767E" strokeWidth="1.6" />
+              </g>
+            </g>
           </g>
         </g>
 
-        {/* target placement marker on the floor */}
-        <g opacity="0.7">
-          <path d="M232 178 l0 18 l18 0" fill="none" stroke="var(--accent2)" strokeWidth="3" strokeLinecap="round" />
-          <path d="M286 178 l0 18 l-18 0" fill="none" stroke="var(--accent2)" strokeWidth="3" strokeLinecap="round" />
+        {/* direction arrow toward the GIS area */}
+        <g opacity="0.9">
+          <path d="M 250 118 h -50" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" strokeDasharray="7 6" />
+          <path d="M 208 110 l -12 8 l 12 8" fill="none" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </g>
     </svg>

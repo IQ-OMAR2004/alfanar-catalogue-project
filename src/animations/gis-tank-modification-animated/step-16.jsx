@@ -1,66 +1,139 @@
+// GIS Tank Modification — Step 16: "Fix the ES/DS tank chine poly"
+// Loop: a black poly protection strip wraps progressively around the exposed
+// ES/DS tank edge (stroke-dashoffset draw), a press-hand pad follows the strip
+// pushing it fully home, and a check tick appears when the strip is continuous.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
-  const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+  const a = (base, anim) => (reduced ? base : `${base} ${anim}`)
+
+  // chine path along the exposed tank edge (top-left → across → down right side)
+  const CHINE = 'M 62 78 H 240 V 176'
+  const CHINE_LEN = 276 // approx path length for dash animation
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Unbolt and lift the CT support plate out of the tank using foam to protect the surface">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Chine poly protection strip wrapping and being pressed down around the ES/DS tank edge until continuous"
+    >
       <style>{`
-        @keyframes ga16-ratchet { 0% { transform: rotate(-20deg) } 55% { transform: rotate(14deg) } 100% { transform: rotate(-20deg) } }
-        @keyframes ga16-spin { 0% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
-        @keyframes ga16-lift { 0% { transform: translate(0,0) } 50% { transform: translate(34px,-44px) } 100% { transform: translate(0,0) } }
-        @keyframes ga16-arrow { 0% { opacity: 0; transform: translateY(4px) } 35% { opacity: 1 } 70% { opacity: 1; transform: translateY(-8px) } 100% { opacity: 0; transform: translateY(-8px) } }
-        .ga16-rk { transform-box: fill-box; transform-origin: 88% 50%; transform: rotate(-20deg); }
-        .ga16-rk--anim { animation: ga16-ratchet 3s ease-in-out infinite; }
-        .ga16-bolt { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga16-bolt--anim { animation: ga16-spin 3s linear infinite; }
-        .ga16-plate { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga16-plate--anim { animation: ga16-lift 3s ease-in-out infinite; }
-        .ga16-arrow { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga16-arrow--anim { animation: ga16-arrow 3s ease-in-out infinite; }
-        .ga16-stage[data-paused] * { animation-play-state: paused !important; }
+        .g16-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* strip draws itself around the tank edge */
+        .g16-strip--anim { animation: g16-strip 4.5s ease-in-out infinite; }
+        @keyframes g16-strip {
+          0%       { stroke-dashoffset: ${CHINE_LEN}; }
+          60%,100% { stroke-dashoffset: 0; }
+        }
+
+        /* press pad rides along the edge just behind the strip front,
+           bobbing down to seat the strip (seal the gaps) */
+        .g16-press--anim { animation: g16-press 4.5s ease-in-out infinite; }
+        @keyframes g16-press {
+          0%   { offset-distance: 0%; opacity: 0; }
+          6%   { opacity: 1; }
+          56%  { opacity: 1; }
+          60%  { offset-distance: 100%; opacity: 0; }
+          100% { offset-distance: 100%; opacity: 0; }
+        }
+        .g16-bob--anim { animation: g16-bob 0.75s ease-in-out infinite; }
+        @keyframes g16-bob {
+          0%,100% { transform: translateY(-6px); }
+          50%     { transform: translateY(0); }
+        }
+
+        /* continuity check tick */
+        .g16-check--anim { animation: g16-check 4.5s ease-in-out infinite; }
+        @keyframes g16-check {
+          0%,66%   { opacity: 0; transform: scale(0.5); }
+          74%      { opacity: 1; transform: scale(1.1); }
+          88%      { opacity: 1; transform: scale(1); }
+          96%,100% { opacity: 0; transform: scale(0.5); }
+        }
+
+        /* "no gaps" shimmer along the finished strip */
+        .g16-sheen--anim { animation: g16-sheen 4.5s linear infinite; }
+        @keyframes g16-sheen {
+          0%,62%  { stroke-dashoffset: ${CHINE_LEN + 40}; opacity: 0; }
+          66%     { opacity: 0.8; }
+          88%     { stroke-dashoffset: 0; opacity: 0.8; }
+          92%,100%{ stroke-dashoffset: 0; opacity: 0; }
+        }
       `}</style>
-      <g className="ga16-stage" data-paused={paused ? '' : undefined}>
-        {/* tank body with open top, surface to protect */}
-        <rect x="30" y="120" width="150" height="96" rx="14" fill="var(--navy)" />
-        <rect x="38" y="128" width="134" height="80" rx="10" fill="var(--panel-2)" />
-        {/* tank rim / inner surface line */}
-        <rect x="38" y="128" width="134" height="14" rx="7" fill="var(--slate)" opacity="0.7" />
 
-        {/* foam sheet cushioning the tank rim */}
-        <rect x="40" y="116" width="132" height="12" rx="6" fill="var(--accent2)" opacity="0.85" />
-        <rect x="46" y="118" width="120" height="3" rx="1.5" fill="var(--on-accent)" opacity="0.4" />
+      <rect x="0" y="0" width="320" height="240" fill="var(--bg)" />
+      <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+      <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
 
-        {/* CT support plate being lifted out */}
-        <g className={anim('ga16-plate')}>
-          <rect x="56" y="146" width="98" height="20" rx="5" fill="var(--accent)" opacity="0.95" />
-          <circle cx="74" cy="156" r="4" fill="var(--navy)" opacity="0.5" />
-          <circle cx="136" cy="156" r="4" fill="var(--navy)" opacity="0.5" />
-          {/* bolt head on the plate, spinning loose */}
-          <g className={anim('ga16-bolt')}>
-            <path d="M105 156 l7 -4 l7 4 v8 l-7 4 l-7 -4 z" fill="var(--ink2)" />
-            <circle cx="112" cy="160" r="2.4" fill="var(--panel)" />
-          </g>
-          {/* up arrow riding with the plate */}
-          <g className={anim('ga16-arrow')}>
-            <path d="M30 152 l-9 12 h6 v12 h6 v-12 h6 z" fill="var(--ok)" />
-          </g>
-        </g>
-
-        {/* 17 mm socket + ratchet driving the bolt */}
-        <g className={anim('ga16-rk')}>
-          <rect x="118" y="150" width="84" height="14" rx="7" fill="var(--ink2)" />
-          <circle cx="124" cy="157" r="11" fill="var(--slate)" stroke="var(--ink2)" strokeWidth="3" />
-          <path d="M124 150 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" fill="var(--panel-2)" transform="translate(-5 0)" />
-          <circle cx="196" cy="157" r="8" fill="none" stroke="var(--ink)" strokeWidth="3" />
-        </g>
-
-        {/* spec / tool badges */}
-        <rect x="208" y="46" width="86" height="24" rx="7" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2" />
-        <text x="251" y="62" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--ink)">17 mm</text>
-        <rect x="208" y="78" width="86" height="24" rx="7" fill="var(--accent2)" />
-        <text x="251" y="94" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--on-accent)">FOAM</text>
-        <rect x="208" y="110" width="86" height="24" rx="7" fill="var(--ok)" />
-        <text x="251" y="126" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="#fff">OUT</text>
+      {/* ===== ES/DS tank on top of the main tank — crop on the edge ===== */}
+      {/* main tank below */}
+      <rect x="40" y="150" width="222" height="64" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+      <g fill="#9BA19A">
+        <circle cx="58" cy="162" r="2" /><circle cx="86" cy="162" r="2" /><circle cx="114" cy="162" r="2" />
+        <circle cx="142" cy="162" r="2" /><circle cx="170" cy="162" r="2" /><circle cx="198" cy="162" r="2" /><circle cx="226" cy="162" r="2" />
       </g>
+      {/* ES/DS tank body sitting on it — the chine edge is its rim */}
+      <rect x="62" y="78" width="178" height="72" fill="#C2C6BF" stroke="#7C837B" strokeWidth="2.5" />
+      {/* bolted cover on ES/DS face */}
+      <rect x="86" y="94" width="92" height="42" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+      <g fill="#9BA19A">
+        <circle cx="93" cy="100" r="2" /><circle cx="115" cy="100" r="2" /><circle cx="137" cy="100" r="2" /><circle cx="159" cy="100" r="2" /><circle cx="171" cy="100" r="2" />
+        <circle cx="93" cy="130" r="2" /><circle cx="115" cy="130" r="2" /><circle cx="137" cy="130" r="2" /><circle cx="159" cy="130" r="2" /><circle cx="171" cy="130" r="2" />
+      </g>
+      {/* small ES/DS mechanism housing on the right */}
+      <rect x="196" y="98" width="32" height="36" fill="#D7DAD4" stroke="#8A9089" strokeWidth="2" />
+      <circle cx="212" cy="116" r="8" fill="#EDEFEA" stroke="#8A9089" strokeWidth="1.5" />
+      <line x1="212" y1="110" x2="212" y2="116" stroke="#6E767E" strokeWidth="2" strokeLinecap="round" />
+
+      {/* bare edge underlay (where the chine poly must cover) */}
+      <path d={CHINE} fill="none" stroke="#8A9089" strokeWidth="7" strokeLinecap="round" opacity="0.5" />
+
+      <g className="g16-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== chine poly strip wrapping the edge ===== */}
+        <path
+          className={a('g16-strip', 'g16-strip--anim')}
+          d={CHINE}
+          fill="none" stroke="#222" strokeWidth="7" strokeLinecap="round"
+          strokeDasharray={CHINE_LEN}
+          strokeDashoffset={reduced ? 0 : undefined}
+        />
+        {/* sheen sweep confirming a continuous, seated strip */}
+        {!reduced && (
+          <path
+            className="g16-sheen--anim"
+            d={CHINE}
+            fill="none" stroke="#9FD8A8" strokeWidth="3" strokeLinecap="round"
+            strokeDasharray={`26 ${CHINE_LEN + 14}`}
+            opacity="0"
+          />
+        )}
+
+        {/* ===== press pad following the edge, pushing the strip home ===== */}
+        {!reduced && (
+          <g className="g16-press--anim" style={{ offsetPath: `path('${CHINE}')`, offsetRotate: '0deg' }}>
+            <g className="g16-bob--anim">
+              {/* thumb-press pad */}
+              <rect x="-9" y="-16" width="18" height="12" rx="5" fill="var(--accent)" opacity="0.9" />
+              <path d="M 0 -4 l -5 -5 h 10 Z" fill="var(--accent)" opacity="0.9" />
+            </g>
+          </g>
+        )}
+
+        {/* continuity check */}
+        <g className={a('g16-check', 'g16-check--anim')} style={reduced ? { opacity: 1 } : { transformOrigin: '266px 96px' }}>
+          <circle cx="266" cy="96" r="12" fill="var(--ok, #2e9e5b)" />
+          <path d="M 260.5 96 l 4 4.5 l 7.5 -9" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      </g>
+
+      {/* mono badge */}
+      <rect x="42" y="34" width="112" height="22" rx="5" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="1.5" />
+      <text x="98" y="49" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink2)">CHINE POLY</text>
+      <rect x="162" y="34" width="86" height="22" rx="5" fill="var(--accent)" />
+      <text x="205" y="49" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--on-accent)">NO GAPS</text>
     </svg>
   )
 }

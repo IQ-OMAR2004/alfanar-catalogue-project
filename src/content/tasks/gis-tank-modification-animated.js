@@ -1,12 +1,14 @@
 // GIS Tank Modification — ANIMATED variant.
-// Same procedure as ./gis-tank-modification.js (all 43 steps, their titles,
+// Same procedure as ./gis-tank-modification.js (all 34 Work-Proposal steps —
+// transfer after boxing through packing — their titles,
 // instructions, tools, warnings and every translation are reused verbatim), but
 // every step's media is a hand-authored SVG/CSS animation instead of the
 // document photos. Each step N renders the component at
 // src/animations/gis-tank-modification-animated/step-N.jsx.
 //
-// PLACEHOLDER pending SME review — the animations are illustrative schematics of
-// the action, not engineering drawings. Verify against the controlled document.
+// PLACEHOLDER pending SME review — the animations are realistic illustrations
+// of the ALFA-G equipment and action, not engineering drawings. Verify against
+// the controlled documents (GIS Work Proposal 1 + AES:AE04:IED:WI:250:00).
 import base from './gis-tank-modification.js'
 
 // Reuse the fully-merged steps (all languages intact); only the media changes.

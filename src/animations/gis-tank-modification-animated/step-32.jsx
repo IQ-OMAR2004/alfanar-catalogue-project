@@ -1,78 +1,144 @@
+// GIS Tank Modification — Step 32: "Fix the top bushing plate"
+// Panel roof, top view: the bushing plate lowers on with a chamfer-inside
+// orientation cue, then a torque wrench works evenly around the bolts
+// ("26.5 Nm"); each torqued bolt is marked red. ~6.5s loop.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+
+  const C = { x: 160, y: 118 } // plate centre
+  const boltAngles = [-90, 0, 90, 180] // cross-pattern order: N, E, S, W
+  const boltR = 42
+  const bolts = boltAngles.map((deg) => ({
+    deg,
+    x: C.x + boltR * Math.cos((deg * Math.PI) / 180),
+    y: C.y + boltR * Math.sin((deg * Math.PI) / 180),
+  }))
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Bolt the disconnector and upper busbar with a 19 mm spanner, torque carefully to avoid SF6 gas leakage">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Top bushing plate fitted chamfer-inside, then torqued evenly around the bolts to 26.5 Nm and marked red"
+    >
       <style>{`
-        @keyframes ga32-swing { 0% { transform: rotate(-24deg) } 50% { transform: rotate(16deg) } 100% { transform: rotate(-24deg) } }
-        @keyframes ga32-arc { 0% { stroke-dashoffset: 150 } 50% { stroke-dashoffset: 36 } 100% { stroke-dashoffset: 150 } }
-        @keyframes ga32-nut { 0% { transform: rotate(0deg) } 50% { transform: rotate(40deg) } 100% { transform: rotate(0deg) } }
-        @keyframes ga32-pulse { 0%,55% { opacity: 0.35 } 65% { opacity: 1 } 80% { opacity: 0.35 } 100% { opacity: 0.35 } }
-        @keyframes ga32-stamp { 0%,52% { opacity: 0.4 } 62% { opacity: 1 } 100% { opacity: 0.4 } }
-        .ga32-spanner { transform-box: fill-box; transform-origin: 50% 90%; transform: rotate(-24deg); }
-        .ga32-spanner--anim { animation: ga32-swing 3s ease-in-out infinite; }
-        .ga32-arc--anim { animation: ga32-arc 3s ease-in-out infinite; }
-        .ga32-nut { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga32-nut--anim { animation: ga32-nut 3s ease-in-out infinite; }
-        .ga32-warn { opacity: 0.35; transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga32-warn--anim { animation: ga32-pulse 3s ease-in-out infinite; }
-        .ga32-tag { opacity: 0.4; }
-        .ga32-tag--anim { animation: ga32-stamp 3s ease-in-out infinite; }
-        .ga32-stage[data-paused] * { animation-play-state: paused !important; }
+        .g32-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* plate lowers into place (scale = descending in top view) */
+        .g32-plate--anim { animation: g32-plate 6.5s ease-in-out infinite; transform-origin: ${C.x}px ${C.y}px; }
+        @keyframes g32-plate {
+          0%       { transform: scale(1.25); opacity: 0.55; }
+          14%,100% { transform: scale(1); opacity: 1; }
+        }
+        /* chamfer-inside orientation cue flashes early */
+        .g32-cham--anim { animation: g32-cham 6.5s ease-in-out infinite; }
+        @keyframes g32-cham {
+          0%,4%    { opacity: 0; }
+          10%,26%  { opacity: 1; }
+          32%,100% { opacity: 0; }
+        }
+        /* torque wrench hops bolt to bolt in a cross pattern */
+        .g32-tool--anim { animation: g32-tool 6.5s ease-in-out infinite; transform-origin: ${C.x}px ${C.y}px; }
+        @keyframes g32-tool {
+          0%,26%   { transform: rotate(-90deg); opacity: 0; }
+          30%,38%  { transform: rotate(-90deg); opacity: 1; }
+          44%,52%  { transform: rotate(0deg); opacity: 1; }
+          58%,66%  { transform: rotate(90deg); opacity: 1; }
+          72%,80%  { transform: rotate(180deg); opacity: 1; }
+          86%,100% { transform: rotate(180deg); opacity: 0; }
+        }
+        /* red marks pop onto each bolt after its torque */
+        .g32-mark--anim { animation: g32-mark 6.5s ease-in-out infinite; }
+        @keyframes g32-mark {
+          0%,38%   { opacity: 0; transform: scale(0.3); }
+          44%,92%  { opacity: 1; transform: scale(1); }
+          98%,100% { opacity: 0; transform: scale(0.3); }
+        }
+        /* Nm badge visible during the torque sequence */
+        .g32-nm--anim { animation: g32-nm 6.5s ease-in-out infinite; }
+        @keyframes g32-nm {
+          0%,24%   { opacity: 0; transform: translateY(6px); }
+          32%,88%  { opacity: 1; transform: translateY(0); }
+          96%,100% { opacity: 0; transform: translateY(6px); }
+        }
       `}</style>
-      <g className="ga32-stage" data-paused={paused ? '' : undefined}>
-        {/* tank wall the DS bolts onto */}
-        <rect x="30" y="150" width="260" height="22" rx="6" fill="var(--panel-2)" stroke="var(--slate)" strokeWidth="2" />
-        {/* upper busbar laid across, fixed with bolts */}
-        <rect x="58" y="92" width="204" height="22" rx="7" fill="var(--accent)" opacity="0.92" />
-        {/* disconnector (DS) body bridging busbar to tank */}
-        <rect x="118" y="112" width="84" height="40" rx="6" fill="var(--navy)" />
-        <text x="160" y="138" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="14" fontWeight="700" fill="var(--on-accent)">DS</text>
-        {/* row of busbar bolt heads */}
-        <circle cx="74" cy="103" r="6" fill="var(--ink2)" />
-        <circle cx="110" cy="103" r="6" fill="var(--ink2)" />
-        <circle cx="160" cy="103" r="6" fill="var(--ink2)" />
-        <circle cx="210" cy="103" r="6" fill="var(--ink2)" />
-        <circle cx="246" cy="103" r="6" fill="var(--ink2)" />
 
-        {/* torque progress arc around the working nut */}
-        <circle cx="226" cy="138" r="22" fill="none" stroke="var(--ok)" strokeWidth="4" strokeLinecap="round"
-          strokeDasharray="150" strokeDashoffset="150" transform="rotate(-90 226 138)" className={anim('ga32-arc')} />
+      <rect x="0" y="0" width="320" height="240" fill="var(--panel)" rx="10" />
 
-        {/* the hex nut being driven on the DS fixing */}
-        <g className={anim('ga32-nut')}>
-          <path d="M226 124 l12 7 l0 14 l-12 7 l-12 -7 l0 -14 z" fill="var(--ink2)" stroke="var(--ink)" strokeWidth="2" />
+      {/* ===== panel roof, top view ===== */}
+      <rect x="60" y="34" width="200" height="170" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+      {/* roof stud rows */}
+      <g fill="#9BA19A">
+        {[80, 120, 160, 200, 240].map((x) => (
+          <circle key={'t' + x} cx={x} cy="42" r="2" />
+        ))}
+        {[80, 120, 160, 200, 240].map((x) => (
+          <circle key={'b' + x} cx={x} cy="196" r="2" />
+        ))}
+      </g>
+      {/* bushing opening in the roof (below the plate) */}
+      <circle cx={C.x} cy={C.y} r="30" fill="#8C4A38" stroke="#6E3A2C" strokeWidth="2" />
+      <circle cx={C.x} cy={C.y} r="14" fill="#A75E48" />
+      <circle cx={C.x} cy={C.y} r="6" fill="#C8CCC9" stroke="#8A9089" strokeWidth="1.2" />
+
+      <g className="g32-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== the top bushing plate lowering on ===== */}
+        <g className={anim('g32-plate')} style={reduced ? undefined : undefined}>
+          <circle cx={C.x} cy={C.y} r="52" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2.5" />
+          {/* chamfered inner edge (double ring = chamfer inside) */}
+          <circle cx={C.x} cy={C.y} r="32" fill="none" stroke="#A9AEA6" strokeWidth="4" />
+          <circle cx={C.x} cy={C.y} r="28" fill="#8C4A38" stroke="#6E3A2C" strokeWidth="1.5" />
+          <circle cx={C.x} cy={C.y} r="6" fill="#C8CCC9" stroke="#8A9089" strokeWidth="1.2" />
+          {/* the four fixing bolts */}
+          {bolts.map((b) => (
+            <g key={b.deg}>
+              <circle cx={b.x} cy={b.y} r="5" fill="#AEB4B9" stroke="#6E767E" strokeWidth="1.8" />
+              <path d={`M ${b.x - 3} ${b.y} h 6 M ${b.x} ${b.y - 3} v 6`} stroke="#6E767E" strokeWidth="1.2" />
+            </g>
+          ))}
         </g>
 
-        {/* 19 mm spanner swinging on the nut */}
-        <g className={anim('ga32-spanner')}>
-          <rect x="219" y="36" width="14" height="80" rx="6" fill="var(--slate)" />
-          <path d="M214 116 a12 12 0 1 0 24 0 l-5 0 a7 7 0 1 1 -14 0 z" fill="var(--ink2)" />
-          <rect x="221" y="30" width="10" height="10" rx="3" fill="var(--ink)" />
+        {/* ===== chamfer-inside orientation cue ===== */}
+        <g className={anim('g32-cham')} style={reduced ? { opacity: 0.9 } : undefined}>
+          <path d={`M ${C.x + 66} ${C.y - 40} q -18 8 -30 22`} fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" />
+          <path d={`M ${C.x + 36} ${C.y - 18} l 8 -1 M ${C.x + 36} ${C.y - 18} l 2 -8`} fill="none" stroke="var(--accent)" strokeWidth="2.5" strokeLinecap="round" />
+          <rect x={C.x + 56} y={C.y - 62} width="76" height="18" rx="5" fill="var(--accent)" />
+          <text x={C.x + 94} y={C.y - 49} textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10" fill="var(--on-accent)">chamfer in</text>
         </g>
 
-        {/* hazard warning glyph — SF6 leak caution */}
-        <g className={anim('ga32-warn')}>
-          <path d="M50 188 l18 -34 l18 34 z" fill="var(--warn)" stroke="var(--ink)" strokeWidth="2" strokeLinejoin="round" />
-          <rect x="65" y="163" width="6" height="13" rx="3" fill="var(--ink)" />
-          <circle cx="68" cy="182" r="3.2" fill="var(--ink)" />
-        </g>
-        <rect x="92" y="178" width="60" height="24" rx="7" fill="var(--panel)" stroke="var(--warn)" strokeWidth="2" />
-        <text x="122" y="195" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13" fontWeight="700" fill="var(--ink)">SF6</text>
-
-        {/* bolt count badge */}
-        <rect x="32" y="42" width="60" height="30" rx="8" fill="var(--accent2)" />
-        <text x="62" y="63" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="16" fontWeight="700" fill="var(--on-accent)">18x</text>
-
-        {/* torque value stamp */}
-        <g className={anim('ga32-tag')}>
-          <rect x="200" y="178" width="86" height="32" rx="8" fill="var(--accent2)" />
-          <text x="243" y="200" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="18" fontWeight="700" fill="var(--on-accent)">47 Nm</text>
+        {/* ===== torque wrench rotating around the bolt circle ===== */}
+        <g className={anim('g32-tool')} style={reduced ? { opacity: 0 } : undefined}>
+          {/* wrench positioned at the E bolt (rotated by keyframes) */}
+          <g transform={`translate(${C.x + boltR} ${C.y})`}>
+            <circle cx="0" cy="0" r="7" fill="none" stroke="#6E767E" strokeWidth="3.5" />
+            <rect x="6" y="-3" width="34" height="6" rx="3" fill="#AEB4B9" stroke="#6E767E" strokeWidth="1.2" />
+            <rect x="34" y="-4" width="10" height="8" rx="2.5" fill="#D8452B" stroke="#2B2F33" strokeWidth="1" />
+          </g>
         </g>
 
-        {/* spanner size badge */}
-        <rect x="228" y="42" width="60" height="30" rx="8" fill="var(--panel)" stroke="var(--slate)" strokeWidth="2" />
-        <text x="258" y="63" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="14" fontWeight="700" fill="var(--ink)">19 mm</text>
+        {/* ===== red torque marks on each bolt (staggered with the wrench) ===== */}
+        {bolts.map((b, i) => (
+          <path
+            key={b.deg}
+            className={anim('g32-mark')}
+            style={
+              reduced
+                ? { opacity: 1 }
+                : { animationDelay: `${i * 0.91}s`, transformOrigin: `${b.x}px ${b.y}px` }
+            }
+            d={`M ${b.x - 7} ${b.y + 7} L ${b.x + 7} ${b.y - 7}`}
+            stroke="#C0392B" strokeWidth="3" strokeLinecap="round" fill="none"
+          />
+        ))}
+
+        {/* ===== "26.5 Nm" badge ===== */}
+        <g className={anim('g32-nm')} style={reduced ? { opacity: 1 } : undefined}>
+          <rect x="112" y="212" width="96" height="24" rx="6" fill="var(--accent)" />
+          <text x="160" y="229" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13" fill="var(--on-accent)">26.5 Nm</text>
+        </g>
       </g>
     </svg>
   )

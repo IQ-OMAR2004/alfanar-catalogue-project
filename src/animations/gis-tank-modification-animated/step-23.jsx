@@ -2,66 +2,54 @@ export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
   return (
     <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Torquing the bushing busbar nuts to 47 newton metres with an Allen socket and extension rod">
+      role="img" aria-label="Testing the door interlock: the door is blocked while the interlock is engaged, then opens when released">
       <style>{`
-        @keyframes ga23-turn { 0% { transform: rotate(-26deg) } 55% { transform: rotate(16deg) } 100% { transform: rotate(-26deg) } }
-        @keyframes ga23-arc { 0% { stroke-dashoffset: 168 } 55% { stroke-dashoffset: 40 } 100% { stroke-dashoffset: 168 } }
-        @keyframes ga23-click { 0%,52% { opacity: 0; transform: scale(0.4) } 60% { opacity: 1; transform: scale(1) } 74% { opacity: 0; transform: scale(1.25) } 100% { opacity: 0; transform: scale(0.4) } }
-        @keyframes ga23-stamp { 0%,52% { opacity: 0.35 } 62% { opacity: 1 } 100% { opacity: 0.35 } }
-        .ga23-tool { transform-box: fill-box; transform-origin: 50% 92%; transform: rotate(-26deg); }
-        .ga23-tool--anim { animation: ga23-turn 3s ease-in-out infinite; }
-        .ga23-arc--anim { animation: ga23-arc 3s ease-in-out infinite; }
-        .ga23-spark { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; }
-        .ga23-spark--anim { animation: ga23-click 3s ease-in-out infinite; }
-        .ga23-tag { opacity: 0.35; }
-        .ga23-tag--anim { animation: ga23-stamp 3s ease-in-out infinite; }
-        .ga23-stage[data-paused] * { animation-play-state: paused !important; }
+        @keyframes g23-doorTry { 0%,10% { transform: rotate(0deg) } 22% { transform: rotate(-6deg) } 30% { transform: rotate(0deg) } 38% { transform: rotate(-6deg) } 46%,55% { transform: rotate(0deg) } 75% { transform: rotate(-42deg) } 92%,100% { transform: rotate(0deg) } }
+        @keyframes g23-cam { 0%,50% { transform: rotate(0deg) } 60%,88% { transform: rotate(70deg) } 100% { transform: rotate(0deg) } }
+        @keyframes g23-blocked { 0%,10% { opacity: 0 } 20%,45% { opacity: 1 } 55%,100% { opacity: 0 } }
+        @keyframes g23-released { 0%,55% { opacity: 0 } 65%,90% { opacity: 1 } 100% { opacity: 0 } }
+        .g23-door { transform-box: fill-box; transform-origin: 0% 50%; }
+        .g23-door--anim { animation: g23-doorTry 6s ease-in-out infinite; }
+        .g23-cam { transform-box: fill-box; transform-origin: 50% 50%; }
+        .g23-cam--anim { animation: g23-cam 6s ease-in-out infinite; }
+        .g23-blocked--anim { animation: g23-blocked 6s ease-in-out infinite; }
+        .g23-released--anim { animation: g23-released 6s ease-in-out infinite; }
+        .g23-stage[data-paused] * { animation-play-state: paused !important; }
       `}</style>
-      <g className="ga23-stage" data-paused={paused ? '' : undefined}>
-        {/* bushing flange base */}
-        <rect x="40" y="150" width="240" height="20" rx="6" fill="var(--panel-2)" stroke="var(--slate)" strokeWidth="2" />
-        {/* two bushings rising up */}
-        <rect x="92" y="118" width="26" height="36" rx="4" fill="var(--navy)" />
-        <rect x="202" y="118" width="26" height="36" rx="4" fill="var(--navy)" />
-        {/* busbar fitted across both bushings */}
-        <rect x="80" y="100" width="160" height="22" rx="6" fill="var(--accent)" opacity="0.92" />
-        {/* seated nuts on the busbar */}
-        <circle cx="105" cy="111" r="9" fill="var(--ink2)" />
-        <circle cx="215" cy="111" r="9" fill="var(--ink2)" />
-
-        {/* torque progress arc around the working nut */}
-        <circle cx="105" cy="111" r="25" fill="none" stroke="var(--ok)" strokeWidth="4" strokeLinecap="round"
-          strokeDasharray="168" strokeDashoffset="168" transform="rotate(-90 105 111)" className={anim('ga23-arc')} />
-
-        {/* Allen socket + extension rod turning the nut */}
-        <g className={anim('ga23-tool')}>
-          <rect x="98" y="40" width="14" height="68" rx="6" fill="var(--slate)" />
-          <rect x="95" y="98" width="20" height="16" rx="4" fill="var(--ink)" />
-          <rect x="100" y="34" width="10" height="12" rx="3" fill="var(--ink2)" />
+      <g className="g23-stage" data-paused={paused ? '' : undefined}>
+        <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+        <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
+        {/* panel frame */}
+        <rect x="60" y="34" width="130" height="180" rx="4" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+        {/* door (hinged left) */}
+        <g className={anim('g23-door')}>
+          <rect x="70" y="46" width="108" height="156" rx="3" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+          {[0,1,2,3].map((i) => <circle key={`l${i}`} cx="76" cy={60 + i * 42} r="2" fill="#9BA19A" />)}
+          <rect x="164" y="112" width="6" height="20" rx="2" fill="#6E767E" />
+          <circle cx="120" cy="70" r="3.5" fill="#C0392B" />
         </g>
-
-        {/* click spark at the click point */}
-        <g className={anim('ga23-spark')}>
-          <g transform="translate(105 111)">
-            <line x1="-15" y1="0" x2="-26" y2="0" stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-            <line x1="15" y1="0" x2="26" y2="0" stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-            <line x1="0" y1="-15" x2="0" y2="-26" stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-            <line x1="11" y1="-11" x2="19" y2="-19" stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-            <line x1="-11" y1="-11" x2="-19" y2="-19" stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-          </g>
+        {/* interlock assembly (right of door) */}
+        <rect x="188" y="104" width="26" height="44" rx="4" fill="#C2C6BF" stroke="#7C837B" strokeWidth="2" />
+        <g className={anim('g23-cam')}>
+          <rect x="192" y="120" width="26" height="9" rx="3" fill="#C0392B" stroke="#8A2A20" strokeWidth="1.5" />
         </g>
-
-        {/* torque value stamp */}
-        <g className={anim('ga23-tag')}>
-          <rect x="196" y="186" width="86" height="32" rx="8" fill="var(--accent2)" />
-          <text x="239" y="208" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="18"
-            fontWeight="700" fill="var(--on-accent)">47 Nm</text>
+        <circle cx="201" cy="124" r="3" fill="#3A4046" />
+        {/* status labels */}
+        <g className={anim('g23-blocked')}>
+          <rect x="226" y="82" width="80" height="26" rx="8" fill="var(--warn)" />
+          <text x="266" y="100" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fontWeight="700" fill="#FFFFFF">LOCKED</text>
         </g>
-
-        {/* size badge */}
-        <rect x="40" y="186" width="68" height="32" rx="8" fill="var(--panel)" stroke="var(--slate)" strokeWidth="2" />
-        <text x="74" y="208" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="15"
-          fontWeight="700" fill="var(--ink)">8 mm</text>
+        <g className={anim('g23-released')}>
+          <rect x="226" y="82" width="80" height="26" rx="8" fill="#1F9D6B" />
+          <text x="266" y="100" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fontWeight="700" fill="#FFFFFF">OPEN</text>
+        </g>
+        {/* full-cycle test note + hazard */}
+        <text x="266" y="130" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10" fill="var(--ink2)">test full</text>
+        <text x="266" y="143" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10" fill="var(--ink2)">cycle</text>
+        <g>
+          <polygon points="278,174 294,202 262,202" fill="var(--warn)" />
+          <text x="278" y="197" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="16" fontWeight="800" fill="#FFFFFF">!</text>
+        </g>
       </g>
     </svg>
   )

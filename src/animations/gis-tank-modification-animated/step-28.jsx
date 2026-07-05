@@ -1,66 +1,132 @@
+// GIS Tank Modification — Step 28: "Hand over the panel to QC1"
+// Finished tall ALFA-G panel; a walk-around highlight circles the panel while
+// clipboard checklist ticks appear one by one; a "QC1" badge with a handover
+// arrow closes the loop. ~5.5s loop.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Stacking current transformers with insulation rubbers on the support, keeping a one millimetre gap above the plate">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Walk-around check circling the finished panel, checklist ticks appearing, handover to QC1"
+    >
       <style>{`
-        @keyframes ga28-drop { 0% { transform: translateY(-58px); opacity: 0 } 14% { opacity: 1 } 46%,84% { transform: translateY(0); opacity: 1 } 100% { transform: translateY(-58px); opacity: 0 } }
-        @keyframes ga28-pulse { 0%,40% { opacity: 0.3 } 60% { opacity: 1 } 100% { opacity: 0.3 } }
-        @keyframes ga28-flow { 0% { stroke-dashoffset: 60 } 100% { stroke-dashoffset: 0 } }
-        @keyframes ga28-rods { 0%,46% { opacity: 0.35 } 70% { opacity: 1 } 100% { opacity: 0.35 } }
-        .ga28-ct { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga28-ct--anim { animation: ga28-drop 3.2s ease-in-out infinite; }
-        .ga28-gap { opacity: 0.3; }
-        .ga28-gap--anim { animation: ga28-pulse 3.2s ease-in-out infinite; }
-        .ga28-wire--anim { animation: ga28-flow 3.2s linear infinite; }
-        .ga28-rodline { opacity: 0.35; }
-        .ga28-rodline--anim { animation: ga28-rods 3.2s ease-in-out infinite; }
-        .ga28-stage[data-paused] * { animation-play-state: paused !important; }
+        .g28-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* walk-around: a highlight dot orbits the panel on a dashed ellipse */
+        .g28-orbit--anim { animation: g28-orbit 5.5s linear infinite; transform-origin: 128px 120px; }
+        @keyframes g28-orbit {
+          0%   { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        /* checklist ticks appear sequentially */
+        .g28-tick--anim { animation: g28-tick 5.5s ease-in-out infinite; }
+        @keyframes g28-tick {
+          0%,10%   { opacity: 0; transform: scale(0.4); }
+          16%,90%  { opacity: 1; transform: scale(1); }
+          97%,100% { opacity: 0; transform: scale(0.4); }
+        }
+        /* QC1 badge + handover arrow at the end of the walk-around */
+        .g28-qc--anim { animation: g28-qc 5.5s ease-in-out infinite; }
+        @keyframes g28-qc {
+          0%,62%   { opacity: 0; transform: translateX(-12px); }
+          72%,92%  { opacity: 1; transform: translateX(0); }
+          98%,100% { opacity: 0; transform: translateX(-12px); }
+        }
       `}</style>
-      <g className="ga28-stage" data-paused={paused ? '' : undefined}>
-        {/* base support plate */}
-        <rect x="60" y="190" width="200" height="20" rx="6" fill="var(--panel-2)" stroke="var(--slate)" strokeWidth="2" />
 
-        {/* two supporting rods rising from the plate */}
-        <rect x="84" y="78" width="9" height="114" rx="4" fill="var(--slate)" />
-        <rect x="227" y="78" width="9" height="114" rx="4" fill="var(--slate)" />
-        {/* wire leading through the rods */}
-        <path d="M93 112 Q160 96 227 112" fill="none" stroke="var(--accent2)" strokeWidth="4"
-          strokeLinecap="round" strokeDasharray="60" className={anim('ga28-wire')} />
+      <rect x="0" y="0" width="320" height="240" fill="var(--panel)" rx="10" />
+      <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+      <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
 
-        {/* stack: rubber - CT - rubber - rubber - CT - rubber (bottom to top) */}
-        {/* bottom rubber pad on the support */}
-        <rect x="96" y="176" width="128" height="10" rx="3" fill="var(--warn)" opacity="0.9" />
-        {/* first CT ring */}
-        <rect x="92" y="148" width="136" height="28" rx="8" fill="var(--navy)" />
-        <ellipse cx="160" cy="162" rx="26" ry="10" fill="var(--panel)" stroke="var(--slate)" strokeWidth="2" />
-        {/* paired rubbers between the CTs */}
-        <rect x="96" y="138" width="128" height="9" rx="3" fill="var(--warn)" opacity="0.9" />
-        <rect x="96" y="128" width="128" height="9" rx="3" fill="var(--warn)" opacity="0.9" />
+      {/* ===== finished ALFA-G panel (front view, left of centre) ===== */}
+      <g>
+        <rect x="83" y="24" width="90" height="190" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+        <rect x="108" y="16" width="40" height="10" fill="#C2C6BF" stroke="#7C837B" strokeWidth="1.5" />
+        <circle cx="128" cy="21" r="4" fill="#E1E4DE" stroke="#8A9089" strokeWidth="1.2" />
+        {/* upper LV box */}
+        <rect x="90" y="32" width="76" height="34" fill="#C2C6BF" stroke="#7C837B" strokeWidth="2" />
+        <circle cx="100" cy="42" r="3" fill="#C0392B" stroke="#7C837B" strokeWidth="1" />
+        <circle cx="110" cy="42" r="3" fill="#C0392B" stroke="#7C837B" strokeWidth="1" />
+        <circle cx="156" cy="56" r="3.5" fill="#1E2226" />
+        {/* mid tank bolted cover with stud row */}
+        <rect x="92" y="74" width="72" height="70" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+        <g fill="#9BA19A">
+          {[80, 96, 112, 128, 140].map((y) => (
+            <circle key={'a' + y} cx="96" cy={y} r="2" />
+          ))}
+          {[80, 96, 112, 128, 140].map((y) => (
+            <circle key={'b' + y} cx="160" cy={y} r="2" />
+          ))}
+        </g>
+        {/* labels already applied (from steps 25–26) */}
+        <rect x="106" y="100" width="30" height="14" rx="2" fill="#FFFFFF" stroke="#8A9089" strokeWidth="1" />
+        <rect x="106" y="100" width="30" height="3.5" fill="#0A82C6" />
+        {/* two round CT terminal plates */}
+        {[108, 148].map((cx) => (
+          <g key={cx}>
+            <circle cx={cx} cy="176" r="16" fill="#EDEFEA" stroke="#8A9089" strokeWidth="2" />
+            {[0, 60, 120, 180, 240, 300].map((deg) => (
+              <circle
+                key={deg}
+                cx={cx + 12 * Math.cos((deg * Math.PI) / 180)}
+                cy={176 + 12 * Math.sin((deg * Math.PI) / 180)}
+                r="1.6"
+                fill="#A9AEA6"
+              />
+            ))}
+            <circle cx={cx} cy="176" r="4" fill="#C8CCC9" stroke="#8A9089" strokeWidth="1" />
+          </g>
+        ))}
+        <rect x="83" y="202" width="90" height="8" fill="#A9AEA6" />
+        <rect x="88" y="210" width="10" height="5" fill="#6E767E" />
+        <rect x="158" y="210" width="10" height="5" fill="#6E767E" />
+      </g>
 
-        {/* second CT being lowered into place */}
-        <g className={anim('ga28-ct')}>
-          <rect x="92" y="98" width="136" height="28" rx="8" fill="var(--accent)" opacity="0.95" />
-          <ellipse cx="160" cy="112" rx="26" ry="10" fill="var(--panel)" stroke="var(--slate)" strokeWidth="2" />
-          {/* one rubber on top of the upper CT */}
-          <rect x="96" y="90" width="128" height="9" rx="3" fill="var(--warn)" />
+      <g className="g28-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== walk-around highlight: dashed orbit + moving dot ===== */}
+        <ellipse cx="128" cy="120" rx="72" ry="108" fill="none" stroke="var(--accent)" strokeWidth="1.6" strokeDasharray="6 7" opacity="0.55" />
+        <g className={anim('g28-orbit')} style={reduced ? undefined : undefined}>
+          <circle cx="128" cy="12" r="6" fill="var(--accent)" opacity="0.95" />
+          <circle cx="128" cy="12" r="10" fill="none" stroke="var(--accent)" strokeWidth="1.5" opacity="0.4" />
         </g>
 
-        {/* 1 mm gap callout above the plate */}
-        <g className={anim('ga28-gap')}>
-          <line x1="246" y1="176" x2="246" y2="190" stroke="var(--ok)" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="242" y1="176" x2="250" y2="176" stroke="var(--ok)" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="242" y1="190" x2="250" y2="190" stroke="var(--ok)" strokeWidth="2.5" strokeLinecap="round" />
-          <rect x="256" y="170" width="46" height="26" rx="7" fill="var(--ok)" />
-          <text x="279" y="188" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="14"
-            fontWeight="700" fill="var(--on-accent)">1 mm</text>
+        {/* ===== clipboard checklist (right) ===== */}
+        <g>
+          <rect x="226" y="52" width="72" height="96" rx="5" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+          <rect x="248" y="46" width="28" height="12" rx="4" fill="#6E767E" />
+          {[0, 1, 2].map((i) => (
+            <g key={i}>
+              <rect x="236" y={70 + i * 24} width="12" height="12" rx="2" fill="#FFFFFF" stroke="#8A9089" strokeWidth="1.5" />
+              <line x1="254" y1={76 + i * 24} x2="288" y2={76 + i * 24} stroke="#A9AEA6" strokeWidth="2.5" strokeLinecap="round" />
+              <g
+                className={anim('g28-tick')}
+                style={
+                  reduced
+                    ? { opacity: 1 }
+                    : { animationDelay: `${0.9 + i * 0.9}s`, transformOrigin: `${242}px ${76 + i * 24}px` }
+                }
+              >
+                <path
+                  d={`M 238 ${76 + i * 24} l 3 3.5 l 6 -7`}
+                  fill="none" stroke="#2E9E5B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                />
+              </g>
+            </g>
+          ))}
         </g>
 
-        {/* rod-through-wire highlight badge */}
-        <g className={anim('ga28-rodline')}>
-          <rect x="18" y="170" width="58" height="26" rx="7" fill="var(--panel)" stroke="var(--slate)" strokeWidth="2" />
-          <text x="47" y="188" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13"
-            fontWeight="700" fill="var(--ink)">3x CT</text>
+        {/* ===== QC1 handover badge + arrow ===== */}
+        <g className={anim('g28-qc')} style={reduced ? { opacity: 1 } : undefined}>
+          <path d="M 214 176 h 34" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" fill="none" />
+          <path d="M 248 176 l -8 -5 M 248 176 l -8 5" stroke="var(--accent)" strokeWidth="3" strokeLinecap="round" fill="none" />
+          <rect x="254" y="162" width="46" height="28" rx="6" fill="var(--accent)" />
+          <text x="277" y="181" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13" fill="var(--on-accent)">QC1</text>
         </g>
       </g>
     </svg>

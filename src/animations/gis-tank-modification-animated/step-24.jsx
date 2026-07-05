@@ -1,78 +1,153 @@
+// GIS Tank Modification — Step 24: "Fix the door handle & door stopper"
+// Zoomed LV-box door: the handle rotates and the latch tongue engages, the
+// stopper block is fitted at the frame, then the door swings open/closed
+// 3 quick times (smooth, positive latching) with a "×3" badge. ~4.5s loop.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Wipe the CT support pipes clean with tissue and methanol, inside and out">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="LV box door: handle fitted and latching, door stopper fitted, door opened and closed three times"
+    >
       <style>{`
-        @keyframes ga24-wipe { 0% { transform: translateX(0) } 50% { transform: translateX(118px) } 100% { transform: translateX(0) } }
-        @keyframes ga24-shine { 0% { opacity: 0 } 20% { opacity: 0 } 28% { opacity: 0.85 } 70% { opacity: 0.85 } 100% { opacity: 0 } }
-        @keyframes ga24-drip { 0% { transform: translateY(0); opacity: 0 } 12% { opacity: 1 } 70% { opacity: 1 } 100% { transform: translateY(30px); opacity: 0 } }
-        @keyframes ga24-spark { 0% { opacity: 0; transform: scale(0.4) } 50% { opacity: 1; transform: scale(1) } 100% { opacity: 0; transform: scale(0.4) } }
-        .ga24-cloth { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga24-cloth--anim { animation: ga24-wipe 3s ease-in-out infinite; }
-        .ga24-shine { opacity: 0; }
-        .ga24-shine--anim { animation: ga24-shine 3s ease-in-out infinite; }
-        .ga24-drip { opacity: 0; transform-box: fill-box; transform-origin: 50% 0%; }
-        .ga24-drip--anim { animation: ga24-drip 3s linear infinite; }
-        .ga24-drip2 { opacity: 0; transform-box: fill-box; transform-origin: 50% 0%; }
-        .ga24-drip2--anim { animation: ga24-drip 3s linear infinite; animation-delay: 1.4s; }
-        .ga24-spark { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga24-spark--anim { animation: ga24-spark 3s ease-in-out infinite; }
-        .ga24-spark2 { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga24-spark2--anim { animation: ga24-spark 3s ease-in-out infinite; animation-delay: 1s; }
-        .ga24-stage[data-paused] * { animation-play-state: paused !important; }
+        .g24-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* handle lever rotates to latch (early in the cycle) */
+        .g24-handle--anim { animation: g24-handle 4.5s ease-in-out infinite; transform-origin: 0px 0px; }
+        @keyframes g24-handle {
+          0%       { transform: rotate(-55deg); }
+          10%,16%  { transform: rotate(0deg); }
+          92%,100% { transform: rotate(-55deg); }
+        }
+        /* latch tongue slides into the keeper as the handle turns */
+        .g24-latch--anim { animation: g24-latch 4.5s ease-in-out infinite; }
+        @keyframes g24-latch {
+          0%       { transform: translateX(-8px); }
+          10%,16%  { transform: translateX(0); }
+          92%,100% { transform: translateX(-8px); }
+        }
+        /* stopper block drops into place at the frame */
+        .g24-stop--anim { animation: g24-stop 4.5s ease-in-out infinite; }
+        @keyframes g24-stop {
+          0%       { transform: translateY(-14px); opacity: 0; }
+          18%      { transform: translateY(-14px); opacity: 0; }
+          26%,100% { transform: translateY(0); opacity: 1; }
+        }
+        /* door swings open/closed 3 quick times (scaleX around the hinge) */
+        .g24-door--anim { animation: g24-door 4.5s ease-in-out infinite; transform-origin: 96px 0px; }
+        @keyframes g24-door {
+          0%,30%   { transform: scaleX(1); }
+          36%      { transform: scaleX(0.22); }
+          42%      { transform: scaleX(1); }
+          50%      { transform: scaleX(0.22); }
+          56%      { transform: scaleX(1); }
+          64%      { transform: scaleX(0.22); }
+          70%,100% { transform: scaleX(1); }
+        }
+        /* ×3 badge shows while the door is cycling */
+        .g24-badge--anim { animation: g24-badge 4.5s ease-in-out infinite; }
+        @keyframes g24-badge {
+          0%,26%   { opacity: 0; transform: scale(0.6); }
+          32%,72%  { opacity: 1; transform: scale(1); }
+          80%,100% { opacity: 0; transform: scale(0.6); }
+        }
+        /* green tick after the third close */
+        .g24-check--anim { animation: g24-check 4.5s ease-in-out infinite; }
+        @keyframes g24-check {
+          0%,72%   { opacity: 0; transform: scale(0.5); }
+          78%      { opacity: 1; transform: scale(1.1); }
+          84%,90%  { opacity: 1; transform: scale(1); }
+          96%,100% { opacity: 0; transform: scale(0.5); }
+        }
       `}</style>
-      <g className="ga24-stage" data-paused={paused ? '' : undefined}>
-        {/* table the pipe rests on */}
-        <rect x="34" y="172" width="232" height="10" rx="4" fill="var(--slate)" />
-        <rect x="50" y="182" width="14" height="30" rx="3" fill="var(--slate)" opacity="0.6" />
-        <rect x="236" y="182" width="14" height="30" rx="3" fill="var(--slate)" opacity="0.6" />
 
-        {/* CT support pipe — a hollow tube, inside + outside */}
-        <rect x="48" y="128" width="206" height="40" rx="20" fill="var(--navy)" />
-        <rect x="52" y="132" width="198" height="32" rx="16" fill="var(--panel-2)" />
-        {/* open bore on the right showing the inside surface */}
-        <ellipse cx="250" cy="148" rx="9" ry="18" fill="var(--bg)" stroke="var(--ink2)" strokeWidth="2.5" />
-        <ellipse cx="250" cy="148" rx="4" ry="10" fill="var(--slate)" opacity="0.6" />
+      <rect x="0" y="0" width="320" height="240" fill="var(--panel)" rx="10" />
+      {/* floor band */}
+      <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+      <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
 
-        {/* clean shine trail revealed along the pipe surface */}
-        <g className={anim('ga24-shine')}>
-          <rect x="60" y="136" width="176" height="8" rx="4" fill="#fff" opacity="0.7" />
-        </g>
-        <g className={anim('ga24-spark')}>
-          <path d="M92 134 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z" fill="#fff" />
-        </g>
-        <g className={anim('ga24-spark2')}>
-          <path d="M174 134 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z" fill="#fff" />
+      {/* ===== panel body around the LV-box door (RAL 7035, zoomed) ===== */}
+      <rect x="70" y="28" width="180" height="186" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+      {/* frame opening for the door */}
+      <rect x="96" y="52" width="112" height="132" fill="#A9AEA6" stroke="#7C837B" strokeWidth="2" />
+      {/* perimeter stud row on the fixed body */}
+      <g fill="#9BA19A">
+        {[62, 96, 130, 164, 198].map((y) => (
+          <circle key={'l' + y} cx="80" cy={y} r="2" />
+        ))}
+        {[62, 96, 130, 164, 198].map((y) => (
+          <circle key={'r' + y} cx="240" cy={y} r="2" />
+        ))}
+      </g>
+      {/* two red pilot lights on the body above the door */}
+      <circle cx="120" cy="40" r="4" fill="#C0392B" stroke="#7C837B" strokeWidth="1.2" />
+      <circle cx="136" cy="40" r="4" fill="#C0392B" stroke="#7C837B" strokeWidth="1.2" />
+
+      {/* latch keeper on the frame (right side, static) */}
+      <rect x="206" y="110" width="8" height="20" fill="#6E767E" stroke="#7C837B" strokeWidth="1.5" />
+
+      <g className="g24-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== the door (hinge on the left at x=96) ===== */}
+        <g transform="translate(0 0)">
+          <g
+            className={anim('g24-door')}
+            style={reduced ? undefined : { transformBox: 'view-box' }}
+          >
+            <g transform="translate(96 52)">
+              <rect x="2" y="2" width="106" height="128" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+              {/* door stiffening lines */}
+              <line x1="14" y1="18" x2="96" y2="18" stroke="#C2C6BF" strokeWidth="2" />
+              <line x1="14" y1="114" x2="96" y2="114" stroke="#C2C6BF" strokeWidth="2" />
+              {/* hinges */}
+              <rect x="0" y="16" width="6" height="14" fill="#6E767E" />
+              <rect x="0" y="102" width="6" height="14" fill="#6E767E" />
+              {/* latch tongue sliding into the keeper */}
+              <g className={anim('g24-latch')} style={reduced ? undefined : undefined}>
+                <rect x="104" y="62" width="14" height="8" fill="#AEB4B9" stroke="#6E767E" strokeWidth="1.5" />
+              </g>
+              {/* handle base + rotating lever */}
+              <circle cx="92" cy="66" r="7" fill="#1E2226" />
+              <g transform="translate(92 66)">
+                <g
+                  className={anim('g24-handle')}
+                  style={reduced ? { transform: 'rotate(0deg)', transformOrigin: '0 0' } : undefined}
+                >
+                  <rect x="-3" y="-2.5" width="26" height="5" rx="2.5" fill="#1E2226" stroke="#000" strokeWidth="0.8" />
+                </g>
+                <circle cx="0" cy="0" r="2.2" fill="#6E767E" />
+              </g>
+            </g>
+          </g>
         </g>
 
-        {/* methanol drips falling onto the pipe */}
-        <g className={anim('ga24-drip')}>
-          <path d="M118 112 q-6 8 0 12 q6 -4 0 -12 z" fill="var(--sky)" />
+        {/* ===== door stopper block fitted at the bottom frame ===== */}
+        <g className={anim('g24-stop')} style={reduced ? { opacity: 1 } : undefined}>
+          <rect x="214" y="188" width="18" height="12" rx="2" fill="#6E767E" stroke="#2B2F33" strokeWidth="1.5" />
+          <rect x="219" y="182" width="8" height="6" fill="#AEB4B9" />
         </g>
-        <g className={anim('ga24-drip2')}>
-          <path d="M168 112 q-6 8 0 12 q6 -4 0 -12 z" fill="var(--sky)" />
-        </g>
-
-        {/* tissue cloth wiping back and forth across the pipe */}
-        <g className={anim('ga24-cloth')}>
-          <path d="M70 116 q14 -10 30 0 q14 10 30 0 l4 30 q-16 10 -34 0 q-16 -10 -34 0 z"
-            fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2.5" />
-          <path d="M82 124 l0 26" stroke="var(--ink2)" strokeWidth="2" opacity="0.4" />
-          <path d="M100 122 l0 28" stroke="var(--ink2)" strokeWidth="2" opacity="0.4" />
-          <path d="M118 124 l0 26" stroke="var(--ink2)" strokeWidth="2" opacity="0.4" />
+        {/* accent arrow to the stopper */}
+        <g stroke="var(--accent)" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.9">
+          <path d="M 254 176 l -14 12" />
+          <path d="M 240 188 l 7 -1 M 240 188 l 1 -7" />
         </g>
 
-        {/* methanol bottle */}
-        <rect x="270" y="120" width="26" height="44" rx="6" fill="var(--accent)" opacity="0.95" />
-        <rect x="277" y="110" width="12" height="12" rx="3" fill="var(--ink2)" />
-        <rect x="274" y="134" width="18" height="16" rx="3" fill="var(--on-accent)" opacity="0.85" />
+        {/* ===== "×3" badge ===== */}
+        <g className={anim('g24-badge')} style={reduced ? { opacity: 1 } : { transformOrigin: '284px 60px' }}>
+          <rect x="264" y="46" width="40" height="26" rx="6" fill="var(--accent)" />
+          <text x="284" y="64" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="14" fill="var(--on-accent)">×3</text>
+        </g>
 
-        {/* labels */}
-        <rect x="34" y="44" width="104" height="24" rx="7" fill="var(--accent2)" />
-        <text x="86" y="60" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--on-accent)">METHANOL</text>
-        <rect x="146" y="44" width="56" height="24" rx="7" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2" />
-        <text x="174" y="60" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--ink)">CLEAN</text>
+        {/* ===== final green tick ===== */}
+        <g className={anim('g24-check')} style={reduced ? { opacity: 0 } : { transformOrigin: '284px 108px' }}>
+          <circle cx="284" cy="108" r="11" fill="#2E9E5B" />
+          <path d="M 279 108 l 3.5 4 l 7 -8" fill="none" stroke="#fff" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
       </g>
     </svg>
   )

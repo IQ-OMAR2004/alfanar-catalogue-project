@@ -1,77 +1,145 @@
+// GIS Tank Modification — Step 21: "Fix the rear cover & channel bracket"
+// Loop: STEP A — the channel bracket bolts to the rear frame first; STEP B —
+// the rear cover swings in and hangs onto the channel; then a sequence
+// highlight hops bolt-to-bolt while a badge confirms "BOLTS = BOM ✓".
+
 export default function StepAnimation({ paused = false, reduced = false }) {
-  const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
+  const a = (base, anim) => (reduced ? base : `${base} ${anim}`)
+
+  // rear cover perimeter bolts (tighten in sequence)
+  const BOLTS = [
+    [122, 88], [206, 88], [206, 186], [122, 186], [164, 88], [164, 186],
+  ]
+
   return (
-    <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Bolt the three bushing plates with washers and nuts and torque to 26.5 Nm">
+    <svg
+      viewBox="0 0 320 240"
+      width="100%"
+      height="100%"
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label="Channel bracket fixed first, rear cover hung onto it, bolts tightened in sequence and counted against the BOM"
+    >
       <style>{`
-        @keyframes ga21-turn { 0% { transform: rotate(-24deg) } 60% { transform: rotate(12deg) } 80% { transform: rotate(12deg) } 100% { transform: rotate(-24deg) } }
-        @keyframes ga21-arc { 0% { stroke-dashoffset: 150 } 60% { stroke-dashoffset: 34 } 80% { stroke-dashoffset: 34 } 100% { stroke-dashoffset: 150 } }
-        @keyframes ga21-spark { 0%,58% { opacity: 0; transform: scale(0.4) } 64% { opacity: 1; transform: scale(1) } 78% { opacity: 1; transform: scale(1) } 82%,100% { opacity: 0; transform: scale(0.4) } }
-        @keyframes ga21-stamp { 0%,55% { opacity: 0.35 } 66% { opacity: 1 } 80% { opacity: 1 } 90%,100% { opacity: 0.35 } }
-        .ga21-wrench { transform-box: fill-box; transform-origin: 92% 50%; transform: rotate(-24deg); }
-        .ga21-wrench--anim { animation: ga21-turn 3s ease-in-out infinite; }
-        .ga21-arc--anim { animation: ga21-arc 3s ease-in-out infinite; }
-        .ga21-spark { opacity: 0; transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga21-spark--anim { animation: ga21-spark 3s ease-in-out infinite; }
-        .ga21-stamp { opacity: 0.35; }
-        .ga21-stamp--anim { animation: ga21-stamp 3s ease-in-out infinite; }
-        .ga21-stage[data-paused] * { animation-play-state: paused !important; }
+        .g21-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* PHASE A: channel bracket slides onto the rear frame */
+        .g21-channel--anim { animation: g21-channel 5.5s ease-in-out infinite; }
+        @keyframes g21-channel {
+          0%       { transform: translateY(-34px); opacity: 0; }
+          6%       { opacity: 1; }
+          18%,100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* PHASE B: rear cover swings in and drops onto the channel hooks */
+        .g21-cover--anim { animation: g21-cover 5.5s ease-in-out infinite; }
+        @keyframes g21-cover {
+          0%,20%   { transform: translate(58px, -18px) rotate(6deg); opacity: 0; }
+          26%      { opacity: 1; }
+          38%      { transform: translate(0, -8px) rotate(0deg); }
+          46%,100% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+        }
+
+        /* PHASE C: sequence highlight hops bolt to bolt */
+        .g21-s1--anim { animation: g21-s 5.5s ease-in-out infinite; }
+        .g21-s2--anim { animation: g21-s 5.5s ease-in-out infinite 0.45s; }
+        .g21-s3--anim { animation: g21-s 5.5s ease-in-out infinite 0.9s; }
+        .g21-s4--anim { animation: g21-s 5.5s ease-in-out infinite 1.35s; }
+        .g21-s5--anim { animation: g21-s 5.5s ease-in-out infinite 1.8s; }
+        .g21-s6--anim { animation: g21-s 5.5s ease-in-out infinite 2.25s; }
+        @keyframes g21-s {
+          0%,50%  { opacity: 0; transform: scale(0.6); }
+          54%     { opacity: 1; transform: scale(1.15); }
+          60%     { opacity: 0.9; transform: scale(1); }
+          66%,100%{ opacity: 0; transform: scale(0.8); }
+        }
+
+        /* BOM count badge tick at the end */
+        .g21-bom--anim { animation: g21-bom 5.5s ease-in-out infinite; }
+        @keyframes g21-bom {
+          0%,84%  { opacity: 0.35; }
+          90%,98% { opacity: 1; }
+          100%    { opacity: 0.35; }
+        }
       `}</style>
-      <g className="ga21-stage" data-paused={paused ? '' : undefined}>
-        {/* mounting flange the plates bolt onto */}
-        <rect x="26" y="40" width="40" height="160" rx="8" fill="var(--navy)" />
-        <rect x="34" y="48" width="24" height="144" rx="5" fill="var(--slate)" opacity="0.6" />
 
-        {/* 3 bushing plates seated on the flange */}
-        <g>
-          <rect x="58" y="52" width="120" height="40" rx="6" fill="var(--accent)" opacity="0.92" />
-          <rect x="58" y="100" width="120" height="40" rx="6" fill="var(--accent)" opacity="0.92" />
-          <rect x="58" y="148" width="120" height="40" rx="6" fill="var(--accent)" opacity="0.92" />
-          {/* bushing stub on each plate */}
-          <circle cx="140" cy="72" r="13" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="3" />
-          <circle cx="140" cy="120" r="13" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="3" />
-          <circle cx="140" cy="168" r="13" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="3" />
-        </g>
+      <rect x="0" y="0" width="320" height="240" fill="var(--bg)" />
+      <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+      <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
 
-        {/* washer + nut bolting points (12x) */}
-        <g fill="var(--ink2)">
-          <path d="M74 64 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" />
-          <path d="M104 80 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" />
-          <path d="M74 112 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" />
-          <path d="M104 128 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" />
-          <path d="M74 160 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" />
-          <path d="M104 176 l5 -3 l5 3 v6 l-5 3 l-5 -3 z" />
-        </g>
-
-        {/* target nut (middle plate) with torque progress arc */}
-        <circle cx="84" cy="120" r="11" fill="var(--panel-2)" stroke="var(--ink)" strokeWidth="2" />
-        <path d="M78 120 l6 -3.5 l6 3.5 v7 l-6 3.5 l-6 -3.5 z" fill="var(--ink2)" />
-        <circle cx="84" cy="120" r="20" fill="none" stroke="var(--ok)" strokeWidth="4" strokeLinecap="round"
-          strokeDasharray="150" strokeDashoffset="150" transform="rotate(-90 84 120)" className={anim('ga21-arc')} />
-
-        {/* "click" spark when torque reaches target */}
-        <g className={anim('ga21-spark')} transform="translate(84 120)">
-          <path d="M0 -26 l3 -8 M0 26 l3 8 M-26 0 l-8 -3 M26 0 l8 3 M18 -18 l6 -6 M-18 18 l-6 6"
-            stroke="var(--warn)" strokeWidth="3" strokeLinecap="round" />
-        </g>
-
-        {/* 17 mm socket + torque wrench driving the nut */}
-        <g className={anim('ga21-wrench')}>
-          <rect x="84" y="113" width="124" height="14" rx="7" fill="var(--ink2)" />
-          <circle cx="90" cy="120" r="12" fill="var(--slate)" stroke="var(--ink2)" strokeWidth="3" />
-          <rect x="200" y="110" width="10" height="20" rx="3" fill="var(--ink)" />
-        </g>
-
-        {/* spec badges */}
-        <rect x="216" y="44" width="80" height="26" rx="7" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="2" />
-        <text x="256" y="62" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--ink)">17 mm</text>
-        <g className={anim('ga21-stamp')}>
-          <rect x="216" y="78" width="80" height="30" rx="7" fill="var(--ok)" />
-          <text x="256" y="98" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13" fill="#fff">26.5 Nm</text>
-        </g>
-        <rect x="216" y="116" width="80" height="26" rx="7" fill="var(--accent2)" />
-        <text x="256" y="134" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="12" fill="var(--on-accent)">12x</text>
+      {/* ===== rear of the panel: tall flat tank, open rear aperture ===== */}
+      <rect x="96" y="26" width="136" height="188" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+      {/* open rear aperture (dark) waiting for the cover */}
+      <rect x="112" y="72" width="104" height="122" fill="#A9AEA6" stroke="#7C837B" strokeWidth="2" />
+      {/* frame stud row around the aperture */}
+      <g fill="#9BA19A">
+        <circle cx="106" cy="80" r="2" /><circle cx="106" cy="120" r="2" /><circle cx="106" cy="160" r="2" /><circle cx="106" cy="196" r="2" />
+        <circle cx="222" cy="80" r="2" /><circle cx="222" cy="120" r="2" /><circle cx="222" cy="160" r="2" /><circle cx="222" cy="196" r="2" />
       </g>
+      {/* neighbouring panel hinted at left */}
+      <rect x="58" y="26" width="38" height="188" fill="#C2C6BF" stroke="#7C837B" strokeWidth="2" />
+
+      <g className="g21-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== PHASE A: channel bracket (C-profile) across the aperture top ===== */}
+        <g className={a('g21-channel', 'g21-channel--anim')} style={reduced ? { opacity: 1 } : undefined}>
+          <path d="M 112 64 h 104 v 12 h -6 v -6 h -92 v 6 h -6 Z"
+            fill="#AEB4B9" stroke="#6E767E" strokeWidth="2" strokeLinejoin="round" />
+          {/* its two fixing bolts */}
+          <g fill="#6E767E">
+            <circle cx="120" cy="70" r="3" />
+            <circle cx="208" cy="70" r="3" />
+          </g>
+        </g>
+        {/* "1st" tag on the channel */}
+        <g opacity="0.9">
+          <rect x="238" y="58" width="40" height="18" rx="4" fill="var(--accent)" />
+          <text x="258" y="71" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--on-accent)">1st</text>
+        </g>
+
+        {/* ===== PHASE B: rear cover hangs onto the channel ===== */}
+        <g className={a('g21-cover', 'g21-cover--anim')} style={{ transformOrigin: '164px 80px' }}>
+          <rect x="114" y="78" width="100" height="116" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2.5" />
+          {/* hanging hooks engaging the channel lip */}
+          <path d="M 126 78 v -8 h 6 v 8" fill="none" stroke="#6E767E" strokeWidth="2.5" />
+          <path d="M 196 78 v -8 h 6 v 8" fill="none" stroke="#6E767E" strokeWidth="2.5" />
+          {/* swage stiffeners */}
+          <line x1="126" y1="112" x2="202" y2="112" stroke="#C2C6BF" strokeWidth="2" />
+          <line x1="126" y1="152" x2="202" y2="152" stroke="#C2C6BF" strokeWidth="2" />
+          {/* perimeter bolt heads */}
+          {BOLTS.map(([x, y], i) => (
+            <g key={i} transform={`translate(${x} ${y})`}>
+              <path d="M -4.2 0 L -2.1 -3.6 h 4.2 L 4.2 0 L 2.1 3.6 h -4.2 Z" fill="#AEB4B9" stroke="#6E767E" strokeWidth="1.4" />
+            </g>
+          ))}
+          {/* "2nd" tag on the cover */}
+          <rect x="140" y="126" width="46" height="18" rx="4" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="1.2" />
+          <text x="163" y="139" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink2)">2nd</text>
+        </g>
+
+        {/* ===== PHASE C: sequence highlight bolt-to-bolt ===== */}
+        {!reduced && BOLTS.map(([x, y], i) => (
+          <circle
+            key={i}
+            className={`g21-s${i + 1}--anim`}
+            cx={x} cy={y} r="8.5"
+            fill="none" stroke="var(--accent)" strokeWidth="2.5"
+            style={{ transformOrigin: `${x}px ${y}px` }}
+            opacity="0"
+          />
+        ))}
+
+        {/* ===== BOM count badge ===== */}
+        <g className={a('g21-bom', 'g21-bom--anim')} style={reduced ? { opacity: 1 } : undefined}>
+          <rect x="236" y="150" width="72" height="40" rx="6" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="1.5" />
+          <text x="272" y="166" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink2)">×6 = BOM</text>
+          <path d="M 262 176 l 4.5 5 l 9 -10" fill="none" stroke="var(--ok, #2e9e5b)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      </g>
+
+      {/* title badge */}
+      <rect x="12" y="26" width="40" height="150" rx="0" fill="none" />
+      <rect x="236" y="98" width="72" height="22" rx="5" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="1" />
+      <text x="272" y="113" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10" fill="var(--ink2)">SEQ 1→6</text>
     </svg>
   )
 }

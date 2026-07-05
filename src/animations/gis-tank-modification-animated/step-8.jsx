@@ -1,7 +1,8 @@
-// GIS Tank — Step 8: Remove the upper busbar & bushings.
-// An impact wrench with a 17 mm socket spins the hex nut loose; the upper
-// busbar then lifts away (removed) while the bushing + lower plate stay below.
-// An up-arrow and "17 mm" stamp reinforce the lift-off. Seamless loop, themed.
+// GIS Tank Modification — Step 8: "Perform the vacuum process"
+// Orange vacuum machine cart connected by a black hose to the closed tank; the
+// gauge needle drops as the tank evacuates, mono readout "0.8 mbar". Warning
+// triangle: certified personnel only. Loop ~4.5s.
+
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
 
@@ -12,60 +13,147 @@ export default function StepAnimation({ paused = false, reduced = false }) {
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label="Loosening the nut and lifting off the upper busbar and bushing"
+      aria-label="Orange vacuum machine cart evacuating the tank through a black hose; gauge needle falling to 0.8 millibar"
     >
       <style>{`
-        @keyframes ga8-spin { 0% { transform: rotate(0deg) } 50% { transform: rotate(-180deg) } 100% { transform: rotate(-360deg) } }
-        @keyframes ga8-buzz { 0%,100% { transform: translate(0,0) } 25% { transform: translate(-1px,1px) } 50% { transform: translate(1px,-1px) } 75% { transform: translate(-1px,-1px) } }
-        @keyframes ga8-lift { 0% { transform: translateY(0); opacity: 1 } 45% { transform: translateY(-46px); opacity: 1 } 70% { transform: translateY(-46px); opacity: 0 } 71% { transform: translateY(0); opacity: 0 } 86% { transform: translateY(0); opacity: 1 } 100% { transform: translateY(0); opacity: 1 } }
-        @keyframes ga8-arrow { 0%,30% { opacity: 0; transform: translateY(6px) } 45% { opacity: 1; transform: translateY(-10px) } 64% { opacity: 0; transform: translateY(-22px) } 100% { opacity: 0; transform: translateY(6px) } }
-        .ga8-socket { transform-box: fill-box; transform-origin: center; }
-        .ga8-socket--anim { animation: ga8-spin 3s linear infinite; }
-        .ga8-tool { transform-box: fill-box; transform-origin: center; }
-        .ga8-tool--anim { animation: ga8-buzz 0.16s steps(2) infinite; }
-        .ga8-bar { transform-box: fill-box; transform-origin: center; }
-        .ga8-bar--anim { animation: ga8-lift 3s ease-in-out infinite; }
-        .ga8-arrow { transform-box: fill-box; transform-origin: center; opacity: 0; }
-        .ga8-arrow--anim { animation: ga8-arrow 3s ease-in-out infinite; }
-        .ga8-stage[data-paused] * { animation-play-state: paused !important; }
+        .g8-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* gauge needle sweeps down from atmosphere to deep vacuum and holds */
+        .g8-needle--anim { animation: g8-needle 4.5s ease-in-out infinite; transform-origin: 0 0; }
+        @keyframes g8-needle {
+          0%       { transform: rotate(72deg); }
+          55%,88%  { transform: rotate(-64deg); }
+          100%     { transform: rotate(72deg); }
+        }
+        /* extraction flow: dashes travel along the hose from tank to machine */
+        .g8-flow--anim { animation: g8-flow 1.4s linear infinite; }
+        @keyframes g8-flow {
+          0%   { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 28; }
+        }
+        /* machine running lamp blink */
+        .g8-run--anim { animation: g8-run 1.4s ease-in-out infinite; }
+        @keyframes g8-run {
+          0%,100% { opacity: 0.25; }
+          50%     { opacity: 1; }
+        }
+        /* readout appears as target reached */
+        .g8-val--anim { animation: g8-val 4.5s ease-in-out infinite; }
+        @keyframes g8-val {
+          0%,50%   { opacity: 0.25; }
+          60%,90%  { opacity: 1; }
+          100%     { opacity: 0.25; }
+        }
+        .g8-warn--anim { animation: g8-warn 2.25s ease-in-out infinite; }
+        @keyframes g8-warn {
+          0%,100% { opacity: 0.65; }
+          50%     { opacity: 1; }
+        }
       `}</style>
 
-      <g className="ga8-stage" data-paused={paused ? '' : undefined}>
-        {/* ---- Lower bushing plate (stays) ---- */}
-        <rect x="96" y="178" width="128" height="22" rx="5" fill="var(--panel-2)" stroke="var(--slate)" strokeWidth="2" />
-        {/* ---- Bushing (cone, stays) ---- */}
-        <path d="M132 178 L142 138 H178 L188 178 Z" fill="var(--panel)" stroke="var(--accent2)" strokeWidth="2.5" />
-        <rect x="150" y="120" width="20" height="22" rx="3" fill="var(--navy)" />
-        <text x="246" y="194" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fill="var(--ink2)">bushing</text>
+      <rect x="0" y="0" width="320" height="240" fill="var(--panel)" />
+      <rect x="0" y="212" width="320" height="28" fill="#B9BDB6" />
 
-        {/* ---- Up-arrow: the part comes off ---- */}
-        <g className={anim('ga8-arrow')} stroke="var(--ok)" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" fill="none">
-          <path d="M252 96 v-30 M242 76 l10 -10 l10 10" />
+      {/* warning triangle — certified personnel only */}
+      <g className={anim('g8-warn')} transform="translate(292 24)">
+        <path d="M 0 -13 L 13 10 L -13 10 Z" fill="var(--warn)" stroke="#7C837B" strokeWidth="1.5" strokeLinejoin="round" />
+        <rect x="-1.6" y="-5" width="3.2" height="8" rx="1.6" fill="#1E2226" />
+        <circle cx="0" cy="6.4" r="1.9" fill="#1E2226" />
+      </g>
+
+      {/* ===== closed ALFA-G tank (left) ===== */}
+      <g transform="translate(24 52)">
+        <rect x="0" y="0" width="110" height="160" rx="4" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+        {/* bolted top cover with studs */}
+        <rect x="8" y="8" width="94" height="14" rx="3" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+        {[16, 34, 52, 70, 88].map((cx) => (
+          <circle key={cx} cx={cx + 2} cy="15" r="2" fill="#9BA19A" />
+        ))}
+        {/* big bolted side cover */}
+        <rect x="14" y="34" width="82" height="64" rx="4" fill="#E1E4DE" stroke="#8A9089" strokeWidth="2" />
+        {[22, 42, 62, 82].map((cx) => (
+          <circle key={cx} cx={cx + 4} cy="39" r="2" fill="#9BA19A" />
+        ))}
+        {[22, 42, 62, 82].map((cx) => (
+          <circle key={'b' + cx} cx={cx + 4} cy="93" r="2" fill="#9BA19A" />
+        ))}
+        {/* two round CT terminal plates */}
+        <circle cx="36" cy="128" r="17" fill="#EDEFEA" stroke="#8A9089" strokeWidth="2" />
+        <circle cx="76" cy="128" r="17" fill="#EDEFEA" stroke="#8A9089" strokeWidth="2" />
+        {[0, 60, 120, 180, 240, 300].map((a) => (
+          <circle key={'l' + a} cx={36 + 12 * Math.cos((a * Math.PI) / 180)} cy={128 + 12 * Math.sin((a * Math.PI) / 180)} r="1.5" fill="#A9AEA6" />
+        ))}
+        {[0, 60, 120, 180, 240, 300].map((a) => (
+          <circle key={'r' + a} cx={76 + 12 * Math.cos((a * Math.PI) / 180)} cy={128 + 12 * Math.sin((a * Math.PI) / 180)} r="1.5" fill="#A9AEA6" />
+        ))}
+        {/* DN8 valve fitting on the side */}
+        <rect x="108" y="52" width="14" height="10" rx="2" fill="#AEB4B9" stroke="#6E767E" strokeWidth="1.8" />
+      </g>
+
+      {/* ===== orange vacuum machine cart (right) ===== */}
+      <g transform="translate(196 96)">
+        {/* cart body */}
+        <rect x="0" y="0" width="100" height="92" rx="6" fill="#E0701F" stroke="#B85812" strokeWidth="2.5" />
+        <rect x="0" y="66" width="100" height="26" rx="4" fill="#B85812" />
+        {/* handle bar */}
+        <path d="M 98 4 q 16 -8 16 -26" fill="none" stroke="#B85812" strokeWidth="5" strokeLinecap="round" />
+        {/* black front panel */}
+        <rect x="10" y="42" width="80" height="22" rx="3" fill="#1E2226" stroke="#111417" strokeWidth="1.5" />
+        {/* switches + run lamp */}
+        <circle cx="22" cy="53" r="3.4" fill="#C0392B" />
+        <rect x="32" y="49" width="8" height="8" rx="1.5" fill="#3FD46C" />
+        <g className={anim('g8-run')} style={reduced ? { opacity: 1 } : undefined}>
+          <circle cx="52" cy="53" r="3.4" fill="#3FD46C" />
         </g>
-
-        {/* ---- Upper busbar being removed (lifts away) ---- */}
-        <g className={anim('ga8-bar')}>
-          <rect x="60" y="98" width="160" height="26" rx="6" fill="var(--accent)" opacity="0.92" />
-          {/* hex nut on the busbar */}
-          <circle cx="160" cy="111" r="11" fill="var(--navy)" />
-          <path d="M160 101 l8.7 5 v10 l-8.7 5 l-8.7 -5 v-10 z" fill="none" stroke="var(--sky)" strokeWidth="2" />
+        {/* mono readout on panel */}
+        <g className={anim('g8-val')} style={reduced ? { opacity: 1 } : undefined}>
+          <rect x="60" y="46" width="26" height="14" rx="2" fill="#0B0D0E" />
+          <text x="73" y="56" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="7.5" fill="#3FD46C">0.8</text>
         </g>
+        {/* wheels */}
+        <circle cx="18" cy="102" r="10" fill="#2B2F33" stroke="#1E2226" strokeWidth="2" />
+        <circle cx="82" cy="102" r="10" fill="#2B2F33" stroke="#1E2226" strokeWidth="2" />
+        <circle cx="18" cy="102" r="3" fill="#AEB4B9" />
+        <circle cx="82" cy="102" r="3" fill="#AEB4B9" />
 
-        {/* ---- Impact wrench: socket spins on the nut ---- */}
-        <g className={anim('ga8-tool')}>
-          {/* socket ring on the nut */}
-          <g className={anim('ga8-socket')}>
-            <circle cx="160" cy="111" r="17" fill="none" stroke="var(--ink2)" strokeWidth="6" />
-            <path d="M160 94 v6 M160 122 v6 M143 111 h6 M171 111 h6" stroke="var(--ink2)" strokeWidth="3" strokeLinecap="round" />
+        {/* ===== gauge dial on top of the machine ===== */}
+        <g transform="translate(50 12)">
+          <circle cx="0" cy="14" r="22" fill="#EDEFEA" stroke="#6E767E" strokeWidth="2.5" />
+          {/* scale ticks */}
+          {[-64, -32, 0, 32, 64].map((a) => (
+            <line
+              key={a}
+              x1={16 * Math.sin((a * Math.PI) / 180)}
+              y1={14 - 16 * Math.cos((a * Math.PI) / 180)}
+              x2={19 * Math.sin((a * Math.PI) / 180)}
+              y2={14 - 19 * Math.cos((a * Math.PI) / 180)}
+              stroke="#6E767E"
+              strokeWidth="1.6"
+            />
+          ))}
+          {/* green target zone at the low end */}
+          <path d="M -17 4 A 19 19 0 0 0 -6 -4" fill="none" stroke="#2E9E4F" strokeWidth="3.5" />
+          <g transform="translate(0 14)">
+            <g className={anim('g8-needle')} style={reduced ? { transform: 'rotate(-64deg)' } : undefined}>
+              <line x1="0" y1="2" x2="0" y2="-16" stroke="#C0392B" strokeWidth="2.4" strokeLinecap="round" />
+            </g>
+            <circle cx="0" cy="0" r="2.6" fill="#2B2F33" />
           </g>
-          {/* wrench body + grip */}
-          <rect x="172" y="100" width="64" height="22" rx="7" fill="var(--ink2)" />
-          <rect x="208" y="118" width="22" height="40" rx="7" fill="var(--accent2)" />
-          <rect x="232" y="106" width="10" height="10" rx="2" fill="var(--slate)" />
         </g>
+      </g>
 
-        {/* ---- Spec stamp ---- */}
-        <text x="74" y="64" fontFamily="var(--font-mono)" fontSize="15" fill="var(--accent)">17 mm</text>
+      <g className="g8-stage" data-paused={paused ? '' : undefined}>
+        {/* black hose from tank valve to machine */}
+        <path d="M 146 110 q 26 34 50 22" fill="none" stroke="#26292C" strokeWidth="7" strokeLinecap="round" />
+        {/* extraction flow dashes (moving toward the machine) */}
+        <path className={anim('g8-flow')} d="M 146 110 q 26 34 50 22" fill="none" stroke="#8FA6B3" strokeWidth="2.4" strokeLinecap="round" strokeDasharray="6 8" style={reduced ? { opacity: 0.5 } : undefined} />
+
+        {/* target value badge */}
+        <g className={anim('g8-val')} style={reduced ? { opacity: 1 } : undefined}>
+          <rect x="112" y="26" width="104" height="26" rx="7" fill="var(--accent)" />
+          <text x="164" y="44" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13" fill="var(--on-accent)">0.8 mbar</text>
+          <path d="M 164 52 v 14" stroke="var(--accent)" strokeWidth="2" strokeDasharray="4 3" />
+        </g>
       </g>
     </svg>
   )

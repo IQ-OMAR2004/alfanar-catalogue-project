@@ -1,93 +1,56 @@
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
-  // 8 bolt positions evenly around the disc (face-on view)
-  const cx = 132, cy = 124, r = 64
-  const bolts = Array.from({ length: 8 }, (_, i) => {
-    const a = (-90 + i * 45) * (Math.PI / 180)
-    return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) }
-  })
   return (
     <svg viewBox="0 0 320 240" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
-      role="img" aria-label="Fit the bursting disc and tighten its eight M8 nuts to 14.70 Nm">
+      role="img" aria-label="After a passed test the discharged panel is unbolted and craned off the testing base">
       <style>{`
-        @keyframes ga33-seat { 0% { transform: scale(0.78); opacity: 0 } 24% { transform: scale(1); opacity: 1 } 100% { transform: scale(1); opacity: 1 } }
-        @keyframes ga33-orbit { 0% { transform: rotate(0deg) } 100% { transform: rotate(360deg) } }
-        @keyframes ga33-turn { 0% { transform: rotate(-26deg) } 50% { transform: rotate(16deg) } 100% { transform: rotate(-26deg) } }
-        @keyframes ga33-arc { 0% { stroke-dashoffset: 402 } 24% { stroke-dashoffset: 402 } 100% { stroke-dashoffset: 0 } }
-        @keyframes ga33-warn { 0% { opacity: 0.45 } 50% { opacity: 1 } 100% { opacity: 0.45 } }
-        @keyframes ga33-shine { 0% { transform: translateX(-26px); opacity: 0 } 30% { opacity: 0.9 } 60% { transform: translateX(26px); opacity: 0 } 100% { transform: translateX(26px); opacity: 0 } }
-        .ga33-disc { transform-box: fill-box; transform-origin: 50% 50%; }
-        .ga33-disc--anim { animation: ga33-seat 3.2s ease-in-out infinite; }
-        .ga33-orbit { transform-box: fill-box; transform-origin: ${cx}px ${cy}px; }
-        .ga33-orbit--anim { animation: ga33-orbit 3.2s linear infinite; }
-        .ga33-socket { transform-box: fill-box; transform-origin: 50% 50%; transform: rotate(-26deg); }
-        .ga33-socket--anim { animation: ga33-turn 0.8s ease-in-out infinite; }
-        .ga33-arc--anim { animation: ga33-arc 3.2s ease-in-out infinite; }
-        .ga33-warn { opacity: 0.45; }
-        .ga33-warn--anim { animation: ga33-warn 1.6s ease-in-out infinite; }
-        .ga33-shine { opacity: 0; }
-        .ga33-shine--anim { animation: ga33-shine 3.2s ease-in-out infinite; }
-        .ga33-stage[data-paused] * { animation-play-state: paused !important; }
+        @keyframes g33-pass { 0%,15% { opacity: 0.3 } 25%,100% { opacity: 1 } }
+        @keyframes g33-unbolt { 0%,25% { opacity: 1; transform: translateY(0) } 40% { transform: translateY(-12px); opacity: 1 } 50%,100% { opacity: 0; transform: translateY(-12px) } }
+        @keyframes g33-lift { 0%,50% { transform: translateY(0) } 90%,100% { transform: translateY(-30px) } }
+        .g33-pass--anim { animation: g33-pass 5s ease-in-out infinite; }
+        .g33-bolt--anim { animation: g33-unbolt 5s ease-in-out infinite; }
+        .g33-panel--anim { animation: g33-lift 5s ease-in-out infinite; }
+        .g33-stage[data-paused] * { animation-play-state: paused !important; }
       `}</style>
-      <g className="ga33-stage" data-paused={paused ? '' : undefined}>
-        {/* tank flange ring the disc seats onto */}
-        <circle cx={cx} cy={cy} r="82" fill="var(--panel-2)" stroke="var(--slate)" strokeWidth="3" />
-        <circle cx={cx} cy={cy} r="64" fill="none" stroke="var(--ink2)" strokeWidth="2" strokeDasharray="5 6" opacity="0.6" />
-
-        {/* the bursting disc dropping / seating in */}
-        <g className={anim('ga33-disc')}>
-          <circle cx={cx} cy={cy} r="58" fill="var(--accent)" stroke="var(--navy)" strokeWidth="3" />
-          <circle cx={cx} cy={cy} r="34" fill="none" stroke="var(--on-accent)" strokeWidth="2.5" opacity="0.7" />
-          <circle cx={cx} cy={cy} r="14" fill="var(--navy)" />
-          {/* clean sheen sweeping across the disc */}
-          <g clipPath="url(#ga33-clip)">
-            <rect x={cx - 6} y={cy - 58} width="12" height="116" rx="6" fill="#fff" opacity="0.5"
-              className={anim('ga33-shine')} />
-          </g>
+      <g className="g33-stage" data-paused={paused ? '' : undefined}>
+        <rect x="0" y="214" width="320" height="26" fill="#B9BDB6" />
+        <rect x="0" y="214" width="320" height="4" fill="#F2B826" />
+        {/* crane */}
+        <rect x="0" y="12" width="320" height="12" fill="#F2B826" stroke="#C8991F" strokeWidth="1.5" />
+        <rect x="130" y="24" width="34" height="14" rx="3" fill="#2C6FB4" />
+        {/* testing base stays on floor */}
+        <rect x="98" y="192" width="126" height="18" rx="2" fill="#A9AEA6" stroke="#7C837B" strokeWidth="2" />
+        <text x="161" y="230" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10" fill="var(--ink2)">testing base</text>
+        {/* bolts lifting out first */}
+        <g className={anim('g33-bolt')}>
+          <circle cx="108" cy="198" r="4" fill="#6E767E" />
+          <circle cx="214" cy="198" r="4" fill="#6E767E" />
         </g>
-        <clipPath id="ga33-clip"><circle cx={cx} cy={cy} r="58" /></clipPath>
-
-        {/* eight M8 nuts + spring washers seated in a ring */}
-        {bolts.map((b, i) => (
-          <g key={i}>
-            <circle cx={b.x} cy={b.y} r="9" fill="var(--panel)" stroke="var(--ink2)" strokeWidth="1.5" />
-            <path d={`M${b.x} ${b.y - 7} l6 3.5 v7 l-6 3.5 l-6 -3.5 v-7 z`}
-              fill="var(--slate)" stroke="var(--navy)" strokeWidth="1.5" />
-          </g>
-        ))}
-
-        {/* socket + ratchet orbiting the ring, spinning on the current nut */}
-        <g className={anim('ga33-orbit')}>
-          <g transform={`translate(${cx} ${cy - r})`}>
-            {/* torque arc that fills as the socket spins */}
-            <g className={anim('ga33-socket')}>
-              <circle cx="0" cy="0" r="13" fill="none" stroke="var(--ok)" strokeWidth="4"
-                strokeLinecap="round" strokeDasharray="60 60" />
-              <rect x="-5" y="-5" width="10" height="10" rx="2" fill="var(--ink)" />
-              <rect x="-4" y="0" width="8" height="44" rx="4" fill="var(--ink2)" />
-            </g>
-          </g>
+        {/* panel lifting off */}
+        <g className={anim('g33-panel')}>
+          <line x1="147" y1="38" x2="122" y2="70" stroke="#5A6068" strokeWidth="3" strokeDasharray="5 4" />
+          <line x1="147" y1="38" x2="198" y2="70" stroke="#5A6068" strokeWidth="3" strokeDasharray="5 4" />
+          <rect x="112" y="70" width="96" height="120" rx="4" fill="#D7DAD4" stroke="#7C837B" strokeWidth="2.5" />
+          <rect x="120" y="78" width="80" height="34" rx="3" fill="#E1E4DE" stroke="#8A9089" strokeWidth="1.5" />
+          <circle cx="132" cy="90" r="3" fill="#C0392B" />
+          <circle cx="150" cy="90" r="3.5" fill="#1E2226" />
+          {[0,1,2,3].map((i) => <circle key={i} cx={128 + i * 22} cy="122" r="2" fill="#9BA19A" />)}
+          <circle cx="142" cy="160" r="13" fill="#EDEFEA" stroke="#8A9089" strokeWidth="1.5" />
+          <circle cx="178" cy="160" r="13" fill="#EDEFEA" stroke="#8A9089" strokeWidth="1.5" />
         </g>
-
-        {/* overall torque progress arc around the disc */}
-        <circle cx={cx} cy={cy} r="64" fill="none" stroke="var(--ok)" strokeWidth="4" strokeLinecap="round"
-          strokeDasharray="402" strokeDashoffset="402" transform={`rotate(-90 ${cx} ${cy})`}
-          className={anim('ga33-arc')} />
-
-        {/* hazard glyph: improper torque risks gas leak */}
-        <g className={anim('ga33-warn')} transform="translate(268 50)">
-          <path d="M0 -18 L17 12 L-17 12 Z" fill="var(--warn)" stroke="var(--navy)" strokeWidth="2" strokeLinejoin="round" />
-          <rect x="-2.5" y="-9" width="5" height="13" rx="2" fill="var(--navy)" />
-          <circle cx="0" cy="8" r="2.6" fill="var(--navy)" />
+        {/* test passed lamp */}
+        <g className={anim('g33-pass')}>
+          <rect x="228" y="84" width="86" height="42" rx="8" fill="#1F9D6B" />
+          <text x="271" y="101" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="11" fontWeight="700" fill="#FFFFFF">TEST PASSED</text>
+          <text x="271" y="117" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="10" fill="#DFF7EA">discharged</text>
         </g>
-
-        {/* spec badges */}
-        <rect x="236" y="180" width="74" height="26" rx="8" fill="var(--accent)" />
-        <text x="273" y="198" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13"
-          fontWeight="700" fill="var(--on-accent)">M8 · 8x</text>
-        <rect x="236" y="146" width="74" height="26" rx="6" fill="var(--panel)" stroke="var(--ok)" strokeWidth="2" />
-        <text x="273" y="164" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="13" fill="var(--ok)">14.70 Nm</text>
-        <text x="22" y="36" fontFamily="var(--font-mono)" fontSize="13" fill="var(--ink)">13mm</text>
+        {/* do-not-touch hazard until released */}
+        <g>
+          <polygon points="36,84 52,112 20,112" fill="var(--warn)" />
+          <text x="36" y="107" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="16" fontWeight="800" fill="#FFFFFF">!</text>
+          <text x="36" y="128" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="9" fill="var(--ink2)">wait for</text>
+          <text x="36" y="139" textAnchor="middle" fontFamily="var(--font-mono)" fontSize="9" fill="var(--ink2)">release</text>
+        </g>
       </g>
     </svg>
   )

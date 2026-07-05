@@ -8,8 +8,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 // animations) is bundled into JS/CSS, so the default precache covers the
 // entire experience — it runs with no network once installed.
 export default defineConfig(({ command }) => ({
-  // Served from the repo subpath on GitHub Pages, but from root in local dev.
-  base: command === 'build' ? '/alfanar-catalogue-project/' : '/',
+  // Local dev/preview serve from root. GitHub Pages deploys set
+  // GHPAGES=1 (e.g. `GHPAGES=1 npm run build`) to use the repo subpath.
+  base: process.env.GHPAGES ? '/alfanar-catalogue-project/' : '/',
   plugins: [
     react(),
     VitePWA({
