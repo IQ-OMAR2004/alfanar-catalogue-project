@@ -80,7 +80,9 @@
       "hearing_protection": "Hearing protection",
       "safety_boots": "Safety boots",
       "dust_mask": "Dust mask",
-      "safety_helmet": "Safety helmet"
+      "safety_helmet": "Safety helmet",
+      "arm_sleeves": "Arm sleeves",
+      "face_shield": "Face shield"
     },
     "a11y": {
       "langSwitch": "Change language",
@@ -184,7 +186,9 @@
       "hearing_protection": "واقي السمع",
       "safety_boots": "أحذية أمان",
       "dust_mask": "كمامة غبار",
-      "safety_helmet": "خوذة أمان"
+      "safety_helmet": "خوذة أمان",
+      "arm_sleeves": "أكمام واقية للذراعين",
+      "face_shield": "قناع واقٍ للوجه"
     },
     "a11y": {
       "langSwitch": "تغيير اللغة",
@@ -288,7 +292,9 @@
       "hearing_protection": "کان کا تحفظ",
       "safety_boots": "حفاظتی جوتے",
       "dust_mask": "دھول ماسک",
-      "safety_helmet": "حفاظتی ہیلمٹ"
+      "safety_helmet": "حفاظتی ہیلمٹ",
+      "arm_sleeves": "حفاظتی بازو آستین",
+      "face_shield": "چہرے کی حفاظتی شیلڈ"
     },
     "a11y": {
       "langSwitch": "زبان تبدیل کریں",
@@ -392,7 +398,9 @@
       "hearing_protection": "श्रवण सुरक्षा",
       "safety_boots": "सुरक्षा जूते",
       "dust_mask": "धूल मास्क",
-      "safety_helmet": "सुरक्षा हेलमेट"
+      "safety_helmet": "सुरक्षा हेलमेट",
+      "arm_sleeves": "सुरक्षात्मक बाँह आस्तीन",
+      "face_shield": "फेस शील्ड"
     },
     "a11y": {
       "langSwitch": "भाषा बदलें",

@@ -1,7 +1,8 @@
 // GIS Tank Modification — Step 15: "Assemble & fix the manometer"
 // Loop: the round gas-density manometer lowers onto its tank fitting, a 32 mm
 // spanner sweeps to torque the cap nut ("G3/4 → 39.2 Nm"), then the needle
-// settles into the green rated-pressure zone. Warn triangle: SF6 leak path.
+// settles at the 0.05 MPa FILLING pressure marker (low end of the scale — the
+// tank is NOT at rated pressure at this stage). Warn triangle: SF6 leak path.
 
 export default function StepAnimation({ paused = false, reduced = false }) {
   const a = (base, anim) => (reduced ? base : `${base} ${anim}`)
@@ -13,7 +14,7 @@ export default function StepAnimation({ paused = false, reduced = false }) {
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label="Manometer gauge screwing onto the tank fitting, spanner torquing the cap nut to 39.2 Nm, needle settling in the green zone"
+      aria-label="Manometer gauge screwing onto the tank fitting, spanner torquing the cap nut to 39.2 Nm, needle reading the 0.05 MPa filling pressure"
     >
       <style>{`
         .g15-stage[data-paused] * { animation-play-state: paused !important; }

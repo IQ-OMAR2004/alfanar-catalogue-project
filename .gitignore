@@ -6,3 +6,6 @@ dist-ssr
 .vite
 dev-dist
 .claude
+
+# Large source brief (kept locally, not in repo)
+Create a GIS project plan consisting of three main cases.docx
