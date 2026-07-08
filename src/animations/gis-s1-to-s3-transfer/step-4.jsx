@@ -1,9 +1,9 @@
-// Case 1 — Step 4: "Dismantle: remove the DS/ES"
-// The grey DS/ES control box (red STATUS-INDICATOR label, round dial with red ES
-// + blue DS arrows, brass chain sprockets + dark chain, grey control-wire ribbon
-// at the top, beige A/D/E Harting blocks) is removed from the tank. First an
-// arrow disconnects the wiring ribbon, then the whole mechanism lifts UP and
-// away. Warning triangle. Loop ~5s.
+// Case 1 — Step 4: "Dismantle: remove the closing sheets & DS/ES"
+// Covers first: a cream-green closing sheet with its black O-ring lifts off the
+// tank, then the grey DS/ES control box (red STATUS-INDICATOR label, round dial
+// with red ES + blue DS arrows, brass chain sprockets + dark chain, grey
+// control-wire ribbon, beige A/D/E Harting blocks) is removed — the wiring
+// ribbon disconnects, then the whole mechanism lifts UP and away. Loop ~5s.
 
 export default function StepAnimation({ paused = false, reduced = false }) {
   const anim = (base) => (reduced ? base : `${base} ${base}--anim`)
@@ -15,10 +15,17 @@ export default function StepAnimation({ paused = false, reduced = false }) {
       height="100%"
       preserveAspectRatio="xMidYMid meet"
       role="img"
-      aria-label="Removing the DS/ES mechanism: the control wiring ribbon is disconnected, then the grey DS/ES box with its dial and chain sprockets lifts up out of the tank"
+      aria-label="Removing the closing sheets and DS/ES: a cream-green cover plate with its O-ring lifts off first, then the grey DS/ES box with its dial and chain sprockets lifts up out of the tank"
     >
       <style>{`
         .c1s4-stage[data-paused] * { animation-play-state: paused !important; }
+
+        /* closing sheet (cover plate) lifts off first, before the DS/ES */
+        .c1s4-cover--anim { animation: c1s4-cover 5s ease-in-out infinite; }
+        @keyframes c1s4-cover {
+          0%,6%    { transform: translate(0px,0px); opacity: 1; }
+          26%,100% { transform: translate(-34px,-30px); opacity: 0; }
+        }
 
         /* control-wire ribbon connector is pulled off first */
         .c1s4-ribbon--anim { animation: c1s4-ribbon 5s ease-in-out infinite; }
@@ -69,6 +76,19 @@ export default function StepAnimation({ paused = false, reduced = false }) {
       </g>
 
       <g className="c1s4-stage" data-paused={paused ? '' : undefined}>
+        {/* ===== closing sheet (cover plate) — lifts off first ===== */}
+        <g className={anim('c1s4-cover')} style={reduced ? { opacity: 0 } : undefined} transform="translate(48 150)">
+          {/* cream-green cover plate */}
+          <rect x="0" y="0" width="52" height="46" rx="4" fill="#DCE2CF" stroke="#9AA187" strokeWidth="2" />
+          {/* black O-ring loop around the rim */}
+          <rect x="5" y="5" width="42" height="36" rx="6" fill="none" stroke="#222" strokeWidth="2.4" />
+          {/* aluminium centre ring */}
+          <circle cx="26" cy="23" r="8" fill="#C9CED4" stroke="#8A9089" strokeWidth="1.5" />
+          <circle cx="26" cy="23" r="3.5" fill="#8A9089" />
+          {/* perimeter stud dots */}
+          {[[3,3],[49,3],[3,43],[49,43],[26,2],[26,44]].map(([x,y],i)=>(<circle key={i} cx={x} cy={y} r="1.4" fill="#9AA187" />))}
+        </g>
+
         {/* ===== the DS/ES mechanism (lifts as one group) ===== */}
         <g className={anim('c1s4-lift')} style={reduced ? { transform: 'translate(0px,0px)' } : undefined}>
           <g transform="translate(72 46)">

@@ -37,12 +37,12 @@ const EN = {
       title: { en: 'Receive the Solution 1 GIS tank' },
       instructions: { en: [
         'Before you start: lifting gear inspected, team informed, lighting and ventilation OK.',
-        'Receive the Solution 1 (S1) GIS tank and check it against the job card.',
+        'Receive the Solution 1 (S1) GIS tank and check it against the bill of material (BOM).',
         'Bring it into the modification area on the handling trolley.',
         'Set it down on a clean, stable floor.',
-        'Self-check: job card matches the tank, no visible damage.',
+        'Self-check: bill of material matches the tank, no visible damage.',
       ] },
-      tools: { en: ['Handling trolley', 'Job card', 'BOM checklist'] },
+      tools: { en: ['Handling trolley', 'Bill of material (BOM)'] },
       warning: { en: 'Move the tank on the materials-handling trolley only. Keep both hands on the handle and push from behind — never walk beside the load. Check the aisle is clear first.' },
     },
     {
@@ -74,15 +74,16 @@ const EN = {
 
     // ============ DISMANTLE THE SOLUTION 1 TANK ============
     {
-      id: 4, estMin: 12, hazard: true,
-      media: [img('1'), img('2'), img('3'), anim(4)],
-      title: { en: 'Dismantle: remove the DS/ES' },
+      id: 4, estMin: 14, hazard: true,
+      media: [img('13'), img('14'), img('1'), img('2'), img('3'), anim(4)],
+      title: { en: 'Dismantle: remove the closing sheets & DS/ES' },
       instructions: { en: [
         'Confirm the tank is at zero pressure and the gas is fully recovered.',
+        'First remove the closing sheets: undo the perimeter nuts, take off each cover plate, and lift out its O-ring seal — mark its position and store it flat.',
         'Disconnect the DS/ES control wiring at the Harting connectors (marked A, D, E).',
         'Set the mechanism to a safe position, then release the chain drive.',
         'Remove the DS/ES (disconnector / earthing switch) and keep it on protective foam.',
-        'Self-check: DS/ES undamaged, contacts protected, hardware bagged and labelled.',
+        'Self-check: closing sheets and DS/ES undamaged, O-rings labelled and stored flat, all hardware bagged.',
       ] },
       tools: { en: ['Ratchet', '17 mm socket', 'Allen keys', 'Foam sheet'] },
       warning: { en: 'The DS/ES is a safety device — handle it gently and never force the mechanism. Keep fingers clear of the chain drive and sprockets while releasing it.' },
@@ -122,10 +123,11 @@ const EN = {
         'Remove the button-head Allen screws around the cable bushing #1 flange.',
         'Carefully draw the brown epoxy bushing out of the tank.',
         'Handle it gently — a chipped bushing is scrap.',
+        'Clean and inspect the bushing O-ring with lint-free tissue, and keep it for reuse.',
         'Place it upright on protective foam.',
-        'Self-check: bushing surface clean and undamaged, all screws kept.',
+        'Self-check: bushing surface clean and undamaged, O-ring kept, all screws kept.',
       ] },
-      tools: { en: ['Ratchet', '5 mm Allen key', 'Foam sheet'] },
+      tools: { en: ['Ratchet', '5 mm Allen key', 'Cleaning tissue', 'Foam sheet'] },
     },
     {
       id: 8, estMin: 8, hazard: false,
@@ -139,18 +141,10 @@ const EN = {
       ] },
       tools: { en: ['Ratchet', '5 mm Allen key', 'Foam sheet'] },
     },
-    {
-      id: 9, estMin: 8, hazard: false,
-      media: [img('13'), img('14'), anim(9)],
-      title: { en: 'Dismantle: remove the closing sheets' },
-      instructions: { en: [
-        'Remove the perimeter nuts holding each closing sheet (cover plate).',
-        'Take off the closing sheets and lift out the O-ring seals.',
-        'Keep each O-ring safe and mark its position.',
-        'Self-check: sealing faces not scratched, O-rings stored flat and labelled.',
-      ] },
-      tools: { en: ['Ratchet', '17 mm socket'] },
-    },
+    // NOTE: the old step 9 (remove closing sheets) is merged into step 4 above,
+    // so covers come off first — matching the real dismantle order. Step ids
+    // below keep their original values (gap at 9); the kiosk numbers steps by
+    // position, so the worker still sees a clean 1…25.
 
     // ============ SCRAP & CLEAR ============
     {
@@ -358,11 +352,11 @@ const EN = {
       instructions: { en: [
         'Turn on the main supply and booster pump on the SF6 gas machine.',
         'Set the filling handle, open the cylinder valve and set the selector to "Filling".',
-        'Fill the tank to its rated filling pressure — watch the gauge the whole time.',
+        'Fill the tank to 0.05 MPa (rated filling pressure) — watch the gauge the whole time.',
         'Self-check: check every hose, cap and connection by hand and by ear — nothing loose, no hissing.',
       ] },
       tools: { en: ['SF6 gas machine', 'DN8 hose', 'DN20→DN8 adapter'] },
-      warning: { en: 'Do not exceed the rated filling pressure. SF6 is colourless, odourless and heavier than air — a leak silently replaces the air at floor level. Keep ventilation running. If you hear hissing or feel dizzy: close the valve, leave the area, report.' },
+      warning: { en: 'Do not exceed 0.05 MPa (rated filling pressure). SF6 is colourless, odourless and heavier than air — a leak silently replaces the air at floor level. Keep ventilation running. If you hear hissing or feel dizzy: close the valve, leave the area, report.' },
     },
     {
       id: 26, estMin: 8, hazard: true,
@@ -371,7 +365,7 @@ const EN = {
       instructions: { en: [
         'Connect the SF6 analyzer (DILO MultiAnalyser) with the self-closing hose only.',
         'Measure the dew point: it must be −25 °C or colder.',
-        'Verify the SF6 purity: it must be 99.75% or higher.',
+        'Verify the SF6 purity: it must be 99.7% or higher.',
         'Write both values on the process record.',
         'If either value fails: stop, disconnect, and inform the supervisor — do not re-test on your own.',
       ] },
