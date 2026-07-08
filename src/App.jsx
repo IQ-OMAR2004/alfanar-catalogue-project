@@ -7,7 +7,7 @@ import Complete from './screens/Complete.jsx'
 import CoachOverlay from './components/CoachOverlay.jsx'
 import { useI18n } from './i18n/I18nProvider.jsx'
 import { useDevice } from './device/DeviceProvider.jsx'
-import { getTask } from './content/index.js'
+import { getTask, tasks } from './content/index.js'
 import { useKioskGuards } from './hooks/useKioskGuards.js'
 import { useWakeLock } from './hooks/useWakeLock.js'
 import { useFullscreen } from './hooks/useFullscreen.js'
@@ -24,6 +24,7 @@ export default function App() {
   const [taskId, setTaskId] = useState(null)
   const [runId, setRunId] = useState(0) // bump to remount StepView (restart)
   const [result, setResult] = useState(null)
+  const [autoplay, setAutoplay] = useState(false) // unattended step + task loop
   const [coachOpen, setCoachOpen] = useState(false)
   const [coachSeen, setCoachSeen] = useState(() => {
     try {
@@ -57,7 +58,8 @@ export default function App() {
     setTaskId(null)
     setResult(null)
   }, [])
-  useIdleReset(backToTasks, { timeoutMs: IDLE_MS, enabled: !isPhone && screen === 'step' })
+  // Auto-play is itself continuous activity, so the idle reset stands down.
+  useIdleReset(backToTasks, { timeoutMs: IDLE_MS, enabled: !isPhone && screen === 'step' && !autoplay })
 
   const task = getTask(taskId)
 
@@ -66,7 +68,8 @@ export default function App() {
     setResult(null)
     setRunId((r) => r + 1)
     setScreen('step')
-    if (!coachSeen) setCoachOpen(true)
+    // The coach card would freeze an unattended loop — skip it in auto-play.
+    if (!coachSeen && !autoplay) setCoachOpen(true)
   }
 
   const restart = () => {
@@ -75,9 +78,31 @@ export default function App() {
     setScreen('step')
   }
 
+  // Next task in grid order, wrapping back to the first (the loop).
+  const nextTaskId = (id) => {
+    const i = tasks.findIndex((t) => t.id === id)
+    return tasks.length ? tasks[(i + 1) % tasks.length].id : null
+  }
+
   const completeTask = (res) => {
+    // In auto-play, roll straight into the next task and keep looping;
+    // otherwise show the normal completion screen.
+    if (autoplay) {
+      const next = nextTaskId(taskId)
+      if (next) {
+        startTask(next)
+        return
+      }
+    }
     setResult(res)
     setScreen('complete')
+  }
+
+  const toggleAutoplay = () => {
+    setAutoplay((on) => {
+      if (!on) setCoachOpen(false) // don't let the coach card block the loop
+      return !on
+    })
   }
 
   const dismissCoach = () => {
@@ -107,7 +132,13 @@ export default function App() {
 
         {screen === 'step' && task && (
           <ScreenShell key={`step-${taskId}-${runId}`}>
-            <StepView task={task} onComplete={completeTask} onQuit={backToTasks} />
+            <StepView
+              task={task}
+              autoplay={autoplay}
+              onToggleAutoplay={toggleAutoplay}
+              onComplete={completeTask}
+              onQuit={backToTasks}
+            />
             <CoachOverlay open={coachOpen} onDismiss={dismissCoach} rtl={rtl} />
           </ScreenShell>
         )}

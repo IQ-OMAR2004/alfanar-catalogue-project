@@ -97,7 +97,10 @@
       "fullscreen": "Enter fullscreen",
       "deviceToggle": "Switch between phone and kiosk view",
       "phoneView": "Phone view",
-      "kioskView": "Kiosk view"
+      "kioskView": "Kiosk view",
+      "autoplay": "Auto-play",
+      "autoplayOn": "Auto-play on — 10s per step, loops all tasks",
+      "autoplayOff": "Turn on auto-play"
     },
     "common": {
       "placeholder": "Placeholder content — pending SME review",
@@ -203,7 +206,10 @@
       "fullscreen": "ملء الشاشة",
       "deviceToggle": "التبديل بين عرض الهاتف وعرض الكشك",
       "phoneView": "عرض الهاتف",
-      "kioskView": "عرض الكشك"
+      "kioskView": "عرض الكشك",
+      "autoplay": "تشغيل تلقائي",
+      "autoplayOn": "التشغيل التلقائي مُفعّل — 10 ثوانٍ لكل خطوة، ويتنقل بين كل المهام",
+      "autoplayOff": "تفعيل التشغيل التلقائي"
     },
     "common": {
       "placeholder": "محتوى مؤقت — بانتظار مراجعة الخبير المختص",
@@ -309,7 +315,10 @@
       "fullscreen": "فل اسکرین",
       "deviceToggle": "فون اور کیوسک ویو کے درمیان تبدیل کریں",
       "phoneView": "فون ویو",
-      "kioskView": "کیوسک ویو"
+      "kioskView": "کیوسک ویو",
+      "autoplay": "آٹو پلے",
+      "autoplayOn": "آٹو پلے آن — ہر مرحلہ 10 سیکنڈ، تمام ٹاسک لوپ میں",
+      "autoplayOff": "آٹو پلے آن کریں"
     },
     "common": {
       "placeholder": "عارضی مواد — ماہر کی نظرثانی کے منتظر",
@@ -415,7 +424,10 @@
       "fullscreen": "पूर्ण स्क्रीन",
       "deviceToggle": "फ़ोन और कियोस्क व्यू के बीच बदलें",
       "phoneView": "फ़ोन व्यू",
-      "kioskView": "कियोस्क व्यू"
+      "kioskView": "कियोस्क व्यू",
+      "autoplay": "ऑटो-प्ले",
+      "autoplayOn": "ऑटो-प्ले चालू — हर चरण 10 सेकंड, सभी टास्क लूप में",
+      "autoplayOff": "ऑटो-प्ले चालू करें"
     },
     "common": {
       "placeholder": "प्लेसहोल्डर सामग्री — SME समीक्षा हेतु लंबित",

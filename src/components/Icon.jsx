@@ -156,6 +156,7 @@ const PATHS = {
     </>
   ),
   play: <path d="M7 4.5l13 7.5-13 7.5z" fill="currentColor" stroke="none" />,
+  pause: <path d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z" fill="currentColor" stroke="none" />,
   stop: <rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none" />,
   replay: (
     <>

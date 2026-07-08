@@ -82,6 +82,22 @@
 .ctl-btn:hover { border-color: var(--accent); color: var(--accent); }
 .ctl-btn:active { transform: scale(0.94); }
 
+/* Auto-play toggle: filled accent + soft pulse while the loop is running. */
+.autoplay-toggle[data-on] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+  animation: autoplay-pulse 2.4s var(--ease-in-out) infinite;
+}
+.autoplay-toggle[data-on]:hover { color: var(--on-accent); }
+@keyframes autoplay-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(10, 130, 198, 0.45); }
+  50% { box-shadow: 0 0 0 8px rgba(10, 130, 198, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .autoplay-toggle[data-on] { animation: none; }
+}
+
 /* Mode toggle: cross-fade sun/moon. */
 .mode-toggle .ctl-icon { position: relative; inline-size: 26px; block-size: 26px; }
 .mode-toggle .ctl-icon > svg {

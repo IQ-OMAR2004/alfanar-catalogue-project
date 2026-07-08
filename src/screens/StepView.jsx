@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import MediaPlayer from '../components/MediaPlayer.jsx'
 import TapZones from '../components/TapZones.jsx'
@@ -11,6 +11,7 @@ import ConfirmDialog from '../components/ConfirmDialog.jsx'
 import LangSwitcher from '../components/LangSwitcher.jsx'
 import ModeToggle from '../components/ModeToggle.jsx'
 import DeviceToggle from '../components/DeviceToggle.jsx'
+import AutoplayToggle from '../components/AutoplayToggle.jsx'
 import Icon from '../components/Icon.jsx'
 import ToolIcon from '../components/ToolIcon.jsx'
 import ReviewRibbon from '../components/ReviewRibbon.jsx'
@@ -21,7 +22,10 @@ import { useDevice } from '../device/DeviceProvider.jsx'
 // on one side, instructions on the other, progress header across the top. All
 // navigation flows through <TapZones> (tap / swipe / keys / corner-quit), which
 // applies the RTL mirror. See §4 of the brief.
-export default function StepView({ task, onComplete, onQuit }) {
+// How long each step is shown before auto-play advances (adjustable).
+const AUTOPLAY_MS = 10000
+
+export default function StepView({ task, onComplete, onQuit, autoplay = false, onToggleAutoplay }) {
   const { t, tr, rtl } = useI18n()
   const { isPhone } = useDevice()
   const [index, setIndex] = useState(0)
@@ -71,6 +75,19 @@ export default function StepView({ task, onComplete, onQuit }) {
     setPaused(false)
     setAnimKey((k) => k + 1)
   }
+
+  // Auto-play: advance one step every AUTOPLAY_MS. The timer restarts whenever
+  // the step changes (index), the animation replays (animKey) or auto-play is
+  // toggled, and it holds while the animation is center-tap paused. On the last
+  // step, goForward() calls onComplete → App loops to the next task. A ref keeps
+  // the timer from resetting on every render (goForward is a fresh closure).
+  const goForwardRef = useRef(goForward)
+  goForwardRef.current = goForward
+  useEffect(() => {
+    if (!autoplay || paused) return undefined
+    const id = setTimeout(() => goForwardRef.current(), AUTOPLAY_MS)
+    return () => clearTimeout(id)
+  }, [autoplay, paused, index, animKey])
 
   // Slide direction respects reading direction: forward enters from the
   // inline-end side (right in LTR, left in RTL).
@@ -180,6 +197,7 @@ export default function StepView({ task, onComplete, onQuit }) {
 
       {/* ---- Floating controls (above the tap surface) ------------------- */}
       <div className="step-controls" onPointerDown={(e) => e.stopPropagation()}>
+        {onToggleAutoplay && <AutoplayToggle on={autoplay} onToggle={onToggleAutoplay} />}
         <AudioButton lines={instructions} title={tr(step.title)} />
         <DeviceToggle />
         <LangSwitcher compact />
