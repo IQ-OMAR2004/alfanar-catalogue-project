@@ -3,12 +3,14 @@
     "title": {
       "ar": "نقل من خزان الحل 1 إلى خزان الحل 3 (الحالة 1)",
       "ur": "سولوشن 1 ٹینک سے سولوشن 3 ٹینک منتقلی (کیس 1)",
-      "hi": "सोल्यूशन 1 टैंक से सोल्यूशन 3 टैंक स्थानांतरण (केस 1)"
+      "hi": "सोल्यूशन 1 टैंक से सोल्यूशन 3 टैंक स्थानांतरण (केस 1)",
+      "fr": "Transfert de cuve S1 → S3 (Cas 1)"
     },
     "summary": {
       "ar": "نقل خلية GIS من خزان الحل 1 إلى خزان الحل 3 — تفكيك وتنظيف وإعادة تجميع وتعبئة بالغاز واختبار.",
       "ur": "ایک GIS بے کو سولوشن 1 ٹینک سے سولوشن 3 ٹینک میں منتقل کریں — علیحدگی، صفائی، دوبارہ تنصیب، گیس بھرائی اور ٹیسٹ۔",
-      "hi": "एक GIS बे को सोल्यूशन 1 टैंक से सोल्यूशन 3 टैंक में स्थानांतरित करें — निराकरण, सफाई, पुनः संयोजन, गैस भरना और परीक्षण।"
+      "hi": "एक GIS बे को सोल्यूशन 1 टैंक से सोल्यूशन 3 टैंक में स्थानांतरित करें — निराकरण, सफाई, पुनः संयोजन, गैस भरना और परीक्षण।",
+      "fr": "Transférer une travée GIS d’une cuve Solution 1 vers une cuve Solution 3 — démontage, nettoyage, remontage, remplissage de gaz et essais."
     }
   },
   "steps": {
@@ -16,7 +18,8 @@
       "title": {
         "ar": "استلم خزان GIS الحل 1",
         "ur": "سولوشن 1 GIS ٹینک وصول کریں",
-        "hi": "सोल्यूशन 1 GIS टैंक प्राप्त करें"
+        "hi": "सोल्यूशन 1 GIS टैंक प्राप्त करें",
+        "fr": "Réceptionner la cuve GIS Solution 1"
       },
       "instructions": {
         "ar": [
@@ -39,6 +42,13 @@
           "इसे हैंडलिंग ट्रॉली पर मॉडिफिकेशन एरिया में ले जाएँ।",
           "इसे साफ़ और मज़बूत फ़र्श पर रखें।",
           "खुद जाँचें: बिल ऑफ मटेरियल टैंक से मेल खाता है, कोई दिखने वाला नुकसान नहीं।"
+        ],
+        "fr": [
+          "Avant de commencer : matériel de levage inspecté, équipe informée, éclairage et ventilation corrects.",
+          "Réceptionner la cuve GIS Solution 1 (S1) et la contrôler par rapport à la nomenclature (BOM).",
+          "L’amener dans la zone de modification sur le chariot de manutention.",
+          "La poser sur un sol propre et stable.",
+          "Auto-contrôle : la nomenclature correspond à la cuve, aucun dommage visible."
         ]
       },
       "tools": {
@@ -53,19 +63,25 @@
         "hi": [
           "हैंडलिंग ट्रॉली",
           "बिल ऑफ मटेरियल (BOM)"
+        ],
+        "fr": [
+          "Chariot de manutention",
+          "Nomenclature (BOM)"
         ]
       },
       "warning": {
         "ar": "انقل الخزان على عربة مناولة المواد فقط. أبقِ كلتا يديك على المقبض وادفع من الخلف — لا تمشِ بجانب الحمولة أبدًا. تأكد أولًا أن الممر خالٍ.",
         "ur": "ٹینک کو صرف میٹیریل ہینڈلنگ ٹرالی پر لے جائیں۔ دونوں ہاتھ ہینڈل پر رکھیں اور پیچھے سے دھکیلیں — کبھی لوڈ کے ساتھ ساتھ نہ چلیں۔ پہلے دیکھ لیں کہ راستہ خالی ہے۔",
-        "hi": "टैंक को सिर्फ़ मटेरियल-हैंडलिंग ट्रॉली पर ले जाएँ। दोनों हाथ हैंडल पर रखें और पीछे से धकेलें — कभी लोड के बगल में न चलें। पहले देख लें कि रास्ता खाली है।"
+        "hi": "टैंक को सिर्फ़ मटेरियल-हैंडलिंग ट्रॉली पर ले जाएँ। दोनों हाथ हैंडल पर रखें और पीछे से धकेलें — कभी लोड के बगल में न चलें। पहले देख लें कि रास्ता खाली है।",
+        "fr": "Déplacer la cuve uniquement sur le chariot de manutention. Garder les deux mains sur la poignée et pousser par l’arrière — ne jamais marcher à côté de la charge. Vérifier d’abord que l’allée est dégagée."
       }
     },
     "2": {
       "title": {
         "ar": "احجز خزان الحل 3 فارغ",
         "ur": "ایک خالی سولوشن 3 ٹینک مختص کریں",
-        "hi": "एक खाली सोल्यूशन 3 टैंक आरक्षित करें"
+        "hi": "एक खाली सोल्यूशन 3 टैंक आरक्षित करें",
+        "fr": "Réserver une cuve Solution 3 vide"
       },
       "instructions": {
         "ar": [
@@ -85,6 +101,12 @@
           "जाँचें कि S3 टैंक इस बे (आउटगोइंग और इनकमर) के लिए सही प्रकार का है।",
           "इसे वर्कस्टेशन पर लाएँ और सफाई तक सुरक्षित रखें।",
           "खुद जाँचें: S3 टैंक पर टैग लगा और सिर्फ़ इसी काम के लिए आरक्षित।"
+        ],
+        "fr": [
+          "Réserver une cuve Solution 3 (S3) vide pour l’assemblage.",
+          "Vérifier que la cuve S3 est du type correct pour cette travée (départ et arrivée).",
+          "L’amener au poste de travail et la garder protégée jusqu’au nettoyage.",
+          "Auto-contrôle : cuve S3 étiquetée et réservée à ce seul travail."
         ]
       },
       "tools": {
@@ -99,6 +121,10 @@
         "hi": [
           "हैंडलिंग ट्रॉली",
           "रिज़र्वेशन टैग"
+        ],
+        "fr": [
+          "Chariot de manutention",
+          "Étiquette de réservation"
         ]
       }
     },
@@ -106,7 +132,8 @@
       "title": {
         "ar": "استرجع غاز SF6 من خزان S1",
         "ur": "S1 ٹینک سے SF6 گیس ریکور کریں",
-        "hi": "S1 टैंक से SF6 गैस रिकवर करें"
+        "hi": "S1 टैंक से SF6 गैस रिकवर करें",
+        "fr": "Récupérer le gaz SF6 de la cuve S1"
       },
       "instructions": {
         "ar": [
@@ -129,6 +156,13 @@
           "मेन सप्लाई, बूस्टर पंप और कंप्रेसर चालू करें।",
           "मशीन को \"Recovery\" पर रखें और टैंक का प्रेशर शून्य होने तक रिकवर करें।",
           "खुद जाँचें: कुछ भी खोलने से पहले टैंक शून्य प्रेशर पर हो।"
+        ],
+        "fr": [
+          "Seul le personnel certifié utilise la machine à gaz SF6.",
+          "Raccorder le flexible DN8 à la cuve et à la machine à gaz (utiliser l’adaptateur DN20 vers DN8 si nécessaire).",
+          "Mettre en marche l’alimentation principale, la pompe booster et le compresseur.",
+          "Régler la machine sur « Récupération » et récupérer jusqu’à ce que la pression de la cuve indique zéro.",
+          "Auto-contrôle : cuve à pression nulle avant toute ouverture."
         ]
       },
       "tools": {
@@ -146,19 +180,26 @@
           "SF6 गैस मशीन",
           "DN8 होज़",
           "DN20→DN8 अडैप्टर"
+        ],
+        "fr": [
+          "Machine à gaz SF6",
+          "Flexible DN8",
+          "Adaptateur DN20→DN8"
         ]
       },
       "warning": {
         "ar": "غاز SF6 عديم اللون والرائحة وأثقل من الهواء — استرجعه ولا تطلقه في الغرفة أبدًا. أبقِ كل خرطوم وغطاء ووصلة محكمة ضد التسرب والتهوية تعمل. لا تفتح الخزان حتى يقرأ المقياس صفرًا.",
         "ur": "SF6 بے رنگ، بے بو اور ہوا سے بھاری ہے — اسے ریکور کریں، کبھی کمرے میں نہ چھوڑیں۔ ہر ہوز، کیپ اور کپلنگ کو لیک ٹائٹ رکھیں اور وینٹیلیشن چالو رکھیں۔ گیج صفر پڑھنے تک ٹینک نہ کھولیں۔",
-        "hi": "SF6 रंगहीन, गंधहीन और हवा से भारी है — इसे रिकवर करें, कभी कमरे में न छोड़ें। हर होज़, कैप और कपलिंग को लीक-टाइट रखें और वेंटिलेशन चालू रखें। गेज शून्य पढ़ने तक टैंक न खोलें।"
+        "hi": "SF6 रंगहीन, गंधहीन और हवा से भारी है — इसे रिकवर करें, कभी कमरे में न छोड़ें। हर होज़, कैप और कपलिंग को लीक-टाइट रखें और वेंटिलेशन चालू रखें। गेज शून्य पढ़ने तक टैंक न खोलें।",
+        "fr": "Le SF6 est incolore, inodore et plus lourd que l’air — le récupérer, ne jamais le rejeter dans le local. Maintenir chaque flexible, bouchon et raccord étanche et la ventilation en marche. Ne pas ouvrir la cuve tant que le manomètre n’indique pas zéro."
       }
     },
     "4": {
       "title": {
         "ar": "التفكيك: أزل ألواح الإغلاق و DS/ES",
         "ur": "علیحدگی: کلوزنگ شیٹس اور DS/ES نکالیں",
-        "hi": "निराकरण: क्लोज़िंग शीट और DS/ES निकालें"
+        "hi": "निराकरण: क्लोज़िंग शीट और DS/ES निकालें",
+        "fr": "Démontage : déposer les tôles de fermeture et le sectionneur/MALT"
       },
       "instructions": {
         "ar": [
@@ -184,6 +225,14 @@
           "मैकेनिज़्म को सुरक्षित पोज़ीशन पर रखें, फिर चेन ड्राइव छोड़ें।",
           "DS/ES (डिसकनेक्टर / अर्थिंग स्विच) निकालें और सुरक्षा फोम पर रखें।",
           "खुद जाँचें: क्लोज़िंग शीट और DS/ES सही, O-rings लेबल और सीधे रखे, सारा हार्डवेयर थैली में।"
+        ],
+        "fr": [
+          "Confirmer que la cuve est à pression nulle et que le gaz est entièrement récupéré.",
+          "Déposer d’abord les tôles de fermeture : desserrer les écrous du pourtour, retirer chaque plaque de capot et extraire son joint torique — repérer sa position et le ranger à plat.",
+          "Débrancher le câblage de commande du sectionneur/MALT aux connecteurs Harting (repérés A, D, E).",
+          "Placer le mécanisme en position sûre, puis libérer l’entraînement par chaîne.",
+          "Déposer le sectionneur/MALT (sectionneur / sectionneur de mise à la terre) et le poser sur mousse de protection.",
+          "Auto-contrôle : tôles de fermeture et sectionneur/MALT intacts, joints toriques identifiés et rangés à plat, toute la visserie ensachée."
         ]
       },
       "tools": {
@@ -204,19 +253,27 @@
           "17 mm सॉकेट",
           "एलन की",
           "फोम शीट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clés Allen",
+          "Plaque de mousse"
         ]
       },
       "warning": {
         "ar": "DS/ES جهاز أمان — تعامل معه برفق ولا تجبر الآلية أبدًا. أبقِ أصابعك بعيدة عن ناقل الحركة السلسلي والتروس أثناء تحريره.",
         "ur": "DS/ES ایک سیفٹی ڈیوائس ہے — اسے نرمی سے پکڑیں اور میکانزم پر کبھی زور نہ لگائیں۔ کھولتے وقت انگلیاں چین ڈرائیو اور اسپروکٹ سے دور رکھیں۔",
-        "hi": "DS/ES एक सेफ्टी डिवाइस है — इसे धीरे से पकड़ें और मैकेनिज़्म पर कभी ज़ोर न लगाएँ। छोड़ते समय उँगलियाँ चेन ड्राइव और स्प्रॉकेट से दूर रखें।"
+        "hi": "DS/ES एक सेफ्टी डिवाइस है — इसे धीरे से पकड़ें और मैकेनिज़्म पर कभी ज़ोर न लगाएँ। छोड़ते समय उँगलियाँ चेन ड्राइव और स्प्रॉकेट से दूर रखें।",
+        "fr": "Le sectionneur/MALT est un organe de sécurité — le manipuler avec douceur et ne jamais forcer le mécanisme. Garder les doigts à l’écart de l’entraînement par chaîne et des pignons pendant sa libération."
       }
     },
     "5": {
       "title": {
         "ar": "التفكيك: أزل قضبان التوصيل الداخلية (BB)",
         "ur": "علیحدگی: اندرونی بس بار (BB) نکالیں",
-        "hi": "निराकरण: अंदरूनी बसबार (BB) निकालें"
+        "hi": "निराकरण: अंदरूनी बसबार (BB) निकालें",
+        "fr": "Démontage : déposer les jeux de barres internes (BB)"
       },
       "instructions": {
         "ar": [
@@ -239,6 +296,13 @@
           "हर बसबार को लपेटें ताकि चढ़े हुए कॉन्टैक्ट फेस खरोंच से बचें।",
           "लपेटे हुए बसबार ट्रॉली पर रखें।",
           "खुद जाँचें: कॉन्टैक्ट फेस बिना खरोंच, हार्डवेयर एक साथ रखा।"
+        ],
+        "fr": [
+          "Déposer les boulons maintenant chaque jeu de barres interne avec le cliquet et la douille.",
+          "Extraire un à un chaque jeu de barres argenté.",
+          "Emballer chaque jeu de barres pour protéger les faces de contact argentées des rayures.",
+          "Poser les jeux de barres emballés sur le chariot.",
+          "Auto-contrôle : faces de contact non rayées, visserie conservée ensemble."
         ]
       },
       "tools": {
@@ -256,6 +320,11 @@
           "रैचेट",
           "17 mm सॉकेट",
           "रैपिंग / सुरक्षा"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Emballage / protection"
         ]
       }
     },
@@ -263,7 +332,8 @@
       "title": {
         "ar": "التفكيك: أزل قاطع الدائرة",
         "ur": "علیحدگی: سرکٹ بریکر نکالیں",
-        "hi": "निराकरण: सर्किट ब्रेकर निकालें"
+        "hi": "निराकरण: सर्किट ब्रेकर निकालें",
+        "fr": "Démontage : déposer le disjoncteur"
       },
       "instructions": {
         "ar": [
@@ -286,6 +356,13 @@
           "ब्रेकर को सीधा ऊपर उठाएँ ताकि वह टैंक की दीवारों को कभी न छुए।",
           "इसे गद्दे वाली ब्रेकर ट्रॉली पर उतारें (इनकमर के लिए INC. लिखी हुई)।",
           "खुद जाँचें: ब्रेकर टैंक से दूर, गद्दे पर सीधा टिका हुआ।"
+        ],
+        "fr": [
+          "Monter le gabarit de levage du disjoncteur avec ses boulons et rondelles.",
+          "Reprendre la charge au pont roulant et au palan — la maintenir équilibrée.",
+          "Sortir le disjoncteur à la verticale pour qu’il ne touche jamais les parois de la cuve.",
+          "Le descendre sur le chariot à disjoncteur capitonné (repéré INC. pour l’arrivée).",
+          "Auto-contrôle : disjoncteur dégagé de la cuve, posé d’aplomb sur le calage."
         ]
       },
       "tools": {
@@ -309,19 +386,28 @@
           "CB फिक्स्चर",
           "लिफ्टिंग स्लिंग",
           "गद्दा / पैलेट"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Palan à chaîne 0,5 t",
+          "Gabarit du disjoncteur",
+          "Élingues de levage",
+          "Calage / palette"
         ]
       },
       "warning": {
         "ar": "حمولة معلّقة: لا تقف تحت القاطع المعلّق أو بجانبه أبدًا. إذا لمس القاطع الخزان يُعتبر تالفًا ومرفوضًا. وجّهه بحبل توجيه، لا بيديك.",
         "ur": "لٹکا ہوا لوڈ: لٹکتے بریکر کے نیچے یا ساتھ کبھی کھڑے نہ ہوں۔ اگر بریکر ٹینک کو چھو جائے تو وہ خراب اور مسترد ہے۔ اسے ہاتھوں سے نہیں، ٹیگ لائن سے گائیڈ کریں۔",
-        "hi": "लटका हुआ लोड: लटकते ब्रेकर के नीचे या बगल में कभी खड़े न हों। अगर ब्रेकर टैंक को छू जाए तो वह खराब और रिजेक्ट है। इसे हाथों से नहीं, टैग लाइन से गाइड करें।"
+        "hi": "लटका हुआ लोड: लटकते ब्रेकर के नीचे या बगल में कभी खड़े न हों। अगर ब्रेकर टैंक को छू जाए तो वह खराब और रिजेक्ट है। इसे हाथों से नहीं, टैग लाइन से गाइड करें।",
+        "fr": "Charge suspendue : ne jamais se tenir sous ou à côté du disjoncteur suspendu. S’il touche la cuve, il est endommagé et rebuté. Le guider avec une corde de guidage, jamais à la main."
       }
     },
     "7": {
       "title": {
         "ar": "التفكيك: أزل عازل الكابل #1",
         "ur": "علیحدگی: کیبل بشنگ #1 نکالیں",
-        "hi": "निराकरण: केबल बुशिंग #1 निकालें"
+        "hi": "निराकरण: केबल बुशिंग #1 निकालें",
+        "fr": "Démontage : déposer la traversée de câble n° 1"
       },
       "instructions": {
         "ar": [
@@ -347,6 +433,14 @@
           "बुशिंग की O-ring को लिंट-फ्री टिशू से साफ़ और जाँचें, और दोबारा उपयोग के लिए रखें।",
           "इसे सुरक्षा फोम पर सीधा खड़ा रखें।",
           "खुद जाँचें: बुशिंग की सतह साफ़ और सही, O-ring सुरक्षित, सारे स्क्रू सुरक्षित।"
+        ],
+        "fr": [
+          "Déposer les vis Allen à tête bombée autour de la bride de la traversée de câble n° 1.",
+          "Extraire avec précaution la traversée époxy brune de la cuve.",
+          "La manipuler avec douceur — une traversée écornée est bonne pour le rebut.",
+          "Nettoyer et contrôler le joint torique de la traversée avec un chiffon non pelucheux, et le conserver pour réemploi.",
+          "La poser debout sur mousse de protection.",
+          "Auto-contrôle : surface de la traversée propre et intacte, joint torique conservé, toutes les vis conservées."
         ]
       },
       "tools": {
@@ -367,6 +461,12 @@
           "5 mm एलन की",
           "सफाई टिशू",
           "फोम शीट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Clé Allen 5 mm",
+          "Chiffon de nettoyage",
+          "Plaque de mousse"
         ]
       }
     },
@@ -374,7 +474,8 @@
       "title": {
         "ar": "التفكيك: أزل عازل الكابل #2",
         "ur": "علیحدگی: کیبل بشنگ #2 نکالیں",
-        "hi": "निराकरण: केबल बुशिंग #2 निकालें"
+        "hi": "निराकरण: केबल बुशिंग #2 निकालें",
+        "fr": "Démontage : déposer la traversée de câble n° 2"
       },
       "instructions": {
         "ar": [
@@ -394,6 +495,12 @@
           "दूसरे बुशिंग को सावधानी से टैंक से बाहर खींचें।",
           "इसे सुरक्षा फोम पर बुशिंग #1 के साथ सीधा खड़ा रखें।",
           "खुद जाँचें: दोनों बुशिंग सही और साफ़ अलग (#1 और #2)।"
+        ],
+        "fr": [
+          "Déposer les vis Allen à tête bombée autour de la bride de la traversée de câble n° 2.",
+          "Extraire avec précaution la seconde traversée de la cuve.",
+          "La poser debout sur mousse de protection, à côté de la traversée n° 1.",
+          "Auto-contrôle : les deux traversées intactes et clairement séparées (n° 1 et n° 2)."
         ]
       },
       "tools": {
@@ -411,6 +518,11 @@
           "रैचेट",
           "5 mm एलन की",
           "फोम शीट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Clé Allen 5 mm",
+          "Plaque de mousse"
         ]
       }
     },
@@ -418,7 +530,8 @@
       "title": {
         "ar": "تخريد قضبان التوصيل غير المطلوبة",
         "ur": "غیر ضروری بس بار اسکریپ کریں",
-        "hi": "अनचाहे बसबार स्क्रैप करें"
+        "hi": "अनचाहे बसबार स्क्रैप करें",
+        "fr": "Mettre au rebut les jeux de barres inutiles"
       },
       "instructions": {
         "ar": [
@@ -438,6 +551,12 @@
           "अनचाहे बसबार चिह्नित स्क्रैप एरिया में ले जाएँ।",
           "स्क्रैप की गई चीज़ें जॉब कार्ड पर दर्ज करें।",
           "खुद जाँचें: सिर्फ़ अनचाहे बसबार स्क्रैप हुए — दोबारा इस्तेमाल होने वाले पार्ट सुरक्षित।"
+        ],
+        "fr": [
+          "Trier les jeux de barres déposés : les réutilisables vers le rack protégé, les inutiles au rebut.",
+          "Déplacer les jeux de barres inutiles vers la zone de rebut repérée.",
+          "Consigner les pièces rebutées sur la fiche suiveuse.",
+          "Auto-contrôle : seuls les jeux de barres inutiles sont rebutés — les pièces réutilisables sont conservées."
         ]
       },
       "tools": {
@@ -452,6 +571,10 @@
         "hi": [
           "स्क्रैप बिन",
           "जॉब कार्ड"
+        ],
+        "fr": [
+          "Bac de rebut",
+          "Fiche suiveuse"
         ]
       }
     },
@@ -459,7 +582,8 @@
       "title": {
         "ar": "تخريد خزان S1 الفارغ",
         "ur": "خالی S1 ٹینک اسکریپ کریں",
-        "hi": "खाली S1 टैंक स्क्रैप करें"
+        "hi": "खाली S1 टैंक स्क्रैप करें",
+        "fr": "Mettre au rebut la cuve S1 vide"
       },
       "instructions": {
         "ar": [
@@ -479,6 +603,12 @@
           "खाली S1 एनक्लोज़र को ट्रॉली या क्रेन से स्क्रैप एरिया में ले जाएँ।",
           "स्क्रैप किए गए टैंक को जॉब कार्ड पर दर्ज करें।",
           "खुद जाँचें: टैंक खाली, स्क्रैप से पहले अंदर कोई दोबारा इस्तेमाल होने वाला पार्ट नहीं।"
+        ],
+        "fr": [
+          "Confirmer que la cuve S1 est entièrement vide et exempte de gaz.",
+          "Déplacer l’enveloppe S1 vide vers la zone de rebut avec le chariot ou le pont roulant.",
+          "Consigner la cuve rebutée sur la fiche suiveuse.",
+          "Auto-contrôle : cuve vide, aucune pièce réutilisable restée à l’intérieur avant le rebut."
         ]
       },
       "tools": {
@@ -496,19 +626,26 @@
           "हैंडलिंग ट्रॉली",
           "ओवरहेड क्रेन ≥ 3.2 t",
           "जॉब कार्ड"
+        ],
+        "fr": [
+          "Chariot de manutention",
+          "Pont roulant ≥ 3,2 t",
+          "Fiche suiveuse"
         ]
       },
       "warning": {
         "ar": "تأكد أن الخزان خالٍ من الغاز قبل التخريد — لا تقطع أو تثقب خزانًا قد يحتوي على SF6 أبدًا. ابقَ بعيدًا أثناء أي رفع.",
         "ur": "اسکریپ سے پہلے تصدیق کریں کہ ٹینک گیس سے پاک ہے — ایسا ٹینک جس میں SF6 ہو سکتی ہے کبھی نہ کاٹیں نہ ڈرل کریں۔ کسی بھی لفٹ کے دوران دور رہیں۔",
-        "hi": "स्क्रैप से पहले पक्का करें कि टैंक गैस-रहित है — ऐसा टैंक जिसमें SF6 हो सकती है कभी न काटें न ड्रिल करें। किसी भी लिफ्ट के दौरान दूर रहें।"
+        "hi": "स्क्रैप से पहले पक्का करें कि टैंक गैस-रहित है — ऐसा टैंक जिसमें SF6 हो सकती है कभी न काटें न ड्रिल करें। किसी भी लिफ्ट के दौरान दूर रहें।",
+        "fr": "Confirmer que la cuve est exempte de gaz avant le rebut — ne jamais découper ni percer une cuve pouvant encore contenir du SF6. Rester à l’écart pendant tout levage."
       }
     },
     "12": {
       "title": {
         "ar": "أفرغ حاوية الحل 1",
         "ur": "سولوشن 1 اینکلوژر خالی کریں",
-        "hi": "सोल्यूशन 1 एनक्लोज़र खाली करें"
+        "hi": "सोल्यूशन 1 एनक्लोज़र खाली करें",
+        "fr": "Vider l’enveloppe Solution 1"
       },
       "instructions": {
         "ar": [
@@ -528,6 +665,12 @@
           "दोबारा इस्तेमाल होने वाले पार्ट उनके लेबल किए डिब्बों में वापस रखें।",
           "वर्कस्टेशन साफ़ और S3 बिल्ड के लिए तैयार छोड़ें।",
           "खुद जाँचें: S1 काम की कोई चीज़ बेंच या फ़र्श पर नहीं रही।"
+        ],
+        "fr": [
+          "Évacuer toutes les pièces, visseries et emballages restants de la zone de l’enveloppe S1.",
+          "Remettre les pièces réutilisables dans leurs bacs identifiés.",
+          "Laisser le poste de travail propre et prêt pour le montage S3.",
+          "Auto-contrôle : plus rien du travail S1 sur l’établi ni au sol."
         ]
       },
       "tools": {
@@ -542,6 +685,10 @@
         "hi": [
           "पार्ट्स बिन",
           "क्लीनिंग टिश्यू"
+        ],
+        "fr": [
+          "Bacs à pièces",
+          "Chiffon de nettoyage"
         ]
       }
     },
@@ -549,7 +696,8 @@
       "title": {
         "ar": "نظّف خزان الحل 3",
         "ur": "سولوشن 3 ٹینک صاف کریں",
-        "hi": "सोल्यूशन 3 टैंक साफ़ करें"
+        "hi": "सोल्यूशन 3 टैंक साफ़ करें",
+        "fr": "Nettoyer la cuve Solution 3"
       },
       "instructions": {
         "ar": [
@@ -572,6 +720,13 @@
           "हर बुशिंग के छेद और सीलिंग फेस के चारों ओर सफाई करें।",
           "सारी धूल और ढीले कण वैक्यूम से निकालें; तल आखिर में साफ़ करें।",
           "खुद जाँचें: सतहें धूल, तेल और बाहरी मटेरियल से मुक्त — यह गैस कंपार्टमेंट है।"
+        ],
+        "fr": [
+          "Mettre des gants résistants aux produits chimiques et des lunettes avant tout contact avec le méthanol.",
+          "Essuyer chaque surface interne de la cuve S3 au méthanol et au chiffon non pelucheux.",
+          "Nettoyer le pourtour de chaque ouverture de traversée et chaque portée d’étanchéité.",
+          "Aspirer toute la poussière et les particules libres ; nettoyer le fond en dernier.",
+          "Auto-contrôle : surfaces exemptes de poussière, d’huile et de corps étrangers — il s’agit d’un compartiment à gaz."
         ]
       },
       "tools": {
@@ -592,19 +747,27 @@
           "टिश्यू रोल",
           "मेथेनॉल",
           "वैक्यूम क्लीनर"
+        ],
+        "fr": [
+          "Gants chimiques",
+          "Rouleau de chiffons",
+          "Méthanol",
+          "Aspirateur"
         ]
       },
       "warning": {
         "ar": "الميثانول قابل للاشتعال وسام — يخترق الجلد وبخاره يسبب الدوار. أبقِ العبوة مغلقة عند عدم الصب، وأبقِ التهوية تعمل، وأبعد كل الشرر والأعمال الساخنة. إذا لمس الجلد، اغسله بالماء فورًا وأبلغ عنه.",
         "ur": "میتھانول آتش گیر اور زہریلا ہے — یہ جلد سے گزرتا ہے اور اس کے بخارات چکر لاتے ہیں۔ جب انڈیل نہ رہے ہوں تو ڈبہ بند رکھیں، وینٹیلیشن چالو رکھیں، اور ہر چنگاری اور گرم کام کو دور رکھیں۔ اگر جلد پر لگے تو فوراً پانی سے دھوئیں اور اطلاع دیں۔",
-        "hi": "मेथेनॉल ज्वलनशील और ज़हरीला है — यह त्वचा से गुज़रता है और इसके वाष्प से चक्कर आते हैं। जब उंडेल न रहे हों तो डिब्बा बंद रखें, वेंटिलेशन चालू रखें, और हर चिंगारी और गरम काम को दूर रखें। अगर त्वचा पर लगे तो तुरंत पानी से धोएँ और सूचना दें।"
+        "hi": "मेथेनॉल ज्वलनशील और ज़हरीला है — यह त्वचा से गुज़रता है और इसके वाष्प से चक्कर आते हैं। जब उंडेल न रहे हों तो डिब्बा बंद रखें, वेंटिलेशन चालू रखें, और हर चिंगारी और गरम काम को दूर रखें। अगर त्वचा पर लगे तो तुरंत पानी से धोएँ और सूचना दें।",
+        "fr": "Le méthanol est inflammable et toxique — il traverse la peau et ses vapeurs provoquent des vertiges. Garder le bidon fermé hors des transvasements, maintenir la ventilation en marche et écarter toute étincelle ou travail à chaud. En cas de contact avec la peau, rincer immédiatement à l’eau et le signaler."
       }
     },
     "14": {
       "title": {
         "ar": "التجميع: ركّب DS/ES",
         "ur": "تنصیب: DS/ES لگائیں",
-        "hi": "संयोजन: DS/ES लगाएँ"
+        "hi": "संयोजन: DS/ES लगाएँ",
+        "fr": "Assemblage : monter le sectionneur/MALT"
       },
       "instructions": {
         "ar": [
@@ -627,6 +790,13 @@
           "इसे बोल्ट से कसें और टॉर्क करें (ड्रॉइंग के अनुसार — TBD)।",
           "Harting कंट्रोल कनेक्टर (A, D, E) दोबारा जोड़ें और स्टेटस इंडिकेटर जाँचें।",
           "खुद जाँचें: O-ring बैठी हुई, मैकेनिज़्म DS-close / ES-close साफ़ चलता है।"
+        ],
+        "fr": [
+          "Nettoyer la portée du sectionneur/MALT et vérifier que le joint torique est bien logé dans sa gorge — ni vrillé ni pincé. Appliquer de la graisse et de l’huile silicone.",
+          "Engager le sectionneur/MALT dans la cuve S3 sur ses pions de guidage — le mécanisme ne doit jamais toucher la cuve.",
+          "Le boulonner et serrer au couple (selon plan — à définir).",
+          "Rebrancher les connecteurs de commande Harting (A, D, E) et contrôler l’indicateur d’état.",
+          "Auto-contrôle : joint torique en place, le mécanisme réalise proprement la fermeture sectionneur / la fermeture MALT."
         ]
       },
       "tools": {
@@ -656,19 +826,30 @@
           "टॉर्क रेंच",
           "Molykote ग्रीस",
           "सिलिकॉन ऑयल"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Pions de guidage",
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique",
+          "Graisse Molykote",
+          "Huile silicone"
         ]
       },
       "warning": {
         "ar": "O-ring المنضغط يعني تسرب SF6. وجّه DS/ES بمسامير التوجيه فقط — لا تضع أصابعك بين القطعة وشفة الخزان أثناء تعليقها أبدًا.",
         "ur": "دبی ہوئی O-ring کا مطلب SF6 لیک ہے۔ DS/ES کو صرف گائیڈ پن سے گائیڈ کریں — لٹکتے وقت پرزے اور ٹینک فلینج کے درمیان کبھی انگلیاں نہ رکھیں۔",
-        "hi": "दबी हुई O-ring का मतलब SF6 लीक है। DS/ES को सिर्फ़ गाइड पिन से गाइड करें — लटकते समय पार्ट और टैंक फ्लैंज के बीच कभी उँगलियाँ न रखें।"
+        "hi": "दबी हुई O-ring का मतलब SF6 लीक है। DS/ES को सिर्फ़ गाइड पिन से गाइड करें — लटकते समय पार्ट और टैंक फ्लैंज के बीच कभी उँगलियाँ न रखें।",
+        "fr": "Un joint torique pincé signifie une fuite de SF6. Guider le sectionneur/MALT uniquement par les pions de guidage — ne jamais mettre les doigts entre la pièce et la bride de la cuve tant qu’elle est suspendue."
       }
     },
     "15": {
       "title": {
         "ar": "التجميع: ركّب قضبان التوصيل الداخلية (BB)",
         "ur": "تنصیب: اندرونی بس بار (BB) لگائیں",
-        "hi": "संयोजन: अंदरूनी बसबार (BB) लगाएँ"
+        "hi": "संयोजन: अंदरूनी बसबार (BB) लगाएँ",
+        "fr": "Assemblage : monter les jeux de barres internes (BB)"
       },
       "instructions": {
         "ar": [
@@ -688,6 +869,12 @@
           "हर अंदरूनी बसबार को S3 टैंक के अंदर उसकी जगह लगाएँ।",
           "हर जोड़ को बोल्ट से कसें और टॉर्क करें (ड्रॉइंग के अनुसार — TBD)। हर बोल्ट को लाल मार्कर से चिह्नित करें।",
           "खुद जाँचें: ठोस मेटल-टू-मेटल कॉन्टैक्ट, हर बोल्ट टॉर्क और चिह्नित।"
+        ],
+        "fr": [
+          "Nettoyer chaque face de contact des jeux de barres ; si elle est rayée, la polir au papier de verre grain 700–1000.",
+          "Monter chaque jeu de barres interne à sa position dans la cuve S3.",
+          "Boulonner chaque raccord et serrer au couple (selon plan — à définir). Marquer chaque boulon au marqueur rouge.",
+          "Auto-contrôle : contact métal-métal franc, chaque boulon serré au couple et marqué."
         ]
       },
       "tools": {
@@ -711,6 +898,13 @@
           "टॉर्क रेंच",
           "रेगमाल 700–1000 ग्रिट",
           "Molykote ग्रीस"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique",
+          "Papier de verre grain 700–1000",
+          "Graisse Molykote"
         ]
       }
     },
@@ -718,7 +912,8 @@
       "title": {
         "ar": "التجميع: ركّب قاطع الدائرة",
         "ur": "تنصیب: سرکٹ بریکر لگائیں",
-        "hi": "संयोजन: सर्किट ब्रेकर लगाएँ"
+        "hi": "संयोजन: सर्किट ब्रेकर लगाएँ",
+        "fr": "Assemblage : monter le disjoncteur"
       },
       "instructions": {
         "ar": [
@@ -738,6 +933,12 @@
           "ब्रेकर को S3 टैंक में उतारें — इसे टैंक की दीवारों से दूर रखें।",
           "इसे अपने माउंट पर बैठाएँ और बोल्ट से कसें; टॉर्क करें (ड्रॉइंग के अनुसार — TBD)।",
           "खुद जाँचें: ब्रेकर टैंक में सीधा, दीवारों को नहीं छुआ, सारे बोल्ट चिह्नित।"
+        ],
+        "fr": [
+          "Monter le gabarit de levage du disjoncteur et reprendre la charge au pont roulant et au palan.",
+          "Descendre le disjoncteur dans la cuve S3 — le maintenir à l’écart des parois.",
+          "L’asseoir sur son support et le fixer avec ses boulons ; serrer au couple (selon plan — à définir).",
+          "Auto-contrôle : disjoncteur d’aplomb dans la cuve, n’a jamais touché les parois, tous les boulons marqués."
         ]
       },
       "tools": {
@@ -764,19 +965,29 @@
           "रैचेट",
           "17 mm सॉकेट",
           "टॉर्क रेंच"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Palan à chaîne 0,5 t",
+          "Gabarit du disjoncteur",
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
         ]
       },
       "warning": {
         "ar": "حمولة معلّقة: أبقِ الجميع بعيدًا. إذا لمس القاطع جوانب الخزان يُعتبر تالفًا ومرفوضًا — أنزله ببطء وبشكل مستقيم.",
         "ur": "لٹکا ہوا لوڈ: سب کو دور رکھیں۔ اگر بریکر ٹینک کی دیواروں کو چھو جائے تو وہ خراب اور مسترد ہے — اسے آہستہ اور سیدھا اتاریں۔",
-        "hi": "लटका हुआ लोड: सबको दूर रखें। अगर ब्रेकर टैंक की दीवारों को छू जाए तो वह खराब और रिजेक्ट है — इसे धीरे और सीधा उतारें।"
+        "hi": "लटका हुआ लोड: सबको दूर रखें। अगर ब्रेकर टैंक की दीवारों को छू जाए तो वह खराब और रिजेक्ट है — इसे धीरे और सीधा उतारें।",
+        "fr": "Charge suspendue : tenir tout le monde à l’écart. Si le disjoncteur touche les parois de la cuve, il est endommagé et rebuté — le descendre lentement et bien droit."
       }
     },
     "17": {
       "title": {
         "ar": "التجميع: ركّب عازل الكابل #1",
         "ur": "تنصیب: کیبل بشنگ #1 لگائیں",
-        "hi": "संयोजन: केबल बुशिंग #1 लगाएँ"
+        "hi": "संयोजन: केबल बुशिंग #1 लगाएँ",
+        "fr": "Assemblage : monter la traversée de câble n° 1"
       },
       "instructions": {
         "ar": [
@@ -796,6 +1007,12 @@
           "बुशिंग को गाइड पिन से लगाएँ ताकि गिर न सके।",
           "बटन-हेड एलन स्क्रू लगाएँ और टॉर्क करें (ड्रॉइंग के अनुसार — TBD)।",
           "खुद जाँचें: बुशिंग सीधा बैठा, O-ring दबी नहीं, स्क्रू चिह्नित।"
+        ],
+        "fr": [
+          "Contrôler la traversée de câble n° 1 et nettoyer la zone de contact de la bride ; appliquer de la graisse.",
+          "Monter la traversée à l’aide des pions de guidage pour qu’elle ne puisse pas tomber.",
+          "Monter les vis Allen à tête bombée et serrer au couple (selon plan — à définir).",
+          "Auto-contrôle : traversée assise d’aplomb, joint torique non pincé, vis marquées."
         ]
       },
       "tools": {
@@ -819,6 +1036,13 @@
           "5 mm एलन की",
           "टॉर्क रेंच",
           "Molykote ग्रीस"
+        ],
+        "fr": [
+          "Pions de guidage",
+          "Cliquet",
+          "Clé Allen 5 mm",
+          "Clé dynamométrique",
+          "Graisse Molykote"
         ]
       }
     },
@@ -826,7 +1050,8 @@
       "title": {
         "ar": "التجميع: ركّب عازل الكابل #2",
         "ur": "تنصیب: کیبل بشنگ #2 لگائیں",
-        "hi": "संयोजन: केबल बुशिंग #2 लगाएँ"
+        "hi": "संयोजन: केबल बुशिंग #2 लगाएँ",
+        "fr": "Assemblage : monter la traversée de câble n° 2"
       },
       "instructions": {
         "ar": [
@@ -846,6 +1071,12 @@
           "बुशिंग को गाइड पिन से लगाएँ ताकि गिर न सके।",
           "बटन-हेड एलन स्क्रू लगाएँ और टॉर्क करें (ड्रॉइंग के अनुसार — TBD)।",
           "खुद जाँचें: दोनों बुशिंग (#1 और #2) सीधे बैठे और गैस-टाइट।"
+        ],
+        "fr": [
+          "Contrôler la traversée de câble n° 2 et nettoyer la zone de contact de la bride ; appliquer de la graisse.",
+          "Monter la traversée à l’aide des pions de guidage pour qu’elle ne puisse pas tomber.",
+          "Monter les vis Allen à tête bombée et serrer au couple (selon plan — à définir).",
+          "Auto-contrôle : les deux traversées (n° 1 et n° 2) assises d’aplomb et étanches au gaz."
         ]
       },
       "tools": {
@@ -869,6 +1100,13 @@
           "5 mm एलन की",
           "टॉर्क रेंच",
           "Molykote ग्रीस"
+        ],
+        "fr": [
+          "Pions de guidage",
+          "Cliquet",
+          "Clé Allen 5 mm",
+          "Clé dynamométrique",
+          "Graisse Molykote"
         ]
       }
     },
@@ -876,7 +1114,8 @@
       "title": {
         "ar": "التجميع: ركّب ألواح الإغلاق",
         "ur": "تنصیب: کلوزنگ شیٹس لگائیں",
-        "hi": "संयोजन: क्लोज़िंग शीट लगाएँ"
+        "hi": "संयोजन: क्लोज़िंग शीट लगाएँ",
+        "fr": "Assemblage : monter les tôles de fermeture"
       },
       "instructions": {
         "ar": [
@@ -896,6 +1135,12 @@
           "हर O-ring पर ग्रीस और सिलिकॉन ऑयल लगाएँ।",
           "क्लोज़िंग शीट लगाएँ और किनारे के नट क्रॉस पैटर्न में कसें (ड्रॉइंग के अनुसार — TBD)।",
           "खुद जाँचें: कवर सीधे, O-ring बैठे, कोनों पर कोई गैप नहीं।"
+        ],
+        "fr": [
+          "Nettoyer chaque portée d’étanchéité de tôle de fermeture et disposer le joint torique en cercle parfait.",
+          "Appliquer de la graisse et de l’huile silicone sur chaque joint torique.",
+          "Monter les tôles de fermeture et serrer les écrous du pourtour en croix (selon plan — à définir).",
+          "Auto-contrôle : capots bien à plat, joints toriques en place, aucun jeu aux angles."
         ]
       },
       "tools": {
@@ -919,6 +1164,13 @@
           "टॉर्क रेंच",
           "Molykote ग्रीस",
           "सिलिकॉन ऑयल"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique",
+          "Graisse Molykote",
+          "Huile silicone"
         ]
       }
     },
@@ -926,7 +1178,8 @@
       "title": {
         "ar": "التجميع: ركّب محولات التيار (CT)",
         "ur": "تنصیب: کرنٹ ٹرانسفارمر (CT) لگائیں",
-        "hi": "संयोजन: करंट ट्रांसफार्मर (CT) लगाएँ"
+        "hi": "संयोजन: करंट ट्रांसफार्मर (CT) लगाएँ",
+        "fr": "Assemblage : installer les transformateurs de courant (TC)"
       },
       "instructions": {
         "ar": [
@@ -949,6 +1202,13 @@
           "हर CT की तार सपोर्ट रॉड के ज़रिए ले जाएँ।",
           "हर CT तार पर लग क्रिम्प करें और टैंक बंद होने से पहले CT टेस्ट करें।",
           "खुद जाँचें: सब CT पर P1 ऊपर / P2 नीचे; हर कोर टेस्ट और रिकॉर्ड किया।"
+        ],
+        "fr": [
+          "Contrôler le sens de chaque TC avant montage : P1 vers le haut, P2 vers le bas.",
+          "Monter chaque TC sur son support avec les caoutchoucs isolants ; conserver un jeu de 1 mm pour que le TC ne touche pas la plaque.",
+          "Faire passer le fil de chaque TC entre les tiges de support.",
+          "Sertir une cosse sur chaque fil de TC et tester les TC avant la fermeture de la cuve.",
+          "Auto-contrôle : P1 en haut / P2 en bas sur tous les TC ; chaque enroulement testé et consigné."
         ]
       },
       "tools": {
@@ -969,19 +1229,27 @@
           "वायर क्रिम्पर",
           "6 mm लग",
           "CT टेस्ट सेट"
+        ],
+        "fr": [
+          "Supports en caoutchouc isolant",
+          "Pince à sertir",
+          "Cosses 6 mm",
+          "Valise de test TC"
         ]
       },
       "warning": {
         "ar": "CT معكوس (P1/P2 مبدّلان) يفشل في الاختبار النهائي بعد إغلاق الخزان — افحص كل CT قبل المتابعة. يشغّل جهاز اختبار CT مشغّل مدرّب فقط.",
         "ur": "الٹا CT (P1/P2 بدلے ہوئے) ٹینک سیل ہونے کے بعد فائنل ٹیسٹ میں فیل ہوتا ہے — آگے بڑھنے سے پہلے ہر CT چیک کریں۔ CT ٹیسٹ سیٹ صرف تربیت یافتہ آپریٹر چلائے۔",
-        "hi": "उल्टा CT (P1/P2 बदले हुए) टैंक सील होने के बाद फाइनल टेस्ट में फेल होता है — आगे बढ़ने से पहले हर CT जाँचें। CT टेस्ट सेट सिर्फ़ प्रशिक्षित ऑपरेटर चलाए।"
+        "hi": "उल्टा CT (P1/P2 बदले हुए) टैंक सील होने के बाद फाइनल टेस्ट में फेल होता है — आगे बढ़ने से पहले हर CT जाँचें। CT टेस्ट सेट सिर्फ़ प्रशिक्षित ऑपरेटर चलाए।",
+        "fr": "Un TC inversé (P1/P2 permutés) échoue aux essais finals une fois la cuve scellée — contrôler chaque TC avant de poursuivre. Seul un opérateur formé utilise la valise de test TC."
       }
     },
     "21": {
       "title": {
         "ar": "التجميع: ركّب قضبان التوصيل المطلوبة (BB)",
         "ur": "تنصیب: مطلوبہ بس بار (BB) لگائیں",
-        "hi": "संयोजन: ज़रूरी बसबार (BB) लगाएँ"
+        "hi": "संयोजन: ज़रूरी बसबार (BB) लगाएँ",
+        "fr": "Assemblage : monter les jeux de barres requis (BB)"
       },
       "instructions": {
         "ar": [
@@ -1001,6 +1269,12 @@
           "हर कॉन्टैक्ट फेस साफ़ करें; खरोंच हो तो 700–1000 ग्रिट रेगमाल से पॉलिश करें।",
           "हर जोड़ को बोल्ट से कसें और टॉर्क करें (ड्रॉइंग के अनुसार — TBD); तय बसबार गैप बनाए रखें।",
           "खुद जाँचें: सब कनेक्शन टाइट और चिह्नित, अलाइनमेंट सही।"
+        ],
+        "fr": [
+          "Monter les jeux de barres requis restants qui relient le disjoncteur, les TC et les traversées.",
+          "Nettoyer chaque face de contact ; polir au papier de verre grain 700–1000 si elle est rayée.",
+          "Boulonner chaque raccord et serrer au couple (selon plan — à définir) ; respecter les jeux spécifiés entre barres.",
+          "Auto-contrôle : tous les raccords serrés et marqués, alignement correct."
         ]
       },
       "tools": {
@@ -1021,6 +1295,12 @@
           "8 mm एलन सॉकेट",
           "टॉर्क रेंच",
           "रेगमाल 700–1000 ग्रिट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille Allen 8 mm",
+          "Clé dynamométrique",
+          "Papier de verre grain 700–1000"
         ]
       }
     },
@@ -1028,7 +1308,8 @@
       "title": {
         "ar": "التجميع: ركّب حاوية الزيوليت",
         "ur": "تنصیب: زیولائٹ ہاؤسنگ لگائیں",
-        "hi": "संयोजन: ज़ियोलाइट हाउसिंग लगाएँ"
+        "hi": "संयोजन: ज़ियोलाइट हाउसिंग लगाएँ",
+        "fr": "Assemblage : monter le logement de la zéolithe"
       },
       "instructions": {
         "ar": [
@@ -1048,6 +1329,12 @@
           "हाउसिंग को O-ring बैठाकर उसकी जगह लगाएँ।",
           "इसे बोल्ट से कसें और टॉर्क करें (ड्रॉइंग के अनुसार — TBD)।",
           "खुद जाँचें: हाउसिंग सीधी बैठी, ज़ियोलाइट बैग लेने के लिए तैयार।"
+        ],
+        "fr": [
+          "Nettoyer le logement de la zéolithe (bride de l’anneau filtrant) et sa portée d’étanchéité.",
+          "Monter le logement à sa position avec le joint torique en place.",
+          "Le boulonner et serrer au couple (selon plan — à définir).",
+          "Auto-contrôle : logement assis à plat, prêt à recevoir le sachet de zéolithe."
         ]
       },
       "tools": {
@@ -1068,6 +1355,12 @@
           "17 mm सॉकेट",
           "टॉर्क रेंच",
           "Molykote ग्रीस"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique",
+          "Graisse Molykote"
         ]
       }
     },
@@ -1075,7 +1368,8 @@
       "title": {
         "ar": "ركّب الزيوليت وأغلق خزان S3 — 20 دقيقة",
         "ur": "زیولائٹ لگائیں اور S3 ٹینک بند کریں — 20 منٹ",
-        "hi": "ज़ियोलाइट लगाएँ और S3 टैंक बंद करें — 20 मिनट"
+        "hi": "ज़ियोलाइट लगाएँ और S3 टैंक बंद करें — 20 मिनट",
+        "fr": "Installer la zéolithe et fermer la cuve S3 — 20 minutes"
       },
       "instructions": {
         "ar": [
@@ -1101,6 +1395,14 @@
           "ज़ियोलाइट बैग को उसकी हाउसिंग में लगाएँ, फिर टैंक कवर बंद करें।",
           "नट को क्रॉस पैटर्न में चरणों में कसें — पहले 30%, फिर 60%, फिर 100% (टॉर्क ड्रॉइंग के अनुसार — TBD)।",
           "खुद जाँचें: टैंक 20 मिनट के अंदर सील, हर नट चिह्नित।"
+        ],
+        "fr": [
+          "Aspirer l’intérieur de la cuve ; essuyer la portée d’étanchéité, la gorge du joint torique et le joint torique.",
+          "Peser le sachet de zéolithe à la masse spécifiée sur la balance.",
+          "Ouvrir la zéolithe — vous disposez alors de 20 minutes pour sceller la cuve.",
+          "Placer le sachet de zéolithe dans son logement, puis fermer le capot de la cuve.",
+          "Serrer les écrous en croix par paliers — d’abord 30 %, puis 60 %, puis 100 % (couple selon plan — à définir).",
+          "Auto-contrôle : cuve scellée dans la fenêtre de 20 minutes, chaque écrou marqué."
         ]
       },
       "tools": {
@@ -1130,19 +1432,30 @@
           "रैचेट",
           "17 mm सॉकेट",
           "टॉर्क रेंच"
+        ],
+        "fr": [
+          "Aspirateur",
+          "Balance",
+          "Rouleau de chiffons",
+          "Frein-filet Loctite",
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
         ]
       },
       "warning": {
         "ar": "أغلق الخزان خلال 20 دقيقة من فتح الزيوليت — فهو يمتص الرطوبة من الهواء، والزيوليت المبلل يفشل في اختبار نقطة الندى.",
         "ur": "زیولائٹ کھولنے کے 20 منٹ کے اندر ٹینک بند کریں — یہ ہوا سے نمی جذب کرتا ہے، اور گیلا زیولائٹ ڈیو پوائنٹ ٹیسٹ میں فیل ہوتا ہے۔",
-        "hi": "ज़ियोलाइट खोलने के 20 मिनट के अंदर टैंक बंद करें — यह हवा से नमी सोखता है, और गीला ज़ियोलाइट ड्यू-पॉइंट टेस्ट में फेल होता है।"
+        "hi": "ज़ियोलाइट खोलने के 20 मिनट के अंदर टैंक बंद करें — यह हवा से नमी सोखता है, और गीला ज़ियोलाइट ड्यू-पॉइंट टेस्ट में फेल होता है।",
+        "fr": "Fermer la cuve dans les 20 minutes suivant l’ouverture de la zéolithe — elle absorbe l’humidité de l’air, et une zéolithe humide fait échouer l’essai de point de rosée."
       }
     },
     "24": {
       "title": {
         "ar": "نفّذ عملية التفريغ (الفاكيوم)",
         "ur": "ویکیوم کا عمل کریں",
-        "hi": "वैक्यूम प्रक्रिया करें"
+        "hi": "वैक्यूम प्रक्रिया करें",
+        "fr": "Réaliser la mise sous vide"
       },
       "instructions": {
         "ar": [
@@ -1162,6 +1475,12 @@
           "मशीन चालू करें और वैक्यूम शुरू करें।",
           "स्क्रीन देखें: रुकने से पहले प्रेशर 0.8 mbar या उससे कम तक नीचे जाना चाहिए।",
           "खुद जाँचें: डिस्कनेक्ट करने से पहले आखिरी वैक्यूम वैल्यू प्रोसेस रिकॉर्ड पर लिखें।"
+        ],
+        "fr": [
+          "Raccorder le flexible DN8 entre la pompe à vide et la cuve (adaptateur si nécessaire).",
+          "Mettre la machine en marche et démarrer la mise sous vide.",
+          "Surveiller l’écran : la pression doit DESCENDRE à 0,8 mbar ou moins avant l’arrêt.",
+          "Auto-contrôle : inscrire la valeur finale de vide sur la fiche de suivi avant le débranchement."
         ]
       },
       "tools": {
@@ -1179,19 +1498,26 @@
           "वैक्यूम पंप ≥ 60 m³/h",
           "DN8 होज़",
           "DN20→DN8 अडैप्टर"
+        ],
+        "fr": [
+          "Pompe à vide ≥ 60 m³/h",
+          "Flexible DN8",
+          "Adaptateur DN20→DN8"
         ]
       },
       "warning": {
         "ar": "الأشخاص المعتمدون فقط. تأكد أن الخرطوم والوصلات مثبتة تمامًا قبل البدء — الخرطوم المنفلت تحت التفريغ يرتد بعنف. نفّس الخط قبل فصل أي وصلة.",
         "ur": "صرف سرٹیفائیڈ اہلکار۔ شروع کرنے سے پہلے چیک کریں کہ ہوز اور کپلنگ پوری طرح جُڑے ہیں — ویکیوم میں چھوٹا ہوا ہوز شدت سے جھٹکے کھاتا ہے۔ کوئی بھی کپلنگ کھولنے سے پہلے لائن کی ہوا نکالیں۔",
-        "hi": "सिर्फ़ सर्टिफाइड कर्मचारी। शुरू करने से पहले जाँचें कि होज़ और कपलिंग पूरी तरह जुड़े हैं — वैक्यूम में छूटा होज़ ज़ोर से झटके खाता है। कोई भी कपलिंग खोलने से पहले लाइन की हवा निकालें।"
+        "hi": "सिर्फ़ सर्टिफाइड कर्मचारी। शुरू करने से पहले जाँचें कि होज़ और कपलिंग पूरी तरह जुड़े हैं — वैक्यूम में छूटा होज़ ज़ोर से झटके खाता है। कोई भी कपलिंग खोलने से पहले लाइन की हवा निकालें।",
+        "fr": "Personnel certifié uniquement. Vérifier que le flexible et les raccords sont parfaitement engagés avant le démarrage — un flexible qui se libère sous vide fouette violemment. Remettre la ligne à l’air avant de débrancher tout raccord."
       }
     },
     "25": {
       "title": {
         "ar": "املأ الخزان بغاز SF6",
         "ur": "ٹینک کو SF6 گیس سے بھریں",
-        "hi": "टैंक को SF6 गैस से भरें"
+        "hi": "टैंक को SF6 गैस से भरें",
+        "fr": "Remplir la cuve de gaz SF6"
       },
       "instructions": {
         "ar": [
@@ -1211,6 +1537,12 @@
           "फिलिंग हैंडल सेट करें, सिलेंडर वाल्व खोलें और सिलेक्टर को \"Filling\" पर रखें।",
           "टैंक को 0.05 MPa (तय फिलिंग प्रेशर) तक भरें — पूरे समय गेज देखते रहें।",
           "खुद जाँचें: हर होज़, कैप और कनेक्शन को हाथ और कान से जाँचें — कुछ ढीला नहीं, कोई सिसकार नहीं।"
+        ],
+        "fr": [
+          "Mettre en marche l’alimentation principale et la pompe booster de la machine à gaz SF6.",
+          "Positionner la poignée de remplissage, ouvrir la vanne de la bouteille et placer le sélecteur sur « Remplissage ».",
+          "Remplir la cuve à 0,05 MPa (pression de remplissage nominale) — surveiller le manomètre en permanence.",
+          "Auto-contrôle : contrôler chaque flexible, bouchon et raccord à la main et à l’oreille — rien de desserré, aucun sifflement."
         ]
       },
       "tools": {
@@ -1228,19 +1560,26 @@
           "SF6 गैस मशीन",
           "DN8 होज़",
           "DN20→DN8 अडैप्टर"
+        ],
+        "fr": [
+          "Machine à gaz SF6",
+          "Flexible DN8",
+          "Adaptateur DN20→DN8"
         ]
       },
       "warning": {
         "ar": "لا تتجاوز 0.05 MPa (ضغط التعبئة المقنّن). غاز SF6 عديم اللون والرائحة وأثقل من الهواء — التسرب يحل محل الهواء عند مستوى الأرض بصمت. أبقِ التهوية تعمل. إذا سمعت هسهسة أو شعرت بدوار: أغلق الصمام، غادر المكان، أبلغ.",
         "ur": "0.05 MPa (مقررہ فلنگ پریشر) سے زیادہ نہ جائیں۔ SF6 بے رنگ، بے بو اور ہوا سے بھاری ہے — لیک خاموشی سے فرش کی سطح پر ہوا کی جگہ لے لیتی ہے۔ وینٹیلیشن چالو رکھیں۔ اگر سسکار سنیں یا چکر آئے: والو بند کریں، جگہ چھوڑیں، اطلاع دیں۔",
-        "hi": "0.05 MPa (तय फिलिंग प्रेशर) से ज़्यादा न जाएँ। SF6 रंगहीन, गंधहीन और हवा से भारी है — लीक चुपचाप फ़र्श की सतह पर हवा की जगह ले लेती है। वेंटिलेशन चालू रखें। अगर सिसकार सुनें या चक्कर आए: वाल्व बंद करें, जगह छोड़ें, सूचना दें।"
+        "hi": "0.05 MPa (तय फिलिंग प्रेशर) से ज़्यादा न जाएँ। SF6 रंगहीन, गंधहीन और हवा से भारी है — लीक चुपचाप फ़र्श की सतह पर हवा की जगह ले लेती है। वेंटिलेशन चालू रखें। अगर सिसकार सुनें या चक्कर आए: वाल्व बंद करें, जगह छोड़ें, सूचना दें।",
+        "fr": "Ne pas dépasser 0,05 MPa (pression de remplissage nominale). Le SF6 est incolore, inodore et plus lourd que l’air — une fuite remplace silencieusement l’air au niveau du sol. Maintenir la ventilation en marche. En cas de sifflement ou de vertige : fermer la vanne, quitter la zone, signaler."
       }
     },
     "26": {
       "title": {
         "ar": "فحوصات الجودة النهائية — نقطة الندى ونقاء SF6",
         "ur": "فائنل کوالٹی چیک — ڈیو پوائنٹ اور SF6 پیوریٹی",
-        "hi": "फाइनल क्वालिटी चेक — ड्यू पॉइंट और SF6 प्योरिटी"
+        "hi": "फाइनल क्वालिटी चेक — ड्यू पॉइंट और SF6 प्योरिटी",
+        "fr": "Contrôles qualité finals — point de rosée et pureté du SF6"
       },
       "instructions": {
         "ar": [
@@ -1263,6 +1602,13 @@
           "SF6 प्योरिटी की पुष्टि करें: यह 99.7% या ज़्यादा होनी चाहिए।",
           "दोनों वैल्यू प्रोसेस रिकॉर्ड पर लिखें।",
           "अगर कोई वैल्यू फेल हो: रुकें, डिस्कनेक्ट करें, और सुपरवाइज़र को बताएँ — खुद दोबारा टेस्ट न करें।"
+        ],
+        "fr": [
+          "Raccorder l’analyseur SF6 (DILO MultiAnalyser) exclusivement avec le flexible auto-obturant.",
+          "Mesurer le point de rosée : il doit être inférieur ou égal à −25 °C.",
+          "Vérifier la pureté du SF6 : elle doit être supérieure ou égale à 99,7 %.",
+          "Inscrire les deux valeurs sur la fiche de suivi.",
+          "Si l’une des valeurs est non conforme : arrêter, débrancher et informer le superviseur — ne pas refaire l’essai de sa propre initiative."
         ]
       },
       "tools": {
@@ -1277,12 +1623,17 @@
         "hi": [
           "SF6 गैस एनालाइज़र",
           "सेल्फ-क्लोज़िंग होज़"
+        ],
+        "fr": [
+          "Analyseur de gaz SF6",
+          "Flexible auto-obturant"
         ]
       },
       "warning": {
         "ar": "الأشخاص المعتمدون فقط. يطلق المحلّل عينة غاز SF6 أثناء القياس — أبقِ التهوية تعمل ووصّل بالخرطوم ذاتي الإغلاق فقط حتى لا يتدفق الغاز بحرية.",
         "ur": "صرف سرٹیفائیڈ اہلکار۔ اینالائزر ماپتے وقت SF6 نمونہ گیس خارج کرتا ہے — وینٹیلیشن چالو رکھیں اور صرف سیلف کلوزنگ ہوز سے جوڑیں تاکہ گیس آزادانہ نہ بہے۔",
-        "hi": "सिर्फ़ सर्टिफाइड कर्मचारी। एनालाइज़र मापते समय SF6 सैंपल गैस छोड़ता है — वेंटिलेशन चालू रखें और सिर्फ़ सेल्फ-क्लोज़िंग होज़ से जोड़ें ताकि गैस खुलकर न बहे।"
+        "hi": "सिर्फ़ सर्टिफाइड कर्मचारी। एनालाइज़र मापते समय SF6 सैंपल गैस छोड़ता है — वेंटिलेशन चालू रखें और सिर्फ़ सेल्फ-क्लोज़िंग होज़ से जोड़ें ताकि गैस खुलकर न बहे।",
+        "fr": "Personnel certifié uniquement. L’analyseur rejette du gaz SF6 d’échantillon pendant la mesure — maintenir la ventilation en marche et raccorder uniquement avec le flexible auto-obturant pour éviter tout écoulement libre de gaz."
       }
     }
   }

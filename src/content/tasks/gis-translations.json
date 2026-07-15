@@ -3,12 +3,14 @@
     "title": {
       "ar": "تعديل خزان GIS",
       "ur": "GIS ٹینک موڈیفکیشن",
-      "hi": "GIS टैंक मॉडिफिकेशन"
+      "hi": "GIS टैंक मॉडिफिकेशन",
+      "fr": "Modification de cuve GIS"
     },
     "summary": {
       "ar": "تعديل كامل لخزان GIS — من الاستلام بعد البوكسينج إلى التغليف، محكم الغاز ومعتمد من QC.",
       "ur": "GIS ٹینک کی مکمل موڈیفکیشن — باکسنگ کی حوالگی سے پیکنگ تک، گیس ٹائٹ اور QC سے منظور شدہ۔",
-      "hi": "GIS टैंक का पूरा मॉडिफिकेशन — बॉक्सिंग हैंडओवर से पैकिंग तक, गैस-टाइट और QC से पास।"
+      "hi": "GIS टैंक का पूरा मॉडिफिकेशन — बॉक्सिंग हैंडओवर से पैकिंग तक, गैस-टाइट और QC से पास।",
+      "fr": "Modification complète d’une cuve GIS — de la remise après mise en caisse jusqu’à l’emballage, étanche au gaz et validée par le CQ."
     }
   },
   "steps": {
@@ -16,7 +18,8 @@
       "title": {
         "ar": "انقل الخزان إلى منطقة التعديل",
         "ur": "ٹینک کو موڈیفکیشن ایریا میں منتقل کریں",
-        "hi": "टैंक को मॉडिफिकेशन एरिया में ले जाएँ"
+        "hi": "टैंक को मॉडिफिकेशन एरिया में ले जाएँ",
+        "fr": "Transférer la cuve vers la zone de modification"
       },
       "instructions": {
         "ar": [
@@ -39,24 +42,50 @@
           "कुछ भी हिलाने से पहले हर पार्ट को BOM से मिलाकर जाँचें।",
           "टैंक को हैंडलिंग ट्रॉली पर GIS मॉडिफिकेशन एरिया में ले जाएँ।",
           "टैंक को साफ़ और मज़बूत फ़र्श पर रखें।"
+        ],
+        "fr": [
+          "Avant de commencer : clé à chocs chargée, matériel de levage inspecté, équipe informée, éclairage et ventilation corrects.",
+          "Confirmer que la mise en caisse est terminée et que la cuve porte l’étiquette CQ conforme.",
+          "Contrôler chaque composant par rapport à la nomenclature avant tout déplacement.",
+          "Déplacer la cuve vers la zone de modification GIS sur le chariot de manutention.",
+          "Poser la cuve sur un sol propre et stable."
         ]
       },
       "tools": {
-        "ar": ["عربة المناولة", "بطاقة اجتياز QC", "قائمة فحص BOM"],
-        "ur": ["ہینڈلنگ ٹرالی", "QC پاس ٹیگ", "BOM چیک لسٹ"],
-        "hi": ["हैंडलिंग ट्रॉली", "QC पास टैग", "BOM चेकलिस्ट"]
+        "ar": [
+          "عربة المناولة",
+          "بطاقة اجتياز QC",
+          "قائمة فحص BOM"
+        ],
+        "ur": [
+          "ہینڈلنگ ٹرالی",
+          "QC پاس ٹیگ",
+          "BOM چیک لسٹ"
+        ],
+        "hi": [
+          "हैंडलिंग ट्रॉली",
+          "QC पास टैग",
+          "BOM चेकलिस्ट"
+        ],
+        "fr": [
+          "Chariot de manutention",
+          "Étiquette CQ conforme",
+          "Check-list nomenclature"
+        ]
       },
       "warning": {
         "ar": "انقل الخزان على عربة مناولة المواد فقط. أبقِ كلتا يديك على المقبض وادفع من الخلف — لا تمشِ بجانب الحمولة أبدًا ولا تسند الخزان بجسمك: سقوط الخزان يسبب إصابات سحق. تأكد أولًا أن الممر خالٍ.",
         "ur": "ٹینک کو صرف میٹیریل ہینڈلنگ ٹرالی پر لے جائیں۔ دونوں ہاتھ ہینڈل پر رکھیں اور پیچھے سے دھکیلیں — کبھی لوڈ کے ساتھ ساتھ نہ چلیں اور کبھی ٹینک کو اپنے جسم سے نہ روکیں: گرتا ہوا ٹینک کچلنے والی چوٹ دیتا ہے۔ پہلے دیکھ لیں کہ راستہ خالی ہے۔",
-        "hi": "टैंक को सिर्फ़ मटेरियल-हैंडलिंग ट्रॉली पर ले जाएँ। दोनों हाथ हैंडल पर रखें और पीछे से धकेलें — कभी लोड के बगल में न चलें और कभी टैंक को अपने शरीर से न रोकें: गिरता टैंक कुचलने वाली चोट देता है। पहले देख लें कि रास्ता खाली है।"
+        "hi": "टैंक को सिर्फ़ मटेरियल-हैंडलिंग ट्रॉली पर ले जाएँ। दोनों हाथ हैंडल पर रखें और पीछे से धकेलें — कभी लोड के बगल में न चलें और कभी टैंक को अपने शरीर से न रोकें: गिरता टैंक कुचलने वाली चोट देता है। पहले देख लें कि रास्ता खाली है।",
+        "fr": "Déplacer la cuve uniquement sur le chariot de manutention. Garder les deux mains sur la poignée et pousser par l’arrière — ne jamais marcher à côté de la charge ni retenir la cuve avec le corps : une cuve qui bascule provoque des écrasements. Vérifier d’abord que l’allée est dégagée."
       }
     },
     "2": {
       "title": {
         "ar": "نظّف الخزان جيدًا",
         "ur": "ٹینک کو اچھی طرح صاف کریں",
-        "hi": "टैंक को अच्छी तरह साफ़ करें"
+        "hi": "टैंक को अच्छी तरह साफ़ करें",
+        "fr": "Nettoyer soigneusement la cuve"
       },
       "instructions": {
         "ar": [
@@ -79,24 +108,54 @@
           "वैक्यूम क्लीनर से सारी धूल और कण निकालें।",
           "सबसे आख़िर में टैंक का निचला हिस्सा वैक्यूम करें।",
           "सेल्फ़-चेक: सतहें धूल, तेल और बाहरी चीज़ों से साफ़ हों — यह गैस कम्पार्टमेंट है।"
+        ],
+        "fr": [
+          "Mettre des gants résistants aux produits chimiques et des lunettes avant tout contact avec le méthanol.",
+          "Essuyer chaque surface interne au méthanol et au chiffon — parois, fond et portées d’étanchéité.",
+          "Aspirer toute la poussière et les particules libres.",
+          "Aspirer le fond de la cuve en dernier.",
+          "Auto-contrôle : surfaces exemptes de poussière, d’huile et de corps étrangers — il s’agit d’un compartiment à gaz."
         ]
       },
       "tools": {
-        "ar": ["قفازات كيماويات", "لفافة مناديل", "ميثانول", "مكنسة شفط"],
-        "ur": ["کیمیکل دستانے", "ٹشو رول", "میتھانول", "ویکیوم کلینر"],
-        "hi": ["केमिकल दस्ताने", "टिशू रोल", "मेथनॉल", "वैक्यूम क्लीनर"]
+        "ar": [
+          "قفازات كيماويات",
+          "لفافة مناديل",
+          "ميثانول",
+          "مكنسة شفط"
+        ],
+        "ur": [
+          "کیمیکل دستانے",
+          "ٹشو رول",
+          "میتھانول",
+          "ویکیوم کلینر"
+        ],
+        "hi": [
+          "केमिकल दस्ताने",
+          "टिशू रोल",
+          "मेथनॉल",
+          "वैक्यूम क्लीनर"
+        ],
+        "fr": [
+          "Gants chimiques",
+          "Rouleau de chiffons",
+          "Méthanol",
+          "Aspirateur"
+        ]
       },
       "warning": {
         "ar": "الميثانول قابل للاشتعال وسام — يخترق الجلد وبخاره يسبب دوخة وضررًا للعين. أبقِ العبوة مغلقة عند عدم السكب، وأبقِ التهوية تعمل، وأبعد كل الشرر والأعمال الساخنة. إذا لامس الميثانول جلدك، اغسله بالماء فورًا وأبلغ عن ذلك.",
         "ur": "میتھانول آگ پکڑنے والا اور زہریلا ہے — یہ جلد کے اندر چلا جاتا ہے اور اس کی بھاپ چکر اور آنکھ کو نقصان دیتی ہے۔ ڈالنے کے علاوہ ڈبہ بند رکھیں، ہوا کا انتظام چالو رکھیں، اور ہر چنگاری اور گرم کام دور رکھیں۔ اگر میتھانول جلد پر لگ جائے تو فوراً پانی سے دھوئیں اور اطلاع دیں۔",
-        "hi": "मेथनॉल ज्वलनशील और ज़हरीला है — यह त्वचा के अंदर चला जाता है और इसकी भाप से चक्कर और आँखों को नुक़सान होता है। डालते समय के अलावा डिब्बा बंद रखें, हवा का इंतज़ाम चालू रखें, और हर चिंगारी और गर्म काम दूर रखें। मेथनॉल त्वचा पर लगे तो तुरंत पानी से धोएँ और रिपोर्ट करें।"
+        "hi": "मेथनॉल ज्वलनशील और ज़हरीला है — यह त्वचा के अंदर चला जाता है और इसकी भाप से चक्कर और आँखों को नुक़सान होता है। डालते समय के अलावा डिब्बा बंद रखें, हवा का इंतज़ाम चालू रखें, और हर चिंगारी और गर्म काम दूर रखें। मेथनॉल त्वचा पर लगे तो तुरंत पानी से धोएँ और रिपोर्ट करें।",
+        "fr": "Le méthanol est inflammable et toxique — il traverse la peau et ses vapeurs provoquent vertiges et lésions oculaires. Garder le bidon fermé hors des transvasements, maintenir la ventilation en marche et écarter toute étincelle ou travail à chaud. En cas de contact avec la peau, rincer immédiatement à l’eau et le signaler."
       }
     },
     "3": {
       "title": {
         "ar": "ركّب بوشينجات الكابل وبسبار البوشينج",
         "ur": "کیبل بوشنگ اور بوشنگ بس بار لگائیں",
-        "hi": "केबल बुशिंग और बुशिंग बसबार लगाएँ"
+        "hi": "केबल बुशिंग और बुशिंग बसबार लगाएँ",
+        "fr": "Installer les traversées de câble et leur jeu de barres"
       },
       "instructions": {
         "ar": [
@@ -122,24 +181,75 @@
           "हर बुशिंग को गाइड पिन की मदद से लगाएँ ताकि कोई पार्ट न गिरे।",
           "हर M8×20 बोल्ट पर Loctite 401 लगाएँ, फिर हर बोल्ट को 13.5 Nm पर कसें।",
           "बसबार को बुशिंग पर 8 mm एलन की और एक्सटेंशन रॉड से लगाएँ; टॉर्क 47 Nm। हर बोल्ट पर लाल मार्कर से निशान लगाएँ।"
+        ],
+        "fr": [
+          "Fixer la plaque de traversée sur la partie basse de la cuve — le côté aux bords de trous chanfreinés vers l’intérieur ; la face plane vers l’extérieur.",
+          "Fixer les 3 plaques de traversée avec leurs 12 rondelles, rondelles ressort et écrous (douille 17 mm) ; couple 26,5 Nm.",
+          "Contrôler et nettoyer chaque traversée de prise de câble ; appliquer de la graisse Molykote là où la traversée touche la plaque.",
+          "Monter chaque traversée à l’aide des pions de guidage pour qu’aucune pièce ne puisse tomber.",
+          "Appliquer du Loctite 401 sur chaque boulon M8×20, puis serrer chaque boulon à 13,5 Nm.",
+          "Monter les jeux de barres sur les traversées avec la clé Allen de 8 mm et la rallonge ; couple 47 Nm. Marquer chaque boulon au marqueur rouge."
         ]
       },
       "tools": {
-        "ar": ["مسامير توجيه", "راتشيت", "بوكس 17 mm", "مفتاح شد كهربائي", "مفاتيح ألن 5 mm و 8 mm", "عمود تطويل", "مفتاح عزم", "شحم Molykote", "Loctite 401"],
-        "ur": ["گائیڈ پن", "ریچٹ", "17 mm ساکٹ", "امپیکٹ رنچ", "5 mm اور 8 mm ایلن کی", "ایکسٹینشن راڈ", "ٹارک رنچ", "Molykote گریس", "Loctite 401"],
-        "hi": ["गाइड पिन", "रैचेट", "17 mm सॉकेट", "इम्पैक्ट रिंच", "5 mm और 8 mm एलन की", "एक्सटेंशन रॉड", "टॉर्क रिंच", "Molykote ग्रीस", "Loctite 401"]
+        "ar": [
+          "مسامير توجيه",
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفتاح شد كهربائي",
+          "مفاتيح ألن 5 mm و 8 mm",
+          "عمود تطويل",
+          "مفتاح عزم",
+          "شحم Molykote",
+          "Loctite 401"
+        ],
+        "ur": [
+          "گائیڈ پن",
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "امپیکٹ رنچ",
+          "5 mm اور 8 mm ایلن کی",
+          "ایکسٹینشن راڈ",
+          "ٹارک رنچ",
+          "Molykote گریس",
+          "Loctite 401"
+        ],
+        "hi": [
+          "गाइड पिन",
+          "रैचेट",
+          "17 mm सॉकेट",
+          "इम्पैक्ट रिंच",
+          "5 mm और 8 mm एलन की",
+          "एक्सटेंशन रॉड",
+          "टॉर्क रिंच",
+          "Molykote ग्रीस",
+          "Loctite 401"
+        ],
+        "fr": [
+          "Pions de guidage",
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé à chocs",
+          "Clés Allen 5 et 8 mm",
+          "Rallonge",
+          "Clé dynamométrique",
+          "Graisse Molykote",
+          "Loctite 401"
+        ]
       },
       "warning": {
         "ar": "Loctite 401 لاصق فوري — يلصق الجلد والعين خلال ثوانٍ. ارتدِ النظارات والقفازات، وضع قطرة واحدة بالفوهة (وليس بالإصبع أبدًا)، وأبقِ العبوة مغلقة. إذا التصق الجلد، لا تشدّه — انقعه في ماء دافئ وصابون وأبلغ. أبعد يديك عن البوشينج أثناء عمل مفتاح الشد الكهربائي.",
         "ur": "Loctite 401 فوری چپکنے والا ہے — یہ سیکنڈوں میں جلد اور آنکھ کو جوڑ دیتا ہے۔ چشمہ اور دستانے پہنیں، ایک قطرہ نوزل سے لگائیں (کبھی انگلی سے نہیں)، اور بوتل بند رکھیں۔ اگر جلد چپک جائے تو کھینچیں نہیں — نیم گرم صابن والے پانی میں بھگوئیں اور اطلاع دیں۔ امپیکٹ رنچ چلتے وقت ہاتھ بوشنگ سے دور رکھیں۔",
-        "hi": "Loctite 401 तुरंत चिपकने वाला है — यह सेकंडों में त्वचा और आँख को जोड़ देता है। चश्मा और दस्ताने पहनें, एक बूँद नोज़ल से लगाएँ (कभी उँगली से नहीं), और बोतल बंद रखें। त्वचा चिपक जाए तो खींचें नहीं — गुनगुने साबुन वाले पानी में भिगोएँ और रिपोर्ट करें। इम्पैक्ट रिंच चलते समय हाथ बुशिंग से दूर रखें।"
+        "hi": "Loctite 401 तुरंत चिपकने वाला है — यह सेकंडों में त्वचा और आँख को जोड़ देता है। चश्मा और दस्ताने पहनें, एक बूँद नोज़ल से लगाएँ (कभी उँगली से नहीं), और बोतल बंद रखें। त्वचा चिपक जाए तो खींचें नहीं — गुनगुने साबुन वाले पानी में भिगोएँ और रिपोर्ट करें। इम्पैक्ट रिंच चलते समय हाथ बुशिंग से दूर रखें।",
+        "fr": "Le Loctite 401 est une colle instantanée — elle colle la peau et les yeux en quelques secondes. Porter lunettes et gants, appliquer une goutte avec l’embout (jamais avec le doigt) et garder le flacon bouché. En cas de collage de la peau, ne pas tirer — tremper dans de l’eau tiède savonneuse et le signaler. Garder les mains à l’écart de la traversée pendant l’utilisation de la clé à chocs."
       }
     },
     "4": {
       "title": {
         "ar": "ركّب خزان ES/DS",
         "ur": "ES/DS ٹینک لگائیں",
-        "hi": "ES/DS टैंक लगाएँ"
+        "hi": "ES/DS टैंक लगाएँ",
+        "fr": "Installer la cuve sectionneur/MALT"
       },
       "instructions": {
         "ar": [
@@ -165,24 +275,79 @@
           "बुशिंग के 18 M8×20 बोल्ट कसें; टॉर्क 14.7 Nm। DS को 19 mm स्पैनर से टैंक पर कसें।",
           "ऊपर वाला बसबार उसके 6 M12×35 बोल्ट से लगाएँ; टॉर्क 47 Nm।",
           "सेल्फ़-चेक: क्रेन छोड़ने से पहले O-ring की पोज़िशन फिर देखें — यहाँ ग़लत टॉर्क का मतलब SF6 लीक है।"
+        ],
+        "fr": [
+          "Essuyer au méthanol le plan de joint où reposera la cuve sectionneur/MALT ; appliquer de la graisse sur la zone de fixation des boulons.",
+          "Vérifier que le joint torique est bien logé dans sa gorge — ni vrillé ni pincé. Appliquer une fine couche de graisse et d’huile silicone.",
+          "Descendre la cuve sectionneur/MALT en position au pont roulant sur les 2 pions de guidage — la traversée ne doit jamais toucher la cuve.",
+          "Fixer les 18 boulons de traversée M8×20 ; couple 14,7 Nm. Fixer le sectionneur à la cuve avec la clé de 19 mm.",
+          "Monter le jeu de barres supérieur avec ses 6 boulons M12×35 ; couple 47 Nm.",
+          "Auto-contrôle : revérifier la position du joint torique avant de libérer le pont roulant — un couple incorrect ici signifie une fuite de SF6."
         ]
       },
       "tools": {
-        "ar": ["رافعة علوية ≥ 3.2 t", "بكرة سلسلة 0.5 t", "مسامير توجيه", "مفتاح 19 mm", "راتشيت", "مفتاح عزم", "زيت سيليكون", "شحم Molykote", "ميثانول", "لفافة مناديل"],
-        "ur": ["اوور ہیڈ کرین ≥ 3.2 t", "چین بلاک 0.5 t", "گائیڈ پن", "19 mm اسپینر", "ریچٹ", "ٹارک رنچ", "سلیکون آئل", "Molykote گریس", "میتھانول", "ٹشو رول"],
-        "hi": ["ओवरहेड क्रेन ≥ 3.2 t", "चेन ब्लॉक 0.5 t", "गाइड पिन", "19 mm स्पैनर", "रैचेट", "टॉर्क रिंच", "सिलिकॉन ऑयल", "Molykote ग्रीस", "मेथनॉल", "टिशू रोल"]
+        "ar": [
+          "رافعة علوية ≥ 3.2 t",
+          "بكرة سلسلة 0.5 t",
+          "مسامير توجيه",
+          "مفتاح 19 mm",
+          "راتشيت",
+          "مفتاح عزم",
+          "زيت سيليكون",
+          "شحم Molykote",
+          "ميثانول",
+          "لفافة مناديل"
+        ],
+        "ur": [
+          "اوور ہیڈ کرین ≥ 3.2 t",
+          "چین بلاک 0.5 t",
+          "گائیڈ پن",
+          "19 mm اسپینر",
+          "ریچٹ",
+          "ٹارک رنچ",
+          "سلیکون آئل",
+          "Molykote گریس",
+          "میتھانول",
+          "ٹشو رول"
+        ],
+        "hi": [
+          "ओवरहेड क्रेन ≥ 3.2 t",
+          "चेन ब्लॉक 0.5 t",
+          "गाइड पिन",
+          "19 mm स्पैनर",
+          "रैचेट",
+          "टॉर्क रिंच",
+          "सिलिकॉन ऑयल",
+          "Molykote ग्रीस",
+          "मेथनॉल",
+          "टिशू रोल"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Palan à chaîne 0,5 t",
+          "Pions de guidage",
+          "Clé 19 mm",
+          "Cliquet",
+          "Clé dynamométrique",
+          "Huile silicone",
+          "Graisse Molykote",
+          "Méthanol",
+          "Rouleau de chiffons"
+        ]
       },
       "warning": {
         "ar": "حمولة معلّقة: وجّه خزان ES/DS بمسامير التوجيه فقط — لا تضع يديك أو أصابعك أبدًا بين الخزان والفلنجة المقابلة وهو معلّق؛ تأرجح الحمولة سيسحقها. ابتعد عن مسار الحركة ولا تحرر الرافعة قبل تركيب البراغي.",
         "ur": "لٹکا ہوا لوڈ: ES/DS ٹینک کو صرف گائیڈ پن سے سیدھ میں لائیں — لٹکے ہوئے ٹینک اور سامنے والے فلینج کے بیچ کبھی ہاتھ یا انگلیاں نہ ڈالیں؛ لوڈ کے جھولنے سے وہ کچل جائیں گی۔ لوڈ کے راستے سے دور رہیں اور بولٹ لگنے تک کرین نہ چھوڑیں۔",
-        "hi": "लटका हुआ लोड: ES/DS टैंक को सिर्फ़ गाइड पिन से सीध में लाएँ — लटके टैंक और सामने वाले फ़्लैंज के बीच कभी हाथ या उँगलियाँ न डालें; लोड के झूलने से वे कुचल जाएँगी। लोड के रास्ते से दूर रहें और बोल्ट लगने तक क्रेन न छोड़ें।"
+        "hi": "लटका हुआ लोड: ES/DS टैंक को सिर्फ़ गाइड पिन से सीध में लाएँ — लटके टैंक और सामने वाले फ़्लैंज के बीच कभी हाथ या उँगलियाँ न डालें; लोड के झूलने से वे कुचल जाएँगी। लोड के रास्ते से दूर रहें और बोल्ट लगने तक क्रेन न छोड़ें।",
+        "fr": "Charge suspendue : guider la cuve sectionneur/MALT uniquement par les pions de guidage — ne jamais placer les mains ou les doigts entre la cuve et la bride d’accouplement tant qu’elle est suspendue ; un balancement de la charge les écraserait. Se tenir à l’écart du trajet et ne pas libérer le pont roulant avant la mise en place des boulons."
       }
     },
     "5": {
       "title": {
         "ar": "ركّب حامل CT ثم وحدات CT",
         "ur": "پہلے CT سپورٹ لگائیں، پھر CT لگائیں",
-        "hi": "पहले CT सपोर्ट लगाएँ, फिर CT लगाएँ"
+        "hi": "पहले CT सपोर्ट लगाएँ, फिर CT लगाएँ",
+        "fr": "Installer le support des TC, puis les TC"
       },
       "instructions": {
         "ar": [
@@ -208,24 +373,63 @@
           "CT के बीच इंसुलेशन रबर रखें। हर CT और प्लेट के बीच 1 mm का गैप रखें — CT प्लेट से न छुए।",
           "हर CT वायर को 4 सपोर्ट रॉड में से निकालें; हर रॉड पर एक M12 नट और सादा वॉशर CT के ऊपरी लेवल तक चढ़ाएँ।",
           "ऊपर वाली इंसुलेशन प्लेट लगाएँ, फिर एल्युमिनियम प्लेट। हर स्टड पर: सादा वॉशर, प्लास्टिक वॉशर (इसे बिल्कुल न भूलें), स्प्रिंग वॉशर, फिर कैप नट। 19 mm स्पैनर से कसें; टॉर्क 47.5 Nm।"
+        ],
+        "fr": [
+          "Fixer chaque plaque support de TC avec 4 boulons M12×35. Travailler en binôme : l’opérateur 1 serre avec la douille Allen de 10 mm, l’opérateur 2 maintient avec la clé de 19 mm. Couple 47,5 Nm.",
+          "Si un conducteur présente des rayures, le nettoyer au papier de verre grain 700–1000, puis fixer le jeu de barres dans la plaque support de TC avec son boulon M12×35.",
+          "Contrôler le sens de chaque TC avant sa pose : P1 vers le haut, P2 vers le bas — sur les trois TC.",
+          "Placer les caoutchoucs isolants entre les TC. Conserver un jeu de 1 mm entre chaque TC et la plaque — le TC ne doit pas toucher la plaque.",
+          "Faire passer le fil de chaque TC entre les 4 tiges de support ; ajouter un écrou M12 et une rondelle plate sur chaque tige jusqu’au niveau du haut du TC.",
+          "Monter la plaque isolante supérieure, puis la plaque aluminium. Sur chaque goujon : rondelle plate, rondelle plastique (NE PAS l’oublier), rondelle ressort, puis l’écrou borgne. Serrer avec la clé de 19 mm ; couple 47,5 Nm."
         ]
       },
       "tools": {
-        "ar": ["بوكس ألن 10 mm", "مفتاح 19 mm", "مفتاح عزم", "ورق صنفرة 700–1000", "لوح فوم", "حوامل مطاط عازلة"],
-        "ur": ["10 mm ایلن ساکٹ", "19 mm اسپینر", "ٹارک رنچ", "سینڈ پیپر 700–1000 گرٹ", "فوم شیٹ", "انسولیشن ربڑ سپورٹ"],
-        "hi": ["10 mm एलन सॉकेट", "19 mm स्पैनर", "टॉर्क रिंच", "सैंडपेपर 700–1000 ग्रिट", "फ़ोम शीट", "इंसुलेशन रबर सपोर्ट"]
+        "ar": [
+          "بوكس ألن 10 mm",
+          "مفتاح 19 mm",
+          "مفتاح عزم",
+          "ورق صنفرة 700–1000",
+          "لوح فوم",
+          "حوامل مطاط عازلة"
+        ],
+        "ur": [
+          "10 mm ایلن ساکٹ",
+          "19 mm اسپینر",
+          "ٹارک رنچ",
+          "سینڈ پیپر 700–1000 گرٹ",
+          "فوم شیٹ",
+          "انسولیشن ربڑ سپورٹ"
+        ],
+        "hi": [
+          "10 mm एलन सॉकेट",
+          "19 mm स्पैनर",
+          "टॉर्क रिंच",
+          "सैंडपेपर 700–1000 ग्रिट",
+          "फ़ोम शीट",
+          "इंसुलेशन रबर सपोर्ट"
+        ],
+        "fr": [
+          "Douille Allen 10 mm",
+          "Clé 19 mm",
+          "Clé dynamométrique",
+          "Papier de verre grain 700–1000",
+          "Plaque de mousse",
+          "Supports en caoutchouc isolant"
+        ]
       },
       "warning": {
         "ar": "عمل بشخصين: اتفقا على إشارات اليد قبل الربط بالعزم، وأبقيا الأصابع خلف فك المفتاح حتى لا يحشرها انزلاقه. نقطة جودة: CT معكوس (تبديل P1/P2) يرسب في الاختبار النهائي بعد إغلاق الخزان — افحص الثلاثة قبل المتابعة.",
         "ur": "دو افراد کا کام: ٹارک لگانے سے پہلے ہاتھ کے اشارے طے کریں، اور انگلیاں اسپینر کے جبڑے کے پیچھے رکھیں تاکہ پھسلنے پر نہ پھنسیں۔ کوالٹی گیٹ: الٹا CT (P1/P2 بدلے ہوئے) ٹینک بند ہونے کے بعد فائنل ٹیسٹ میں فیل ہوتا ہے — آگے بڑھنے سے پہلے تینوں چیک کریں۔",
-        "hi": "दो लोगों का काम: टॉर्क लगाने से पहले हाथ के इशारे तय करें, और उँगलियाँ स्पैनर के जबड़े के पीछे रखें ताकि फिसलने पर न फँसें। क्वालिटी गेट: उल्टा CT (P1/P2 बदले हुए) टैंक बंद होने के बाद फ़ाइनल टेस्ट में फ़ेल होता है — आगे बढ़ने से पहले तीनों चेक करें।"
+        "hi": "दो लोगों का काम: टॉर्क लगाने से पहले हाथ के इशारे तय करें, और उँगलियाँ स्पैनर के जबड़े के पीछे रखें ताकि फिसलने पर न फँसें। क्वालिटी गेट: उल्टा CT (P1/P2 बदले हुए) टैंक बंद होने के बाद फ़ाइनल टेस्ट में फ़ेल होता है — आगे बढ़ने से पहले तीनों चेक करें।",
+        "fr": "Opération à deux : convenir des signaux de la main avant le serrage et garder les doigts derrière la mâchoire de la clé pour qu’un dérapage ne les coince pas. Point qualité : un TC inversé (P1/P2 permutés) échoue aux essais finals une fois la cuve scellée — contrôler les trois avant de poursuivre."
       }
     },
     "6": {
       "title": {
         "ar": "وصّل أسلاك CT واختبرها وأغلق غطاء CT",
         "ur": "CT کی وائرنگ کریں، ٹیسٹ کریں اور CT کور بند کریں",
-        "hi": "CT की वायरिंग करें, टेस्ट करें और CT कवर बंद करें"
+        "hi": "CT की वायरिंग करें, टेस्ट करें और CT कवर बंद करें",
+        "fr": "Câbler les TC, les tester et fermer le capot des TC"
       },
       "instructions": {
         "ar": [
@@ -248,24 +452,66 @@
           "टैंक बंद होने से पहले हर CT को CT टेस्ट सेट से टेस्ट करें — गैस भरने के बाद दोबारा काम पूरे कम्पार्टमेंट की क़ीमत लेता है।",
           "CT कवर प्लेट लगाएँ और उसकी O-ring सही बैठी हो। सभी 8 M10 बोल्ट आधे डालें, फिर क्रॉस पैटर्न में चरणों में कसें — पहले 30%, फिर 60%, फिर 100%। आख़िरी टॉर्क 26.48 Nm।",
           "CT लेबल/पहचान टैंक के बाहर चिपकाएँ।"
+        ],
+        "fr": [
+          "Sertir une cosse de 6 mm sur chaque fil de TC.",
+          "Vérifier que chaque phase (R, Y, B) comporte 9 fils, numérotés de 1S1 à 3S3 — 27 fils au total. Les cheminer sans contrainte sur aucune borne.",
+          "Tester chaque TC avec la valise de test avant la fermeture de la cuve — une reprise après remplissage de gaz coûte tout le compartiment.",
+          "Monter la plaque de capot des TC avec son joint torique correctement en place. Engager les 8 boulons M10 à mi-course, puis serrer en croix par paliers — d’abord 30 %, puis 60 %, puis 100 %. Couple final 26,48 Nm.",
+          "Coller l’étiquette d’identification des TC à l’extérieur de la cuve."
         ]
       },
       "tools": {
-        "ar": ["قشّارة أسلاك", "كبّاسة أطراف", "أطراف 6 mm", "جهاز اختبار CT", "راتشيت", "بوكس 17 mm", "مفتاح عزم"],
-        "ur": ["وائر اسٹرپر", "وائر کرمپر", "6 mm لَگ", "CT ٹیسٹ سیٹ", "ریچٹ", "17 mm ساکٹ", "ٹارک رنچ"],
-        "hi": ["वायर स्ट्रिपर", "वायर क्रिम्पर", "6 mm लग", "CT टेस्ट सेट", "रैचेट", "17 mm सॉकेट", "टॉर्क रिंच"]
+        "ar": [
+          "قشّارة أسلاك",
+          "كبّاسة أطراف",
+          "أطراف 6 mm",
+          "جهاز اختبار CT",
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفتاح عزم"
+        ],
+        "ur": [
+          "وائر اسٹرپر",
+          "وائر کرمپر",
+          "6 mm لَگ",
+          "CT ٹیسٹ سیٹ",
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ٹارک رنچ"
+        ],
+        "hi": [
+          "वायर स्ट्रिपर",
+          "वायर क्रिम्पर",
+          "6 mm लग",
+          "CT टेस्ट सेट",
+          "रैचेट",
+          "17 mm सॉकेट",
+          "टॉर्क रिंच"
+        ],
+        "fr": [
+          "Pince à dénuder",
+          "Pince à sertir",
+          "Cosses 6 mm",
+          "Valise de test TC",
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
+        ]
       },
       "warning": {
         "ar": "جهاز اختبار CT يشغّله عامل مدرّب فقط — يخرج جهدًا وتيارًا خطرين على الأطراف. وصّل وافحص كل الأسلاك قبل التشغيل، ونبّه العمال القريبين، ولا تلمس الأطراف أبدًا أثناء الاختبار.",
         "ur": "CT ٹیسٹ سیٹ صرف تربیت یافتہ آپریٹر چلائے — اس کی لیڈز پر خطرناک وولٹیج اور کرنٹ آتا ہے۔ آن کرنے سے پہلے تمام لیڈز لگا کر چیک کریں، قریبی ورکرز کو خبردار کریں، اور ٹیسٹ چلتے وقت ٹرمینل کو کبھی ہاتھ نہ لگائیں۔",
-        "hi": "CT टेस्ट सेट सिर्फ़ ट्रेंड ऑपरेटर चलाए — इसकी लीड्स पर ख़तरनाक वोल्टेज और करंट आता है। ऑन करने से पहले सभी लीड्स लगाकर चेक करें, पास के वर्करों को आगाह करें, और टेस्ट चलते समय टर्मिनल कभी न छुएँ।"
+        "hi": "CT टेस्ट सेट सिर्फ़ ट्रेंड ऑपरेटर चलाए — इसकी लीड्स पर ख़तरनाक वोल्टेज और करंट आता है। ऑन करने से पहले सभी लीड्स लगाकर चेक करें, पास के वर्करों को आगाह करें, और टेस्ट चलते समय टर्मिनल कभी न छुएँ।",
+        "fr": "Seul un opérateur formé utilise la valise de test TC — elle délivre une tension et un courant dangereux aux cordons. Raccorder et contrôler tous les cordons avant la mise sous tension, avertir les personnes à proximité et ne jamais toucher les bornes pendant l’essai."
       }
     },
     "7": {
       "title": {
         "ar": "ركّب الزيولايت وأغلق الأغطية — 20 دقيقة",
         "ur": "زیولائٹ لگائیں اور کور بند کریں — 20 منٹ",
-        "hi": "ज़ियोलाइट लगाएँ और कवर बंद करें — 20 मिनट"
+        "hi": "ज़ियोलाइट लगाएँ और कवर बंद करें — 20 मिनट",
+        "fr": "Installer la zéolithe et fermer les capots — 20 minutes"
       },
       "instructions": {
         "ar": [
@@ -291,24 +537,71 @@
           "दोनों फ़िल्टर केसों में एक-एक बैग लगाएँ — CB के पिछले कवर और पिछले बीच वाले कवर के अंदर। हर फ़िल्टर केस को उसके 6 स्क्रू से कसें; कसने से पहले Loctite लगाएँ।",
           "कवर लगाएँ और M10 नट क्रम से कसें — एक कसें, एक छोड़ें — चरणों में: पहले 30%, फिर 60%, फिर 100%। टॉर्क 26.5 Nm।",
           "सेल्फ़-चेक: हर नट टॉर्क से कसा और मार्क हो, टैंक 20 मिनट के अंदर सील हो।"
+        ],
+        "fr": [
+          "Aspirer l’intérieur de la cuve ; essuyer la portée d’étanchéité, la gorge du joint torique et le joint torique.",
+          "Peser chaque sachet de zéolithe à 1,5 kg sur la balance.",
+          "Ouvrir la zéolithe — vous disposez alors de 20 minutes pour sceller la cuve.",
+          "Fixer un sachet dans chacun des DEUX boîtiers filtrants — dans le capot arrière du disjoncteur et dans le capot arrière central. Fixer chaque boîtier avec ses 6 vis ; appliquer du Loctite avant serrage.",
+          "Monter les capots et serrer les écrous M10 dans l’ordre — un sur deux — par paliers : d’abord 30 %, puis 60 %, puis 100 %. Couple 26,5 Nm.",
+          "Auto-contrôle : chaque écrou serré au couple et marqué, cuve scellée dans la fenêtre de 20 minutes."
         ]
       },
       "tools": {
-        "ar": ["مكنسة شفط", "ميزان", "لفافة مناديل", "ميثانول", "مثبّت أسنان Loctite (الدرجة حسب الرسم — TBD)", "راتشيت", "بوكس 17 mm", "مفتاح عزم"],
-        "ur": ["ویکیوم کلینر", "ترازو", "ٹشو رول", "میتھانول", "Loctite تھریڈ لاکر (گریڈ ڈرائنگ کے مطابق — TBD)", "ریچٹ", "17 mm ساکٹ", "ٹارک رنچ"],
-        "hi": ["वैक्यूम क्लीनर", "तराज़ू", "टिशू रोल", "मेथनॉल", "Loctite थ्रेडलॉकर (ग्रेड ड्रॉइंग के अनुसार — TBD)", "रैचेट", "17 mm सॉकेट", "टॉर्क रिंच"]
+        "ar": [
+          "مكنسة شفط",
+          "ميزان",
+          "لفافة مناديل",
+          "ميثانول",
+          "مثبّت أسنان Loctite (الدرجة حسب الرسم — TBD)",
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفتاح عزم"
+        ],
+        "ur": [
+          "ویکیوم کلینر",
+          "ترازو",
+          "ٹشو رول",
+          "میتھانول",
+          "Loctite تھریڈ لاکر (گریڈ ڈرائنگ کے مطابق — TBD)",
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ٹارک رنچ"
+        ],
+        "hi": [
+          "वैक्यूम क्लीनर",
+          "तराज़ू",
+          "टिशू रोल",
+          "मेथनॉल",
+          "Loctite थ्रेडलॉकर (ग्रेड ड्रॉइंग के अनुसार — TBD)",
+          "रैचेट",
+          "17 mm सॉकेट",
+          "टॉर्क रिंच"
+        ],
+        "fr": [
+          "Aspirateur",
+          "Balance",
+          "Rouleau de chiffons",
+          "Méthanol",
+          "Frein-filet Loctite (grade selon plan — à définir)",
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
+        ]
       },
       "warning": {
         "ar": "أغلق الخزان خلال 20 دقيقة من فتح الزيولايت — فهو يمتص الرطوبة من الهواء، والزيولايت الرطب يعني رسوب حجرة الغاز في اختبار نقطة الندى.",
         "ur": "زیولائٹ کھولنے کے 20 منٹ کے اندر ٹینک بند کریں — یہ ہوا سے نمی جذب کرتا ہے، اور گیلا زیولائٹ گیس کمپارٹمنٹ کو ڈیو پوائنٹ ٹیسٹ میں فیل کر دیتا ہے۔",
-        "hi": "ज़ियोलाइट खोलने के 20 मिनट के अंदर टैंक बंद करें — यह हवा से नमी सोखता है, और गीला ज़ियोलाइट गैस कम्पार्टमेंट को ड्यू-पॉइंट टेस्ट में फ़ेल कर देता है।"
+        "hi": "ज़ियोलाइट खोलने के 20 मिनट के अंदर टैंक बंद करें — यह हवा से नमी सोखता है, और गीला ज़ियोलाइट गैस कम्पार्टमेंट को ड्यू-पॉइंट टेस्ट में फ़ेल कर देता है।",
+        "fr": "Fermer la cuve dans les 20 minutes suivant l’ouverture de la zéolithe — elle absorbe l’humidité de l’air, et une zéolithe humide fait échouer le compartiment à gaz à l’essai de point de rosée."
       }
     },
     "8": {
       "title": {
         "ar": "نفّذ عملية التفريغ (الفاكيوم)",
         "ur": "ویکیوم کا عمل کریں",
-        "hi": "वैक्यूम प्रोसेस करें"
+        "hi": "वैक्यूम प्रोसेस करें",
+        "fr": "Réaliser la mise sous vide"
       },
       "instructions": {
         "ar": [
@@ -331,24 +624,50 @@
           "मशीन ऑन करें और शुरू करने के लिए हरा बटन दबाएँ।",
           "स्क्रीन देखते रहें: रोकने से पहले प्रेशर 0.8 mbar या उससे नीचे आना चाहिए।",
           "सेल्फ़-चेक: होज़ हटाने से पहले आख़िरी वैक्यूम वैल्यू प्रोसेस रिकॉर्ड में लिखें।"
+        ],
+        "fr": [
+          "Raccorder le flexible DN8 entre la pompe à vide et la cuve.",
+          "Si le piquage de la cuve est en DN20, monter d’abord l’adaptateur DN20 vers DN8.",
+          "Mettre la machine en marche et appuyer sur le bouton vert pour démarrer.",
+          "Surveiller l’écran : la pression doit DESCENDRE à 0,8 mbar ou moins avant l’arrêt.",
+          "Auto-contrôle : inscrire la valeur finale de vide sur la fiche de suivi avant le débranchement."
         ]
       },
       "tools": {
-        "ar": ["مضخة تفريغ ≥ 60 m³/h", "خرطوم DN8", "محول DN20→DN8"],
-        "ur": ["ویکیوم پمپ ≥ 60 m³/h", "DN8 ہوز", "DN20→DN8 اڈاپٹر"],
-        "hi": ["वैक्यूम पंप ≥ 60 m³/h", "DN8 होज़", "DN20→DN8 अडैप्टर"]
+        "ar": [
+          "مضخة تفريغ ≥ 60 m³/h",
+          "خرطوم DN8",
+          "محول DN20→DN8"
+        ],
+        "ur": [
+          "ویکیوم پمپ ≥ 60 m³/h",
+          "DN8 ہوز",
+          "DN20→DN8 اڈاپٹر"
+        ],
+        "hi": [
+          "वैक्यूम पंप ≥ 60 m³/h",
+          "DN8 होज़",
+          "DN20→DN8 अडैप्टर"
+        ],
+        "fr": [
+          "Pompe à vide ≥ 60 m³/h",
+          "Flexible DN8",
+          "Adaptateur DN20→DN8"
+        ]
       },
       "warning": {
         "ar": "للعاملين المعتمدين فقط. تأكد قبل البدء أن الخرطوم والوصلات سليمة ومثبتة بالكامل — الخرطوم المنفلت تحت التفريغ يرتد بعنف. نفّس الخط قبل فصل أي وصلة؛ لا تفتح أي وصلة أبدًا والمضخة تعمل.",
         "ur": "صرف سرٹیفائیڈ عملہ۔ شروع کرنے سے پہلے چیک کریں کہ ہوز اور کپلنگ سلامت اور پوری طرح لگے ہوں — ویکیوم میں چھوٹا ہوا ہوز زور سے لہراتا ہے۔ کوئی کپلنگ کھولنے سے پہلے لائن کا پریشر نکالیں؛ پمپ چلتے وقت کبھی کوئی فٹنگ نہ کھولیں۔",
-        "hi": "सिर्फ़ सर्टिफ़ाइड कर्मचारी। शुरू करने से पहले चेक करें कि होज़ और कपलिंग सही और पूरी तरह लगे हों — वैक्यूम में छूटा होज़ ज़ोर से लहराता है। कोई कपलिंग खोलने से पहले लाइन का प्रेशर निकालें; पंप चलते समय कभी कोई फ़िटिंग न खोलें।"
+        "hi": "सिर्फ़ सर्टिफ़ाइड कर्मचारी। शुरू करने से पहले चेक करें कि होज़ और कपलिंग सही और पूरी तरह लगे हों — वैक्यूम में छूटा होज़ ज़ोर से लहराता है। कोई कपलिंग खोलने से पहले लाइन का प्रेशर निकालें; पंप चलते समय कभी कोई फ़िटिंग न खोलें।",
+        "fr": "Personnel certifié uniquement. Vérifier que le flexible et les raccords sont intacts et parfaitement engagés avant le démarrage — un flexible qui se libère sous vide fouette violemment. Remettre la ligne à l’air avant de débrancher tout raccord ; ne jamais ouvrir un raccord pendant que la pompe tourne."
       }
     },
     "9": {
       "title": {
         "ar": "عبّئ الخزان بغاز SF6",
         "ur": "ٹینک میں SF6 گیس بھریں",
-        "hi": "टैंक में SF6 गैस भरें"
+        "hi": "टैंक में SF6 गैस भरें",
+        "fr": "Remplir la cuve de gaz SF6"
       },
       "instructions": {
         "ar": [
@@ -371,24 +690,50 @@
           "सिलेंडर वाल्व खोलें।",
           "सिलेक्टर को \"Filling\" पर घुमाएँ और टैंक को 0.05 MPa तक भरें — पूरे समय गेज देखते रहें।",
           "सेल्फ़-चेक: हर होज़, कैप और कनेक्शन को हाथ से और कान से चेक करें — कुछ ढीला न हो, कोई सिसकारी की आवाज़ न हो।"
+        ],
+        "fr": [
+          "Mettre en marche l’alimentation principale et la pompe booster de la machine à gaz SF6.",
+          "Positionner la poignée de remplissage.",
+          "Ouvrir la vanne de la bouteille.",
+          "Placer le sélecteur sur « Remplissage » et remplir la cuve à 0,05 MPa — surveiller le manomètre en permanence.",
+          "Auto-contrôle : contrôler chaque flexible, bouchon et raccord à la main et à l’oreille — rien de desserré, aucun sifflement."
         ]
       },
       "tools": {
-        "ar": ["ماكينة غاز SF6", "خرطوم DN8", "محول DN20→DN8"],
-        "ur": ["SF6 گیس مشین", "DN8 ہوز", "DN20→DN8 اڈاپٹر"],
-        "hi": ["SF6 गैस मशीन", "DN8 होज़", "DN20→DN8 अडैप्टर"]
+        "ar": [
+          "ماكينة غاز SF6",
+          "خرطوم DN8",
+          "محول DN20→DN8"
+        ],
+        "ur": [
+          "SF6 گیس مشین",
+          "DN8 ہوز",
+          "DN20→DN8 اڈاپٹر"
+        ],
+        "hi": [
+          "SF6 गैस मशीन",
+          "DN8 होज़",
+          "DN20→DN8 अडैप्टर"
+        ],
+        "fr": [
+          "Machine à gaz SF6",
+          "Flexible DN8",
+          "Adaptateur DN20→DN8"
+        ]
       },
       "warning": {
         "ar": "لا تتجاوز 0.05 MPa. غاز SF6 بلا لون ولا رائحة وأثقل من الهواء — التسرب يحل محل الهواء عند مستوى الأرض بصمت. أبقِ التهوية تعمل، ولا تركع فوق وصلة مسرّبة أبدًا، وافحص كل وصلة قبل فتح صمام الأسطوانة. إذا سمعت فحيحًا أو شعرت بدوخة: أغلق الصمام، وغادر المنطقة، وأبلغ.",
         "ur": "0.05 MPa سے آگے نہ جائیں۔ SF6 بے رنگ، بے بو اور ہوا سے بھاری ہے — لیک خاموشی سے فرش کے لیول کی ہوا کی جگہ لے لیتا ہے۔ وینٹیلیشن چلتی رکھیں، لیک ہوتے کنکشن کے اوپر کبھی نہ جھکیں، اور سلنڈر والو کھولنے سے پہلے ہر کپلنگ چیک کریں۔ سسکاری سنیں یا چکر محسوس کریں تو: والو بند کریں، جگہ چھوڑیں، اطلاع دیں۔",
-        "hi": "0.05 MPa से आगे न जाएँ। SF6 बेरंग, बिना गंध और हवा से भारी है — लीक चुपचाप फ़र्श के लेवल की हवा की जगह ले लेता है। वेंटिलेशन चालू रखें, लीक हो रहे कनेक्शन के ऊपर कभी न झुकें, और सिलेंडर वाल्व खोलने से पहले हर कपलिंग चेक करें। सिसकारी सुनें या चक्कर महसूस हो तो: वाल्व बंद करें, जगह छोड़ें, रिपोर्ट करें।"
+        "hi": "0.05 MPa से आगे न जाएँ। SF6 बेरंग, बिना गंध और हवा से भारी है — लीक चुपचाप फ़र्श के लेवल की हवा की जगह ले लेता है। वेंटिलेशन चालू रखें, लीक हो रहे कनेक्शन के ऊपर कभी न झुकें, और सिलेंडर वाल्व खोलने से पहले हर कपलिंग चेक करें। सिसकारी सुनें या चक्कर महसूस हो तो: वाल्व बंद करें, जगह छोड़ें, रिपोर्ट करें।",
+        "fr": "Ne pas dépasser 0,05 MPa. Le SF6 est incolore, inodore et plus lourd que l’air — une fuite remplace silencieusement l’air au niveau du sol. Maintenir la ventilation en marche, ne jamais se pencher au-dessus d’un raccord qui fuit et contrôler chaque raccord avant d’ouvrir la vanne de la bouteille. En cas de sifflement ou de vertige : fermer la vanne, quitter la zone, signaler."
       }
     },
     "10": {
       "title": {
         "ar": "افحص نقاوة الغاز",
         "ur": "گیس کی پیوریٹی چیک کریں",
-        "hi": "गैस की प्योरिटी चेक करें"
+        "hi": "गैस की प्योरिटी चेक करें",
+        "fr": "Contrôler la pureté du gaz"
       },
       "instructions": {
         "ar": [
@@ -411,24 +756,46 @@
           "ड्यू पॉइंट चेक करें: यह −25 °C या उससे ठंडा होना चाहिए।",
           "दोनों वैल्यू प्रोसेस रिकॉर्ड में लिखें।",
           "कोई वैल्यू फ़ेल हो तो: रुकें, होज़ हटाएँ, और सुपरवाइज़र को बताएँ — अपने आप दोबारा टेस्ट या गैस न भरें।"
+        ],
+        "fr": [
+          "Raccorder l’analyseur de gaz SF6 exclusivement avec le flexible auto-obturant.",
+          "Contrôler la pureté : elle doit être supérieure ou égale à 99,75 %.",
+          "Contrôler le point de rosée : il doit être inférieur ou égal à −25 °C.",
+          "Inscrire les deux valeurs sur la fiche de suivi.",
+          "Si l’une des valeurs est non conforme : arrêter, débrancher et informer le superviseur — ne pas refaire l’essai ni recompléter de sa propre initiative."
         ]
       },
       "tools": {
-        "ar": ["محلل غاز SF6", "خرطوم ذاتي الإغلاق"],
-        "ur": ["SF6 گیس اینالائزر", "سیلف کلوزنگ ہوز"],
-        "hi": ["SF6 गैस एनालाइज़र", "सेल्फ़-क्लोज़िंग होज़"]
+        "ar": [
+          "محلل غاز SF6",
+          "خرطوم ذاتي الإغلاق"
+        ],
+        "ur": [
+          "SF6 گیس اینالائزر",
+          "سیلف کلوزنگ ہوز"
+        ],
+        "hi": [
+          "SF6 गैस एनालाइज़र",
+          "सेल्फ़-क्लोज़िंग होज़"
+        ],
+        "fr": [
+          "Analyseur de gaz SF6",
+          "Flexible auto-obturant"
+        ]
       },
       "warning": {
         "ar": "للعاملين المعتمدين فقط. المحلل يطلق غاز عينة SF6 أثناء القياس — أبقِ التهوية تعمل ووصّل بالخرطوم ذاتي الإغلاق فقط حتى لا يتدفق الغاز بحرية.",
         "ur": "صرف سرٹیفائیڈ عملہ۔ اینالائزر پیمائش کے دوران SF6 سیمپل گیس خارج کرتا ہے — وینٹیلیشن چلتی رکھیں اور صرف سیلف کلوزنگ ہوز سے جوڑیں تاکہ گیس آزاد نہ بہے۔",
-        "hi": "सिर्फ़ सर्टिफ़ाइड कर्मचारी। एनालाइज़र मापते समय SF6 सैंपल गैस छोड़ता है — वेंटिलेशन चालू रखें और सिर्फ़ सेल्फ़-क्लोज़िंग होज़ से जोड़ें ताकि गैस खुलकर न बहे।"
+        "hi": "सिर्फ़ सर्टिफ़ाइड कर्मचारी। एनालाइज़र मापते समय SF6 सैंपल गैस छोड़ता है — वेंटिलेशन चालू रखें और सिर्फ़ सेल्फ़-क्लोज़िंग होज़ से जोड़ें ताकि गैस खुलकर न बहे।",
+        "fr": "Personnel certifié uniquement. L’analyseur rejette du gaz SF6 d’échantillon pendant la mesure — maintenir la ventilation en marche et raccorder uniquement avec le flexible auto-obturant pour éviter tout écoulement libre de gaz."
       }
     },
     "11": {
       "title": {
         "ar": "ثبّت الخزان على القاعدة",
         "ur": "ٹینک کو بیس پر کسیں",
-        "hi": "टैंक को बेस पर कसें"
+        "hi": "टैंक को बेस पर कसें",
+        "fr": "Fixer la cuve sur l’embase"
       },
       "instructions": {
         "ar": [
@@ -451,24 +818,62 @@
           "टैंक के पैर बेस के छेदों से सीध में करें।",
           "चारों 4 M16×40 बोल्ट 24 mm सॉकेट से लगाएँ और पूरी तरह कसें (टॉर्क ड्रॉइंग के अनुसार — TBD)।",
           "सेल्फ़-चेक: टैंक को हिलाकर देखें — यह हिलना नहीं चाहिए; चारों बोल्ट पर निशान हो।"
+        ],
+        "fr": [
+          "Vérifier que les chaînes sont tendues et que les 4 manilles sont verrouillées avant le levage.",
+          "Lever la cuve au-dessus de l’embase du panneau au pont roulant — tenir tout le monde à l’écart.",
+          "Aligner les pieds de la cuve avec les trous de l’embase.",
+          "Monter les 4 boulons M16×40 avec la douille de 24 mm et serrer à fond (couple selon plan — à définir).",
+          "Auto-contrôle : tenter de faire bouger la cuve — elle ne doit pas bouger ; les 4 boulons marqués."
         ]
       },
       "tools": {
-        "ar": ["رافعة علوية ≥ 3.2 t", "سلاسل فولاذية 975 mm ×4", "شناكل أمان ×4", "بوكس 24 mm", "راتشيت", "براغي M16×40"],
-        "ur": ["اوور ہیڈ کرین ≥ 3.2 t", "اسٹیل چینیں 975 mm ×4", "سیفٹی شیکل ×4", "24 mm ساکٹ", "ریچٹ", "M16×40 بولٹ"],
-        "hi": ["ओवरहेड क्रेन ≥ 3.2 t", "स्टील चेनें 975 mm ×4", "सेफ़्टी शैकल ×4", "24 mm सॉकेट", "रैचेट", "M16×40 बोल्ट"]
+        "ar": [
+          "رافعة علوية ≥ 3.2 t",
+          "سلاسل فولاذية 975 mm ×4",
+          "شناكل أمان ×4",
+          "بوكس 24 mm",
+          "راتشيت",
+          "براغي M16×40"
+        ],
+        "ur": [
+          "اوور ہیڈ کرین ≥ 3.2 t",
+          "اسٹیل چینیں 975 mm ×4",
+          "سیفٹی شیکل ×4",
+          "24 mm ساکٹ",
+          "ریچٹ",
+          "M16×40 بولٹ"
+        ],
+        "hi": [
+          "ओवरहेड क्रेन ≥ 3.2 t",
+          "स्टील चेनें 975 mm ×4",
+          "सेफ़्टी शैकल ×4",
+          "24 mm सॉकेट",
+          "रैचेट",
+          "M16×40 बोल्ट"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Chaînes acier 975 mm ×4",
+          "Manilles de sécurité ×4",
+          "Douille 24 mm",
+          "Cliquet",
+          "Boulons M16×40"
+        ]
       },
       "warning": {
         "ar": "عمل تحت حمولة معلّقة: لا تقف أبدًا تحت الخزان المعلّق أو بجانبه. لا تضع إصبعك أبدًا في ثقب برغي للمحاذاة — استخدم عمود محاذاة. أبعد يديك عن القاعدة حتى يستقر الخزان؛ الخزان المنزلق يبتر الإصبع المحشور.",
         "ur": "لٹکے لوڈ کا کام: لٹکے ہوئے ٹینک کے نیچے یا برابر کبھی نہ کھڑے ہوں۔ سیدھ کرنے کے لیے بولٹ کے سوراخ میں کبھی انگلی نہ ڈالیں — الائنمنٹ بار استعمال کریں۔ ٹینک بیٹھنے تک ہاتھ بیس سے دور رکھیں؛ سرکتا ٹینک پھنسی انگلی کاٹ دیتا ہے۔",
-        "hi": "लटके लोड का काम: लटके टैंक के नीचे या बगल में कभी न खड़े हों। सीध करने के लिए बोल्ट के छेद में कभी उँगली न डालें — अलाइनमेंट बार इस्तेमाल करें। टैंक बैठने तक हाथ बेस से दूर रखें; खिसकता टैंक फँसी उँगली काट देता है।"
+        "hi": "लटके लोड का काम: लटके टैंक के नीचे या बगल में कभी न खड़े हों। सीध करने के लिए बोल्ट के छेद में कभी उँगली न डालें — अलाइनमेंट बार इस्तेमाल करें। टैंक बैठने तक हाथ बेस से दूर रखें; खिसकता टैंक फँसी उँगली काट देता है।",
+        "fr": "Travail sous charge suspendue : ne jamais se tenir sous ou à côté de la cuve suspendue. NE JAMAIS introduire un doigt dans un trou de boulon pour l’aligner — utiliser une broche d’alignement. Garder les mains hors de l’embase jusqu’à la dépose de la cuve ; une cuve qui ripe sectionnerait un doigt coincé."
       }
     },
     "12": {
       "title": {
         "ar": "جمّع وثبّت صندوق LV العلوي وبابه",
         "ur": "اوپر والا LV بکس اور اس کا دروازہ جوڑیں اور لگائیں",
-        "hi": "ऊपर वाला LV बॉक्स और उसका दरवाज़ा जोड़ें और लगाएँ"
+        "hi": "ऊपर वाला LV बॉक्स और उसका दरवाज़ा जोड़ें और लगाएँ",
+        "fr": "Assembler et fixer le coffret BT supérieur et sa porte"
       },
       "instructions": {
         "ar": [
@@ -491,24 +896,50 @@
           "बॉक्स को उसके फ़िक्सिंग पॉइंट पर कसें (फ़ास्नर ड्रॉइंग के अनुसार)।",
           "दरवाज़ा लगाएँ। खोलकर बंद करें — इसे आसानी से चलना और लैच होना चाहिए।",
           "सेल्फ़-चेक: शीट के किनारे मुड़े न हों, सब बोल्ट कसे हों।"
+        ],
+        "fr": [
+          "Assembler le coffret BT supérieur sur l’établi ; contrôler d’abord l’alignement de la porte et le fonctionnement des charnières.",
+          "Lever le coffret sur le dessus du panneau — à deux personnes.",
+          "Fixer le coffret sur ses points de fixation (visserie selon plan).",
+          "Monter la porte. L’ouvrir et la fermer — elle doit bouger et verrouiller sans à-coup.",
+          "Auto-contrôle : aucun bord de tôle déformé, tous les boulons serrés."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "مفاتيح ألن"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "ایلن کیز"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "एलन की सेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفاتيح ألن"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ایلن کیز"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "एलन की सेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clés Allen"
+        ]
       },
       "warning": {
         "ar": "رفع بشخصين: الصندوق يرتفع فوق مستوى الكتف — واحد يرفع وواحد يثبّت. أمسك من الحواف المطوية والقفازات في يديك؛ حواف الصاج الخام تجرح الجلد المكشوف. لا تقف أبدًا تحت الصندوق مباشرة.",
         "ur": "دو افراد کی لفٹنگ: بکس کندھے سے اوپر جاتا ہے — ایک اٹھائے، ایک سنبھالے۔ دستانے پہن کر مڑے ہوئے کناروں سے پکڑیں؛ کچی شیٹ کے کنارے ننگی جلد کاٹتے ہیں۔ بکس کے عین نیچے کبھی نہ کھڑے ہوں۔",
-        "hi": "दो लोगों की लिफ़्टिंग: बॉक्स कंधे से ऊपर जाता है — एक उठाए, एक संभाले। दस्ताने पहनकर मुड़े किनारों से पकड़ें; कच्ची शीट के किनारे नंगी त्वचा काटते हैं। बॉक्स के ठीक नीचे कभी न खड़े हों।"
+        "hi": "दो लोगों की लिफ़्टिंग: बॉक्स कंधे से ऊपर जाता है — एक उठाए, एक संभाले। दस्ताने पहनकर मुड़े किनारों से पकड़ें; कच्ची शीट के किनारे नंगी त्वचा काटते हैं। बॉक्स के ठीक नीचे कभी न खड़े हों।",
+        "fr": "Levage à deux : le coffret passe au-dessus de la hauteur d’épaule — l’un lève, l’autre maintient. Saisir par les bords pliés avec des gants ; les bords de tôle bruts coupent la peau nue. Ne jamais se tenir directement sous le coffret."
       }
     },
     "13": {
       "title": {
         "ar": "جمّع وثبّت حامل صندوق LV",
         "ur": "LV بکس سپورٹ جوڑیں اور لگائیں",
-        "hi": "LV बॉक्स सपोर्ट जोड़ें और लगाएँ"
+        "hi": "LV बॉक्स सपोर्ट जोड़ें और लगाएँ",
+        "fr": "Assembler et fixer le support du coffret BT"
       },
       "instructions": {
         "ar": [
@@ -528,19 +959,43 @@
           "सपोर्ट को पैनल फ़्रेम पर कसें।",
           "आख़िरी बार कसने से पहले स्पिरिट लेवल से चेक करें कि यह बराबर है।",
           "सेल्फ़-चेक: सपोर्ट मज़बूत हो, कोई वॉशर कम न हो।"
+        ],
+        "fr": [
+          "Assembler les équerres support du coffret BT.",
+          "Fixer le support au châssis du panneau.",
+          "Contrôler son horizontalité au niveau à bulle avant le serrage final.",
+          "Auto-contrôle : support rigide, aucune rondelle manquante."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "ميزان ماء"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "اسپرٹ لیول"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "स्पिरिट लेवल"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "ميزان ماء"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "اسپرٹ لیول"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "स्पिरिट लेवल"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Niveau à bulle"
+        ]
       }
     },
     "14": {
       "title": {
         "ar": "ثبّت صندوقي LV العلوي والسفلي",
         "ur": "اوپر اور نیچے والے LV بکس لگائیں",
-        "hi": "ऊपर और नीचे वाले LV बॉक्स लगाएँ"
+        "hi": "ऊपर और नीचे वाले LV बॉक्स लगाएँ",
+        "fr": "Fixer les coffrets BT supérieur et inférieur"
       },
       "instructions": {
         "ar": [
@@ -560,19 +1015,39 @@
           "इसे ऊपर वाले बॉक्स से सीध में करें; केबल एंट्रियाँ एक लाइन में रखें।",
           "दोनों बॉक्स पैनल पर कसें।",
           "सेल्फ़-चेक: बॉक्स पैनल पर सीधे हों; दरवाज़े खुलते समय आपस में न छुएँ न रगड़ खाएँ।"
+        ],
+        "fr": [
+          "Poser le coffret BT inférieur sur son support.",
+          "L’aligner avec le coffret supérieur ; garder les entrées de câbles dans l’axe.",
+          "Fixer les deux coffrets au panneau.",
+          "Auto-contrôle : coffrets droits sur le panneau ; les portes ne se touchent ni ne frottent à l’ouverture."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm"],
-        "ur": ["ریچٹ", "17 mm ساکٹ"],
-        "hi": ["रैचेट", "17 mm सॉकेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm"
+        ]
       }
     },
     "15": {
       "title": {
         "ar": "جمّع وثبّت المانومتر",
         "ur": "مینومیٹر جوڑیں اور لگائیں",
-        "hi": "मैनोमीटर जोड़ें और लगाएँ"
+        "hi": "मैनोमीटर जोड़ें और लगाएँ",
+        "fr": "Assembler et fixer le manomètre"
       },
       "instructions": {
         "ar": [
@@ -595,24 +1070,50 @@
           "G1/4 → 17 mm स्पैनर, 5.5 Nm। G3/8 → 21 mm, 12.3 Nm। G1/2 → 24 mm, 26.5 Nm। G3/4 → 32 mm, 39.2 Nm।",
           "पक्का करें कि गेज फ़िलिंग प्रेशर 0.05 MPa दिखा रहा है — इस स्टेज पर रेटेड-प्रेशर ज़ोन तक पहुँचने के लिए गैस न भरें।",
           "सेल्फ़-चेक: सिसकारी की आवाज़ न हो, टॉर्क के बाद फ़िटिंग पर निशान हो।"
+        ],
+        "fr": [
+          "Monter le manomètre (densimètre à gaz) sur son raccord de cuve.",
+          "Lire la taille de raccord marquée sur l’écrou borgne, puis utiliser la clé et le couple correspondants :",
+          "G1/4 → clé 17 mm, 5,5 Nm. G3/8 → 21 mm, 12,3 Nm. G1/2 → 24 mm, 26,5 Nm. G3/4 → 32 mm, 39,2 Nm.",
+          "Confirmer que le manomètre indique la pression de remplissage de 0,05 MPa — ne pas ajouter de gaz pour atteindre la zone de pression nominale à ce stade.",
+          "Auto-contrôle : aucun sifflement, raccord marqué après serrage."
         ]
       },
       "tools": {
-        "ar": ["مفاتيح 17 / 21 / 24 / 32 mm", "مفتاح عزم", "مانومتر"],
-        "ur": ["اسپینر 17 / 21 / 24 / 32 mm", "ٹارک رنچ", "مینومیٹر"],
-        "hi": ["स्पैनर 17 / 21 / 24 / 32 mm", "टॉर्क रिंच", "मैनोमीटर"]
+        "ar": [
+          "مفاتيح 17 / 21 / 24 / 32 mm",
+          "مفتاح عزم",
+          "مانومتر"
+        ],
+        "ur": [
+          "اسپینر 17 / 21 / 24 / 32 mm",
+          "ٹارک رنچ",
+          "مینومیٹر"
+        ],
+        "hi": [
+          "स्पैनर 17 / 21 / 24 / 32 mm",
+          "टॉर्क रिंच",
+          "मैनोमीटर"
+        ],
+        "fr": [
+          "Clé 17 / 21 / 24 / 32 mm",
+          "Clé dynamométrique",
+          "Manomètre"
+        ]
       },
       "warning": {
         "ar": "الخزان تحت ضغط SF6. ارتدِ واقي الوجه: وصلة العداد المرتخية أو المربوطة بشكل مائل قد تطلق نفاثة غاز في وجهك. أبقِ رأسك جانب الوصلة واربط بعزم الجدول. إذا سمعت فحيحًا بعد الربط، توقف وأبلغ — لا تعد الربط تحت الضغط.",
         "ur": "ٹینک SF6 پریشر میں ہے۔ فیس شیلڈ پہنیں: ڈھیلی یا ترچھی چڑھی گیج فٹنگ آپ کے چہرے پر گیس کی دھار چھوڑ سکتی ہے۔ سر کنکشن کے ایک طرف رکھیں اور ٹیبل کی ویلیو پر ٹارک کریں۔ ٹارک کے بعد سسکاری سنیں تو رکیں اور اطلاع دیں — پریشر میں دوبارہ نہ کسیں۔",
-        "hi": "टैंक SF6 प्रेशर में है। फ़ेस शील्ड पहनें: ढीली या तिरछी चढ़ी गेज फ़िटिंग आपके चेहरे पर गैस की धार छोड़ सकती है। सिर कनेक्शन के एक तरफ़ रखें और टेबल की वैल्यू पर टॉर्क करें। टॉर्क के बाद सिसकारी सुनें तो रुकें और रिपोर्ट करें — प्रेशर में दोबारा न कसें।"
+        "hi": "टैंक SF6 प्रेशर में है। फ़ेस शील्ड पहनें: ढीली या तिरछी चढ़ी गेज फ़िटिंग आपके चेहरे पर गैस की धार छोड़ सकती है। सिर कनेक्शन के एक तरफ़ रखें और टेबल की वैल्यू पर टॉर्क करें। टॉर्क के बाद सिसकारी सुनें तो रुकें और रिपोर्ट करें — प्रेशर में दोबारा न कसें।",
+        "fr": "La cuve est sous pression de SF6. Porter l’écran facial : un raccord de manomètre desserré ou au filetage forcé peut projeter un jet de gaz au visage. Garder la tête sur le côté du raccord et serrer à la valeur du tableau. Si un sifflement se fait entendre après serrage, arrêter et signaler — ne pas resserrer sous pression."
       }
     },
     "16": {
       "title": {
         "ar": "ركّب شريط الحماية (chine poly) على خزان ES/DS",
         "ur": "ES/DS ٹینک پر حفاظتی پٹی (chine poly) لگائیں",
-        "hi": "ES/DS टैंक पर प्रोटेक्शन स्ट्रिप (chine poly) लगाएँ"
+        "hi": "ES/DS टैंक पर प्रोटेक्शन स्ट्रिप (chine poly) लगाएँ",
+        "fr": "Poser la bande de protection (chine poly) sur la cuve sectionneur/MALT"
       },
       "instructions": {
         "ar": [
@@ -629,19 +1130,34 @@
           "प्रोटेक्शन स्ट्रिप (जिसे \"chine poly\" कहते हैं) ES/DS टैंक के किनारे के चारों ओर लगाएँ।",
           "इसे पूरी तरह दबाकर बैठाएँ — कोई गैप या उठा हिस्सा न हो।",
           "सेल्फ़-चेक: स्ट्रिप पूरे घेरे में लगातार और मज़बूत हो।"
+        ],
+        "fr": [
+          "Poser la bande de protection (dite « chine poly ») autour du bord de la cuve sectionneur/MALT.",
+          "L’enfoncer complètement — aucun jeu ni portion décollée.",
+          "Auto-contrôle : bande continue et bien fixée sur tout le pourtour."
         ]
       },
       "tools": {
-        "ar": ["—"],
-        "ur": ["—"],
-        "hi": ["—"]
+        "ar": [
+          "—"
+        ],
+        "ur": [
+          "—"
+        ],
+        "hi": [
+          "—"
+        ],
+        "fr": [
+          "—"
+        ]
       }
     },
     "17": {
       "title": {
         "ar": "ثبّت بسبار التأريض بين الخزانين",
         "ur": "ٹینک سے ٹینک ارتھنگ بس بار لگائیں",
-        "hi": "टैंक-से-टैंक अर्थिंग बसबार लगाएँ"
+        "hi": "टैंक-से-टैंक अर्थिंग बसबार लगाएँ",
+        "fr": "Fixer le jeu de barres de mise à la terre entre cuves"
       },
       "instructions": {
         "ar": [
@@ -661,19 +1177,43 @@
           "दोनों टैंकों के बीच अर्थिंग बसबार लगाएँ।",
           "बोल्ट टॉर्क रिंच से कसें (टॉर्क ड्रॉइंग के अनुसार — TBD)।",
           "सेल्फ़-चेक: धातु-से-धातु का पक्का जोड़ — यह अर्थ रास्ता आगे काम करने वाले सबकी हिफ़ाज़त करता है।"
+        ],
+        "fr": [
+          "Nettoyer les faces de contact de mise à la terre jusqu’à obtenir un métal nu et brillant.",
+          "Monter le jeu de barres de mise à la terre entre les deux cuves.",
+          "Serrer les boulons à la clé dynamométrique (couple selon plan — à définir).",
+          "Auto-contrôle : contact métal-métal franc — cette liaison de terre protège tout le monde en aval."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "مفتاح عزم"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "ٹارک رنچ"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "टॉर्क रिंच"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفتاح عزم"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ٹارک رنچ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "टॉर्क रिंच"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
+        ]
       }
     },
     "18": {
       "title": {
         "ar": "ثبّت الصاج العلوي",
         "ur": "اوپر والی شیٹ لگائیں",
-        "hi": "ऊपर वाली शीट लगाएँ"
+        "hi": "ऊपर वाली शीट लगाएँ",
+        "fr": "Fixer la tôle de toit"
       },
       "instructions": {
         "ar": [
@@ -693,24 +1233,45 @@
           "इसे पैनल की छत पर रखें और छेद सीध में करें।",
           "पहले सभी फ़िक्सिंग लगाएँ, फिर उन्हें कसें।",
           "सेल्फ़-चेक: शीट सीधी हो, कोनों पर कोई गैप न हो।"
+        ],
+        "fr": [
+          "Porter la tôle de toit par ses bords pliés, avec des gants.",
+          "La poser sur le toit du panneau et aligner les trous.",
+          "Engager d’abord toutes les fixations, puis les serrer.",
+          "Auto-contrôle : tôle bien à plat, aucun jeu aux angles."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm"],
-        "ur": ["ریچٹ", "17 mm ساکٹ"],
-        "hi": ["रैचेट", "17 mm सॉकेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm"
+        ]
       },
       "warning": {
         "ar": "حواف الصاج حادة. ارتدِ القفازات وأكمام الذراع، ولا تمرر يدًا أو ساعدًا مكشوفًا على الحافة أبدًا. ضع الصاج أرضًا قبل تغيير مسكتك.",
         "ur": "شیٹ میٹل کے کنارے تیز ہوتے ہیں۔ دستانے اور بازو کی آستینیں پہنیں، اور ننگا ہاتھ یا بازو کبھی کنارے پر نہ پھیریں۔ پکڑ بدلنے سے پہلے شیٹ نیچے رکھیں۔",
-        "hi": "शीट मेटल के किनारे तेज़ होते हैं। दस्ताने और आर्म स्लीव पहनें, और नंगा हाथ या बाँह कभी किनारे पर न फिराएँ। पकड़ बदलने से पहले शीट नीचे रखें।"
+        "hi": "शीट मेटल के किनारे तेज़ होते हैं। दस्ताने और आर्म स्लीव पहनें, और नंगा हाथ या बाँह कभी किनारे पर न फिराएँ। पकड़ बदलने से पहले शीट नीचे रखें।",
+        "fr": "Les bords de tôle sont coupants. Porter des gants et des manchettes, et ne jamais faire glisser une main ou un avant-bras nu le long d’un bord. Reposer la tôle avant de changer de prise."
       }
     },
     "19": {
       "title": {
         "ar": "جمّع وثبّت الغطاء العلوي للجهة الخلفية",
         "ur": "پچھلی طرف کا اوپر والا کور جوڑیں اور لگائیں",
-        "hi": "पिछली तरफ़ का ऊपर वाला कवर जोड़ें और लगाएँ"
+        "hi": "पिछली तरफ़ का ऊपर वाला कवर जोड़ें और लगाएँ",
+        "fr": "Assembler et fixer le capot supérieur arrière"
       },
       "instructions": {
         "ar": [
@@ -730,19 +1291,39 @@
           "कवर को पैनल पर उसकी जगह पर पकड़ें।",
           "बोल्ट के छेद सीध में करें, सभी बोल्ट लगाएँ, फिर बराबर कसें।",
           "सेल्फ़-चेक: कवर पैनल पर बिना गैप के सीधा बैठा हो।"
+        ],
+        "fr": [
+          "Assembler le capot supérieur arrière.",
+          "Maintenir le capot dans sa position sur le panneau.",
+          "Aligner les trous de boulons, engager tous les boulons, puis les serrer uniformément.",
+          "Auto-contrôle : le capot repose bien à plat contre le panneau, sans jeu."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm"],
-        "ur": ["ریچٹ", "17 mm ساکٹ"],
-        "hi": ["रैचेट", "17 mm सॉकेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm"
+        ]
       }
     },
     "20": {
       "title": {
         "ar": "ثبّت كتيفة الدعم بين الخزانين أعلى الجهة الخلفية",
         "ur": "پچھلی طرف اوپر ٹینک سے ٹینک سپورٹ بریکٹ لگائیں",
-        "hi": "पिछली तरफ़ ऊपर टैंक-से-टैंक सपोर्ट ब्रैकेट लगाएँ"
+        "hi": "पिछली तरफ़ ऊपर टैंक-से-टैंक सपोर्ट ब्रैकेट लगाएँ",
+        "fr": "Fixer l’équerre support arrière supérieure entre cuves"
       },
       "instructions": {
         "ar": [
@@ -759,19 +1340,42 @@
           "सपोर्ट ब्रैकेट को पिछली तरफ़ ऊपर, दोनों टैंकों के बीच रखें।",
           "इसे दोनों टैंकों पर लगाएँ और कसें।",
           "सेल्फ़-चेक: ब्रैकेट सीधा हो, दोनों टैंक आपस में मज़बूती से जुड़े हों।"
+        ],
+        "fr": [
+          "Placer l’équerre support en partie haute arrière, entre les deux cuves.",
+          "La fixer aux deux cuves et serrer.",
+          "Auto-contrôle : équerre d’équerre, les deux cuves rigidement solidarisées."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "مفتاح عزم"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "ٹارک رنچ"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "टॉर्क रिंच"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفتاح عزم"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ٹارک رنچ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "टॉर्क रिंच"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
+        ]
       }
     },
     "21": {
       "title": {
         "ar": "ثبّت الغطاء الخلفي وكتيفة القناة",
         "ur": "پچھلا کور اور چینل بریکٹ لگائیں",
-        "hi": "पिछला कवर और चैनल ब्रैकेट लगाएँ"
+        "hi": "पिछला कवर और चैनल ब्रैकेट लगाएँ",
+        "fr": "Fixer le capot arrière et l’équerre de rail"
       },
       "instructions": {
         "ar": [
@@ -794,19 +1398,40 @@
           "सभी बोल्ट हाथ से हल्के कसें और सीध चेक करें।",
           "फिर हर बोल्ट एक-एक करके पूरी तरह कसें।",
           "सेल्फ़-चेक: बोल्ट BOM से गिनकर मिलाएँ — कोई हार्डवेयर कम न हो।"
+        ],
+        "fr": [
+          "Monter d’abord l’équerre de rail.",
+          "Accrocher le capot arrière sur l’équerre.",
+          "Engager tous les boulons à la main et contrôler l’alignement.",
+          "Serrer ensuite chaque boulon à fond, un par un.",
+          "Auto-contrôle : compter les boulons par rapport à la nomenclature — aucune visserie manquante."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm"],
-        "ur": ["ریچٹ", "17 mm ساکٹ"],
-        "hi": ["रैचेट", "17 mm सॉकेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm"
+        ]
       }
     },
     "22": {
       "title": {
         "ar": "ثبّت كتيفة CVI",
         "ur": "CVI بریکٹ لگائیں",
-        "hi": "CVI ब्रैकेट लगाएँ"
+        "hi": "CVI ब्रैकेट लगाएँ",
+        "fr": "Fixer l’équerre du CVI"
       },
       "instructions": {
         "ar": [
@@ -823,19 +1448,38 @@
           "CVI (वोल्टेज इंडिकेटर) ब्रैकेट को उसकी मार्क की गई जगह पर लगाएँ।",
           "चेक करें कि इंडिकेटर विंडो वहाँ से दिखे जहाँ ऑपरेटर खड़ा होता है।",
           "सेल्फ़-चेक: ब्रैकेट कसा हो, इंडिकेटर ढका न हो।"
+        ],
+        "fr": [
+          "Fixer l’équerre du CVI (indicateur de présence de tension) à sa position repérée.",
+          "Vérifier que le voyant est visible depuis la position de l’opérateur.",
+          "Auto-contrôle : équerre serrée, indicateur non masqué."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm"],
-        "ur": ["ریچٹ", "17 mm ساکٹ"],
-        "hi": ["रैचेट", "17 mm सॉकेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm"
+        ]
       }
     },
     "23": {
       "title": {
         "ar": "ثبّت مجموعة إنترلوك الباب",
         "ur": "دروازے کی انٹرلاک اسمبلی لگائیں",
-        "hi": "दरवाज़े की इंटरलॉक असेंबली लगाएँ"
+        "hi": "दरवाज़े की इंटरलॉक असेंबली लगाएँ",
+        "fr": "Fixer l’ensemble de verrouillage de porte"
       },
       "instructions": {
         "ar": [
@@ -855,24 +1499,49 @@
           "इंटरलॉक को पूरा साइकिल चलाकर देखें: ज़रूरत पर यह दरवाज़ा रोके और साफ़ तरीक़े से छोड़े।",
           "सेल्फ़-चेक: इंटरलॉक लगा हो तो दरवाज़ा हाथ से खोलकर देखें — यह लॉक रहना चाहिए।",
           "कोई भी शक हो तो सुपरवाइज़र को बुलाएँ।"
+        ],
+        "fr": [
+          "Monter l’ensemble de verrouillage de porte exactement selon le plan — c’est un organe de sécurité.",
+          "Manœuvrer le verrouillage sur tout son cycle : il doit bloquer la porte lorsque requis et se libérer proprement.",
+          "Auto-contrôle : verrouillage engagé, tenter d’ouvrir la porte à la main — elle doit rester bloquée.",
+          "Au moindre doute, appeler le superviseur."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "مفاتيح ألن"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "ایلن کیز"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "एलन की सेट"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفاتيح ألن"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ایلن کیز"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "एलन की सेट"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clés Allen"
+        ]
       },
       "warning": {
         "ar": "الإنترلوك المعطّل يعرّض المستخدم النهائي للخطر — فهو ما يمنع فتح الباب على معدات مكهربة. اختبر الدورة الكاملة قبل المتابعة؛ ولا تعدّله أبدًا لجعل الباب \"أسهل\".",
         "ur": "خراب انٹرلاک آخری استعمال کرنے والے کو خطرے میں ڈالتا ہے — یہی چیز لائیو آلات پر دروازہ کھلنے سے روکتی ہے۔ آگے بڑھنے سے پہلے پورا سائیکل ٹیسٹ کریں؛ دروازہ \"آسان\" بنانے کے لیے اسے کبھی ایڈجسٹ نہ کریں۔",
-        "hi": "ख़राब इंटरलॉक आख़िरी इस्तेमाल करने वाले को ख़तरे में डालता है — यही चीज़ लाइव उपकरण पर दरवाज़ा खुलने से रोकती है। आगे बढ़ने से पहले पूरा साइकिल टेस्ट करें; दरवाज़ा \"आसान\" बनाने के लिए इसे कभी एडजस्ट न करें।"
+        "hi": "ख़राब इंटरलॉक आख़िरी इस्तेमाल करने वाले को ख़तरे में डालता है — यही चीज़ लाइव उपकरण पर दरवाज़ा खुलने से रोकती है। आगे बढ़ने से पहले पूरा साइकिल टेस्ट करें; दरवाज़ा \"आसान\" बनाने के लिए इसे कभी एडजस्ट न करें।",
+        "fr": "Un verrouillage défectueux met l’utilisateur final en danger — c’est lui qui empêche l’ouverture d’une porte sur un appareil sous tension. Tester le cycle complet avant de poursuivre ; ne jamais le régler pour rendre la porte « plus facile » à ouvrir."
       }
     },
     "24": {
       "title": {
         "ar": "ثبّت مقبض الباب ومصد الباب",
         "ur": "دروازے کا ہینڈل اور ڈور اسٹاپر لگائیں",
-        "hi": "दरवाज़े का हैंडल और डोर स्टॉपर लगाएँ"
+        "hi": "दरवाज़े का हैंडल और डोर स्टॉपर लगाएँ",
+        "fr": "Fixer la poignée et la butée de porte"
       },
       "instructions": {
         "ar": [
@@ -889,19 +1558,42 @@
           "दरवाज़े का हैंडल लगाएँ और लैच की हरकत चेक करें।",
           "डोर स्टॉपर लगाएँ — दरवाज़ा झूलकर बगल वाले पैनल से न लगे।",
           "सेल्फ़-चेक: दरवाज़ा 3 बार खोलें और बंद करें — हर बार आसान और पक्की लैचिंग हो।"
+        ],
+        "fr": [
+          "Monter la poignée de porte et contrôler le verrouillage.",
+          "Monter la butée de porte — la porte ne doit pas battre contre le panneau voisin.",
+          "Auto-contrôle : ouvrir et fermer la porte 3 fois — mouvement sans à-coup et verrouillage franc à chaque fois."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "مفاتيح ألن", "مفك"],
-        "ur": ["ریچٹ", "ایلن کیز", "اسکریو ڈرائیور"],
-        "hi": ["रैचेट", "एलन की सेट", "स्क्रूड्राइवर"]
+        "ar": [
+          "راتشيت",
+          "مفاتيح ألن",
+          "مفك"
+        ],
+        "ur": [
+          "ریچٹ",
+          "ایلن کیز",
+          "اسکریو ڈرائیور"
+        ],
+        "hi": [
+          "रैचेट",
+          "एलन की सेट",
+          "स्क्रूड्राइवर"
+        ],
+        "fr": [
+          "Cliquet",
+          "Clés Allen",
+          "Tournevis"
+        ]
       }
     },
     "25": {
       "title": {
         "ar": "ثبّت غطاء الجهة الخلفية وألصق ملصقات الباب",
         "ur": "پچھلی طرف کا کور لگائیں اور دروازے کے لیبل چپکائیں",
-        "hi": "पिछली तरफ़ का कवर लगाएँ और दरवाज़े के लेबल चिपकाएँ"
+        "hi": "पिछली तरफ़ का कवर लगाएँ और दरवाज़े के लेबल चिपकाएँ",
+        "fr": "Fixer le capot arrière et poser les étiquettes de porte"
       },
       "instructions": {
         "ar": [
@@ -921,19 +1613,47 @@
           "दरवाज़े की सतह टिशू से साफ़ करें।",
           "दरवाज़े के लेबल सीधे, ड्रॉइंग की जगहों पर चिपकाएँ।",
           "सेल्फ़-चेक: लेबल इसी पैनल के सीरियल से मिलें — ग़लत लेबल QC में रिजेक्शन है।"
+        ],
+        "fr": [
+          "Fixer le capot arrière avec tous ses boulons.",
+          "Nettoyer la surface de la porte au chiffon.",
+          "Poser les étiquettes de porte bien droites, aux positions du plan.",
+          "Auto-contrôle : les étiquettes correspondent au numéro de série de CE panneau — des étiquettes erronées entraînent un refus CQ."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "طقم ملصقات", "مناديل تنظيف"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "لیبل سیٹ", "صفائی کا ٹشو"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "लेबल सेट", "सफ़ाई का टिशू"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "طقم ملصقات",
+          "مناديل تنظيف"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "لیبل سیٹ",
+          "صفائی کا ٹشو"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "लेबल सेट",
+          "सफ़ाई का टिशू"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Jeu d’étiquettes",
+          "Chiffon de nettoyage"
+        ]
       }
     },
     "26": {
       "title": {
         "ar": "ألصق ملصقي VCB والمانومتر",
         "ur": "VCB اور مینومیٹر کے لیبل چپکائیں",
-        "hi": "VCB और मैनोमीटर के लेबल चिपकाएँ"
+        "hi": "VCB और मैनोमीटर के लेबल चिपकाएँ",
+        "fr": "Poser les étiquettes du disjoncteur et du manomètre"
       },
       "instructions": {
         "ar": [
@@ -950,19 +1670,38 @@
           "VCB लेबल ब्रेकर की जगह पर चिपकाएँ।",
           "मैनोमीटर लेबल गेज विंडो के बगल में चिपकाएँ।",
           "सेल्फ़-चेक: लेबल बराबर हों, पूरी तरह चिपके हों, और पैनल के दस्तावेज़ों से मिलते हों।"
+        ],
+        "fr": [
+          "Poser l’étiquette du disjoncteur à l’emplacement du disjoncteur.",
+          "Poser l’étiquette du manomètre à côté du hublot du manomètre.",
+          "Auto-contrôle : étiquettes de niveau, entièrement collées, conformes à la documentation du panneau."
         ]
       },
       "tools": {
-        "ar": ["طقم ملصقات", "مناديل تنظيف"],
-        "ur": ["لیبل سیٹ", "صفائی کا ٹشو"],
-        "hi": ["लेबल सेट", "सफ़ाई का टिशू"]
+        "ar": [
+          "طقم ملصقات",
+          "مناديل تنظيف"
+        ],
+        "ur": [
+          "لیبل سیٹ",
+          "صفائی کا ٹشو"
+        ],
+        "hi": [
+          "लेबल सेट",
+          "सफ़ाई का टिशू"
+        ],
+        "fr": [
+          "Jeu d’étiquettes",
+          "Chiffon de nettoyage"
+        ]
       }
     },
     "27": {
       "title": {
         "ar": "أكمل توصيلات صندوق LV والوصلات المتبقية",
         "ur": "LV بکس کی وائرنگ اور باقی کنکشن مکمل کریں",
-        "hi": "LV बॉक्स की वायरिंग और बाक़ी कनेक्शन पूरे करें"
+        "hi": "LV बॉक्स की वायरिंग और बाक़ी कनेक्शन पूरे करें",
+        "fr": "Terminer le câblage du coffret BT et les raccordements restants"
       },
       "instructions": {
         "ar": [
@@ -988,19 +1727,57 @@
           "वायर के बंडल साफ़ तरीक़े से लगाएँ और केबल टाई से बाँधें।",
           "हर वायर के सिरे पर छपा वायर मार्कर (फ़ेरूल) लगाएँ।",
           "सेल्फ़-चेक: मल्टीमीटर से हर कनेक्शन पॉइंट-टू-पॉइंट डायग्राम से मिलाकर टेस्ट करें।"
+        ],
+        "fr": [
+          "Terminer le câblage du coffret BT sur l’établi, en suivant le schéma de câblage.",
+          "Installer le coffret BT câblé dans le panneau.",
+          "Raccorder les fils restants exactement selon le schéma de câblage.",
+          "Ranger proprement les faisceaux et les attacher avec des colliers.",
+          "Poser un repère de fil imprimé (bague) à chaque extrémité de fil.",
+          "Auto-contrôle : tester chaque point de raccordement point à point au multimètre par rapport au schéma."
         ]
       },
       "tools": {
-        "ar": ["قشّارة أسلاك", "كبّاسة أطراف", "فرولات وأطراف", "مفكات", "ملتيميتر", "مخطط التوصيل"],
-        "ur": ["وائر اسٹرپر", "وائر کرمپر", "فیرول اور لَگ", "اسکریو ڈرائیور", "ملٹی میٹر", "وائرنگ ڈایاگرام"],
-        "hi": ["वायर स्ट्रिपर", "वायर क्रिम्पर", "फ़ेरूल और लग", "स्क्रूड्राइवर", "मल्टीमीटर", "वायरिंग डायग्राम"]
+        "ar": [
+          "قشّارة أسلاك",
+          "كبّاسة أطراف",
+          "فرولات وأطراف",
+          "مفكات",
+          "ملتيميتر",
+          "مخطط التوصيل"
+        ],
+        "ur": [
+          "وائر اسٹرپر",
+          "وائر کرمپر",
+          "فیرول اور لَگ",
+          "اسکریو ڈرائیور",
+          "ملٹی میٹر",
+          "وائرنگ ڈایاگرام"
+        ],
+        "hi": [
+          "वायर स्ट्रिपर",
+          "वायर क्रिम्पर",
+          "फ़ेरूल और लग",
+          "स्क्रूड्राइवर",
+          "मल्टीमीटर",
+          "वायरिंग डायग्राम"
+        ],
+        "fr": [
+          "Pince à dénuder",
+          "Pince à sertir",
+          "Bagues et cosses",
+          "Tournevis",
+          "Multimètre",
+          "Schéma de câblage"
+        ]
       }
     },
     "28": {
       "title": {
         "ar": "سلّم اللوحة إلى QC1",
         "ur": "پینل QC1 کے حوالے کریں",
-        "hi": "पैनल QC1 को सौंपें"
+        "hi": "पैनल QC1 को सौंपें",
+        "fr": "Remettre le panneau au CQ1"
       },
       "instructions": {
         "ar": [
@@ -1020,19 +1797,39 @@
           "8 सेल्फ़-क्वालिटी पॉइंट जाँचें: सब पार्ट अपनी जगह कसे हों; सब टॉर्क स्पेक के अनुसार; कोई टूटा या मुड़ा पार्ट नहीं; सीध ड्रॉइंग के अनुसार; सतहें साफ़; कोई ढीली फ़िटिंग नहीं; कसने के बाद हर नट और बोल्ट पर लाल मार्कर का निशान।",
           "कोई भी गड़बड़ी तुरंत सुपरवाइज़र को बताएँ।",
           "पैनल उसके दस्तावेज़ों के साथ निरीक्षण के लिए QC1 को सौंपें।"
+        ],
+        "fr": [
+          "Faire le tour du panneau avec la check-list et confirmer que TOUS les travaux d’assemblage, d’étiquetage et de câblage sont terminés.",
+          "Vérifier les 8 points d’auto-contrôle qualité : toutes les pièces fixées en position ; tous les couples conformes ; aucune pièce endommagée ou déformée ; alignement conforme au plan ; surfaces propres ; aucun raccord desserré ; chaque écrou et boulon marqué au marqueur rouge après serrage.",
+          "Signaler immédiatement toute non-conformité au superviseur.",
+          "Remettre le panneau au CQ1 pour inspection avec sa documentation."
         ]
       },
       "tools": {
-        "ar": ["قائمة فحص QC", "وثائق اللوحة"],
-        "ur": ["QC چیک لسٹ", "پینل کے کاغذات"],
-        "hi": ["QC चेकलिस्ट", "पैनल के दस्तावेज़"]
+        "ar": [
+          "قائمة فحص QC",
+          "وثائق اللوحة"
+        ],
+        "ur": [
+          "QC چیک لسٹ",
+          "پینل کے کاغذات"
+        ],
+        "hi": [
+          "QC चेकलिस्ट",
+          "पैनल के दस्तावेज़"
+        ],
+        "fr": [
+          "Check-list CQ",
+          "Documentation du panneau"
+        ]
       }
     },
     "29": {
       "title": {
         "ar": "عالج كل ملاحظات QC1",
         "ur": "QC1 کے تمام کمنٹس حل کریں",
-        "hi": "QC1 के सभी कमेंट हल करें"
+        "hi": "QC1 के सभी कमेंट हल करें",
+        "fr": "Traiter toutes les remarques du CQ1"
       },
       "instructions": {
         "ar": [
@@ -1052,19 +1849,39 @@
           "हर पॉइंट पूरी तरह ठीक करें — आधा-अधूरा काम नहीं।",
           "दोबारा टॉर्क किए हर फ़ास्नर पर लाल मार्कर से फिर निशान लगाएँ।",
           "पैनल आगे जाने से पहले QC1 को दोबारा बुलाकर हर कमेंट बंद करवाएँ।"
+        ],
+        "fr": [
+          "Reprendre chaque remarque du CQ1 une par une.",
+          "Corriger chaque point complètement — pas de correction partielle.",
+          "Re-marquer au marqueur rouge toute fixation resserrée.",
+          "Rappeler le CQ1 pour solder chaque remarque avant que le panneau ne poursuive."
         ]
       },
       "tools": {
-        "ar": ["تقرير QC1", "عدد يدوية حسب الحاجة"],
-        "ur": ["QC1 رپورٹ", "ضرورت کے مطابق ہینڈ ٹولز"],
-        "hi": ["QC1 रिपोर्ट", "ज़रूरत के अनुसार हैंड टूल"]
+        "ar": [
+          "تقرير QC1",
+          "عدد يدوية حسب الحاجة"
+        ],
+        "ur": [
+          "QC1 رپورٹ",
+          "ضرورت کے مطابق ہینڈ ٹولز"
+        ],
+        "hi": [
+          "QC1 रिपोर्ट",
+          "ज़रूरत के अनुसार हैंड टूल"
+        ],
+        "fr": [
+          "Rapport CQ1",
+          "Outillage à main selon besoin"
+        ]
       }
     },
     "30": {
       "title": {
         "ar": "ثبّت اللوحة على قاعدة الاختبار وسلّمها لقسم الاختبار",
         "ur": "پینل کو ٹیسٹنگ بیس پر کسیں اور ٹیسٹنگ کے حوالے کریں",
-        "hi": "पैनल को टेस्टिंग बेस पर कसें और टेस्टिंग को सौंपें"
+        "hi": "पैनल को टेस्टिंग बेस पर कसें और टेस्टिंग को सौंपें",
+        "fr": "Fixer le panneau sur l’embase d’essai et le remettre aux essais"
       },
       "instructions": {
         "ar": [
@@ -1081,24 +1898,56 @@
           "चेनें और शैकल चेक करें, फिर क्रेन से पैनल को टेस्टिंग बेस पर रखें — सबको दूर रखें।",
           "पैनल को टेस्टिंग बेस पर ऐसा कसें कि टेस्ट के दौरान हिल न सके।",
           "पैनल उसके रिकॉर्ड के साथ टेस्टिंग डिपार्टमेंट को सौंपें।"
+        ],
+        "fr": [
+          "Contrôler les chaînes et les manilles, puis poser le panneau sur l’embase d’essai au pont roulant — tenir tout le monde à l’écart.",
+          "Fixer le panneau à l’embase d’essai pour qu’il ne puisse pas bouger pendant l’essai.",
+          "Remettre le panneau au service essais avec ses enregistrements."
         ]
       },
       "tools": {
-        "ar": ["رافعة علوية ≥ 3.2 t", "سلاسل فولاذية 975 mm ×4", "شناكل أمان ×4", "راتشيت", "بوكس 24 mm"],
-        "ur": ["اوور ہیڈ کرین ≥ 3.2 t", "اسٹیل چینیں 975 mm ×4", "سیفٹی شیکل ×4", "ریچٹ", "24 mm ساکٹ"],
-        "hi": ["ओवरहेड क्रेन ≥ 3.2 t", "स्टील चेनें 975 mm ×4", "सेफ़्टी शैकल ×4", "रैचेट", "24 mm सॉकेट"]
+        "ar": [
+          "رافعة علوية ≥ 3.2 t",
+          "سلاسل فولاذية 975 mm ×4",
+          "شناكل أمان ×4",
+          "راتشيت",
+          "بوكس 24 mm"
+        ],
+        "ur": [
+          "اوور ہیڈ کرین ≥ 3.2 t",
+          "اسٹیل چینیں 975 mm ×4",
+          "سیفٹی شیکل ×4",
+          "ریچٹ",
+          "24 mm ساکٹ"
+        ],
+        "hi": [
+          "ओवरहेड क्रेन ≥ 3.2 t",
+          "स्टील चेनें 975 mm ×4",
+          "सेफ़्टी शैकल ×4",
+          "रैचेट",
+          "24 mm सॉकेट"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Chaînes acier 975 mm ×4",
+          "Manilles de sécurité ×4",
+          "Cliquet",
+          "Douille 24 mm"
+        ]
       },
       "warning": {
         "ar": "لا تقف أبدًا تحت اللوحة المعلّقة أو بجانبها. وجّهها بحبل توجيه، لا بيديك على اللوحة.",
         "ur": "لٹکے ہوئے پینل کے نیچے یا برابر کبھی نہ کھڑے ہوں۔ اسے ٹیگ لائن (رسی) سے گائیڈ کریں، پینل پر ہاتھ رکھ کر نہیں۔",
-        "hi": "लटके पैनल के नीचे या बगल में कभी न खड़े हों। इसे टैग लाइन (रस्सी) से गाइड करें, पैनल पर हाथ रखकर नहीं।"
+        "hi": "लटके पैनल के नीचे या बगल में कभी न खड़े हों। इसे टैग लाइन (रस्सी) से गाइड करें, पैनल पर हाथ रखकर नहीं।",
+        "fr": "Ne jamais se tenir sous ou à côté du panneau suspendu. Le guider avec une corde de guidage, sans poser les mains sur le panneau."
       }
     },
     "31": {
       "title": {
         "ar": "ركّب الكابل وسدادات الكابل الوهمية",
         "ur": "کیبل اور کیبل ڈمی پلگ لگائیں",
-        "hi": "केबल और केबल डमी प्लग लगाएँ"
+        "hi": "केबल और केबल डमी प्लग लगाएँ",
+        "fr": "Monter le câble et les bouchons factices"
       },
       "instructions": {
         "ar": [
@@ -1121,24 +1970,46 @@
           "हर डमी प्लग पर सिलिकॉन ग्रीस की पतली परत लगाएँ।",
           "सभी बिना इस्तेमाल वाली बुशिंग पर डमी प्लग लगाएँ — हर बुशिंग बंद होनी चाहिए।",
           "सेल्फ़-चेक: सब प्लग पूरी तरह अंदर दबे हों; HV टेस्ट के लिए कोई बुशिंग खुली न रहे।"
+        ],
+        "fr": [
+          "Confirmer auprès du service essais que l’alimentation d’essai est consignée et verrouillée avant de toucher une traversée.",
+          "Monter le câble d’essai sur la traversée de câble.",
+          "Appliquer une fine couche de graisse silicone sur chaque bouchon factice.",
+          "Monter les bouchons factices sur toutes les traversées inutilisées — chaque traversée doit être obturée.",
+          "Auto-contrôle : tous les bouchons enfoncés à fond ; aucune traversée laissée ouverte pour l’essai HT."
         ]
       },
       "tools": {
-        "ar": ["سدادات كابل وهمية", "شحم سيليكون"],
-        "ur": ["کیبل ڈمی پلگ", "سلیکون گریس"],
-        "hi": ["केबल डमी प्लग", "सिलिकॉन ग्रीस"]
+        "ar": [
+          "سدادات كابل وهمية",
+          "شحم سيليكون"
+        ],
+        "ur": [
+          "کیبل ڈمی پلگ",
+          "سلیکون گریس"
+        ],
+        "hi": [
+          "केबल डमी प्लग",
+          "सिलिकॉन ग्रीस"
+        ],
+        "fr": [
+          "Bouchons factices de câble",
+          "Graisse silicone"
+        ]
       },
       "warning": {
         "ar": "أنت في منطقة اختبار HV. لا تدخل حاجز الاختبار أبدًا وضوء \"الاختبار جارٍ\" الأحمر مضاء — ملامسة الجهد العالي قاتلة. لا تلمس اللوحة إلا بعد أن يؤكد قسم الاختبار أنها معزولة ومؤرضة.",
         "ur": "آپ HV ٹیسٹ ایریا میں ہیں۔ سرخ ٹیسٹ اِن پروگریس لائٹ جلتے وقت ٹیسٹ بیریئر کے اندر کبھی نہ جائیں — ہائی وولٹیج چھونا جان لیوا ہے۔ پینل کو تبھی ہاتھ لگائیں جب ٹیسٹنگ تصدیق کرے کہ یہ الگ اور ارتھ شدہ ہے۔",
-        "hi": "आप HV टेस्ट एरिया में हैं। लाल टेस्ट-इन-प्रोग्रेस लाइट जलते समय टेस्ट बैरियर के अंदर कभी न जाएँ — हाई वोल्टेज छूना जानलेवा है। पैनल को तभी छुएँ जब टेस्टिंग पुष्टि करे कि यह अलग और अर्थ किया हुआ है।"
+        "hi": "आप HV टेस्ट एरिया में हैं। लाल टेस्ट-इन-प्रोग्रेस लाइट जलते समय टेस्ट बैरियर के अंदर कभी न जाएँ — हाई वोल्टेज छूना जानलेवा है। पैनल को तभी छुएँ जब टेस्टिंग पुष्टि करे कि यह अलग और अर्थ किया हुआ है।",
+        "fr": "Vous êtes dans la zone d’essai HT. Ne jamais franchir la barrière d’essai tant que le voyant rouge d’essai en cours est allumé — un contact haute tension est mortel. Ne toucher le panneau qu’après confirmation par les essais qu’il est consigné et mis à la terre."
       }
     },
     "32": {
       "title": {
         "ar": "ثبّت لوح البوشينج العلوي",
         "ur": "اوپر والی بوشنگ پلیٹ لگائیں",
-        "hi": "ऊपर वाली बुशिंग प्लेट लगाएँ"
+        "hi": "ऊपर वाली बुशिंग प्लेट लगाएँ",
+        "fr": "Fixer la plaque de traversée supérieure"
       },
       "instructions": {
         "ar": [
@@ -1155,19 +2026,42 @@
           "ऊपर वाली बुशिंग प्लेट लगाएँ: जिस तरफ़ छेदों के किनारे तिरछे (चैम्फर्ड) हैं वह अंदर की ओर; सीधा चेहरा बाहर की ओर।",
           "सभी फ़िक्सिंग लगाएँ और बराबर कसें (टॉर्क ड्रॉइंग के अनुसार — TBD; शॉप-फ़्लोर पर इस्तेमाल से पहले पुष्टि करें)।",
           "सेल्फ़-चेक: प्लेट टैंक पर सीधी लगी हो, हर बोल्ट पर निशान हो।"
+        ],
+        "fr": [
+          "Monter la plaque de traversée supérieure : le côté aux bords de trous chanfreinés vers l’intérieur ; la face plane vers l’extérieur.",
+          "Engager toutes les fixations et serrer uniformément (couple selon plan — à définir ; à vérifier avant utilisation en atelier).",
+          "Auto-contrôle : plaque bien à plat contre la cuve, chaque boulon marqué."
         ]
       },
       "tools": {
-        "ar": ["راتشيت", "بوكس 17 mm", "مفتاح عزم"],
-        "ur": ["ریچٹ", "17 mm ساکٹ", "ٹارک رنچ"],
-        "hi": ["रैचेट", "17 mm सॉकेट", "टॉर्क रिंच"]
+        "ar": [
+          "راتشيت",
+          "بوكس 17 mm",
+          "مفتاح عزم"
+        ],
+        "ur": [
+          "ریچٹ",
+          "17 mm ساکٹ",
+          "ٹارک رنچ"
+        ],
+        "hi": [
+          "रैचेट",
+          "17 mm सॉकेट",
+          "टॉर्क रिंच"
+        ],
+        "fr": [
+          "Cliquet",
+          "Douille 17 mm",
+          "Clé dynamométrique"
+        ]
       }
     },
     "33": {
       "title": {
         "ar": "بعد الاختبار — أنزل اللوحة عن قاعدة الاختبار",
         "ur": "ٹیسٹنگ کے بعد — پینل کو ٹیسٹنگ بیس سے اتاریں",
-        "hi": "टेस्टिंग के बाद — पैनल को टेस्टिंग बेस से उतारें"
+        "hi": "टेस्टिंग के बाद — पैनल को टेस्टिंग बेस से उतारें",
+        "fr": "Après les essais — retirer le panneau de l’embase d’essai"
       },
       "instructions": {
         "ar": [
@@ -1187,24 +2081,57 @@
           "पुष्टि करें कि पैनल डिस्चार्ज और डी-एनर्जाइज़ है — उसमें कोई बिजली बाक़ी नहीं।",
           "पैनल के बोल्ट टेस्टिंग बेस से खोलें।",
           "चेनें चेक करें, फिर क्रेन से पैनल को बेस से उतारें — जगह खाली हो।"
+        ],
+        "fr": [
+          "Confirmer auprès du service essais que TOUS les essais sont conformes.",
+          "Confirmer que le panneau est déchargé et hors tension — plus aucune énergie électrique à l’intérieur.",
+          "Déboulonner le panneau de l’embase d’essai.",
+          "Contrôler les chaînes, puis lever le panneau de l’embase au pont roulant — zone dégagée."
         ]
       },
       "tools": {
-        "ar": ["رافعة علوية ≥ 3.2 t", "سلاسل فولاذية 975 mm ×4", "شناكل أمان ×4", "راتشيت", "بوكس 24 mm"],
-        "ur": ["اوور ہیڈ کرین ≥ 3.2 t", "اسٹیل چینیں 975 mm ×4", "سیفٹی شیکل ×4", "ریچٹ", "24 mm ساکٹ"],
-        "hi": ["ओवरहेड क्रेन ≥ 3.2 t", "स्टील चेनें 975 mm ×4", "सेफ़्टी शैकल ×4", "रैचेट", "24 mm सॉकेट"]
+        "ar": [
+          "رافعة علوية ≥ 3.2 t",
+          "سلاسل فولاذية 975 mm ×4",
+          "شناكل أمان ×4",
+          "راتشيت",
+          "بوكس 24 mm"
+        ],
+        "ur": [
+          "اوور ہیڈ کرین ≥ 3.2 t",
+          "اسٹیل چینیں 975 mm ×4",
+          "سیفٹی شیکل ×4",
+          "ریچٹ",
+          "24 mm ساکٹ"
+        ],
+        "hi": [
+          "ओवरहेड क्रेन ≥ 3.2 t",
+          "स्टील चेनें 975 mm ×4",
+          "सेफ़्टी शैकल ×4",
+          "रैचेट",
+          "24 mm सॉकेट"
+        ],
+        "fr": [
+          "Pont roulant ≥ 3,2 t",
+          "Chaînes acier 975 mm ×4",
+          "Manilles de sécurité ×4",
+          "Cliquet",
+          "Douille 24 mm"
+        ]
       },
       "warning": {
         "ar": "لا تلمس اللوحة حتى يؤكد قسم الاختبار أنها مفرّغة ومسلّمة. جهد الاختبار المخزون يقتل حتى بعد فصل التغذية.",
         "ur": "پینل کو تب تک ہاتھ نہ لگائیں جب تک ٹیسٹنگ ڈیپارٹمنٹ تصدیق نہ کرے کہ یہ ڈسچارج اور ریلیز ہے۔ جمع شدہ ٹیسٹ وولٹیج سپلائی بند ہونے کے بعد بھی جان لے سکتا ہے۔",
-        "hi": "पैनल को तब तक न छुएँ जब तक टेस्टिंग डिपार्टमेंट पुष्टि न करे कि यह डिस्चार्ज और रिलीज़ है। जमा टेस्ट वोल्टेज सप्लाई बंद होने के बाद भी जान ले सकता है।"
+        "hi": "पैनल को तब तक न छुएँ जब तक टेस्टिंग डिपार्टमेंट पुष्टि न करे कि यह डिस्चार्ज और रिलीज़ है। जमा टेस्ट वोल्टेज सप्लाई बंद होने के बाद भी जान ले सकता है।",
+        "fr": "Ne pas toucher le panneau tant que le service essais n’a pas confirmé qu’il est déchargé et libéré. Une tension d’essai résiduelle peut tuer même après la coupure de l’alimentation."
       }
     },
     "34": {
       "title": {
         "ar": "انقل اللوحة إلى قسم التغليف",
         "ur": "پینل کو پیکنگ سیکشن میں منتقل کریں",
-        "hi": "पैनल को पैकिंग सेक्शन में ले जाएँ"
+        "hi": "पैनल को पैकिंग सेक्शन में ले जाएँ",
+        "fr": "Transférer le panneau vers la section emballage"
       },
       "instructions": {
         "ar": [
@@ -1224,17 +2151,41 @@
           "पैनल को ट्रॉली पर पैकिंग सेक्शन ले जाएँ — धीमी और क़ाबू में हरकत।",
           "इसे पूरे डॉक्यूमेंट पैक के साथ सौंपें।",
           "शाबाश — पैनल पूरा हो गया।"
+        ],
+        "fr": [
+          "Vérifier que le panneau porte sa libération CQ finale avant de quitter la zone.",
+          "Déplacer le panneau sur le chariot vers la section emballage — mouvement lent et maîtrisé.",
+          "Le remettre avec le dossier de documentation complet.",
+          "Bravo — panneau terminé."
         ]
       },
       "tools": {
-        "ar": ["عربة المناولة", "إفراج QC النهائي", "حزمة الوثائق"],
-        "ur": ["ہینڈلنگ ٹرالی", "فائنل QC ریلیز", "ڈاکیومنٹ پیک"],
-        "hi": ["हैंडलिंग ट्रॉली", "फ़ाइनल QC रिलीज़", "डॉक्यूमेंट पैक"]
+        "ar": [
+          "عربة المناولة",
+          "إفراج QC النهائي",
+          "حزمة الوثائق"
+        ],
+        "ur": [
+          "ہینڈلنگ ٹرالی",
+          "فائنل QC ریلیز",
+          "ڈاکیومنٹ پیک"
+        ],
+        "hi": [
+          "हैंडलिंग ट्रॉली",
+          "फ़ाइनल QC रिलीज़",
+          "डॉक्यूमेंट पैक"
+        ],
+        "fr": [
+          "Chariot de manutention",
+          "Libération CQ finale",
+          "Dossier de documentation"
+        ]
       },
       "warning": {
         "ar": "أبعد يديك عن نقاط الانحشار بين العربة وإطارات الأبواب. ادفع من الخلف، وتحرك ببطء في الممر، واطلب شخصًا ثانيًا لمراقبة الزوايا.",
         "ur": "ٹرالی اور دروازوں کے فریموں کے بیچ پھنسنے کی جگہوں سے ہاتھ دور رکھیں۔ پیچھے سے دھکیلیں، راستے میں آہستہ چلیں، اور کونوں پر نظر رکھنے کے لیے دوسرا آدمی ساتھ لیں۔",
-        "hi": "ट्रॉली और दरवाज़ों के फ़्रेमों के बीच फँसने की जगहों से हाथ दूर रखें। पीछे से धकेलें, रास्ते में धीरे चलें, और कोनों पर नज़र रखने के लिए दूसरा आदमी साथ लें।"
+        "hi": "ट्रॉली और दरवाज़ों के फ़्रेमों के बीच फँसने की जगहों से हाथ दूर रखें। पीछे से धकेलें, रास्ते में धीरे चलें, और कोनों पर नज़र रखने के लिए दूसरा आदमी साथ लें।",
+        "fr": "Garder les mains à l’écart des points de pincement entre le chariot et les huisseries. Pousser par l’arrière, avancer lentement dans l’allée et faire surveiller les angles par une deuxième personne."
       }
     }
   }

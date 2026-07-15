@@ -1,15 +1,614 @@
 {
+  "_note": "Translations for gis-full-wi.js and its photo variant gis-full-wi-plus.js. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially technical terms, torques and part numbers. English in the .js file is authoritative. ar/ur/hi step text is not drafted yet; those languages fall back to English per step.",
   "meta": {
     "title": {
       "ar": "التفكيك والتجميع الكامل لخزان GIS (تعليمات العمل)",
       "ur": "GIS ٹینک مکمل علیحدگی اور تنصیب (WI)",
-      "hi": "GIS टैंक पूर्ण निराकरण और संयोजन (WI)"
+      "hi": "GIS टैंक पूर्ण निराकरण और संयोजन (WI)",
+      "fr": "Démontage et assemblage complets GIS (WI)"
     },
     "summary": {
       "ar": "تعليمات العمل الكاملة ALFA-G المكوّنة من 60 خطوة — من تفكيك الحل 1 حتى تعبئة الغاز وفحص النقاء واختبار التسرب للحل 3.",
       "ur": "مکمل 60 مراحل ALFA-G ورک انسٹرکشن — سولوشن 1 علیحدگی سے سولوشن 3 گیس بھرائی، پیوریٹی اور لیک ٹیسٹ تک۔",
-      "hi": "पूर्ण 60-चरण ALFA-G कार्य निर्देश — सोल्यूशन 1 निराकरण से सोल्यूशन 3 गैस भरना, प्योरिटी और लीक टेस्ट तक।"
+      "hi": "पूर्ण 60-चरण ALFA-G कार्य निर्देश — सोल्यूशन 1 निराकरण से सोल्यूशन 3 गैस भरना, प्योरिटी और लीक टेस्ट तक।",
+      "fr": "L’instruction de travail ALFA-G complète en 60 étapes — du démontage de la Solution 1 au remplissage de gaz, au contrôle de pureté et au test d’étanchéité de la Solution 3."
     }
   },
-  "steps": {}
+  "steps": {
+    "1": {
+      "title": { "fr": "Amener la cuve S1 dans la zone GIS" },
+      "instructions": { "fr": [
+        "Amener la cuve depuis la zone tampon du parc avec le chariot élévateur 5 t et la poser sur la palette.",
+        "La déplacer vers l’emplacement Solution 1 et la poser au sol dans la zone GIS.",
+        "Auto-contrôle : étiquette CQ conforme présente, cuve intacte, sol dégagé."
+      ] },
+      "tools": { "fr": ["Chariot élévateur 5 t", "Palette", "Étiquette CQ conforme"] },
+      "warning": { "fr": "Rester à l’écart du passage du chariot élévateur. Ne jamais se tenir sous ou à côté d’une charge levée. Utiliser le chariot de manutention pour les produits finis." }
+    },
+    "2": {
+      "title": { "fr": "Assembler le tuyau et le manomètre" },
+      "instructions": { "fr": [
+        "Assembler le tuyau et le manomètre, puis raccorder le flexible.",
+        "Associer l’écrou borgne à sa clé et à son couple : G3/8 = 21 mm → 12,3 Nm, G1/2 = 24 mm → 26,5 Nm, G3/4 = 32 mm → 39,2 Nm.",
+        "Auto-contrôle : raccord serré au couple, sans fuite possible."
+      ] },
+      "tools": { "fr": ["Clé dynamométrique", "Clé femelle 19/20/24/32 mm", "Manomètre"] }
+    },
+    "3": {
+      "title": { "fr": "Récupérer le gaz SF6" },
+      "instructions": { "fr": [
+        "Mettre en marche le Main 25 A, la pompe booster et le Compresseur 2 sur la machine à gaz SF6.",
+        "Fixer le tuyau en position SF6 « Récupération (Absaugen) » et tourner la poignée sur récupération.",
+        "Placer le sélecteur sur « Récupération » et récupérer jusqu’à ce que la cuve indique zéro. Utiliser l’adaptateur DN20→DN8 si nécessaire.",
+        "Auto-contrôle : cuve à pression nulle avant toute ouverture."
+      ] },
+      "tools": { "fr": ["Machine à gaz SF6", "Flexible DN8", "Adaptateur DN20→DN8"] },
+      "warning": { "fr": "Personnel certifié uniquement. Le SF6 est incolore et inodore — le récupérer, ne jamais le rejeter à l’air libre. Maintenir chaque flexible, bouchon et raccord parfaitement étanche." }
+    },
+    "4": {
+      "title": { "fr": "Ouvrir les capots et déposer le jeu de barres" },
+      "instructions": { "fr": [
+        "Déposer les 62 écrous M10 et leurs rondelles des capots avant et arrière avec une douille de 17 mm et un cliquet.",
+        "Conserver le joint torique dans un endroit sûr.",
+        "Retirer les capots pour accéder au jeu de barres ; extraire le jeu de barres et l’emballer pour éviter les rayures.",
+        "Auto-contrôle : jeu de barres emballé sur le chariot, joint torique rangé en sécurité."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille 17 mm", "Emballage / protection"] }
+    },
+    "5": {
+      "title": { "fr": "Assembler le gabarit du disjoncteur" },
+      "instructions": { "fr": [
+        "Placer les 3 plaques de lest sur la tige du gabarit du disjoncteur.",
+        "Aligner les trous avec les anneaux de levage.",
+        "Monter le boulon en bout de tige pour bloquer les plaques.",
+        "Auto-contrôle : gabarit équilibré, plaques bien fixées."
+      ] },
+      "tools": { "fr": ["Gabarit du disjoncteur", "Plaques de lest ×3", "Anneaux de levage", "Clé"] }
+    },
+    "6": {
+      "title": { "fr": "Élinguer le pont roulant et le palan" },
+      "instructions": { "fr": [
+        "Monter 2 chaînes acier sur le pont roulant, puis le support de levage sur les chaînes.",
+        "Monter 2 élingues aux extrémités du support, chacune fixée par 2 manilles de sécurité ; fixer les autres extrémités au gabarit du disjoncteur.",
+        "Monter une troisième élingue sur le pont et la relier au palan à chaîne bidirectionnel 0,5 t ; attacher son extrémité à la dernière plaque de lest.",
+        "Auto-contrôle : toutes les manilles verrouillées, chaînes tendues, palan libre de contrôler la charge."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Chaînes acier 975 mm ×2", "Support de levage", "Élingues 3 t ×3", "Manilles de sécurité ×2", "Palan à chaîne 0,5 t"] },
+      "warning": { "fr": "Seul le personnel certifié manœuvre le pont roulant. Porter un casque. Rester à l’écart de la charge suspendue." }
+    },
+    "7": {
+      "title": { "fr": "Sortir le disjoncteur au pont roulant" },
+      "instructions": { "fr": [
+        "Fixer le gabarit au disjoncteur avec 4 boulons M30 et 8 rondelles plates, en alignement avec le palan.",
+        "Reprendre la charge et sortir le disjoncteur au pont roulant en le maintenant équilibré.",
+        "Auto-contrôle : le disjoncteur ne touche jamais les parois de la cuve pendant le levage."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Palan à chaîne 0,5 t", "Gabarit du disjoncteur", "Boulons M30 ×4", "Rondelles plates ×8"] },
+      "warning": { "fr": "Tout contact du disjoncteur avec la paroi de la cuve l’endommage. Ne jamais se tenir sous la charge ; la guider avec une corde de guidage." }
+    },
+    "8": {
+      "title": { "fr": "Poser le disjoncteur sur la palette" },
+      "instructions": { "fr": [
+        "Dégager le disjoncteur de la cuve avec précaution.",
+        "Ajouter une couche de calage sur la palette, puis y descendre le disjoncteur.",
+        "Auto-contrôle : disjoncteur posé d’aplomb sur le calage, intact."
+      ] },
+      "tools": { "fr": ["Palette", "Couche de calage"] },
+      "warning": { "fr": "Le contact avec la paroi de la cuve raye et endommage le disjoncteur." }
+    },
+    "9": {
+      "title": { "fr": "Lever la cuve sur le châssis" },
+      "instructions": { "fr": [
+        "Élinguer les 4 points de levage sur le dessus de la cuve ; utiliser l’échelle pour les atteindre.",
+        "Lever la cuve sur le châssis au pont roulant.",
+        "La fixer avec 4 boulons M16×40 à l’aide d’une douille de 24 mm et d’un cliquet.",
+        "Auto-contrôle : les 4 boulons serrés, la cuve ne peut pas bouger."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Échelle", "Douille 24 mm", "Cliquet", "Boulons M16×40 ×4"] },
+      "warning": { "fr": "Porter un casque. Ne pas se tenir près de la cuve pendant le levage." }
+    },
+    "10": {
+      "title": { "fr": "Déposer le jeu de barres supérieur et les traversées" },
+      "instructions": { "fr": [
+        "Déposer le jeu de barres supérieur interne, la traversée et la plaque de traversée inférieure avec la clé à chocs et la douille de 17 mm.",
+        "Manipuler chaque pièce avec douceur pour éviter tout dommage.",
+        "Auto-contrôle : pièces déposées proprement, sans éclat."
+      ] },
+      "tools": { "fr": ["Clé à chocs", "Douille 17 mm"] }
+    },
+    "11": {
+      "title": { "fr": "Déposer la traversée inférieure" },
+      "instructions": { "fr": [
+        "Déposer les 18 vis Allen à tête bombée qui maintiennent la traversée supérieure.",
+        "Déposer avec précaution la traversée inférieure et sa plaque de la cuve.",
+        "Auto-contrôle : traversées intactes, vis conservées ensemble."
+      ] },
+      "tools": { "fr": ["Cliquet", "Clé Allen 5 mm"] }
+    },
+    "12": {
+      "title": { "fr": "Déposer le sectionneur et le tuyau de gaz" },
+      "instructions": { "fr": [
+        "Déposer les 4 écrous M12, puis retirer la cuve du châssis et la poser au sol.",
+        "Déposer le disque de rupture, puis le tuyau de gaz avec une clé de 32 mm.",
+        "Auto-contrôle : pièces conservées en sécurité pour la nouvelle cuve."
+      ] },
+      "tools": { "fr": ["Clé 32 mm", "Cliquet"] }
+    },
+    "13": {
+      "title": { "fr": "Démonter les points de levage du sectionneur" },
+      "instructions": { "fr": [
+        "Déposer 4 rondelles ressort, 4 rondelles plates et 4 écrous de chaque point de levage du sectionneur avec la clé.",
+        "Auto-contrôle : toute la visserie conservée ensemble et identifiée."
+      ] },
+      "tools": { "fr": ["Clé", "Cliquet"] }
+    },
+    "14": {
+      "title": { "fr": "Sortir le sectionneur au pont roulant" },
+      "instructions": { "fr": [
+        "Monter le palan directement sur le pont roulant et le relier avec une élingue.",
+        "Monter 2 manilles de sécurité sur les points de levage arrière et les relier avec une élingue.",
+        "Sortir le sectionneur au pont roulant en le maintenant équilibré.",
+        "Auto-contrôle : sectionneur dégagé de la cuve, posé sur mousse de protection."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Palan à chaîne 0,5 t", "Élingues 3 t", "Manilles de sécurité ×2"] },
+      "warning": { "fr": "Rester à l’écart du sectionneur suspendu. Ne pas laisser la traversée toucher la cuve." }
+    },
+    "15": {
+      "title": { "fr": "Ranger les joints toriques" },
+      "instructions": { "fr": [
+        "Conserver les joints toriques dans un endroit sûr, rangés à plat et identifiés.",
+        "Auto-contrôle : chaque joint torique est recensé."
+      ] },
+      "tools": { "fr": ["—"] }
+    },
+    "16": {
+      "title": { "fr": "Lever la nouvelle cuve S3 de la palette" },
+      "instructions": { "fr": [
+        "Porter l’ensemble des EPI, casque compris.",
+        "Élinguer la nouvelle cuve Solution 3 et la lever de la palette au pont roulant.",
+        "La déplacer avec précaution, à l’écart de la charge suspendue.",
+        "Auto-contrôle : chaînes et manilles vérifiées avant le levage."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Chaînes acier 975 mm ×4", "Manilles de sécurité ×4"] },
+      "warning": { "fr": "Rester à l’écart de la cuve suspendue ; vérifier l’élingage au préalable." }
+    },
+    "17": {
+      "title": { "fr": "Déposer et déballer la cuve S3" },
+      "instructions": { "fr": [
+        "Poser la cuve au sol.",
+        "Retirer tout l’emballage et inspecter les surfaces à la recherche de dommages.",
+        "Auto-contrôle : surfaces propres et intactes."
+      ] },
+      "tools": { "fr": ["—"] }
+    },
+    "18": {
+      "title": { "fr": "Déposer la plaque à bornes des TC" },
+      "instructions": { "fr": [
+        "Déposer les 16 boulons avec leurs rondelles et ressorts de la borne du TC.",
+        "Utiliser une douille de 17 mm et un cliquet ; retirer la plaque à bornes des TC.",
+        "Auto-contrôle : visserie conservée ensemble."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille 17 mm"] }
+    },
+    "19": {
+      "title": { "fr": "Déposer les capots arrière" },
+      "instructions": { "fr": [
+        "Déposer les 62 écrous M10, rondelles et rondelles ressort des côtés haut et bas avec une douille de 17 mm et un cliquet.",
+        "NE PAS utiliser la clé à chocs — le goujon serait endommagé.",
+        "Conserver toute la visserie dans le bac.",
+        "Auto-contrôle : goujons intacts."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille 17 mm"] },
+      "warning": { "fr": "Ne pas utiliser la clé à chocs ici — elle endommage les goujons." }
+    },
+    "20": {
+      "title": { "fr": "Déposer le capot arrière central" },
+      "instructions": { "fr": [
+        "Monter 2 anneaux de levage M10×25 et élinguer le capot arrière central (~50 kg).",
+        "Le déposer au pont roulant, sans endommager les goujons.",
+        "Auto-contrôle : capot mis de côté en sécurité."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Anneaux de levage M10×25 ×2", "Chaînes acier 975 mm ×2"] },
+      "warning": { "fr": "Le capot arrière central pèse ~50 kg. Porter un casque et rester à l’écart pendant le levage." }
+    },
+    "21": {
+      "title": { "fr": "Déposer la plaque support des TC" },
+      "instructions": { "fr": [
+        "Déposer la plaque support des TC avec une douille de 17 mm et un cliquet ; la conserver à l’extérieur.",
+        "Utiliser de la mousse pour ne pas rayer la surface de la cuve.",
+        "Auto-contrôle : surface de la cuve non rayée."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille 17 mm", "Plaque de mousse"] }
+    },
+    "22": {
+      "title": { "fr": "Nettoyer la cuve" },
+      "instructions": { "fr": [
+        "Mettre des gants résistants aux produits chimiques avant tout contact avec le méthanol.",
+        "Nettoyer toutes les surfaces de la cuve au méthanol et au chiffon.",
+        "Auto-contrôle : surfaces exemptes de poussière, d’huile et de corps étrangers."
+      ] },
+      "tools": { "fr": ["Gants chimiques", "Rouleau de chiffons", "Méthanol"] },
+      "warning": { "fr": "Le méthanol est inflammable et toxique. Maintenir la ventilation en marche et écarter toute source d’étincelles ; rincer la peau à l’eau en cas de contact." }
+    },
+    "23": {
+      "title": { "fr": "Nettoyer et monter la plaque de traversée" },
+      "instructions": { "fr": [
+        "Nettoyer la plaque de traversée et les 9 traversées ; utiliser le gabarit de positionnement pour qu’aucune ne tombe.",
+        "Nettoyer le joint torique et appliquer de la graisse.",
+        "Monter la plaque de traversée sur la partie basse de la cuve.",
+        "Auto-contrôle : traversées en place, joint torique graissé."
+      ] },
+      "tools": { "fr": ["Gants chimiques", "Rouleau de chiffons", "Méthanol", "Graisse Molykote", "Gabarit de traversée"] }
+    },
+    "24": {
+      "title": { "fr": "Lever la cuve sur la plateforme" },
+      "instructions": { "fr": [
+        "Depuis le dessous de la cuve, élinguer les 4 points de levage au-dessus du sectionneur ; maintenir les chaînes tendues.",
+        "Lever la cuve au pont roulant et la poser sur la plateforme.",
+        "Auto-contrôle : chaînes bien fixées et tendues avant le levage."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Chaînes acier 975 mm ×4", "Manilles de sécurité ×4"] },
+      "warning": { "fr": "S’assurer que les chaînes sont bien fixées et tendues avant le levage." }
+    },
+    "25": {
+      "title": { "fr": "Positionner la plaque de traversée" },
+      "instructions": { "fr": [
+        "Monter la plaque de traversée sur la partie basse de la cuve.",
+        "Placer les trous chanfreinés vers l’intérieur et la surface plane vers l’extérieur.",
+        "Auto-contrôle : positionnement correct avant serrage."
+      ] },
+      "tools": { "fr": ["—"] }
+    },
+    "26": {
+      "title": { "fr": "Boulonner les plaques de traversée" },
+      "instructions": { "fr": [
+        "Monter 3 plaques de traversée avec 12 rondelles, rondelles ressort et écrous.",
+        "Serrer avec une douille de 17 mm et un cliquet ; couple 26,5 Nm.",
+        "Marquer au marqueur BLEU (production) et au marqueur ROUGE (CQ) après serrage.",
+        "Auto-contrôle : chaque boulon serré au couple et marqué."
+      ] },
+      "tools": { "fr": ["Clé dynamométrique", "Douille 17 mm", "Marqueurs bleu et rouge"] }
+    },
+    "27": {
+      "title": { "fr": "Monter les traversées (à 2 personnes)" },
+      "instructions": { "fr": [
+        "Contrôler chaque traversée de prise de câble avant insertion ; utiliser le pion de guidage (1321232).",
+        "Opérateur 1 : appliquer la graisse (1221789) sur la zone de contact de la plaque de traversée et monter la traversée.",
+        "Opérateur 2 : serrer les boulons M8×20 avec la clé à chocs et la clé Allen de 5 mm ; appliquer du Loctite 401 sur chaque boulon.",
+        "Auto-contrôle : traversées en place, boulons serrés au couple."
+      ] },
+      "tools": { "fr": ["Pions de guidage", "Clé à chocs", "Clé Allen 5 mm", "Graisse", "Loctite 401"] }
+    },
+    "28": {
+      "title": { "fr": "Serrer au couple les barres des traversées" },
+      "instructions": { "fr": [
+        "Monter les jeux de barres sur les traversées.",
+        "Serrer les écrous avec une clé Allen de 8 mm et une rallonge ; couple 47 Nm.",
+        "Marquer au marqueur BLEU (production) et au marqueur ROUGE (CQ).",
+        "Auto-contrôle : boulons du jeu de barres serrés au couple et marqués."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille Allen 8 mm", "Rallonge", "Clé dynamométrique", "Marqueurs bleu et rouge"] }
+    },
+    "29": {
+      "title": { "fr": "Nettoyer les tubes support des TC" },
+      "instructions": { "fr": [
+        "Amener les tubes support des TC sur la table.",
+        "Nettoyer toutes les surfaces — intérieures et extérieures — au chiffon et au méthanol.",
+        "Auto-contrôle : tubes parfaitement propres."
+      ] },
+      "tools": { "fr": ["Gants chimiques", "Rouleau de chiffons", "Méthanol"] }
+    },
+    "30": {
+      "title": { "fr": "Installer les plaques support des TC" },
+      "instructions": { "fr": [
+        "Amener le tube support des TC à la cuve ; protéger les arêtes avec de la mousse pour éviter les rayures.",
+        "Installer les plaques une à une avec des boulons M12×35.",
+        "L’opérateur 1 serre avec une douille Allen de 10 mm ; l’opérateur 2 maintient la clé en dessous. Couple 47,5 Nm.",
+        "Auto-contrôle : plaques serrées uniformément."
+      ] },
+      "tools": { "fr": ["Douille Allen 10 mm", "Clé 19 mm", "Clé dynamométrique", "Plaque de mousse"] }
+    },
+    "31": {
+      "title": { "fr": "Nettoyer et installer le conducteur" },
+      "instructions": { "fr": [
+        "Si nécessaire, nettoyer le conducteur au papier de verre grain 700–1000 pour éliminer les débris.",
+        "Installer le conducteur et le fixer avec un boulon M12×35 dans la plaque support des TC.",
+        "L’aligner correctement.",
+        "Auto-contrôle : conducteur aligné et bien fixé."
+      ] },
+      "tools": { "fr": ["Papier de verre 700–1000", "Rouleau de chiffons", "Méthanol"] }
+    },
+    "32": {
+      "title": { "fr": "Vérifier le sens du conducteur" },
+      "instructions": { "fr": [
+        "Depuis la face avant de la cuve, vérifier le sens des conducteurs.",
+        "Auto-contrôle : sens conformes au plan."
+      ] },
+      "tools": { "fr": ["—"] }
+    },
+    "33": {
+      "title": { "fr": "Vérifier le sens des TC" },
+      "instructions": { "fr": [
+        "Avant de poser chaque TC, vérifier que P1 est orienté vers le haut et P2 vers le bas.",
+        "Confirmer sur les trois TC.",
+        "Auto-contrôle : P1 en haut / P2 en bas sur chaque TC."
+      ] },
+      "tools": { "fr": ["—"] }
+    },
+    "34": {
+      "title": { "fr": "Poser les TC et l’isolation" },
+      "instructions": { "fr": [
+        "Placer 2 caoutchoucs isolants (support Jean) sur chacun des 3 supports de TC.",
+        "Poser un TC, ajouter 2 caoutchoucs, poser le TC suivant, puis des caoutchoucs par-dessus.",
+        "Faire passer le fil de chaque TC entre les tiges de support.",
+        "Auto-contrôle : TC en place, isolation entre chacun."
+      ] },
+      "tools": { "fr": ["Caoutchouc isolant (support Jean)"] }
+    },
+    "35": {
+      "title": { "fr": "Monter les tiges support des TC" },
+      "instructions": { "fr": [
+        "Fixer les 4 tiges support des TC sur le jeu d’écrous des plaques support des TC.",
+        "Ajouter un écrou M12 et une rondelle plate sur chaque tige, au niveau du haut du TC.",
+        "Auto-contrôle : tiges au niveau du haut des TC."
+      ] },
+      "tools": { "fr": ["Écrous M12", "Rondelles plates M12"] }
+    },
+    "36": {
+      "title": { "fr": "Monter la plaque isolante orange" },
+      "instructions": { "fr": [
+        "Poser la plaque isolante orange ; intercaler une rondelle plate et une rondelle ressort entre la plaque et l’écrou.",
+        "Aligner la plaque à l’horizontale (même hauteur sur les deux écrous).",
+        "En cas de jeu sous la plaque, ajouter du caoutchouc isolant (support Jean).",
+        "Auto-contrôle : plaque de niveau, sans jeu."
+      ] },
+      "tools": { "fr": ["Clé 19 mm", "Caoutchouc isolant"] }
+    },
+    "37": {
+      "title": { "fr": "Monter la plaque support supérieure des TC" },
+      "instructions": { "fr": [
+        "Monter un écrou, puis une rondelle plate ; poser la plaque aluminium, puis 3 rondelles plastique, une rondelle ressort et un écrou borgne.",
+        "NE PAS oublier la rondelle plastique.",
+        "Serrer avec une clé de 19 mm ; couple 47,5 Nm. Marquer en BLEU (production) et en ROUGE (CQ).",
+        "Auto-contrôle : écrous borgnes serrés au couple et marqués."
+      ] },
+      "tools": { "fr": ["Clé 19 mm", "Clé dynamométrique", "Marqueurs bleu et rouge"] },
+      "warning": { "fr": "Ne pas oublier la rondelle plastique sous l’écrou borgne." }
+    },
+    "38": {
+      "title": { "fr": "Installer le sectionneur sur la cuve S3" },
+      "instructions": { "fr": [
+        "Nettoyer la surface supérieure au méthanol et appliquer de la graisse sur la zone de fixation.",
+        "Transférer le sectionneur de la Solution 1 vers la nouvelle cuve Solution 3 au pont roulant.",
+        "Vérifier que la traversée est propre et le joint torique correctement positionné ; appliquer de la graisse et de l’huile silicone (1208914).",
+        "Auto-contrôle : joint torique en place, sectionneur aligné."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Palan à chaîne 0,5 t", "Méthanol", "Graisse Molykote", "Huile silicone"] },
+      "warning": { "fr": "Un joint torique mal positionné provoque une fuite de SF6 — vérifier sa position. Rester à l’écart du sectionneur suspendu." }
+    },
+    "39": {
+      "title": { "fr": "Installer les pions de guidage du sectionneur" },
+      "instructions": { "fr": [
+        "Pendant le levage, installer les 2 pions de guidage (1321232) pour que la traversée ne touche jamais la cuve.",
+        "Auto-contrôle : pions de guidage en place avant la mise en assise du sectionneur."
+      ] },
+      "tools": { "fr": ["Pions de guidage ×2"] },
+      "warning": { "fr": "Tout contact de la traversée avec la cuve l’endommage." }
+    },
+    "40": {
+      "title": { "fr": "Boulonner le sectionneur et le jeu de barres supérieur" },
+      "instructions": { "fr": [
+        "Monter 18 boulons M8×20 pour fixer les traversées ; couple 14,70 Nm.",
+        "Fixer le sectionneur à la cuve avec une clé de 19 mm.",
+        "Monter le jeu de barres supérieur avec 6 boulons M12×35 ; couple 47 Nm avec un cliquet et une douille de 5 mm. Marquer en BLEU et en ROUGE.",
+        "Auto-contrôle : tout est serré au couple et marqué."
+      ] },
+      "tools": { "fr": ["Clé 19 mm", "Cliquet", "Douille 5 mm", "Clé dynamométrique", "Marqueurs bleu et rouge"] },
+      "warning": { "fr": "Un couple incorrect ici risque de provoquer une fuite de gaz SF6 — bien serrer." }
+    },
+    "41": {
+      "title": { "fr": "Monter le disque de rupture" },
+      "instructions": { "fr": [
+        "Nettoyer le disque de rupture et la surface de la cuve où il se pose.",
+        "Monter 8 écrous M8 avec 8 rondelles ressort et rondelles plates ; serrer avec une douille de 13 mm et un cliquet ; couple 14,70 Nm.",
+        "Marquer au marqueur ROUGE (CQ).",
+        "Auto-contrôle : disque serré au couple et marqué."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille 13 mm", "Clé dynamométrique", "Marqueur rouge"] },
+      "warning": { "fr": "Un couple incorrect risque de provoquer une fuite de gaz — bien serrer." }
+    },
+    "42": {
+      "title": { "fr": "Réassembler le gabarit du disjoncteur" },
+      "instructions": { "fr": [
+        "Placer les 3 plaques de lest sur la tige du gabarit du disjoncteur et aligner les trous avec les anneaux de levage.",
+        "Monter le boulon en bout de tige.",
+        "Auto-contrôle : gabarit équilibré et bien fixé."
+      ] },
+      "tools": { "fr": ["Gabarit du disjoncteur", "Plaques de lest ×3", "Anneaux de levage", "Clé"] }
+    },
+    "43": {
+      "title": { "fr": "Réélinguer le pont roulant et le palan" },
+      "instructions": { "fr": [
+        "Monter les 2 chaînes acier et le support de levage sur le pont roulant.",
+        "Monter les élingues avec les manilles de sécurité sur le support et le gabarit du disjoncteur.",
+        "Relier la troisième élingue au palan 0,5 t et à la dernière plaque de lest.",
+        "Auto-contrôle : élingage sûr, palan contrôlant bien la charge."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Chaînes acier 975 mm ×2", "Élingues 3 t ×3", "Manilles de sécurité", "Palan à chaîne 0,5 t"] },
+      "warning": { "fr": "Personnel certifié uniquement. Porter un casque ; rester à l’écart de la charge." }
+    },
+    "44": {
+      "title": { "fr": "Installer le disjoncteur S1 dans la cuve S3" },
+      "instructions": { "fr": [
+        "Prendre le disjoncteur de la Solution 1 et le descendre dans la cuve Solution 3 au pont roulant avec le gabarit.",
+        "Maintenir le disjoncteur à l’écart des parois de la cuve — tout contact provoque des dommages.",
+        "Auto-contrôle : disjoncteur descendu en douceur, sans contact."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Gabarit du disjoncteur", "Palan à chaîne 0,5 t"] },
+      "warning": { "fr": "Si le disjoncteur heurte les parois de la cuve, il est endommagé et rebuté — travailler en douceur." }
+    },
+    "45": {
+      "title": { "fr": "Monter le joint torique du disjoncteur" },
+      "instructions": { "fr": [
+        "Disposer le joint torique, long et souple, en cercle parfait sur la plaque.",
+        "Appliquer correctement de la graisse et de l’huile silicone (1208914).",
+        "Vérifier son bon positionnement — aucune poussière ne doit y adhérer.",
+        "Auto-contrôle : joint torique en cercle parfait, graissé."
+      ] },
+      "tools": { "fr": ["Huile silicone", "Graisse Molykote", "Rouleau de chiffons", "Méthanol"] },
+      "warning": { "fr": "Un joint torique mal positionné provoque une fuite de gaz — le contrôler soigneusement." }
+    },
+    "46": {
+      "title": { "fr": "Asseoir et fixer le disjoncteur" },
+      "instructions": { "fr": [
+        "Descendre le disjoncteur dans la cuve au pont roulant avec le gabarit d’équilibrage ; le maintenir à l’écart des parois.",
+        "Le fixer avec 1 écrou M10 et 4 boulons M10×25 ; couple 26,5 Nm.",
+        "Auto-contrôle : disjoncteur d’aplomb, tous les boulons marqués."
+      ] },
+      "tools": { "fr": ["Pont roulant ≥ 3,2 t", "Gabarit du disjoncteur", "Cliquet", "Douille 17 mm", "Clé dynamométrique"] },
+      "warning": { "fr": "Tout contact avec les parois de la cuve entraîne un rebut CQ — travailler en douceur et avec précaution." }
+    },
+    "47": {
+      "title": { "fr": "Raccorder les barres disjoncteur–sectionneur" },
+      "instructions": { "fr": [
+        "Nettoyer tous les jeux de barres au méthanol et au chiffon.",
+        "Placer 2 rondelles plates + 1 rondelle ressort sur la barre du disjoncteur ; par le dessous de la barre du disjoncteur à vide, monter l’écrou de blindage pour la raccorder.",
+        "Marquer au marqueur BLEU (production) et au marqueur ROUGE (CQ).",
+        "Auto-contrôle : raccord propre, serré au couple et marqué."
+      ] },
+      "tools": { "fr": ["Gants chimiques", "Rouleau de chiffons", "Méthanol", "Douille Allen 8 mm", "Clé dynamométrique", "Marqueurs bleu et rouge"] }
+    },
+    "48": {
+      "title": { "fr": "Raccorder les barres disjoncteur–TC" },
+      "instructions": { "fr": [
+        "Raccorder la petite éclisse côté TC avec 6 boulons M12×35 ; couple 47 Nm.",
+        "Raccorder le côté disjoncteur à vide avec 12 boulons M12×40.",
+        "Maintenir le conducteur du TC à la distance spécifiée du tube support interne des TC.",
+        "Auto-contrôle : distances respectées, boulons serrés au couple."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille Allen 8 mm", "Clé 19 mm", "Clé dynamométrique"] }
+    },
+    "49": {
+      "title": { "fr": "Câbler les TC et monter la plaque de fermeture" },
+      "instructions": { "fr": [
+        "Câbler les bornes des TC avec des cosses de 6 mm — 9 fils par phase (R, Y, B) : les fils du TC inférieur vers la plaque de droite, ceux du TC supérieur vers la gauche ; p. ex. phase R 1S1 en premier.",
+        "Sertir chaque cosse ; contrôler chaque câble par rapport à son numéro de borne.",
+        "Monter la plaque de fermeture des TC avec son joint torique en place ; utiliser les 8 boulons M10 (douille 17 mm).",
+        "Serrer en croix/étoile par paliers (30 → 60 → 100 %) ; recontrôler tous les boulons. Marquer en BLEU et en ROUGE."
+      ] },
+      "tools": { "fr": ["Pince à sertir", "Cosses 6 mm", "Cliquet", "Douille 17 mm", "Clé dynamométrique", "Marqueurs bleu et rouge"] }
+    },
+    "50": {
+      "title": { "fr": "Nettoyer la cuve et monter la zéolithe" },
+      "instructions": { "fr": [
+        "Aspirer l’intérieur de la cuve ; s’assurer que le fond est parfaitement propre, sans particule étrangère.",
+        "Essuyer la portée d’étanchéité, la gorge du joint torique du capot et le joint torique avec un chiffon propre.",
+        "Monter la zéolithe et préparer la fermeture de la cuve.",
+        "Auto-contrôle : intérieur propre, portées d’étanchéité essuyées."
+      ] },
+      "tools": { "fr": ["Aspirateur", "Rouleau de chiffons", "Méthanol", "Zéolithe"] },
+      "warning": { "fr": "Fermer la cuve rapidement après l’ouverture de la zéolithe — elle absorbe l’humidité de l’air." }
+    },
+    "51": {
+      "title": { "fr": "Fermer les capots arrière" },
+      "instructions": { "fr": [
+        "Engager tous les boulons M10 et les serrer d’abord à mi-course à la main.",
+        "Serrer dans l’ordre — un sur deux — pour une pression uniforme.",
+        "Serrer par paliers (30 → 60 → 100 %) ; recontrôler chaque boulon. Marquer en BLEU et en ROUGE.",
+        "Auto-contrôle : capots uniformément serrés, tous les boulons marqués."
+      ] },
+      "tools": { "fr": ["Cliquet", "Douille 17 mm", "Clé dynamométrique", "Marqueurs bleu et rouge"] }
+    },
+    "52": {
+      "title": { "fr": "Monter les tuyaux et manomètres, fermer la vanne" },
+      "instructions": { "fr": [
+        "Assembler les tuyaux et les manomètres ; serrer selon le tableau des tailles de clé (G3/8 → 12,3 Nm … G3/4 → 39,2 Nm).",
+        "Tourner la vanne d’Ouvert (O) à Fermé (C) et confirmer qu’elle est étanche et serrée au couple.",
+        "Auto-contrôle : aucune fuite, vanne fermée et marquée."
+      ] },
+      "tools": { "fr": ["Clé dynamométrique", "Clé femelle 19/20/24/32 mm", "Manomètres"] }
+    },
+    "53": {
+      "title": { "fr": "Réaliser la mise sous vide" },
+      "instructions": { "fr": [
+        "Raccorder le flexible à la machine (adaptateur DN20→DN8 si nécessaire) et à la cuve ; tourner la vanne sur Ouvert (O).",
+        "Appuyer sur le bouton vert pour démarrer la mise sous vide.",
+        "À 0,8 mbar ou moins, arrêter et retirer le tuyau.",
+        "Auto-contrôle : valeur de vide relevée avant le débranchement."
+      ] },
+      "tools": { "fr": ["Pompe à vide ≥ 60 m³/h", "Flexible DN8", "Adaptateur DN20→DN8"] },
+      "warning": { "fr": "Personnel certifié uniquement. Le vide minimal requis est de 0,8 mbar." }
+    },
+    "54": {
+      "title": { "fr": "Préparer le remplissage de gaz" },
+      "instructions": { "fr": [
+        "Positionner la poignée de remplissage SF6.",
+        "Placer le sélecteur de la machine sur « Remplissage » (utiliser l’adaptateur DN20→DN8 si nécessaire).",
+        "Auto-contrôle : raccords étanches avant le remplissage."
+      ] },
+      "tools": { "fr": ["Machine à gaz SF6", "Flexible DN8", "Adaptateur DN20→DN8"] },
+      "warning": { "fr": "Personnel certifié uniquement. Maintenir chaque raccord parfaitement étanche." }
+    },
+    "55": {
+      "title": { "fr": "Remplir de gaz SF6" },
+      "instructions": { "fr": [
+        "Remplir la cuve de SF6 jusqu’à 0,05 MPa.",
+        "NE PAS dépasser 0,05 MPa — un surremplissage peut provoquer la rupture de la cuve.",
+        "Surveiller attentivement la pression tout au long de l’opération.",
+        "Auto-contrôle : pression à 0,05 MPa, aucune fuite."
+      ] },
+      "tools": { "fr": ["Machine à gaz SF6", "Flexible DN8", "Manomètre"] },
+      "warning": { "fr": "Ne pas dépasser 0,05 MPa. Le SF6 est incolore et inodore — maintenir chaque raccord étanche et la zone ventilée." }
+    },
+    "56": {
+      "title": { "fr": "Fermer et étanchéifier la vanne" },
+      "instructions": { "fr": [
+        "Tourner la vanne d’Ouvert (O) à Fermé (C).",
+        "Confirmer qu’elle est étanche et serrée au couple pour que le tuyau ne puisse pas fuir.",
+        "Auto-contrôle : vanne fermée, aucun sifflement."
+      ] },
+      "tools": { "fr": ["Clé dynamométrique", "Clé femelle"] }
+    },
+    "57": {
+      "title": { "fr": "Contrôler la pureté du gaz et le point de rosée" },
+      "instructions": { "fr": [
+        "Raccorder l’analyseur de gaz SF6 à la cuve.",
+        "Contrôler la pureté : elle doit être supérieure ou égale à 99,75 % (SF6/N2).",
+        "Contrôler le point de rosée : il doit être inférieur ou égal à −25 °C.",
+        "Auto-contrôle : les deux valeurs relevées et dans les limites."
+      ] },
+      "tools": { "fr": ["Analyseur de gaz SF6", "Flexible auto-obturant"] },
+      "warning": { "fr": "Personnel certifié uniquement. Tout gaz hors spécification doit être signalé immédiatement." }
+    },
+    "58": {
+      "title": { "fr": "Ensacher la cuve pour le test d’étanchéité" },
+      "instructions": { "fr": [
+        "Apporter le sac plastique cumulatif (1330308) et couvrir la cuve, uniquement pour le test d’étanchéité.",
+        "Utiliser 2 échelles et 2 opérateurs pour mettre le sac en place sans le déchirer.",
+        "Porter les EPI et bloquer les roues des échelles.",
+        "Auto-contrôle : sac couvrant toute la cuve, sans déchirure."
+      ] },
+      "tools": { "fr": ["Sac plastique cumulatif", "Échelles ×2"] },
+      "warning": { "fr": "Porter les EPI. S’assurer que les roues des échelles sont bloquées avant d’y monter." }
+    },
+    "59": {
+      "title": { "fr": "Sceller le sac au sol" },
+      "instructions": { "fr": [
+        "Fixer complètement le sac plastique au sol avec le ruban d’emballage alfanar (1043008).",
+        "Auto-contrôle : sac scellé sur tout le pourtour, sans interstice."
+      ] },
+      "tools": { "fr": ["Ruban d’emballage"] }
+    },
+    "60": {
+      "title": { "fr": "Test d’étanchéité au détecteur (24–48 h)" },
+      "instructions": { "fr": [
+        "Attendre 24 à 48 heures.",
+        "Ouvrir le sac à l’extrémité en retirant le ruban d’emballage.",
+        "Introduire le détecteur de SF6 (1252532) et appuyer sur ON — l’appareil émet un signal sonore et affiche une valeur s’il détecte du SF6.",
+        "Auto-contrôle : aucune fuite détectée ; consigner le résultat. Signaler toute fuite au superviseur."
+      ] },
+      "tools": { "fr": ["Détecteur de gaz SF6", "Fiche d’essai"] },
+      "warning": { "fr": "Une fuite détectée signifie un compartiment non étanche — ne pas libérer le panneau ; signaler immédiatement." }
+    }
+  }
 }

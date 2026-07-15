@@ -34,6 +34,14 @@ export const LOCALES = [
     flag: '🇮🇳',
     font: 'var(--font-hi)',
   },
+  {
+    code: 'fr',
+    name: 'French',
+    native: 'Français',
+    dir: 'ltr',
+    flag: '🇫🇷',
+    font: 'var(--font-body)',
+  },
 ]
 
 export const LOCALE_CODES = LOCALES.map((l) => l.code)

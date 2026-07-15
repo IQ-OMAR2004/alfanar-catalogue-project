@@ -1,5 +1,5 @@
 {
-  "_note": "App-chrome strings ×4 languages. Arabic/Urdu/Hindi are MACHINE-DRAFTED and flagged for native-speaker review (esp. technical terms). Edit values freely; keep keys + {placeholders} intact.",
+  "_note": "App-chrome strings ×5 languages. Arabic/Urdu/Hindi/French are MACHINE-DRAFTED and flagged for native-speaker review (esp. technical terms). Edit values freely; keep keys + {placeholders} intact.",
   "en": {
     "app": {
       "title": "alfanar",
@@ -434,6 +434,115 @@
       "offlineReady": "ऑफ़लाइन कार्य के लिए तैयार",
       "updateReady": "अपडेट तैयार",
       "reload": "पुनः लोड करें"
+    }
+  },
+  "fr": {
+    "app": {
+      "title": "alfanar",
+      "subtitle": "Instructions de travail"
+    },
+    "gate": {
+      "heading": "Choisissez votre langue",
+      "sub": "Sélectionnez la langue de ces instructions de travail",
+      "phone": "Vous utilisez un téléphone ? Passer en vue téléphone",
+      "kiosk": "Revenir à la vue kiosque"
+    },
+    "tasks": {
+      "heading": "Sélectionnez une tâche",
+      "sub": "Choisissez un travail pour être guidé pas à pas",
+      "steps": "{n} étapes",
+      "minutes": "{n} min",
+      "totalTime": "Durée totale",
+      "start": "Commencer"
+    },
+    "difficulty": {
+      "basic": "Basique",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé"
+    },
+    "step": {
+      "of": "Étape {current} sur {total}",
+      "estimated": "≈ {n} min",
+      "remaining": "{n} min restantes",
+      "elapsed": "{n} min écoulées",
+      "thisStep": "Cette étape",
+      "replay": "Revoir",
+      "paused": "En pause",
+      "warning": "Avertissement",
+      "ppe": "EPI requis",
+      "done": "Terminer",
+      "tools": "Outils et matériel",
+      "enlarge": "Appuyez pour agrandir",
+      "photoOf": "Photo {n} sur {total}",
+      "closePhoto": "Fermer la photo"
+    },
+    "nav": {
+      "next": "Suivant",
+      "previous": "Retour"
+    },
+    "quit": {
+      "title": "Quitter la tâche ?",
+      "body": "La progression sera perdue.",
+      "confirm": "Oui, quitter",
+      "cancel": "Non, rester"
+    },
+    "coach": {
+      "title": "Comment naviguer",
+      "tapRight": "Appuyez à droite pour l’étape suivante",
+      "tapLeft": "Appuyez à gauche pour revenir",
+      "tapForward": "Appuyez de ce côté pour l’étape suivante",
+      "tapBack": "Appuyez de ce côté pour revenir",
+      "center": "Appuyez au centre pour revoir l’animation",
+      "quit": "Appuyez deux fois dans le coin pour quitter",
+      "gotIt": "J’ai compris"
+    },
+    "complete": {
+      "title": "Tâche terminée",
+      "sub": "Bravo — le travail est terminé.",
+      "estimate": "Estimé",
+      "actual": "Votre temps",
+      "faster": "{n} min sous l’estimation",
+      "slower": "{n} min au-dessus de l’estimation",
+      "onTime": "Conforme à l’estimation",
+      "restart": "Recommencer",
+      "tasks": "Retour aux tâches"
+    },
+    "ppe": {
+      "insulated_gloves": "Gants isolants",
+      "safety_glasses": "Lunettes de sécurité",
+      "gloves": "Gants de travail",
+      "fume_extraction": "Aspiration des fumées",
+      "arc_flash_hood": "Cagoule anti-arc électrique",
+      "hearing_protection": "Protection auditive",
+      "safety_boots": "Chaussures de sécurité",
+      "dust_mask": "Masque anti-poussière",
+      "safety_helmet": "Casque de sécurité",
+      "arm_sleeves": "Manchettes de protection",
+      "face_shield": "Écran facial"
+    },
+    "a11y": {
+      "langSwitch": "Changer de langue",
+      "themeToggle": "Basculer entre le mode clair et sombre",
+      "lightMode": "Mode clair",
+      "darkMode": "Mode sombre",
+      "playAudio": "Lire cette étape à voix haute",
+      "stopAudio": "Arrêter la lecture",
+      "audioUnavailable": "La narration audio n’est pas disponible pour cette langue sur cet appareil",
+      "quitHint": "Quitter",
+      "progress": "Progression de la tâche",
+      "fullscreen": "Passer en plein écran",
+      "deviceToggle": "Basculer entre la vue téléphone et kiosque",
+      "phoneView": "Vue téléphone",
+      "kioskView": "Vue kiosque",
+      "autoplay": "Lecture automatique",
+      "autoplayOn": "Lecture automatique activée — 10 s par étape, boucle sur toutes les tâches",
+      "autoplayOff": "Activer la lecture automatique"
+    },
+    "common": {
+      "placeholder": "Contenu provisoire — en attente de validation par un expert",
+      "offlineReady": "Prêt à fonctionner hors ligne",
+      "updateReady": "Mise à jour disponible",
+      "reload": "Recharger"
     }
   }
 }

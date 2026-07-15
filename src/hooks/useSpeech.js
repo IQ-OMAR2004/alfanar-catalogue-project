@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 // Map our locale codes to BCP-47 tags the speech engine understands.
-const BCP47 = { en: 'en-US', ar: 'ar-SA', ur: 'ur-PK', hi: 'hi-IN' }
+const BCP47 = { en: 'en-US', ar: 'ar-SA', ur: 'ur-PK', hi: 'hi-IN', fr: 'fr-FR' }
 
 // Optional audio narration via the Web Speech API. This is a clean hook + slot
 // — when real recorded narration is added later, swap the body of `speak` to
