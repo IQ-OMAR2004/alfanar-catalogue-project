@@ -312,6 +312,11 @@
 .media-grid[data-count='4'] { grid-template-columns: 1fr 1fr; }
 .media-grid[data-count='5'],
 .media-grid[data-count='6'] { grid-template-columns: 1fr 1fr 1fr; }
+/* safety net: should a step ever carry 7–9 photos, stay at 3 columns and let
+   grid-auto-rows add rows, rather than crushing every cell into one band. */
+.media-grid[data-count='7'],
+.media-grid[data-count='8'],
+.media-grid[data-count='9'] { grid-template-columns: 1fr 1fr 1fr; }
 /* a "hero" first cell spanning the top row for odd-ish counts */
 .media-grid[data-count='3'] .media-cell:first-child { grid-column: 1 / -1; }
 .media-grid[data-count='5'] .media-cell:first-child { grid-column: 1 / -1; }

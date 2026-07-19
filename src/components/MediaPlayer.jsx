@@ -49,7 +49,7 @@ export default function MediaPlayer({ media, paused = false, reduced }) {
     inner = <PhoneFilmstrip items={items} paused={paused} reduced={isReduced} onZoom={open} />
   } else {
     inner = (
-      <div className="media-grid" data-count={Math.min(items.length, 6)}>
+      <div className="media-grid" data-count={Math.min(items.length, 9)}>
         {items.map((item, i) => (
           <div key={i} className="media-cell">
             <MediaItem item={item} paused={paused} reduced={isReduced} />

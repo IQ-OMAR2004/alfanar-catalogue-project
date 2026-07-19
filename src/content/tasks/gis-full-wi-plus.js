@@ -3,32 +3,35 @@
 // Same 60-step ALFA-G work instruction (AES:AE04:IED:WI:250:00 rev 01,
 // 30/06/2026) — every title, instruction, tool, warning and translation is
 // reused verbatim from the base task. What changes is the media: each step
-// leads with the real shop-floor photographs taken from the controlled Word
-// document, followed by the base task's animation as a closing summary slide.
-//
-// The document numbers most steps but not all (steps 1–4 and 8 are unnumbered
-// narrative, 22/24/41/42 are glued to callout text, and "38." appears twice —
-// a numbering bug in the controlled doc). Steps 4, 5 and 31 share a paragraph
-// block with their neighbours, so the document gives them no separately
-// identifiable photo; those fall back to the animation alone.
+// shows the real shop-floor photographs from the controlled Word document
+// where they exist, and falls back to the base task's animation only for the
+// few steps the document does not photograph separately (42, 43, 56).
 //
 // Photo -> step mapping lives in ./gis-full-wi-plus-photos.json (step id ->
 // document image numbers, in document order). Files are the same images
 // exported to web JPEGs at public/media/gis-wi-plus/img<N>.jpg, where <N> is
 // the original document image number, so any photo can be traced back.
 //
-// PLACEHOLDER pending SME review — photo placement is derived from document
-// order and has not been confirmed by a subject-matter expert.
+// The map is curated (see scripts/rebuild.py in the work notes): tool/material
+// product-shot images are excluded (they are already named in each step's tools
+// list, shown on the right), Word's duplicate images are de-duplicated, each
+// real photo appears in only one step, and steps are capped so the photo grid
+// stays legible.
+//
+// PLACEHOLDER pending SME review — photo placement is derived from the document
+// and has not been confirmed by a subject-matter expert.
 import base from './gis-full-wi.js'
 import photos from './gis-full-wi-plus-photos.json'
 
 const img = (n) => ({ type: 'image', src: `/media/gis-wi-plus/img${n}.jpg` })
 
-// Photos first (document order), then the base animation as the last slide.
+// Photos where the document has them; the base animation only where it does not
+// (per the original brief: "use the photos, and if there is no photo use the
+// animation"). Never both, so the photo gallery is never diluted by a tiny
+// animation cell.
 const steps = base.steps.map((s) => {
   const shots = photos[String(s.id)] || []
-  const anim = [].concat(s.media)
-  return { ...s, media: shots.length ? [...shots.map(img), ...anim] : anim }
+  return { ...s, media: shots.length ? shots.map(img) : [].concat(s.media) }
 })
 
 export default {
