@@ -298,10 +298,14 @@
 .media-fallback { flex-direction: column; gap: 14px; color: var(--slate); }
 .media-fallback-label { font-size: 12px; opacity: 0.7; }
 
-/* multi-photo grid — all photos shown as sections in the same box */
+/* multi-photo grid — all photos shown as sections in the same box.
+   Absolutely fill the (position:relative) media column so the grid has a
+   DEFINITE height: otherwise the centered parent leaves it content-sized and
+   `grid-auto-rows: 1fr` grows each row to the image's natural height, pushing
+   the second row out of view (e.g. a 4-photo step showed only photos 1 & 2). */
 .media-grid {
-  inline-size: 100%;
-  block-size: 100%;
+  position: absolute;
+  inset: 0;
   display: grid;
   gap: 10px;
   grid-auto-rows: 1fr;
