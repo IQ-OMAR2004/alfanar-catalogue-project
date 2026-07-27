@@ -97,6 +97,11 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
 
   const instructions = tr(step.instructions) || []
   const tools = step.tools ? tr(step.tools) || [] : []
+  // <ToolIcon> classifies by English keyword, so feed it the English name while
+  // the chip shows the translated one — otherwise every tool in Arabic, Urdu,
+  // Hindi and French fell back to the same generic glyph. The per-language
+  // arrays are index-aligned by construction.
+  const toolsEn = step.tools?.en || tools
   const warning = step.warning ? tr(step.warning) : null
 
   return (
@@ -164,7 +169,7 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
                     <ul className="step-tools-list">
                       {tools.map((tool, i) => (
                         <li key={i} className="step-tool-chip mono">
-                          <ToolIcon name={tool} size={20} delay={(i % 6) * 0.25} />
+                          <ToolIcon name={toolsEn[i] ?? tool} size={20} delay={(i % 6) * 0.25} />
                           <span>{tool}</span>
                         </li>
                       ))}

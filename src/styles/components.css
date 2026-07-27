@@ -314,7 +314,9 @@
 .media-grid[data-count='2'] { grid-template-columns: 1fr 1fr; }
 .media-grid[data-count='3'],
 .media-grid[data-count='4'] { grid-template-columns: 1fr 1fr; }
-.media-grid[data-count='5'],
+/* 5 photos read best as hero + 2 + 2; on a 3-column grid the fifth cell was
+   stranded alone on its own row with two empty columns beside it. */
+.media-grid[data-count='5'] { grid-template-columns: 1fr 1fr; }
 .media-grid[data-count='6'] { grid-template-columns: 1fr 1fr 1fr; }
 /* safety net: should a step ever carry 7–9 photos, stay at 3 columns and let
    grid-auto-rows add rows, rather than crushing every cell into one band. */
@@ -333,6 +335,19 @@
   background: var(--panel);
   border: 1px solid var(--line-2);
 }
+/* A photo cell is a button: select it to open the fullscreen viewer. The step's
+   tap-navigation layer is transparent to everything else in the visual column,
+   so only the photo itself claims the tap. */
+.media-cell--zoom {
+  padding: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  cursor: zoom-in;
+  pointer-events: auto;
+  transition: border-color var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+}
+.media-cell--zoom:hover { border-color: var(--accent); }
+.media-cell--zoom:active { transform: scale(0.985); }
 .media-cell .media-stage { border-radius: 0; }
 /* show the whole photo (no crop) so no detail is lost in a section */
 .media-cell .media-img { object-fit: contain; }
@@ -435,23 +450,68 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-  display: grid;
-  place-items: center;
-  padding: clamp(12px, 4vw, 32px);
   background: color-mix(in srgb, #04121f 92%, transparent);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   animation: lightbox-in 0.18s var(--ease-out, ease-out);
 }
 @keyframes lightbox-in { from { opacity: 0; } to { opacity: 1; } }
+/* The stage fills the viewer and becomes a scroll box in the 2× detail view, so
+   the enlarged photo can be panned instead of overflowing off-screen. */
+/* Positioned by inset (not sized in %) so its height is DEFINITE — that is what
+   lets the photo's own 100% / 200% heights resolve instead of silently falling
+   back to the image's small native size. */
+.lightbox-stage {
+  position: absolute;
+  inset: clamp(12px, 4vw, 32px);
+  /* flex, not grid: a percentage height on a grid item resolves against an
+     auto-sized row, which is indefinite — the photo would fall back to its
+     native size. Against a flex container's definite height it resolves. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.lightbox-stage[data-zoomed] {
+  overflow: auto;
+  align-items: flex-start;
+  cursor: zoom-out;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+/* Fill the viewer, don't just centre the file at its native pixel size: the
+   shop-floor JPEGs are small (~540 px wide), so showing them 1:1 made "enlarge"
+   barely larger than the step thumbnail. `contain` scales up to the screen and
+   keeps the aspect ratio, letterboxed against the backdrop. */
 .lightbox-img {
-  max-inline-size: 100%;
-  max-block-size: 100%;
-  inline-size: auto;
-  block-size: auto;
+  flex: none;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: contain;
-  border-radius: var(--r-md);
-  box-shadow: 0 24px 80px -20px rgba(0, 0, 0, 0.7);
+  cursor: zoom-in;
+}
+/* Detail view: twice the fitted height, panned by scrolling the stage. */
+.lightbox-stage[data-zoomed] .lightbox-img {
+  inline-size: auto;
+  block-size: 200%;
+  max-inline-size: none;
+  cursor: zoom-out;
+}
+.lightbox-hint {
+  position: absolute;
+  inset-block-end: max(58px, calc(env(safe-area-inset-bottom) + 58px));
+  inset-inline: 0;
+  margin-inline: auto;
+  inline-size: fit-content;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #dbe8f3;
+  /* opaque enough to stay readable when it lands on a bright photo */
+  background: rgba(4, 18, 31, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 6px 16px;
+  border-radius: var(--r-pill);
+  pointer-events: none;
 }
 .lightbox-close {
   position: absolute;
@@ -503,6 +563,13 @@
   touch-action: none;
   -webkit-user-select: none;
   user-select: none;
+}
+/* Hint layer — painted above the visual column, never interactive. */
+.tap-aff-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
 }
 .tz-aff {
   position: absolute;
@@ -681,16 +748,27 @@
 }
 .audio-btn:hover { border-color: var(--accent); color: var(--accent); }
 .audio-btn[data-on] { border-color: var(--accent); color: var(--accent); background: var(--beacon-soft); }
-.audio-wave { display: inline-flex; align-items: flex-end; gap: 3px; block-size: 18px; }
+/* The "speaking" equaliser is a badge pinned inside the circle, so the button
+   keeps exactly the same footprint whether it is idle or reading — the control
+   row never reflows mid-step. */
+.audio-wave {
+  position: absolute;
+  inset-block-end: 6px;
+  inset-inline-end: 7px;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  block-size: 12px;
+}
 .audio-wave i {
   inline-size: 3px;
   background: currentColor;
   border-radius: 2px;
   animation: audio-eq 0.9s var(--ease-in-out) infinite;
 }
-.audio-wave i:nth-child(1) { block-size: 8px; animation-delay: 0s; }
-.audio-wave i:nth-child(2) { block-size: 16px; animation-delay: 0.15s; }
-.audio-wave i:nth-child(3) { block-size: 11px; animation-delay: 0.3s; }
+.audio-wave i:nth-child(1) { block-size: 6px; animation-delay: 0s; }
+.audio-wave i:nth-child(2) { block-size: 12px; animation-delay: 0.15s; }
+.audio-wave i:nth-child(3) { block-size: 8px; animation-delay: 0.3s; }
 @keyframes audio-eq { 0%, 100% { transform: scaleY(0.5); } 50% { transform: scaleY(1); } }
 
 /* ---------------------------- Review ribbon ------------------------------ */

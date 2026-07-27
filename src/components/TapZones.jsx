@@ -118,44 +118,48 @@ export default function TapZones({
   const forwardGlyph = rtl ? 'chevron-left' : 'chevron-right'
   const backGlyph = rtl ? 'chevron-right' : 'chevron-left'
 
+  // Two layers, deliberately separated: the interaction surface sits BELOW the
+  // visual layer (so a photo can claim its own tap and open the viewer), while
+  // the affordance hints sit ABOVE it (so they are never buried behind the
+  // media panel). Both are one stacking context each, hence the split.
   return (
-    <div
-      ref={ref}
-      className="tap-zones"
-      onPointerDown={onPointerDown}
-      onPointerUp={onPointerUp}
-      onPointerCancel={() => (start.current = null)}
-    >
-      {/* faint side chevrons */}
+    <>
       <div
-        className="tz-aff tz-aff--back"
-        data-disabled={!canBack || undefined}
-        aria-hidden="true"
-      >
-        <Icon name={backGlyph} size={56} />
-      </div>
+        ref={ref}
+        className="tap-zones"
+        onPointerDown={onPointerDown}
+        onPointerUp={onPointerUp}
+        onPointerCancel={() => (start.current = null)}
+      />
 
-      <div className="tz-aff tz-aff--forward" aria-hidden="true">
-        {isLast ? (
-          <span className="tz-finish">
-            <Icon name="check" size={52} />
-          </span>
-        ) : (
-          <Icon name={forwardGlyph} size={56} />
-        )}
-      </div>
+      <div className="tap-aff-layer" aria-hidden="true">
+        {/* faint side chevrons */}
+        <div className="tz-aff tz-aff--back" data-disabled={!canBack || undefined}>
+          <Icon name={backGlyph} size={56} />
+        </div>
 
-      {/* center replay hint */}
-      <div className="tz-center-hint" aria-hidden="true">
-        <Icon name="replay" size={30} />
-        <span className="mono">{t('step.replay')}</span>
-      </div>
+        <div className="tz-aff tz-aff--forward">
+          {isLast ? (
+            <span className="tz-finish">
+              <Icon name="check" size={52} />
+            </span>
+          ) : (
+            <Icon name={forwardGlyph} size={56} />
+          )}
+        </div>
 
-      {/* bottom-leading corner quit hint */}
-      <div className="tz-quit-hint" data-rtl={rtl || undefined} aria-hidden="true">
-        <Icon name="x" size={22} />
-        <span className="mono">{t('a11y.quitHint')}</span>
+        {/* center replay hint */}
+        <div className="tz-center-hint">
+          <Icon name="replay" size={30} />
+          <span className="mono">{t('step.replay')}</span>
+        </div>
+
+        {/* bottom-leading corner quit hint */}
+        <div className="tz-quit-hint" data-rtl={rtl || undefined}>
+          <Icon name="x" size={22} />
+          <span className="mono">{t('a11y.quitHint')}</span>
+        </div>
       </div>
-    </div>
+    </>
   )
 }

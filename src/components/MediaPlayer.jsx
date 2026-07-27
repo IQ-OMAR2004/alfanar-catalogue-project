@@ -17,8 +17,11 @@ import Icon from './Icon.jsx'
 //           the large landscape panel).
 //   phone — the grid would shrink each photo to an illegible thumbnail, so a
 //           multi-photo step becomes a full-width swipeable FILMSTRIP (one photo
-//           per view) and every photo is tap-to-enlarge into a fullscreen
-//           lightbox. This is the readable, glove-friendly fix for small screens.
+//           per view). This is the readable, glove-friendly fix for small
+//           screens.
+// On BOTH devices every photo is select-to-enlarge into a fullscreen lightbox
+// (which itself zooms further) — on the kiosk a grid cell is still far smaller
+// than the detail a worker needs to match against the real part.
 export default function MediaPlayer({ media, paused = false, reduced }) {
   const sysReduced = useReducedMotion()
   const isReduced = reduced ?? sysReduced
@@ -31,7 +34,7 @@ export default function MediaPlayer({ media, paused = false, reduced }) {
 
   // Only raster photos/gifs are worth enlarging (SVG animations + video aren't).
   const zoomable = (it) => !!it && (it.type === 'image' || it.type === 'gif')
-  const canZoom = (i) => isPhone && zoomable(items[i])
+  const canZoom = (i) => zoomable(items[i])
   const open = (i) => canZoom(i) && setLightbox(i)
 
   let inner
@@ -51,10 +54,15 @@ export default function MediaPlayer({ media, paused = false, reduced }) {
     inner = (
       <div className="media-grid" data-count={Math.min(items.length, 9)}>
         {items.map((item, i) => (
-          <div key={i} className="media-cell">
-            <MediaItem item={item} paused={paused} reduced={isReduced} />
-            <span className="media-cell-no mono" aria-hidden="true">{i + 1}</span>
-          </div>
+          <GridCell
+            key={i}
+            item={item}
+            no={i + 1}
+            paused={paused}
+            reduced={isReduced}
+            zoom={canZoom(i)}
+            onZoom={() => open(i)}
+          />
         ))}
       </div>
     )
@@ -67,6 +75,34 @@ export default function MediaPlayer({ media, paused = false, reduced }) {
         <Lightbox items={items} index={lightbox} onClose={() => setLightbox(null)} />
       )}
     </>
+  )
+}
+
+// One cell of the kiosk photo grid. A photo cell is a real button (select to
+// enlarge); an animation cell stays a plain, non-interactive box.
+function GridCell({ item, no, paused, reduced, zoom, onZoom }) {
+  const { t } = useI18n()
+  const body = (
+    <>
+      <MediaItem item={item} paused={paused} reduced={reduced} />
+      <span className="media-cell-no mono" aria-hidden="true">{no}</span>
+    </>
+  )
+
+  if (!zoom) return <div className="media-cell">{body}</div>
+
+  return (
+    <button
+      type="button"
+      className="media-cell media-cell--zoom"
+      onClick={onZoom}
+      aria-label={`${t('step.photo', { n: no })} — ${t('step.enlarge')}`}
+    >
+      {body}
+      <span className="media-film-zoom" aria-hidden="true">
+        <Icon name="zoom" size={16} />
+      </span>
+    </button>
   )
 }
 
@@ -122,13 +158,19 @@ function PhoneFilmstrip({ items, paused, reduced, onZoom }) {
 
 // Fullscreen photo viewer. Portaled to <body> so it escapes the step's animated
 // (transformed) subtree and truly covers the viewport. Tap the backdrop or the
-// close button to dismiss; arrows page through a multi-photo step.
+// close button to dismiss; arrows page through a multi-photo step. Selecting the
+// photo itself steps into a 2× detail view that pans (scrolls) — enough to read
+// a label or a torque marking off a shop-floor photograph.
 function Lightbox({ items, index, onClose }) {
   const { t } = useI18n()
   const [i, setI] = useState(index)
+  const [zoomed, setZoomed] = useState(false)
   const item = items[i]
   const many = items.length > 1
-  const go = (delta) => setI((p) => (p + delta + items.length) % items.length)
+  const go = (delta) => {
+    setZoomed(false)
+    setI((p) => (p + delta + items.length) % items.length)
+  }
 
   useEffect(() => {
     const onKey = (e) => {
@@ -155,12 +197,22 @@ function Lightbox({ items, index, onClose }) {
         <Icon name="x" size={26} />
       </button>
 
-      <img
-        className="lightbox-img"
-        src={asset(item.src)}
-        alt={item.alt || ''}
+      <div
+        className="lightbox-stage"
+        data-zoomed={zoomed || undefined}
         onClick={(e) => e.stopPropagation()}
-      />
+      >
+        <img
+          className="lightbox-img"
+          src={asset(item.src)}
+          alt={item.alt || ''}
+          onClick={() => setZoomed((z) => !z)}
+        />
+      </div>
+
+      <span className="lightbox-hint mono" aria-hidden="true">
+        {zoomed ? t('step.zoomOut') : t('step.zoomIn')}
+      </span>
 
       {many && (
         <>

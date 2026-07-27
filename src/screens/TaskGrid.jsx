@@ -35,13 +35,14 @@ export default function TaskGrid({ onStart }) {
               transition={{ delay: 0.07 * i + 0.05, type: 'spring', stiffness: 240, damping: 24 }}
             >
               <button type="button" className="task-card" onClick={() => onStart(task.id)}>
-                <span className="task-card-top">
-                  <span className="task-card-icon">
-                    <Icon name={task.icon} size={46} />
-                  </span>
-                  <span className={`task-diff task-diff--${task.difficulty} mono`}>
-                    {t(`difficulty.${task.difficulty}`)}
-                  </span>
+                {/* Direct children of the card grid: a wrapper here would have
+                    swallowed both grid-areas and stacked the icon on top of the
+                    difficulty tag in one corner. */}
+                <span className="task-card-icon">
+                  <Icon name={task.icon} size={46} />
+                </span>
+                <span className={`task-diff task-diff--${task.difficulty} mono`}>
+                  {t(`difficulty.${task.difficulty}`)}
                 </span>
 
                 <span className="task-card-body">

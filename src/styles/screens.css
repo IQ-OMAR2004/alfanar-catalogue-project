@@ -15,11 +15,15 @@
 }
 
 /* ============================ LANGUAGE GATE ============================== */
+/* `safe center` + scroll: on a short window the gate centres as designed, but
+   when the content is taller than the viewport it falls back to top-aligned and
+   scrolls instead of clipping the logo off the top edge. */
 .gate {
   align-items: center;
-  justify-content: center;
-  gap: clamp(20px, 3.5vh, 44px);
+  justify-content: safe center;
+  gap: clamp(16px, 3vh, 40px);
   text-align: center;
+  overflow-y: auto;
 }
 .gate-brand { display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .gate-tagline { font-size: 13px; color: var(--slate); letter-spacing: 0.28em; }
@@ -27,16 +31,21 @@
 .gate-heading { font-size: clamp(26px, 3.4vw, 44px); }
 .gate-heading-native { font-size: clamp(15px, 1.6vw, 20px); color: var(--ink2); }
 
+/* One row per language set. Five locales in a four-column grid left a single
+   orphan card on a second row and pushed the logo off the top of the screen. */
 .gate-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(14px, 1.6vw, 24px);
-  inline-size: min(1100px, 94vw);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 22px);
+  inline-size: min(1320px, 94vw);
+}
+@media (max-width: 1080px) {
+  .gate-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); inline-size: min(760px, 94vw); }
 }
 .gate-card {
   inline-size: 100%;
-  min-block-size: clamp(180px, 26vh, 240px);
+  min-block-size: clamp(150px, 22vh, 220px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,14 +80,23 @@
 .tasks-heading { font-size: clamp(26px, 3vw, 40px); }
 .tasks-sub { font-size: clamp(14px, 1.5vw, 18px); color: var(--ink2); margin-block-start: 4px; }
 
+/* The card rows can outgrow the panel (five tasks and counting), so the grid
+   scrolls inside its own region: `safe center` keeps the designed centring while
+   there is room and switches to top-aligned once there isn't, instead of
+   clipping the heading off the top and the last card off the bottom. */
 .tasks-grid {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(14px, 1.8vw, 26px);
   flex: 1;
-  align-content: center;
+  align-content: safe center;
   min-block-size: 0;
+  overflow-y: auto;
+  padding-block-end: 4px;
+}
+@media (min-width: 1500px) {
+  .tasks-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .task-card {
   inline-size: 100%;
@@ -104,7 +122,6 @@
 }
 .task-card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: var(--shadow-glow); }
 .task-card:active { transform: translateY(-1px) scale(0.995); }
-.task-card-top { grid-area: diff; justify-self: end; align-self: start; }
 .task-card-icon {
   grid-area: icon;
   align-self: start;
@@ -121,6 +138,9 @@
 .task-card-title { font-size: clamp(20px, 2.2vw, 28px); line-height: 1.1; }
 .task-card-summary { font-size: clamp(13px, 1.3vw, 16px); color: var(--ink2); line-height: 1.35; }
 .task-diff {
+  grid-area: diff;
+  justify-self: end;
+  align-self: start;
   font-size: 11px;
   padding: 6px 12px;
   border-radius: var(--r-pill);
@@ -151,6 +171,9 @@
 
 /* ================================ STEP ================================= */
 .step { position: relative; inline-size: 100%; block-size: 100%; }
+/* Sits ABOVE the tap-navigation layer but stays pointer-transparent, so taps and
+   swipes still fall through to it everywhere — except on the few elements that
+   opt back in (the photos, which open the fullscreen viewer). */
 .step-visual {
   position: absolute;
   inset: 0;
@@ -158,13 +181,13 @@
   flex-direction: column;
   padding-inline: clamp(28px, 4vw, 72px);
   padding-block: clamp(18px, 2.5vh, 32px);
-  z-index: 1;
+  z-index: 6;
   pointer-events: none;
 }
-/* Fixed reserve anchored to the same trailing edge as .step-controls (audio +
-   compact lang + theme ≈ 192px), so the remaining-time label never collides
-   regardless of viewport width. */
-.step-header { flex: none; padding-inline-end: 232px; }
+/* Fixed reserve anchored to the same trailing edge as .step-controls, so the
+   remaining-time label never collides regardless of viewport width. Derived from
+   the real cluster: 5 round controls (56px) + 4 gaps (12px) = 328px, plus air. */
+.step-header { flex: none; padding-inline-end: var(--step-controls-reserve, 348px); }
 .step-body-wrap { position: relative; flex: 1; margin-block-start: clamp(14px, 2.4vh, 30px); min-block-size: 0; }
 .step-body {
   position: absolute;

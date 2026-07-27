@@ -114,13 +114,11 @@ html[data-device='phone'] .step-media-col {
 }
 
 /* The photos must be directly tappable (filmstrip swipe + tap-to-enlarge). The
-   kiosk keeps the tap-zones overlay on top; on a phone its taps are inert, so we
-   paint the visual layer above the overlay and re-enable pointer events only on
-   the interactive photo targets. Non-interactive areas stay pointer-events:none,
-   so they still fall through to the overlay for swipe/keyboard step navigation. */
-html[data-device='phone'] .step-visual { z-index: 6; }
+   visual layer is painted above the tap overlay on every device (screens.css);
+   pointer events are re-enabled only on the interactive photo targets, so
+   non-interactive areas still fall through for swipe/keyboard step navigation. */
 html[data-device='phone'] .media-film { pointer-events: auto; touch-action: pan-x; }
-html[data-device='phone'] .media-stage--zoom { pointer-events: auto; cursor: zoom-in; }
+.media-stage--zoom { pointer-events: auto; cursor: zoom-in; }
 
 /* Phone photo sizing: centre with flex + max-bounded image so the photo is
    contained in its fixed box without depending on percentage heights (which the

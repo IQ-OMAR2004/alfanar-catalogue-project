@@ -156,6 +156,26 @@ const PATHS = {
     </>
   ),
   play: <path d="M7 4.5l13 7.5-13 7.5z" fill="currentColor" stroke="none" />,
+  // "Read this step aloud" — a loudspeaker, not a play arrow. The play triangle
+  // sat next to the auto-play triangle and read as a second play button; a
+  // speaker with sound waves says "listen" at a glance, in any language.
+  speaker: (
+    <>
+      <path d="M4 9.5h3.2L12 5.4v13.2L7.2 14.5H4z" fill="currentColor" stroke="currentColor"
+        strokeWidth="1.7" strokeLinejoin="round" />
+      <path d="M15.4 9.2a4 4 0 0 1 0 5.6" {...P} />
+      <path d="M18 6.6a7.6 7.6 0 0 1 0 10.8" {...P} />
+    </>
+  ),
+  // Speaking state: same speaker, waves replaced by a stop square so the button
+  // clearly reads "tap to stop".
+  'speaker-stop': (
+    <>
+      <path d="M4 9.5h3.2L12 5.4v13.2L7.2 14.5H4z" fill="currentColor" stroke="currentColor"
+        strokeWidth="1.7" strokeLinejoin="round" />
+      <rect x="14.6" y="9" width="6" height="6" rx="1.2" fill="currentColor" stroke="none" />
+    </>
+  ),
   pause: <path d="M7 5h3.2v14H7zM13.8 5H17v14h-3.2z" fill="currentColor" stroke="none" />,
   stop: <rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor" stroke="none" />,
   replay: (

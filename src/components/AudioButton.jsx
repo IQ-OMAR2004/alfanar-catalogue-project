@@ -5,6 +5,8 @@ import { useSpeech } from '../hooks/useSpeech.js'
 // Per-step "read aloud" button — valuable for low-literacy workers. Uses the
 // device speech engine now; the hook is a clean slot for recorded narration
 // later. Hidden entirely when the device has no voice for the chosen language.
+// The glyph is a loudspeaker (not a play arrow) so it can never be confused
+// with the auto-play control sitting beside it.
 export default function AudioButton({ lines, title }) {
   const { lang, t } = useI18n()
   const { supported, speaking, speak, stop, availableFor } = useSpeech()
@@ -23,7 +25,7 @@ export default function AudioButton({ lines, title }) {
       onClick={() => (speaking ? stop() : speak(text, lang))}
       aria-label={speaking ? t('a11y.stopAudio') : t('a11y.playAudio')}
     >
-      <Icon name={speaking ? 'stop' : 'play'} size={22} />
+      <Icon name={speaking ? 'speaker-stop' : 'speaker'} size={24} />
       {speaking && (
         <span className="audio-wave" aria-hidden="true">
           <i /><i /><i />
