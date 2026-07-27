@@ -3,18 +3,21 @@ import TopBar from '../components/TopBar.jsx'
 import Icon from '../components/Icon.jsx'
 import PPEBadge from '../components/PPEBadge.jsx'
 import ReviewRibbon from '../components/ReviewRibbon.jsx'
+import SectionSwitcher from '../components/SectionSwitcher.jsx'
 import Credit from '../components/Credit.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
 import { tasks, taskTotalMin } from '../content/index.js'
 
 // Task selection: a grid of large, glanceable cards. Each shows icon, name,
 // one-line summary, difficulty, step count, total time and required PPE.
-export default function TaskGrid({ onStart }) {
+export default function TaskGrid({ onStart, onSwitchSection }) {
   const { t, tr } = useI18n()
 
   return (
     <section className="screen tasks">
-      <TopBar />
+      <TopBar>
+        {onSwitchSection && <SectionSwitcher section="wi" onSwitch={onSwitchSection} />}
+      </TopBar>
 
       <div className="tasks-head">
         <div>

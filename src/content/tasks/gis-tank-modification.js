@@ -497,9 +497,65 @@ const steps = EN.steps.map((s) => {
   }
 })
 
+// Stage index — the phases of the Work Proposal flow. `from`/`to` are inclusive
+// step ids; the task index screen groups by these.
+const sections = [
+  {
+    id: 'tank-prep', from: 1, to: 2,
+    title: {
+      en: 'Tank preparation',
+      ar: 'تحضير الخزان',
+      ur: 'ٹینک کی تیاری',
+      hi: 'टैंक की तैयारी',
+      fr: 'Préparation de la cuve',
+    },
+  },
+  {
+    id: 'internals', from: 3, to: 6,
+    title: {
+      en: 'Internals',
+      ar: 'المكوّنات الداخلية',
+      ur: 'اندرونی پرزے',
+      hi: 'अंदरूनी पुर्ज़े',
+      fr: 'Composants internes',
+    },
+  },
+  {
+    id: 'close-vacuum-gas', from: 7, to: 10,
+    title: {
+      en: 'Close, vacuum & gas',
+      ar: 'الإغلاق والتفريغ والغاز',
+      ur: 'بندش، ویکیوم اور گیس',
+      hi: 'बंद करना, वैक्यूम और गैस',
+      fr: 'Fermeture, vide et gaz',
+    },
+  },
+  {
+    id: 'panel-buildup', from: 11, to: 27,
+    title: {
+      en: 'Panel build-up',
+      ar: 'بناء اللوحة',
+      ur: 'پینل کی تعمیر',
+      hi: 'पैनल निर्माण',
+      fr: 'Montage du tableau',
+    },
+  },
+  {
+    id: 'qc-test-pack', from: 28, to: 34,
+    title: {
+      en: 'QC, testing & packing',
+      ar: 'الجودة والاختبار والتغليف',
+      ur: 'QC، ٹیسٹنگ اور پیکنگ',
+      hi: 'QC, टेस्टिंग और पैकिंग',
+      fr: 'CQ, essais et emballage',
+    },
+  },
+]
+
 export default {
   id: 'gis-tank-modification',
   order: 5,
+  sections,
   icon: 'gis-tank',
   difficulty: 'advanced',
   ppe: ['safety_helmet', 'safety_glasses', 'gloves', 'hearing_protection', 'safety_boots', 'arm_sleeves', 'face_shield'],

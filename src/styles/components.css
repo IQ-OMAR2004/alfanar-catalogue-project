@@ -243,6 +243,33 @@
   background: var(--panel);
   overflow: visible;
 }
+/* Scrubbable: the bar is the fastest way to reach a distant step in a 60-step
+   job. It opts back into pointer events (the whole visual layer is transparent
+   to them) and grows a generous invisible grab area above and below itself, so
+   a gloved finger does not have to find a 12 px ribbon. */
+.progress-track--seek {
+  pointer-events: auto;
+  cursor: pointer;
+  touch-action: none;
+}
+.progress-track--seek::after {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block: -18px;
+}
+.progress-track--seek:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 6px;
+}
+.progress-track--seek:hover .progress-beacon-dot,
+.progress-track--seek[data-dragging] .progress-beacon-dot {
+  inline-size: 28px;
+  block-size: 28px;
+}
+/* No easing while dragging — the beacon must track the finger exactly. */
+.progress-track[data-dragging] .progress-fill { transition: none; }
+.progress-track[data-dragging] .progress-beacon-dot { animation: none; }
 .progress-ticks {
   position: absolute;
   inset: 0;
@@ -270,6 +297,7 @@
   inset-block-start: 50%;
   inline-size: 22px;
   block-size: 22px;
+  transition: inline-size var(--dur-fast) var(--ease-out), block-size var(--dur-fast) var(--ease-out);
   transform: translate(50%, -50%);
   border-radius: 50%;
   background: var(--sky);

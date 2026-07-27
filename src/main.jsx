@@ -8,6 +8,7 @@ import './styles/tokens.css'
 import './styles/global.css'
 import './styles/components.css'
 import './styles/screens.css'
+import './styles/sections.css'
 import './styles/responsive.css'
 
 // Service worker: auto-update keeps the kiosk fresh when it next has network;

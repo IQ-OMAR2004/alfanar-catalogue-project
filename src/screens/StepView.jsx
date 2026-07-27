@@ -15,6 +15,8 @@ import AutoplayToggle from '../components/AutoplayToggle.jsx'
 import Icon from '../components/Icon.jsx'
 import ToolIcon from '../components/ToolIcon.jsx'
 import ReviewRibbon from '../components/ReviewRibbon.jsx'
+import SectionSwitcher from '../components/SectionSwitcher.jsx'
+import TaskIndex from './TaskIndex.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
 import { useDevice } from '../device/DeviceProvider.jsx'
 
@@ -25,15 +27,44 @@ import { useDevice } from '../device/DeviceProvider.jsx'
 // How long each step is shown before auto-play advances (adjustable).
 const AUTOPLAY_MS = 10000
 
-export default function StepView({ task, onComplete, onQuit, autoplay = false, onToggleAutoplay }) {
+export default function StepView({
+  task,
+  onComplete,
+  onQuit,
+  autoplay = false,
+  onToggleAutoplay,
+  startAt = 0,
+  onSwitchSection,
+  indexOpen = false,
+  onOpenIndex,
+  onCloseIndex,
+}) {
   const { t, tr, rtl } = useI18n()
   const { isPhone } = useDevice()
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(() =>
+    Math.max(0, Math.min(task.steps.length - 1, startAt)),
+  )
   const [dir, setDir] = useState(1) // 1 forward, -1 back (for the slide)
   const [animKey, setAnimKey] = useState(0) // bump to restart the animation
   const [paused, setPaused] = useState(false)
   const [showQuit, setShowQuit] = useState(false)
   const startedAt = useRef(Date.now())
+
+  // The header reserves room for the floating control cluster so the
+  // remaining-time label never lands underneath it. The cluster's width changes
+  // with the feature set (index, auto-play, audio, section, device, language,
+  // theme) and with the language, so measure it rather than guess a number.
+  const controlsRef = useRef(null)
+  const [reserve, setReserve] = useState(null)
+  useEffect(() => {
+    const el = controlsRef.current
+    if (!el || typeof ResizeObserver === 'undefined') return undefined
+    const ro = new ResizeObserver(([entry]) => {
+      setReserve(Math.ceil(entry.contentRect.width) + 28)
+    })
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
 
   const steps = task.steps
   const total = steps.length
@@ -41,7 +72,10 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
   const isLast = index === total - 1
   const canBack = index > 0
 
-  // Time math (source of truth = per-step estMin).
+  // Time math (source of truth = per-step estMin). `weights` is the same series
+  // the progress bar scrubs against, so a drag lands on the step whose segment
+  // the worker actually pointed at.
+  const weights = useMemo(() => steps.map((st) => st.estMin || 0), [steps])
   const { totalMin, beforeMin } = useMemo(() => {
     const totalMin = steps.reduce((s, st) => s + (st.estMin || 0), 0)
     const beforeMin = steps
@@ -76,6 +110,20 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
     setAnimKey((k) => k + 1)
   }
 
+  // Jump straight to a step — from the progress scrubber or the task index.
+  const goTo = (next) => {
+    const target = Math.max(0, Math.min(total - 1, next))
+    if (target === index) {
+      onCloseIndex?.()
+      return
+    }
+    setDir(target > index ? 1 : -1)
+    setIndex(target)
+    setPaused(false)
+    setAnimKey((k) => k + 1)
+    onCloseIndex?.()
+  }
+
   // Auto-play: advance one step every AUTOPLAY_MS. The timer restarts whenever
   // the step changes (index), the animation replays (animKey) or auto-play is
   // toggled, and it holds while the animation is center-tap paused. On the last
@@ -105,7 +153,11 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
   const warning = step.warning ? tr(step.warning) : null
 
   return (
-    <section className="screen step" aria-roledescription="work instruction step">
+    <section
+      className="screen step"
+      aria-roledescription="work instruction step"
+      style={reserve ? { '--step-controls-reserve': `${reserve}px` } : undefined}
+    >
       {/* ---- Visual layer (below the tap surface; non-interactive) -------- */}
       <div className="step-visual">
         <div className="step-header">
@@ -114,6 +166,8 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
             total={total}
             fraction={fraction}
             remaining={t('step.remaining', { n: remainingMin })}
+            weights={weights}
+            onSeek={goTo}
           />
         </div>
 
@@ -201,13 +255,39 @@ export default function StepView({ task, onComplete, onQuit, autoplay = false, o
       />
 
       {/* ---- Floating controls (above the tap surface) ------------------- */}
-      <div className="step-controls" onPointerDown={(e) => e.stopPropagation()}>
+      <div className="step-controls" ref={controlsRef} onPointerDown={(e) => e.stopPropagation()}>
+        <button
+          type="button"
+          className="ctl-btn"
+          onClick={onOpenIndex}
+          aria-label={t('a11y.openIndex')}
+          title={t('index.open')}
+        >
+          <Icon name="list" size={22} />
+        </button>
         {onToggleAutoplay && <AutoplayToggle on={autoplay} onToggle={onToggleAutoplay} />}
         <AudioButton lines={instructions} title={tr(step.title)} />
+        {onSwitchSection && <SectionSwitcher section="wi" onSwitch={onSwitchSection} compact />}
         <DeviceToggle />
         <LangSwitcher compact />
         <ModeToggle />
       </div>
+
+      {/* Mid-task index — jump to any stage or step without losing the run. */}
+      <AnimatePresence>
+        {indexOpen && (
+          <motion.div
+            className="index-modal"
+            onPointerDown={(e) => e.stopPropagation()}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.18 }}
+          >
+            <TaskIndex task={task} current={index} onPick={goTo} onClose={onCloseIndex} overlay />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* ---- Phone-only bottom nav bar (explicit, above the tap surface) -- */}
       {isPhone && (

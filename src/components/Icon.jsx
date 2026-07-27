@@ -130,6 +130,15 @@ const PATHS = {
       <path d="M9 4V2.8h6V4" {...P} />
     </>
   ),
+  // Bump cap — the PPE map distinguishes it (🧢) from the hard hat (🪖).
+  safety_cap: (
+    <>
+      <path d="M4.5 15.5a7.5 7.5 0 0 1 15 0z" {...P} />
+      <path d="M19.5 15.5h1.6a1 1 0 0 1 0 2H4.5" {...P} />
+      <path d="M12 8v7.5" {...P} />
+      <circle cx="12" cy="7.4" r="0.7" fill="currentColor" stroke="none" />
+    </>
+  ),
 
   // ---- UI glyphs --------------------------------------------------------
   'chevron-right': <path d="M9 5l7 7-7 7" {...P} />,
@@ -208,6 +217,39 @@ const PATHS = {
     <>
       <rect x="2.5" y="4" width="19" height="12.5" rx="1.8" {...P} />
       <path d="M9 20h6M12 16.5V20" {...P} />
+    </>
+  ),
+  // Step index / table of contents.
+  list: (
+    <>
+      <path d="M9 6h11M9 12h11M9 18h11" {...P} />
+      <circle cx="4.6" cy="6" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="4.6" cy="12" r="1.1" fill="currentColor" stroke="none" />
+      <circle cx="4.6" cy="18" r="1.1" fill="currentColor" stroke="none" />
+    </>
+  ),
+  // Zone map (folded plan with a pin).
+  map: (
+    <>
+      <path d="M3 6.4l6-2.4 6 2.4 6-2.4v13.6l-6 2.4-6-2.4-6 2.4z" {...P} />
+      <path d="M9 4v13.6M15 6.4V20" {...P} />
+    </>
+  ),
+  // Work-instruction section: a document with a step list.
+  instructions: (
+    <>
+      <path d="M6 3h8l4 4v14H6z" {...P} />
+      <path d="M14 3v4h4" {...P} />
+      <path d="M9 12h6M9 16h4" {...P} />
+    </>
+  ),
+  // Safety section: hard hat over a shield.
+  safety: (
+    <>
+      <path d="M12 2.4l7.5 2.6v5.6c0 5-3.2 8.6-7.5 10-4.3-1.4-7.5-5-7.5-10V5z" {...P} />
+      <path d="M8 13.4a4 4 0 0 1 8 0z" {...P} />
+      <path d="M7.4 13.4h9.2" {...P} />
+      <path d="M12 7.6v1.9" {...P} />
     </>
   ),
 }

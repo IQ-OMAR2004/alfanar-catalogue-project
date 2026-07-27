@@ -699,9 +699,55 @@ const steps = EN.steps.map((s) => {
   }
 })
 
+// Stage index — the four phases the controlled document itself is divided into.
+// `from`/`to` are inclusive step ids; the task index screen groups by these.
+const sections = [
+  {
+    id: 's1-dismantle', from: 1, to: 21,
+    title: {
+      en: 'Solution-1 dismantle',
+      ar: 'تفكيك الحل-1',
+      ur: 'سولوشن-1 علیحدگی',
+      hi: 'सोल्यूशन-1 निराकरण',
+      fr: 'Démontage Solution-1',
+    },
+  },
+  {
+    id: 's3-assemble', from: 22, to: 49,
+    title: {
+      en: 'Solution-3 clean & assemble',
+      ar: 'تنظيف وتجميع الحل-3',
+      ur: 'سولوشن-3 صفائی و تنصیب',
+      hi: 'सोल्यूशन-3 सफ़ाई और संयोजन',
+      fr: 'Solution-3 : nettoyage et assemblage',
+    },
+  },
+  {
+    id: 'close-gas', from: 50, to: 57,
+    title: {
+      en: 'Close, evacuate & gas-fill',
+      ar: 'الإغلاق والتفريغ وتعبئة الغاز',
+      ur: 'بندش، ویکیوم اور گیس بھرائی',
+      hi: 'बंद करना, वैक्यूम और गैस भरना',
+      fr: 'Fermeture, vide et remplissage gaz',
+    },
+  },
+  {
+    id: 'leak-test', from: 58, to: 60,
+    title: {
+      en: 'Leak test',
+      ar: 'اختبار التسرّب',
+      ur: 'لیک ٹیسٹ',
+      hi: 'लीक टेस्ट',
+      fr: 'Test d’étanchéité',
+    },
+  },
+]
+
 export default {
   id: 'gis-full-wi',
   order: 8,
+  sections,
   icon: 'gis-tank',
   difficulty: 'advanced',
   ppe: ['safety_helmet', 'safety_glasses', 'gloves', 'hearing_protection', 'safety_boots', 'arm_sleeves', 'face_shield'],

@@ -85,7 +85,8 @@
       "dust_mask": "Dust mask",
       "safety_helmet": "Safety helmet",
       "arm_sleeves": "Arm sleeves",
-      "face_shield": "Face shield"
+      "face_shield": "Face shield",
+      "safety_cap": "Safety cap"
     },
     "a11y": {
       "langSwitch": "Change language",
@@ -103,13 +104,70 @@
       "kioskView": "Kiosk view",
       "autoplay": "Auto-play",
       "autoplayOn": "Auto-play on — 10s per step, loops all tasks",
-      "autoplayOff": "Turn on auto-play"
+      "autoplayOff": "Turn on auto-play",
+      "sectionSwitch": "Switch between work instructions and safety",
+      "openIndex": "Open the task index",
+      "seek": "Go to a step",
+      "zonePick": "Choose zone {n}"
     },
     "common": {
       "placeholder": "Placeholder content — pending SME review",
       "offlineReady": "Ready to work offline",
       "updateReady": "Update ready",
       "reload": "Reload"
+    },
+    "section": {
+      "heading": "What do you need?",
+      "sub": "Choose work instructions or factory safety",
+      "wi": "Work instructions",
+      "wiSub": "Step-by-step guidance through a job",
+      "safety": "Safety",
+      "safetySub": "PPE required in each area of the factory",
+      "toSafety": "Safety",
+      "toWi": "Work instructions"
+    },
+    "index": {
+      "heading": "Where do you want to start?",
+      "sub": "Pick a stage, or a single step",
+      "start": "Start from the beginning",
+      "continue": "Continue",
+      "jump": "Jump to this step",
+      "stage": "Stage {n}",
+      "allSteps": "All steps",
+      "current": "You are here",
+      "close": "Close",
+      "title": "Task index",
+      "open": "Task index"
+    },
+    "safety": {
+      "heading": "Choose your area",
+      "sub": "Select a zone on the plan to see the PPE it requires",
+      "zone": "Zone {n}",
+      "required": "Required PPE",
+      "items": "{n} items",
+      "back": "Back to the map",
+      "donning": "Putting it on",
+      "spotlight": "Item by item",
+      "view": "View",
+      "order": "Put on in this order",
+      "before": "Before you enter the area",
+      "replay": "Play again",
+      "next": "Next zone",
+      "prev": "Previous zone",
+      "step": "{current} of {total}",
+      "ready": "Ready to enter",
+      "legend": "Zones",
+      "note": "Transcribed from the factory PPE zone plan — pending HSE review"
+    },
+    "ppeAction": {
+      "safety_cap": "Put the cap on and tuck long hair inside it.",
+      "safety_helmet": "Put the helmet on and tighten the chin strap.",
+      "safety_glasses": "Put the glasses on — the side shields must sit against your face.",
+      "hearing_protection": "Put the ear defenders on and cover both ears fully.",
+      "dust_mask": "Fit the mask over the nose and mouth and press the nose clip.",
+      "arm_sleeves": "Pull the sleeves up both arms to the elbow.",
+      "insulated_gloves": "Check the insulated gloves for damage, then put them on.",
+      "gloves": "Put your work gloves on last, over everything else."
     }
   },
   "ar": {
@@ -197,7 +255,8 @@
       "dust_mask": "كمامة غبار",
       "safety_helmet": "خوذة أمان",
       "arm_sleeves": "أكمام واقية للذراعين",
-      "face_shield": "قناع واقٍ للوجه"
+      "face_shield": "قناع واقٍ للوجه",
+      "safety_cap": "قبعة أمان"
     },
     "a11y": {
       "langSwitch": "تغيير اللغة",
@@ -215,13 +274,70 @@
       "kioskView": "عرض الكشك",
       "autoplay": "تشغيل تلقائي",
       "autoplayOn": "التشغيل التلقائي مُفعّل — 10 ثوانٍ لكل خطوة، ويتنقل بين كل المهام",
-      "autoplayOff": "تفعيل التشغيل التلقائي"
+      "autoplayOff": "تفعيل التشغيل التلقائي",
+      "sectionSwitch": "التبديل بين تعليمات العمل والسلامة",
+      "openIndex": "افتح فهرس المهمة",
+      "seek": "انتقل إلى خطوة",
+      "zonePick": "اختر المنطقة {n}"
     },
     "common": {
       "placeholder": "محتوى مؤقت — بانتظار مراجعة الخبير المختص",
       "offlineReady": "جاهز للعمل دون اتصال",
       "updateReady": "التحديث جاهز",
       "reload": "إعادة تحميل"
+    },
+    "section": {
+      "heading": "ماذا تحتاج؟",
+      "sub": "اختر تعليمات العمل أو سلامة المصنع",
+      "wi": "تعليمات العمل",
+      "wiSub": "إرشاد خطوة بخطوة خلال العمل",
+      "safety": "السلامة",
+      "safetySub": "مهمات الوقاية المطلوبة في كل منطقة بالمصنع",
+      "toSafety": "السلامة",
+      "toWi": "تعليمات العمل"
+    },
+    "index": {
+      "heading": "من أين تريد أن تبدأ؟",
+      "sub": "اختر مرحلة، أو خطوة واحدة",
+      "start": "ابدأ من البداية",
+      "continue": "متابعة",
+      "jump": "انتقل إلى هذه الخطوة",
+      "stage": "المرحلة {n}",
+      "allSteps": "كل الخطوات",
+      "current": "أنت هنا",
+      "close": "إغلاق",
+      "title": "فهرس المهمة",
+      "open": "فهرس المهمة"
+    },
+    "safety": {
+      "heading": "اختر منطقتك",
+      "sub": "اختر منطقة على المخطط لعرض مهمات الوقاية المطلوبة",
+      "zone": "المنطقة {n}",
+      "required": "مهمات الوقاية المطلوبة",
+      "items": "{n} عناصر",
+      "back": "العودة إلى الخريطة",
+      "donning": "طريقة الارتداء",
+      "spotlight": "عنصرًا بعنصر",
+      "view": "العرض",
+      "order": "ارتدِها بهذا الترتيب",
+      "before": "قبل دخول المنطقة",
+      "replay": "شغّل مرة أخرى",
+      "next": "المنطقة التالية",
+      "prev": "المنطقة السابقة",
+      "step": "{current} من {total}",
+      "ready": "جاهز للدخول",
+      "legend": "المناطق",
+      "note": "منقول عن مخطط مناطق مهمات الوقاية بالمصنع — بانتظار مراجعة السلامة"
+    },
+    "ppeAction": {
+      "safety_cap": "ارتدِ القبعة وأدخل الشعر الطويل بداخلها.",
+      "safety_helmet": "ارتدِ الخوذة وأحكم رباط الذقن.",
+      "safety_glasses": "ارتدِ النظارة — يجب أن تلتصق الحواف الجانبية بوجهك.",
+      "hearing_protection": "ارتدِ واقي السمع وغطِّ الأذنين بالكامل.",
+      "dust_mask": "ثبّت الكمامة على الأنف والفم واضغط مشبك الأنف.",
+      "arm_sleeves": "اسحب الأكمام على الذراعين حتى المرفق.",
+      "insulated_gloves": "افحص القفازات العازلة بحثًا عن تلف ثم ارتدِها.",
+      "gloves": "ارتدِ قفازات العمل في النهاية، فوق كل شيء آخر."
     }
   },
   "ur": {
@@ -309,7 +425,8 @@
       "dust_mask": "دھول ماسک",
       "safety_helmet": "حفاظتی ہیلمٹ",
       "arm_sleeves": "حفاظتی بازو آستین",
-      "face_shield": "چہرے کی حفاظتی شیلڈ"
+      "face_shield": "چہرے کی حفاظتی شیلڈ",
+      "safety_cap": "سیفٹی کیپ"
     },
     "a11y": {
       "langSwitch": "زبان تبدیل کریں",
@@ -327,13 +444,70 @@
       "kioskView": "کیوسک ویو",
       "autoplay": "آٹو پلے",
       "autoplayOn": "آٹو پلے آن — ہر مرحلہ 10 سیکنڈ، تمام ٹاسک لوپ میں",
-      "autoplayOff": "آٹو پلے آن کریں"
+      "autoplayOff": "آٹو پلے آن کریں",
+      "sectionSwitch": "ورک انسٹرکشن اور سیفٹی کے درمیان تبدیلی",
+      "openIndex": "ٹاسک انڈیکس کھولیں",
+      "seek": "کسی قدم پر جائیں",
+      "zonePick": "زون {n} منتخب کریں"
     },
     "common": {
       "placeholder": "عارضی مواد — ماہر کی نظرثانی کے منتظر",
       "offlineReady": "آف لائن کام کے لیے تیار",
       "updateReady": "اپ ڈیٹ تیار",
       "reload": "دوبارہ لوڈ کریں"
+    },
+    "section": {
+      "heading": "آپ کو کیا چاہیے؟",
+      "sub": "ورک انسٹرکشن یا فیکٹری سیفٹی منتخب کریں",
+      "wi": "ورک انسٹرکشن",
+      "wiSub": "کام میں مرحلہ وار رہنمائی",
+      "safety": "سیفٹی",
+      "safetySub": "فیکٹری کے ہر علاقے میں مطلوبہ PPE",
+      "toSafety": "سیفٹی",
+      "toWi": "ورک انسٹرکشن"
+    },
+    "index": {
+      "heading": "آپ کہاں سے شروع کرنا چاہتے ہیں؟",
+      "sub": "ایک مرحلہ چنیں، یا کوئی ایک قدم",
+      "start": "شروع سے آغاز کریں",
+      "continue": "جاری رکھیں",
+      "jump": "اس قدم پر جائیں",
+      "stage": "مرحلہ {n}",
+      "allSteps": "تمام مراحل",
+      "current": "آپ یہاں ہیں",
+      "close": "بند کریں",
+      "title": "ٹاسک انڈیکس",
+      "open": "ٹاسک انڈیکس"
+    },
+    "safety": {
+      "heading": "اپنا علاقہ منتخب کریں",
+      "sub": "مطلوبہ PPE دیکھنے کے لیے نقشے پر زون منتخب کریں",
+      "zone": "زون {n}",
+      "required": "مطلوبہ PPE",
+      "items": "{n} اشیاء",
+      "back": "نقشے پر واپس",
+      "donning": "پہننے کا طریقہ",
+      "spotlight": "ایک ایک چیز",
+      "view": "منظر",
+      "order": "اسی ترتیب سے پہنیں",
+      "before": "علاقے میں داخل ہونے سے پہلے",
+      "replay": "دوبارہ چلائیں",
+      "next": "اگلا زون",
+      "prev": "پچھلا زون",
+      "step": "{total} میں سے {current}",
+      "ready": "داخلے کے لیے تیار",
+      "legend": "زون",
+      "note": "فیکٹری کے PPE زون پلان سے نقل — HSE جائزے کے منتظر"
+    },
+    "ppeAction": {
+      "safety_cap": "کیپ پہنیں اور لمبے بال اس کے اندر کر لیں۔",
+      "safety_helmet": "ہیلمٹ پہنیں اور ٹھوڑی کی پٹی کس لیں۔",
+      "safety_glasses": "چشمہ پہنیں — سائیڈ شیلڈ چہرے سے لگی ہوں۔",
+      "hearing_protection": "ایئر ڈیفنڈر پہنیں اور دونوں کان پوری طرح ڈھانپیں۔",
+      "dust_mask": "ماسک ناک اور منہ پر لگائیں اور ناک کی کلپ دبائیں۔",
+      "arm_sleeves": "آستینیں دونوں بازوؤں پر کہنی تک چڑھائیں۔",
+      "insulated_gloves": "انسولیٹڈ دستانے نقصان کے لیے چیک کریں، پھر پہنیں۔",
+      "gloves": "کام کے دستانے سب سے آخر میں، سب کے اوپر پہنیں۔"
     }
   },
   "hi": {
@@ -421,7 +595,8 @@
       "dust_mask": "धूल मास्क",
       "safety_helmet": "सुरक्षा हेलमेट",
       "arm_sleeves": "सुरक्षात्मक बाँह आस्तीन",
-      "face_shield": "फेस शील्ड"
+      "face_shield": "फेस शील्ड",
+      "safety_cap": "सेफ़्टी कैप"
     },
     "a11y": {
       "langSwitch": "भाषा बदलें",
@@ -439,13 +614,70 @@
       "kioskView": "कियोस्क व्यू",
       "autoplay": "ऑटो-प्ले",
       "autoplayOn": "ऑटो-प्ले चालू — हर चरण 10 सेकंड, सभी टास्क लूप में",
-      "autoplayOff": "ऑटो-प्ले चालू करें"
+      "autoplayOff": "ऑटो-प्ले चालू करें",
+      "sectionSwitch": "वर्क इंस्ट्रक्शन और सेफ़्टी के बीच बदलें",
+      "openIndex": "टास्क इंडेक्स खोलें",
+      "seek": "किसी स्टेप पर जाएँ",
+      "zonePick": "ज़ोन {n} चुनें"
     },
     "common": {
       "placeholder": "प्लेसहोल्डर सामग्री — SME समीक्षा हेतु लंबित",
       "offlineReady": "ऑफ़लाइन कार्य के लिए तैयार",
       "updateReady": "अपडेट तैयार",
       "reload": "पुनः लोड करें"
+    },
+    "section": {
+      "heading": "आपको क्या चाहिए?",
+      "sub": "वर्क इंस्ट्रक्शन या फ़ैक्ट्री सेफ़्टी चुनें",
+      "wi": "वर्क इंस्ट्रक्शन",
+      "wiSub": "काम में चरण-दर-चरण मार्गदर्शन",
+      "safety": "सेफ़्टी",
+      "safetySub": "फ़ैक्ट्री के हर एरिया में ज़रूरी PPE",
+      "toSafety": "सेफ़्टी",
+      "toWi": "वर्क इंस्ट्रक्शन"
+    },
+    "index": {
+      "heading": "आप कहाँ से शुरू करना चाहते हैं?",
+      "sub": "एक चरण चुनें, या कोई एक स्टेप",
+      "start": "शुरू से आरंभ करें",
+      "continue": "जारी रखें",
+      "jump": "इस स्टेप पर जाएँ",
+      "stage": "चरण {n}",
+      "allSteps": "सभी स्टेप",
+      "current": "आप यहाँ हैं",
+      "close": "बंद करें",
+      "title": "टास्क इंडेक्स",
+      "open": "टास्क इंडेक्स"
+    },
+    "safety": {
+      "heading": "अपना एरिया चुनें",
+      "sub": "ज़रूरी PPE देखने के लिए प्लान पर ज़ोन चुनें",
+      "zone": "ज़ोन {n}",
+      "required": "ज़रूरी PPE",
+      "items": "{n} चीज़ें",
+      "back": "नक़्शे पर वापस",
+      "donning": "पहनने का तरीक़ा",
+      "spotlight": "एक-एक चीज़",
+      "view": "दृश्य",
+      "order": "इसी क्रम में पहनें",
+      "before": "एरिया में जाने से पहले",
+      "replay": "फिर चलाएँ",
+      "next": "अगला ज़ोन",
+      "prev": "पिछला ज़ोन",
+      "step": "{total} में से {current}",
+      "ready": "प्रवेश के लिए तैयार",
+      "legend": "ज़ोन",
+      "note": "फ़ैक्ट्री के PPE ज़ोन प्लान से लिया गया — HSE समीक्षा बाक़ी"
+    },
+    "ppeAction": {
+      "safety_cap": "कैप पहनें और लंबे बाल उसके अंदर कर लें।",
+      "safety_helmet": "हेलमेट पहनें और ठोड़ी की पट्टी कस लें।",
+      "safety_glasses": "चश्मा पहनें — साइड शील्ड चेहरे से सटी हों।",
+      "hearing_protection": "ईयर डिफ़ेंडर पहनें और दोनों कान पूरी तरह ढकें।",
+      "dust_mask": "मास्क नाक और मुँह पर लगाएँ और नोज़ क्लिप दबाएँ।",
+      "arm_sleeves": "स्लीव्स दोनों बाँहों पर कोहनी तक चढ़ाएँ।",
+      "insulated_gloves": "इंसुलेटेड दस्ताने नुक़सान के लिए जाँचें, फिर पहनें।",
+      "gloves": "काम के दस्ताने सबसे आख़िर में, सबके ऊपर पहनें।"
     }
   },
   "fr": {
@@ -533,7 +765,8 @@
       "dust_mask": "Masque anti-poussière",
       "safety_helmet": "Casque de sécurité",
       "arm_sleeves": "Manchettes de protection",
-      "face_shield": "Écran facial"
+      "face_shield": "Écran facial",
+      "safety_cap": "Casquette de sécurité"
     },
     "a11y": {
       "langSwitch": "Changer de langue",
@@ -551,13 +784,70 @@
       "kioskView": "Vue kiosque",
       "autoplay": "Lecture automatique",
       "autoplayOn": "Lecture automatique activée — 10 s par étape, boucle sur toutes les tâches",
-      "autoplayOff": "Activer la lecture automatique"
+      "autoplayOff": "Activer la lecture automatique",
+      "sectionSwitch": "Basculer entre instructions de travail et sécurité",
+      "openIndex": "Ouvrir le sommaire de la tâche",
+      "seek": "Aller à une opération",
+      "zonePick": "Choisir la zone {n}"
     },
     "common": {
       "placeholder": "Contenu provisoire — en attente de validation par un expert",
       "offlineReady": "Prêt à fonctionner hors ligne",
       "updateReady": "Mise à jour disponible",
       "reload": "Recharger"
+    },
+    "section": {
+      "heading": "De quoi avez-vous besoin ?",
+      "sub": "Choisissez les instructions de travail ou la sécurité",
+      "wi": "Instructions de travail",
+      "wiSub": "Guidage pas à pas tout au long du travail",
+      "safety": "Sécurité",
+      "safetySub": "EPI requis dans chaque zone de l’usine",
+      "toSafety": "Sécurité",
+      "toWi": "Instructions de travail"
+    },
+    "index": {
+      "heading": "Où voulez-vous commencer ?",
+      "sub": "Choisissez une étape, ou une seule opération",
+      "start": "Commencer au début",
+      "continue": "Continuer",
+      "jump": "Aller à cette opération",
+      "stage": "Étape {n}",
+      "allSteps": "Toutes les opérations",
+      "current": "Vous êtes ici",
+      "close": "Fermer",
+      "title": "Sommaire de la tâche",
+      "open": "Sommaire de la tâche"
+    },
+    "safety": {
+      "heading": "Choisissez votre zone",
+      "sub": "Sélectionnez une zone du plan pour voir les EPI requis",
+      "zone": "Zone {n}",
+      "required": "EPI requis",
+      "items": "{n} éléments",
+      "back": "Retour au plan",
+      "donning": "Mise en place",
+      "spotlight": "Élément par élément",
+      "view": "Affichage",
+      "order": "Mettre dans cet ordre",
+      "before": "Avant d’entrer dans la zone",
+      "replay": "Rejouer",
+      "next": "Zone suivante",
+      "prev": "Zone précédente",
+      "step": "{current} sur {total}",
+      "ready": "Prêt à entrer",
+      "legend": "Zones",
+      "note": "Transcrit du plan des zones EPI de l’usine — en attente de validation HSE"
+    },
+    "ppeAction": {
+      "safety_cap": "Mettre la casquette et y rentrer les cheveux longs.",
+      "safety_helmet": "Mettre le casque et serrer la jugulaire.",
+      "safety_glasses": "Mettre les lunettes — les protections latérales contre le visage.",
+      "hearing_protection": "Mettre le casque antibruit et couvrir entièrement les deux oreilles.",
+      "dust_mask": "Poser le masque sur le nez et la bouche et pincer la barrette nasale.",
+      "arm_sleeves": "Remonter les manchettes sur les deux bras jusqu’au coude.",
+      "insulated_gloves": "Vérifier l’absence de dommage sur les gants isolants, puis les mettre.",
+      "gloves": "Mettre les gants de travail en dernier, par-dessus le reste."
     }
   }
 }

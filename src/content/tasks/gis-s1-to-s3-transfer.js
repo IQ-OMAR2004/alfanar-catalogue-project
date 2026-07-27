@@ -388,9 +388,75 @@ const steps = EN.steps.map((s) => {
   }
 })
 
+// Stage index — the phases of Case 1. `from`/`to` are inclusive step ids; the
+// task index screen groups by these.
+const sections = [
+  {
+    id: 'receive', from: 1, to: 3,
+    title: {
+      en: 'Receive & prepare',
+      ar: 'الاستلام والتحضير',
+      ur: 'وصولی اور تیاری',
+      hi: 'प्राप्ति और तैयारी',
+      fr: 'Réception et préparation',
+    },
+  },
+  {
+    id: 'dismantle-s1', from: 4, to: 9,
+    title: {
+      en: 'Dismantle the Solution 1 tank',
+      ar: 'تفكيك خزان الحل 1',
+      ur: 'سولوشن 1 ٹینک کی علیحدگی',
+      hi: 'सोल्यूशन 1 टैंक का निराकरण',
+      fr: 'Démonter la cuve Solution 1',
+    },
+  },
+  {
+    id: 'scrap-clear', from: 10, to: 12,
+    title: {
+      en: 'Scrap & clear',
+      ar: 'الخردة والإخلاء',
+      ur: 'اسکریپ اور صفائی',
+      hi: 'स्क्रैप और सफ़ाई',
+      fr: 'Rebut et évacuation',
+    },
+  },
+  {
+    id: 'prepare-s3', from: 13, to: 13,
+    title: {
+      en: 'Prepare the Solution 3 tank',
+      ar: 'تحضير خزان الحل 3',
+      ur: 'سولوشن 3 ٹینک کی تیاری',
+      hi: 'सोल्यूशन 3 टैंक की तैयारी',
+      fr: 'Préparer la cuve Solution 3',
+    },
+  },
+  {
+    id: 'assemble-s3', from: 14, to: 22,
+    title: {
+      en: 'Assemble into the Solution 3 tank',
+      ar: 'التجميع داخل خزان الحل 3',
+      ur: 'سولوشن 3 ٹینک میں تنصیب',
+      hi: 'सोल्यूशन 3 टैंक में संयोजन',
+      fr: 'Assembler dans la cuve Solution 3',
+    },
+  },
+  {
+    id: 'close-gas-test', from: 23, to: 25,
+    title: {
+      en: 'Close, vacuum, gas & test',
+      ar: 'الإغلاق والتفريغ والغاز والاختبار',
+      ur: 'بندش، ویکیوم، گیس اور ٹیسٹ',
+      hi: 'बंद करना, वैक्यूम, गैस और टेस्ट',
+      fr: 'Fermeture, vide, gaz et essais',
+    },
+  },
+]
+
 export default {
   id: 'gis-s1-to-s3-transfer',
   order: 7,
+  sections,
   icon: 'gis-tank',
   difficulty: 'advanced',
   ppe: ['safety_helmet', 'safety_glasses', 'gloves', 'hearing_protection', 'safety_boots', 'arm_sleeves', 'face_shield'],
