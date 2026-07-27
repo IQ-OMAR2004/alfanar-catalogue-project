@@ -56,6 +56,67 @@ const PATHS = {
     </>
   ),
 
+  // ---- Commissioning-test task icons ------------------------------------
+  // Circuit breaker under test: breaker symbol with a meter on it.
+  'breaker-test': (
+    <>
+      <path d="M4 6h4M16 6h4M6 6v3M18 6v3" {...P} />
+      <path d="M6 9l12 6" {...P} />
+      <circle cx="6" cy="9" r="1.4" {...P} />
+      <circle cx="18" cy="15" r="1.4" {...P} />
+      <rect x="4" y="17" width="16" height="5" rx="1.2" {...P} />
+      <path d="M7 20.8h3M13 20.8h4" {...P} />
+    </>
+  ),
+  // Earthing switch: blade dropping onto an earth symbol.
+  'earth-switch': (
+    <>
+      <path d="M5 3v4M5 7l9 5" {...P} />
+      <circle cx="5" cy="7" r="1.3" {...P} />
+      <circle cx="14" cy="12" r="1.3" {...P} />
+      <path d="M14 12v4" {...P} />
+      <path d="M8.5 17h11M10.5 20h7M12.5 22.5h3" {...P} />
+    </>
+  ),
+  // Busbar: three bars with end pads.
+  busbar: (
+    <>
+      <path d="M3 6.5h18M3 12h18M3 17.5h18" {...P} />
+      <rect x="2.4" y="4.8" width="3" height="3.4" rx="0.8" fill="currentColor" stroke="none" />
+      <rect x="18.6" y="10.3" width="3" height="3.4" rx="0.8" fill="currentColor" stroke="none" />
+      <rect x="2.4" y="15.8" width="3" height="3.4" rx="0.8" fill="currentColor" stroke="none" />
+    </>
+  ),
+  // HV / VLF test: high-voltage bolt inside a test terminal.
+  'hv-test': (
+    <>
+      <rect x="3" y="4" width="18" height="13" rx="1.8" {...P} />
+      <path d="M13.4 7l-3.6 4.6h2.8L11.4 15l3.8-4.9h-2.8z" fill="currentColor" stroke="none" />
+      <path d="M8 20h8M12 17v3" {...P} />
+    </>
+  ),
+  // Ring main unit: three-way switch cabinet.
+  rmu: (
+    <>
+      <rect x="3" y="3.5" width="18" height="17" rx="1.6" {...P} />
+      <path d="M9 3.5v17M15 3.5v17" {...P} />
+      <circle cx="6" cy="9" r="1.2" {...P} />
+      <circle cx="12" cy="9" r="1.2" {...P} />
+      <circle cx="18" cy="9" r="1.2" {...P} />
+      <path d="M6 11.5v4M12 11.5v4M18 11.5v4" {...P} />
+    </>
+  ),
+  // Surge arrester: stack of sheds with an earth lead.
+  arrester: (
+    <>
+      <path d="M10.5 2.6h3v2h-3z" {...P} />
+      <path d="M12 4.6v12" {...P} />
+      <path d="M7.6 7h8.8M7.6 10h8.8M7.6 13h8.8" {...P} />
+      <path d="M9 16.6h6" {...P} />
+      <path d="M12 16.6v2.4M8.6 19h6.8M10 21.4h4" {...P} />
+    </>
+  ),
+
   // ---- PPE icons --------------------------------------------------------
   insulated_gloves: (
     <>
@@ -128,6 +189,14 @@ const PATHS = {
       <path d="M5 4h14v7a7 7 0 0 1-14 0z" {...P} />
       <path d="M5 7.5h14" {...P} />
       <path d="M9 4V2.8h6V4" {...P} />
+    </>
+  ),
+  // High-visibility clothing — required by the commissioning posters.
+  hi_vis: (
+    <>
+      <path d="M8.5 3.2 12 6l3.5-2.8 4 2.2-1.4 5 1.4 10h-15l1.4-10-1.4-5z" {...P} />
+      <path d="M9.4 8.6 10.6 20M14.6 8.6 13.4 20" {...P} />
+      <path d="M6.2 13.6h11.6" {...P} />
     </>
   ),
   // Bump cap — the PPE map distinguishes it (🧢) from the hard hat (🪖).

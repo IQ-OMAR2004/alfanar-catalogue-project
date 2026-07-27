@@ -1,0 +1,253 @@
+{
+  "_note": "Translations for csd-rmu-test.js and its photo variant. Step 1 (safety precautions) is translated inline in src/content/csd-safety.js because it is shared by every commissioning task. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially test voltages, currents and acceptance criteria. English in the .js file is authoritative.",
+  "meta": {
+    "title": {
+      "ar": "اختبار وحدة الحلقة الرئيسية",
+      "ur": "رنگ مین یونٹ ٹیسٹ",
+      "hi": "रिंग मेन यूनिट टेस्ट",
+      "fr": "Essai unité en boucle"
+    },
+    "summary": {
+      "ar": "اختبارات الإدخال في الخدمة لوحدة الحلقة الرئيسية — مقاومة العزل ومقاومة التلامس والتوقيت، ثم التسجيل والتقييم.",
+      "ur": "رنگ مین یونٹ کے کمیشننگ ٹیسٹ — انسولیشن ریزسٹنس، کانٹیکٹ ریزسٹنس اور ٹائمنگ، پھر ریکارڈ اور جانچ۔",
+      "hi": "रिंग मेन यूनिट के कमीशनिंग टेस्ट — इंसुलेशन रेज़िस्टेंस, कॉन्टैक्ट रेज़िस्टेंस और टाइमिंग, फिर रिकॉर्ड और मूल्यांकन।",
+      "fr": "Essais de mise en service d’une unité en boucle — isolement, résistance de contact et chronométrage, puis consignation et évaluation."
+    }
+  },
+  "steps": {
+    "2": {
+      "title": {
+        "ar": "اختبار مقاومة العزل",
+        "ur": "انسولیشن ریزسٹنس ٹیسٹ",
+        "hi": "इंसुलेशन रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance d’isolement"
+      },
+      "instructions": {
+        "ar": [
+          "وصّل جهاز قياس العزل حسب مخطط التوصيل: الوجه R إلى الأرض، بجهد 5 kV مطبّق لمدة دقيقة واحدة.",
+          "كرر الاختبار للوجه Y إلى الأرض، ثم الوجه B إلى الأرض.",
+          "قيّم كل قراءة وفق المعايير (أكبر من 100 MΩ).",
+          "فحص ذاتي: ثلاث قراءات مأخوذة، كل منها أعلى من 100 MΩ."
+        ],
+        "ur": [
+          "IR ٹیسٹر کو کنکشن ڈایاگرام کے مطابق جوڑیں: فیز R تا ارتھ، 1 منٹ کے لیے 5 kV لگا کر۔",
+          "یہی ٹیسٹ فیز Y تا ارتھ، پھر فیز B تا ارتھ دہرائیں۔",
+          "ہر ریڈنگ کو معیار (100 MΩ سے زیادہ) کے مطابق جانچیں۔",
+          "سیلف چیک: تین ریڈنگ لی گئی ہوں، ہر ایک 100 MΩ سے اوپر۔"
+        ],
+        "hi": [
+          "IR टेस्टर को कनेक्शन डायग्राम के अनुसार जोड़ें: फ़ेज़ R से अर्थ, 1 मिनट के लिए 5 kV लगाकर।",
+          "यही टेस्ट फ़ेज़ Y से अर्थ, फिर फ़ेज़ B से अर्थ दोहराएँ।",
+          "हर रीडिंग को मानक (100 MΩ से अधिक) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: तीन रीडिंग ली गई हों, हर एक 100 MΩ से ऊपर।"
+        ],
+        "fr": [
+          "Raccorder le testeur d’isolement selon le schéma : phase R à la terre, 5 kV appliqués pendant 1 minute.",
+          "Répéter l’essai pour la phase Y à la terre, puis la phase B à la terre.",
+          "Évaluer chaque valeur selon les critères (> 100 MΩ).",
+          "Auto-contrôle : trois valeurs relevées, chacune supérieure à 100 MΩ."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز قياس عزل Megger",
+          "أسلاك اختبار جهد عالٍ",
+          "أسلاك تأريض"
+        ],
+        "ur": [
+          "Megger IR ٹیسٹ کٹ",
+          "HV ٹیسٹ لیڈ",
+          "ارتھنگ لیڈ"
+        ],
+        "hi": [
+          "Megger IR टेस्ट किट",
+          "HV टेस्ट लीड",
+          "अर्थिंग लीड"
+        ],
+        "fr": [
+          "Kit de mesure d’isolement Megger",
+          "Cordons HT",
+          "Cordons de terre"
+        ]
+      },
+      "warning": {
+        "ar": "أسلاك الاختبار تحمل 5 kV تيار مستمر. أبقِ حجرة الوحدة مغلقة أمام الآخرين أثناء الاختبار، وفرّغ كل وجه إلى الأرض قبل تحريك أي سلك.",
+        "ur": "ٹیسٹ لیڈ میں 5 kV DC ہوتا ہے۔ ٹیسٹ کے دوران RMU کمپارٹمنٹ دوسروں کے لیے بند رکھیں، اور کوئی لیڈ ہلانے سے پہلے ہر فیز کو ارتھ پر ڈسچارج کریں۔",
+        "hi": "टेस्ट लीड में 5 kV DC रहता है। टेस्ट के दौरान RMU कम्पार्टमेंट दूसरों के लिए बंद रखें, और कोई लीड हटाने से पहले हर फ़ेज़ को अर्थ पर डिस्चार्ज करें।",
+        "fr": "Les cordons portent 5 kV CC. Garder le compartiment fermé aux autres pendant l’essai et décharger chaque phase à la terre avant de déplacer un cordon."
+      }
+    },
+    "3": {
+      "title": {
+        "ar": "اختبار مقاومة التلامس",
+        "ur": "کانٹیکٹ ریزسٹنس ٹیسٹ",
+        "hi": "कॉन्टैक्ट रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance de contact"
+      },
+      "instructions": {
+        "ar": [
+          "وصّل طقم مقاومة التلامس على الوجه R حسب مخطط التوصيل.",
+          "كرر الاختبار للوجه Y وللوجه B.",
+          "قيّم كل قراءة وفق المعايير (أكبر من 1 GΩ كما هو مطبوع في الدليل — تحقّق من الحد والوحدة الصحيحين في نموذج الاختبار المعتمد قبل قبول النتيجة).",
+          "فحص ذاتي: ثلاث قراءات مأخوذة مقابل المعيار المدوّن في النموذج."
+        ],
+        "ur": [
+          "کانٹیکٹ ریزسٹنس سیٹ کو کنکشن ڈایاگرام کے مطابق فیز R پر جوڑیں۔",
+          "یہی ٹیسٹ فیز Y اور فیز B کے لیے دہرائیں۔",
+          "ہر ریڈنگ کو معیار کے مطابق جانچیں (مینوئل میں چھپا ہوا ‘1 GΩ سے زیادہ’ — نتیجہ قبول کرنے سے پہلے کنٹرولڈ ٹیسٹ فارم پر درست حد اور یونٹ کی تصدیق کریں)۔",
+          "سیلف چیک: فارم کے معیار کے مقابل تین ریڈنگ لی گئی ہوں۔"
+        ],
+        "hi": [
+          "कॉन्टैक्ट रेज़िस्टेंस सेट को कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर जोड़ें।",
+          "यही टेस्ट फ़ेज़ Y और फ़ेज़ B के लिए दोहराएँ।",
+          "हर रीडिंग को मानक के अनुसार जाँचें (मैनुअल में छपा ‘1 GΩ से अधिक’ — नतीजा स्वीकार करने से पहले कंट्रोल्ड टेस्ट फ़ॉर्म पर सही सीमा और यूनिट की पुष्टि करें)।",
+          "सेल्फ़-चेक: फ़ॉर्म के मानक के सामने तीन रीडिंग ली गई हों।"
+        ],
+        "fr": [
+          "Raccorder le kit de résistance de contact sur la phase R selon le schéma.",
+          "Répéter l’essai pour la phase Y et la phase B.",
+          "Évaluer chaque valeur selon les critères (« > 1 GΩ » tel qu’imprimé dans le manuel — vérifier la limite et l’unité correctes sur le formulaire contrôlé avant d’accepter le résultat).",
+          "Auto-contrôle : trois valeurs relevées face au critère du formulaire."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "طقم اختبار مقاومة التلامس",
+          "أسلاك تيار ثقيل"
+        ],
+        "ur": [
+          "کانٹیکٹ ریزسٹنس ٹیسٹ کٹ",
+          "ہیوی کرنٹ لیڈ"
+        ],
+        "hi": [
+          "कॉन्टैक्ट रेज़िस्टेंस टेस्ट किट",
+          "हैवी करंट लीड"
+        ],
+        "fr": [
+          "Kit de mesure de résistance de contact",
+          "Cordons de forte intensité"
+        ]
+      },
+      "warning": {
+        "ar": "يسري تيار اختبار ثقيل في الأسلاك. أحكم كلتا الوصلتين قبل الحقن — الملقط المرتخي يسخن ويشرر.",
+        "ur": "لیڈ میں بھاری ٹیسٹ کرنٹ بہتا ہے۔ کرنٹ لگانے سے پہلے دونوں کنکشن مضبوط کریں — ڈھیلا کلیمپ گرم ہو کر چنگاری دیتا ہے۔",
+        "hi": "लीड में भारी टेस्ट करंट बहता है। करंट लगाने से पहले दोनों कनेक्शन मज़बूत करें — ढीला क्लैंप गरम होकर चिंगारी देता है।",
+        "fr": "Un courant d’essai élevé circule dans les cordons. Serrer fermement les deux raccordements avant l’injection — une pince desserrée chauffe et provoque un arc."
+      }
+    },
+    "4": {
+      "title": {
+        "ar": "اختبار التوقيت",
+        "ur": "ٹائمنگ ٹیسٹ",
+        "hi": "टाइमिंग टेस्ट",
+        "fr": "Essai de chronométrage"
+      },
+      "instructions": {
+        "ar": [
+          "وصّل محلّل القاطع حسب مخطط التوصيل: التغذية الرئيسية، وتلامسات الأوجه، وملفّا الفصل والغلق إلى موجب وسالب البطارية أو لوحة التيار المستمر.",
+          "نفّذ قياس التوقيت.",
+          "قيّم النتيجة وفق المعايير (أقل من 20 msec).",
+          "فحص ذاتي: كل وجه ضمن 20 msec."
+        ],
+        "ur": [
+          "بریکر اینالائزر کو کنکشن ڈایاگرام کے مطابق جوڑیں: مین سپلائی، فیز کانٹیکٹ، اور ٹرپ و کلوز کوائل بیٹری یا DC پینل کے (+) اور (−) کو۔",
+          "ٹائمنگ کی پیمائش کریں۔",
+          "نتیجہ معیار (20 msec سے کم) کے مطابق جانچیں۔",
+          "سیلف چیک: ہر فیز 20 msec کے اندر ہو۔"
+        ],
+        "hi": [
+          "ब्रेकर एनालाइज़र को कनेक्शन डायग्राम के अनुसार जोड़ें: मेन सप्लाई, फ़ेज़ कॉन्टैक्ट, और ट्रिप व क्लोज़ कॉइल बैटरी या DC पैनल के (+) और (−) को।",
+          "टाइमिंग की माप करें।",
+          "नतीजा मानक (20 msec से कम) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: हर फ़ेज़ 20 msec के भीतर हो।"
+        ],
+        "fr": [
+          "Raccorder l’analyseur selon le schéma : alimentation principale, contacts de phase, bobines de déclenchement et de fermeture vers le (+) et le (−) de la batterie ou du tableau CC.",
+          "Effectuer la mesure de chronométrage.",
+          "Évaluer le résultat selon les critères (< 20 ms).",
+          "Auto-contrôle : chaque phase sous 20 ms."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "طقم محلّل القاطع",
+          "أسلاك توقيت",
+          "أسلاك الملفات"
+        ],
+        "ur": [
+          "بریکر اینالائزر ٹیسٹ کٹ",
+          "ٹائمنگ لیڈ",
+          "کوائل لیڈ"
+        ],
+        "hi": [
+          "ब्रेकर एनालाइज़र टेस्ट किट",
+          "टाइमिंग लीड",
+          "कॉइल लीड"
+        ],
+        "fr": [
+          "Kit analyseur de disjoncteur",
+          "Cordons de chronométrage",
+          "Cordons de bobine"
+        ]
+      },
+      "warning": {
+        "ar": "سيعمل المفتاح أثناء هذا الاختبار. تأكد أن لا أحد يعمل على الوحدة وابتعد عن الآلية قبل أول أمر.",
+        "ur": "اس ٹیسٹ کے دوران سوئچ چلے گا۔ تصدیق کریں کہ یونٹ پر کوئی کام نہیں کر رہا اور پہلے کمانڈ سے پہلے میکانزم سے دور رہیں۔",
+        "hi": "इस टेस्ट के दौरान स्विच चलेगा। पक्का करें कि यूनिट पर कोई काम नहीं कर रहा और पहले कमांड से पहले मैकेनिज़्म से दूर रहें।",
+        "fr": "L’appareil va manœuvrer pendant cet essai. Vérifier que personne n’intervient sur l’unité et rester à l’écart du mécanisme avant la première commande."
+      }
+    },
+    "5": {
+      "title": {
+        "ar": "سجّل النتائج وقيّمها",
+        "ur": "نتائج ریکارڈ اور جانچ کریں",
+        "hi": "नतीजे रिकॉर्ड और मूल्यांकन करें",
+        "fr": "Consigner et évaluer les résultats"
+      },
+      "instructions": {
+        "ar": [
+          "سجّل القيم المقاسة من الاختبارات الثلاثة في نماذج الاختبار.",
+          "قيّم كل قيمة وفق معيارها المقبول.",
+          "أبلغ المشرف عن أي قيمة خارج معيارها بدلًا من إعادة الاختبار بنفسك.",
+          "فحص ذاتي: النموذج مكتمل وموقّع."
+        ],
+        "ur": [
+          "تینوں ٹیسٹ کی ماپی گئی قدریں ٹیسٹ فارم میں درج کریں۔",
+          "ہر قدر کو اس کے قابلِ قبول معیار کے مطابق جانچیں۔",
+          "معیار سے باہر کوئی قدر ہو تو خود دوبارہ ٹیسٹ کرنے کے بجائے سپروائزر کو اطلاع دیں۔",
+          "سیلف چیک: فارم مکمل اور دستخط شدہ ہو۔"
+        ],
+        "hi": [
+          "तीनों टेस्ट की मापी गई वैल्यू टेस्ट फ़ॉर्म में दर्ज करें।",
+          "हर वैल्यू को उसके स्वीकार्य मानक के अनुसार जाँचें।",
+          "मानक से बाहर कोई वैल्यू हो तो खुद दोबारा टेस्ट करने के बजाय सुपरवाइज़र को बताएँ।",
+          "सेल्फ़-चेक: फ़ॉर्म पूरा और हस्ताक्षरित हो।"
+        ],
+        "fr": [
+          "Consigner les valeurs mesurées des trois essais sur les formulaires.",
+          "Évaluer chaque valeur par rapport à son critère d’acceptation.",
+          "Signaler au responsable toute valeur hors critère au lieu de refaire l’essai de sa propre initiative.",
+          "Auto-contrôle : formulaire complet et signé."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "نماذج الاختبار",
+          "قلم"
+        ],
+        "ur": [
+          "ٹیسٹ فارم",
+          "قلم"
+        ],
+        "hi": [
+          "टेस्ट फ़ॉर्म",
+          "पेन"
+        ],
+        "fr": [
+          "Formulaires d’essai",
+          "Stylo"
+        ]
+      }
+    }
+  }
+}

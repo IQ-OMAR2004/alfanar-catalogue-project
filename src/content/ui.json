@@ -86,7 +86,8 @@
       "safety_helmet": "Safety helmet",
       "arm_sleeves": "Arm sleeves",
       "face_shield": "Face shield",
-      "safety_cap": "Safety cap"
+      "safety_cap": "Safety cap",
+      "hi_vis": "High-visibility clothing"
     },
     "a11y": {
       "langSwitch": "Change language",
@@ -167,7 +168,8 @@
       "dust_mask": "Fit the mask over the nose and mouth and press the nose clip.",
       "arm_sleeves": "Pull the sleeves up both arms to the elbow.",
       "insulated_gloves": "Check the insulated gloves for damage, then put them on.",
-      "gloves": "Put your work gloves on last, over everything else."
+      "gloves": "Put your work gloves on last, over everything else.",
+      "hi_vis": "Put the high-visibility vest on over your clothing and close it."
     }
   },
   "ar": {
@@ -256,7 +258,8 @@
       "safety_helmet": "خوذة أمان",
       "arm_sleeves": "أكمام واقية للذراعين",
       "face_shield": "قناع واقٍ للوجه",
-      "safety_cap": "قبعة أمان"
+      "safety_cap": "قبعة أمان",
+      "hi_vis": "ملابس عالية الوضوح"
     },
     "a11y": {
       "langSwitch": "تغيير اللغة",
@@ -337,7 +340,8 @@
       "dust_mask": "ثبّت الكمامة على الأنف والفم واضغط مشبك الأنف.",
       "arm_sleeves": "اسحب الأكمام على الذراعين حتى المرفق.",
       "insulated_gloves": "افحص القفازات العازلة بحثًا عن تلف ثم ارتدِها.",
-      "gloves": "ارتدِ قفازات العمل في النهاية، فوق كل شيء آخر."
+      "gloves": "ارتدِ قفازات العمل في النهاية، فوق كل شيء آخر.",
+      "hi_vis": "ارتدِ السترة عالية الوضوح فوق ملابسك وأغلقها."
     }
   },
   "ur": {
@@ -426,7 +430,8 @@
       "safety_helmet": "حفاظتی ہیلمٹ",
       "arm_sleeves": "حفاظتی بازو آستین",
       "face_shield": "چہرے کی حفاظتی شیلڈ",
-      "safety_cap": "سیفٹی کیپ"
+      "safety_cap": "سیفٹی کیپ",
+      "hi_vis": "ہائی وزیبلٹی لباس"
     },
     "a11y": {
       "langSwitch": "زبان تبدیل کریں",
@@ -507,7 +512,8 @@
       "dust_mask": "ماسک ناک اور منہ پر لگائیں اور ناک کی کلپ دبائیں۔",
       "arm_sleeves": "آستینیں دونوں بازوؤں پر کہنی تک چڑھائیں۔",
       "insulated_gloves": "انسولیٹڈ دستانے نقصان کے لیے چیک کریں، پھر پہنیں۔",
-      "gloves": "کام کے دستانے سب سے آخر میں، سب کے اوپر پہنیں۔"
+      "gloves": "کام کے دستانے سب سے آخر میں، سب کے اوپر پہنیں۔",
+      "hi_vis": "ہائی وزیبلٹی جیکٹ اپنے کپڑوں کے اوپر پہنیں اور بند کریں۔"
     }
   },
   "hi": {
@@ -596,7 +602,8 @@
       "safety_helmet": "सुरक्षा हेलमेट",
       "arm_sleeves": "सुरक्षात्मक बाँह आस्तीन",
       "face_shield": "फेस शील्ड",
-      "safety_cap": "सेफ़्टी कैप"
+      "safety_cap": "सेफ़्टी कैप",
+      "hi_vis": "हाई-विज़िबिलिटी कपड़े"
     },
     "a11y": {
       "langSwitch": "भाषा बदलें",
@@ -677,7 +684,8 @@
       "dust_mask": "मास्क नाक और मुँह पर लगाएँ और नोज़ क्लिप दबाएँ।",
       "arm_sleeves": "स्लीव्स दोनों बाँहों पर कोहनी तक चढ़ाएँ।",
       "insulated_gloves": "इंसुलेटेड दस्ताने नुक़सान के लिए जाँचें, फिर पहनें।",
-      "gloves": "काम के दस्ताने सबसे आख़िर में, सबके ऊपर पहनें।"
+      "gloves": "काम के दस्ताने सबसे आख़िर में, सबके ऊपर पहनें।",
+      "hi_vis": "हाई-विज़िबिलिटी जैकेट अपने कपड़ों के ऊपर पहनें और बंद करें।"
     }
   },
   "fr": {
@@ -766,7 +774,8 @@
       "safety_helmet": "Casque de sécurité",
       "arm_sleeves": "Manchettes de protection",
       "face_shield": "Écran facial",
-      "safety_cap": "Casquette de sécurité"
+      "safety_cap": "Casquette de sécurité",
+      "hi_vis": "Vêtement haute visibilité"
     },
     "a11y": {
       "langSwitch": "Changer de langue",
@@ -847,7 +856,8 @@
       "dust_mask": "Poser le masque sur le nez et la bouche et pincer la barrette nasale.",
       "arm_sleeves": "Remonter les manchettes sur les deux bras jusqu’au coude.",
       "insulated_gloves": "Vérifier l’absence de dommage sur les gants isolants, puis les mettre.",
-      "gloves": "Mettre les gants de travail en dernier, par-dessus le reste."
+      "gloves": "Mettre les gants de travail en dernier, par-dessus le reste.",
+      "hi_vis": "Enfiler le gilet haute visibilité par-dessus les vêtements et le fermer."
     }
   }
 }

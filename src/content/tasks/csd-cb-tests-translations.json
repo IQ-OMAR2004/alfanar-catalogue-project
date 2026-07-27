@@ -1,0 +1,257 @@
+{
+  "_note": "Translations for csd-cb-tests.js and its photo variant csd-cb-tests-photos.js. Step 1 (safety precautions) is translated inline in src/content/csd-safety.js because it is shared by every commissioning task. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially test voltages, currents and acceptance criteria. English in the .js file is authoritative.",
+  "meta": {
+    "title": {
+      "ar": "اختبارات قاطع 13.8 kV",
+      "ur": "13.8 kV سرکٹ بریکر ٹیسٹ",
+      "hi": "13.8 kV CB टेस्ट",
+      "fr": "Essais disjoncteur 13,8 kV"
+    },
+    "summary": {
+      "ar": "اختبارات الإدخال في الخدمة لقاطع دائرة لوحة 13.8 kV — العزل ومقاومة التلامس والتوقيت ومانع الضخ ومؤشرات الإدخال والإخراج.",
+      "ur": "13.8 kV سوئچ گیئر سرکٹ بریکر کے کمیشننگ ٹیسٹ — انسولیشن، کانٹیکٹ ریزسٹنس، ٹائمنگ، اینٹی پمپ اور ریکنگ اشارے۔",
+      "hi": "13.8 kV स्विचगियर सर्किट ब्रेकर के कमीशनिंग टेस्ट — इंसुलेशन, कॉन्टैक्ट रेज़िस्टेंस, टाइमिंग, एंटी-पंप और रैकिंग संकेत।",
+      "fr": "Essais de mise en service d’un disjoncteur 13,8 kV — isolement, résistance de contact, chronométrage, anti-pompage et indications de débrochage."
+    }
+  },
+  "steps": {
+    "2": {
+      "title": {
+        "ar": "اختبار مقاومة العزل",
+        "ur": "انسولیشن ریزسٹنس ٹیسٹ",
+        "hi": "इंसुलेशन रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance d’isolement"
+      },
+      "instructions": {
+        "ar": [
+          "احقن 5 kV تيار مستمر لمدة دقيقة واحدة على الوجه R، مع توصيل الوجهين Y و B بالأرض، حسب مخطط التوصيل.",
+          "كرر نفس التوصيل والقياس للوجه Y، ثم للوجه B.",
+          "سجّل القيم المقاسة في نماذج الاختبار وقيّمها وفق المعايير المقبولة (أكبر من 100 MΩ).",
+          "فحص ذاتي: ثلاث قراءات مسجّلة، كل منها أعلى من 100 MΩ."
+        ],
+        "ur": [
+          "کنکشن ڈایاگرام کے مطابق فیز R پر 1 منٹ کے لیے 5 kV DC لگائیں، جبکہ فیز Y اور B ارتھ سے جڑے ہوں۔",
+          "یہی کنکشن اور پیمائش فیز Y کے لیے، پھر فیز B کے لیے دہرائیں۔",
+          "ماپی گئی قدریں ٹیسٹ فارم میں درج کریں اور معیار (100 MΩ سے زیادہ) کے مطابق جانچیں۔",
+          "سیلف چیک: تین ریڈنگ درج ہوں، ہر ایک 100 MΩ سے اوپر۔"
+        ],
+        "hi": [
+          "कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर 1 मिनट के लिए 5 kV DC लगाएँ, जबकि फ़ेज़ Y और B अर्थ से जुड़े हों।",
+          "यही कनेक्शन और माप फ़ेज़ Y के लिए, फिर फ़ेज़ B के लिए दोहराएँ।",
+          "मापी गई वैल्यू टेस्ट फ़ॉर्म में दर्ज करें और मानक (100 MΩ से अधिक) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: तीन रीडिंग दर्ज हों, हर एक 100 MΩ से ऊपर।"
+        ],
+        "fr": [
+          "Injecter 5 kV CC pendant 1 minute sur la phase R, les phases Y et B étant reliées à la terre, selon le schéma de raccordement.",
+          "Répéter le même raccordement et la même mesure pour la phase Y, puis pour la phase B.",
+          "Consigner les valeurs mesurées sur les formulaires d’essai et les évaluer selon les critères acceptables (> 100 MΩ).",
+          "Auto-contrôle : trois valeurs consignées, chacune supérieure à 100 MΩ."
+        ]
+      },
+      "tools": {
+        "ar": ["جهاز قياس عزل Megger", "أسلاك اختبار جهد عالٍ", "أسلاك تأريض", "نموذج الاختبار"],
+        "ur": ["Megger IR ٹیسٹ کٹ", "HV ٹیسٹ لیڈ", "ارتھنگ لیڈ", "ٹیسٹ فارم"],
+        "hi": ["Megger IR टेस्ट किट", "HV टेस्ट लीड", "अर्थिंग लीड", "टेस्ट फ़ॉर्म"],
+        "fr": ["Kit de mesure d’isolement Megger", "Cordons HT", "Cordons de terre", "Formulaire d’essai"]
+      },
+      "warning": {
+        "ar": "أسلاك الاختبار تحمل 5 kV تيار مستمر. لا يلمس أحد اللوحة أثناء تشغيل الاختبار، ويُفرَّغ المسار إلى الأرض بعد كل قياس قبل تحريك أي سلك.",
+        "ur": "ٹیسٹ لیڈ میں 5 kV DC ہوتا ہے۔ ٹیسٹ چلنے کے دوران کوئی سوئچ گیئر کو ہاتھ نہ لگائے، اور ہر پیمائش کے بعد کوئی لیڈ ہلانے سے پہلے سرکٹ کو ارتھ پر ڈسچارج کریں۔",
+        "hi": "टेस्ट लीड में 5 kV DC रहता है। टेस्ट चलते समय कोई स्विचगियर को न छुए, और हर माप के बाद कोई लीड हटाने से पहले सर्किट को अर्थ पर डिस्चार्ज करें।",
+        "fr": "Les cordons portent 5 kV CC. Personne ne touche l’appareillage pendant l’essai, et le circuit est déchargé à la terre après chaque mesure avant tout déplacement de cordon."
+      }
+    },
+    "3": {
+      "title": {
+        "ar": "اختبار مقاومة التلامس",
+        "ur": "کانٹیکٹ ریزسٹنس ٹیسٹ",
+        "hi": "कॉन्टैक्ट रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance de contact"
+      },
+      "instructions": {
+        "ar": [
+          "احقن 100 A لمدة دقيقة واحدة على الوجه R حسب مخطط التوصيل.",
+          "كرر نفس التوصيل والقياس للوجه Y، ثم للوجه B.",
+          "سجّل القيم المقاسة في نماذج الاختبار وقيّمها وفق المعايير المقبولة (أكبر من 1 GΩ كما هو مطبوع في الدليل — تحقّق من الحد والوحدة الصحيحين في نموذج الاختبار المعتمد قبل قبول النتيجة).",
+          "فحص ذاتي: ثلاث قراءات مسجّلة مقابل المعيار المدوّن في النموذج."
+        ],
+        "ur": [
+          "کنکشن ڈایاگرام کے مطابق فیز R پر 1 منٹ کے لیے 100 A لگائیں۔",
+          "یہی کنکشن اور پیمائش فیز Y کے لیے، پھر فیز B کے لیے دہرائیں۔",
+          "ماپی گئی قدریں ٹیسٹ فارم میں درج کریں اور معیار کے مطابق جانچیں (مینوئل میں چھپا ہوا ‘1 GΩ سے زیادہ’ — نتیجہ قبول کرنے سے پہلے کنٹرولڈ ٹیسٹ فارم پر درست حد اور یونٹ کی تصدیق کریں)۔",
+          "سیلف چیک: فارم کے معیار کے مقابل تین ریڈنگ درج ہوں۔"
+        ],
+        "hi": [
+          "कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर 1 मिनट के लिए 100 A लगाएँ।",
+          "यही कनेक्शन और माप फ़ेज़ Y के लिए, फिर फ़ेज़ B के लिए दोहराएँ।",
+          "मापी गई वैल्यू टेस्ट फ़ॉर्म में दर्ज करें और मानक के अनुसार जाँचें (मैनुअल में छपा ‘1 GΩ से अधिक’ — नतीजा स्वीकार करने से पहले कंट्रोल्ड टेस्ट फ़ॉर्म पर सही सीमा और यूनिट की पुष्टि करें)।",
+          "सेल्फ़-चेक: फ़ॉर्म के मानक के सामने तीन रीडिंग दर्ज हों।"
+        ],
+        "fr": [
+          "Injecter 100 A pendant 1 minute sur la phase R selon le schéma de raccordement.",
+          "Répéter le même raccordement et la même mesure pour la phase Y, puis pour la phase B.",
+          "Consigner les valeurs mesurées et les évaluer selon les critères (« > 1 GΩ » tel qu’imprimé dans le manuel — vérifier la limite et l’unité correctes sur le formulaire contrôlé avant d’accepter le résultat).",
+          "Auto-contrôle : trois valeurs consignées face au critère du formulaire."
+        ]
+      },
+      "tools": {
+        "ar": ["طقم اختبار مقاومة التلامس", "أسلاك تيار ثقيل", "نموذج الاختبار"],
+        "ur": ["کانٹیکٹ ریزسٹنس ٹیسٹ کٹ", "ہیوی کرنٹ لیڈ", "ٹیسٹ فارم"],
+        "hi": ["कॉन्टैक्ट रेज़िस्टेंस टेस्ट किट", "हैवी करंट लीड", "टेस्ट फ़ॉर्म"],
+        "fr": ["Kit de mesure de résistance de contact", "Cordons de forte intensité", "Formulaire d’essai"]
+      },
+      "warning": {
+        "ar": "يسري تيار 100 A في أسلاك الاختبار. أحكم كلتا الوصلتين قبل بدء الحقن — الملقط المرتخي عند هذا التيار يسخن ويشرر.",
+        "ur": "ٹیسٹ لیڈ میں 100 A بہتا ہے۔ کرنٹ لگانے سے پہلے دونوں کنکشن مضبوط کریں — اتنے کرنٹ پر ڈھیلا کلیمپ گرم ہو کر چنگاری دیتا ہے۔",
+        "hi": "टेस्ट लीड में 100 A बहता है। करंट लगाने से पहले दोनों कनेक्शन मज़बूत करें — इतने करंट पर ढीला क्लैंप गरम होकर चिंगारी देता है।",
+        "fr": "100 A circulent dans les cordons. Serrer fermement les deux raccordements avant l’injection — à ce courant, une pince desserrée chauffe et provoque un arc."
+      }
+    },
+    "4": {
+      "title": {
+        "ar": "اختبار توقيت الفتح والغلق",
+        "ur": "اوپن اور کلوز ٹائمنگ ٹیسٹ",
+        "hi": "ओपन और क्लोज़ टाइमिंग टेस्ट",
+        "fr": "Essai de chronométrage ouverture/fermeture"
+      },
+      "instructions": {
+        "ar": [
+          "وصّل محلّل القاطع حسب مخطط التوصيل: التغذية الرئيسية إلى الجهاز، والتلامسات إلى مداخل التوقيت، وملفّي الغلق والفصل إلى موجب وسالب البطارية أو لوحة التيار المستمر.",
+          "نفّذ قياسي توقيت الفتح والغلق.",
+          "اطبع القيم المقاسة وسجّلها في نماذج الاختبار وقيّمها وفق المعايير المقبولة (أقل من 20 msec).",
+          "فحص ذاتي: المطبوعة مرفقة بالنموذج، وكل وجه ضمن 20 msec."
+        ],
+        "ur": [
+          "بریکر اینالائزر کو کنکشن ڈایاگرام کے مطابق جوڑیں: مین سپلائی آلے کو، کانٹیکٹ ٹائمنگ ان پٹ کو، اور کلوز و ٹرپ کوائل بیٹری یا DC پینل کے (+) اور (−) کو۔",
+          "اوپن اور کلوز ٹائمنگ کی پیمائش کریں۔",
+          "ماپی گئی قدریں پرنٹ کر کے ٹیسٹ فارم میں درج کریں اور معیار (20 msec سے کم) کے مطابق جانچیں۔",
+          "سیلف چیک: پرنٹ آؤٹ فارم کے ساتھ لگا ہو، ہر فیز 20 msec کے اندر ہو۔"
+        ],
+        "hi": [
+          "ब्रेकर एनालाइज़र को कनेक्शन डायग्राम के अनुसार जोड़ें: मेन सप्लाई उपकरण को, कॉन्टैक्ट टाइमिंग इनपुट को, और क्लोज़ व ट्रिप कॉइल बैटरी या DC पैनल के (+) और (−) को।",
+          "ओपन और क्लोज़ टाइमिंग की माप करें।",
+          "मापी गई वैल्यू प्रिंट करके टेस्ट फ़ॉर्म में दर्ज करें और मानक (20 msec से कम) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: प्रिंटआउट फ़ॉर्म के साथ लगा हो, हर फ़ेज़ 20 msec के भीतर हो।"
+        ],
+        "fr": [
+          "Raccorder l’analyseur de disjoncteur selon le schéma : alimentation principale vers l’appareil, contacts vers les entrées de chronométrage, bobines de fermeture et de déclenchement vers le (+) et le (−) de la batterie ou du tableau CC.",
+          "Effectuer les mesures de temps d’ouverture et de fermeture.",
+          "Imprimer et consigner les valeurs mesurées sur les formulaires et les évaluer selon les critères (< 20 ms).",
+          "Auto-contrôle : impression jointe au formulaire, chaque phase sous 20 ms."
+        ]
+      },
+      "tools": {
+        "ar": ["محلّل قاطع الدائرة", "أسلاك توقيت", "أسلاك الملفات", "نموذج الاختبار"],
+        "ur": ["سرکٹ بریکر اینالائزر", "ٹائمنگ لیڈ", "کوائل لیڈ", "ٹیسٹ فارم"],
+        "hi": ["सर्किट ब्रेकर एनालाइज़र", "टाइमिंग लीड", "कॉइल लीड", "टेस्ट फ़ॉर्म"],
+        "fr": ["Analyseur de disjoncteur", "Cordons de chronométrage", "Cordons de bobine", "Formulaire d’essai"]
+      },
+      "warning": {
+        "ar": "سيعمل القاطع أثناء هذا الاختبار. تأكد أن لا أحد يعمل على العربة أو الآلية، وابتعد عن الأجزاء المتحركة قبل إعطاء أول أمر.",
+        "ur": "اس ٹیسٹ کے دوران بریکر چلے گا۔ تصدیق کریں کہ ٹرک یا میکانزم پر کوئی کام نہیں کر رہا، اور پہلا کمانڈ دینے سے پہلے حرکت کرنے والے حصوں سے دور رہیں۔",
+        "hi": "इस टेस्ट के दौरान ब्रेकर चलेगा। पक्का करें कि ट्रक या मैकेनिज़्म पर कोई काम नहीं कर रहा, और पहला कमांड देने से पहले चलने वाले हिस्सों से दूर रहें।",
+        "fr": "Le disjoncteur va manœuvrer pendant cet essai. Vérifier que personne n’intervient sur le chariot ou le mécanisme et rester à l’écart des pièces mobiles avant la première commande."
+      }
+    },
+    "5": {
+      "title": {
+        "ar": "التحقق من وظيفة مرحّل مانع الضخ",
+        "ur": "اینٹی پمپ ریلے فنکشن کی تصدیق",
+        "hi": "एंटी-पंप रिले फंक्शन की पुष्टि",
+        "fr": "Vérification du relais anti-pompage"
+      },
+      "instructions": {
+        "ar": [
+          "أغلق قاطع الدائرة كهربائيًا وأبقِ إشارة الغلق مستمرة.",
+          "لاحظ أن دائرة الغلق تحتوي على تلامس مفتوح يمنع أي عملية غلق أخرى ما دامت إشارة الغلق قائمة.",
+          "تأكد أن مرحّل مانع الضخ (مرحّل Y) يمنع القاطع من الغلق مباشرة بعد فصله عند تزامن إشارتي الغلق والفصل.",
+          "سجّل النتيجة في نموذج الاختبار.",
+          "فحص ذاتي: تحدث عملية غلق واحدة فقط أثناء استمرار إشارة الغلق."
+        ],
+        "ur": [
+          "سرکٹ بریکر کو بجلی سے بند (کلوز) کریں اور کلوز سگنل برقرار رکھیں۔",
+          "دیکھیں کہ کلوز سرکٹ میں ایک کھلا کانٹیکٹ ہے جو کلوز سگنل قائم رہنے تک مزید کلوز آپریشن روکتا ہے۔",
+          "تصدیق کریں کہ اینٹی پمپ ریلے (Y-ریلے) بیک وقت کلوز اور ٹرپ سگنل پر بریکر کو ٹرپ ہونے کے فوراً بعد دوبارہ بند ہونے سے روکتا ہے۔",
+          "نتیجہ ٹیسٹ فارم میں درج کریں۔",
+          "سیلف چیک: کلوز سگنل قائم رہتے ہوئے صرف ایک کلوز آپریشن ہو۔"
+        ],
+        "hi": [
+          "सर्किट ब्रेकर को बिजली से क्लोज़ करें और क्लोज़ सिग्नल बनाए रखें।",
+          "देखें कि क्लोज़ सर्किट में एक खुला कॉन्टैक्ट है जो क्लोज़ सिग्नल बने रहने तक आगे कोई क्लोज़ ऑपरेशन नहीं होने देता।",
+          "पुष्टि करें कि एंटी-पंप रिले (Y-रिले) एक साथ क्लोज़ और ट्रिप सिग्नल पर ब्रेकर को ट्रिप होने के तुरंत बाद फिर से बंद होने से रोकता है।",
+          "नतीजा टेस्ट फ़ॉर्म में दर्ज करें।",
+          "सेल्फ़-चेक: क्लोज़ सिग्नल बने रहते हुए सिर्फ़ एक क्लोज़ ऑपरेशन हो।"
+        ],
+        "fr": [
+          "Fermer le disjoncteur électriquement et maintenir l’ordre de fermeture.",
+          "Observer que le circuit de fermeture comporte un contact ouvert qui empêche toute nouvelle fermeture tant que l’ordre est maintenu.",
+          "Confirmer que le relais anti-pompage (relais Y) empêche le disjoncteur de refermer immédiatement après un déclenchement sur ordres simultanés de fermeture et de déclenchement.",
+          "Consigner le résultat sur le formulaire d’essai.",
+          "Auto-contrôle : une seule fermeture se produit tant que l’ordre est maintenu."
+        ]
+      },
+      "tools": {
+        "ar": ["تغذية دائرة التحكم", "نموذج الاختبار"],
+        "ur": ["کنٹرول سپلائی", "ٹیسٹ فارم"],
+        "hi": ["कंट्रोल सप्लाई", "टेस्ट फ़ॉर्म"],
+        "fr": ["Alimentation de commande", "Formulaire d’essai"]
+      },
+      "warning": {
+        "ar": "يشغّل هذا الاختبار القاطع على تغذية تحكم حية. أعطِ إشارتي الغلق والفصل المتزامنتين من موضع التحكم فقط، ولا تحرّك الآلية باليد أبدًا.",
+        "ur": "یہ ٹیسٹ زندہ کنٹرول سپلائی پر بریکر چلاتا ہے۔ بیک وقت کلوز اور ٹرپ سگنل صرف کنٹرول پوزیشن سے دیں، میکانزم کو ہاتھ سے ہرگز نہ چلائیں۔",
+        "hi": "यह टेस्ट लाइव कंट्रोल सप्लाई पर ब्रेकर चलाता है। एक साथ क्लोज़ और ट्रिप सिग्नल सिर्फ़ कंट्रोल पोज़ीशन से दें, मैकेनिज़्म को हाथ से बिलकुल न चलाएँ।",
+        "fr": "Cet essai manœuvre le disjoncteur sur alimentation de commande sous tension. Donner les ordres simultanés uniquement depuis le poste de commande, jamais en forçant le mécanisme à la main."
+      }
+    },
+    "6": {
+      "title": {
+        "ar": "المؤشرات أثناء الإدخال والإخراج",
+        "ur": "ریکنگ اِن اور آؤٹ کے دوران اشارے",
+        "hi": "रैकिंग इन और आउट के दौरान संकेत",
+        "fr": "Indications pendant l’embrochage/débrochage"
+      },
+      "instructions": {
+        "ar": [
+          "أدخل القاطع وأخرجه بذراع الإدخال عبر فتحة شحن الزنبرك اليدوي.",
+          "أثناء حركته، تحقق أن مؤشر مشحون/مفرَّغ ومؤشر مغلق/مفتوح يتبعان الحالة الفعلية للقاطع.",
+          "تحقق أن عدّاد العمليات يتقدّم، وافحص زرّي الغلق والفتح ولوحة البيانات.",
+          "سجّل النتيجة في نموذج الاختبار.",
+          "فحص ذاتي: كل مؤشر يطابق وضع القاطع وحالته الفعلية."
+        ],
+        "ur": [
+          "ریکنگ ہینڈل سے، مینوئل اسپرنگ چارجنگ کے سوراخ کے ذریعے بریکر کو اندر اور باہر ریک کریں۔",
+          "حرکت کے دوران تصدیق کریں کہ CHARGED/DISCHARGED اور CLOSED/OPEN اشارے بریکر کی اصل حالت کے مطابق ہیں۔",
+          "تصدیق کریں کہ آپریشن کاؤنٹر آگے بڑھتا ہے، اور CLOSE و OPEN بٹن اور ریٹنگ پلیٹ چیک کریں۔",
+          "نتیجہ ٹیسٹ فارم میں درج کریں۔",
+          "سیلف چیک: ہر اشارہ بریکر کی اصل پوزیشن اور حالت سے میل کھائے۔"
+        ],
+        "hi": [
+          "रैकिंग हैंडल से, मैनुअल स्प्रिंग-चार्जिंग के छेद के ज़रिए ब्रेकर को अंदर और बाहर रैक करें।",
+          "चलते समय पुष्टि करें कि CHARGED/DISCHARGED और CLOSED/OPEN संकेत ब्रेकर की असली स्थिति के अनुसार हैं।",
+          "पुष्टि करें कि ऑपरेशन काउंटर आगे बढ़ता है, और CLOSE व OPEN बटन तथा रेटिंग प्लेट जाँचें।",
+          "नतीजा टेस्ट फ़ॉर्म में दर्ज करें।",
+          "सेल्फ़-चेक: हर संकेत ब्रेकर की असली पोज़ीशन और स्थिति से मेल खाए।"
+        ],
+        "fr": [
+          "Embrocher et débrocher le disjoncteur avec la manivelle, par l’ouverture d’armement manuel du ressort.",
+          "Pendant le déplacement, vérifier que les indicateurs ARMÉ/DÉSARMÉ et FERMÉ/OUVERT suivent l’état réel du disjoncteur.",
+          "Vérifier que le compteur de manœuvres s’incrémente, et contrôler les boutons FERMETURE et OUVERTURE ainsi que la plaque signalétique.",
+          "Consigner le résultat sur le formulaire d’essai.",
+          "Auto-contrôle : chaque indication correspond à la position et à l’état réels du disjoncteur."
+        ]
+      },
+      "tools": {
+        "ar": ["ذراع الإدخال", "نموذج الاختبار"],
+        "ur": ["ریکنگ ہینڈل", "ٹیسٹ فارم"],
+        "hi": ["रैकिंग हैंडल", "टेस्ट फ़ॉर्म"],
+        "fr": ["Manivelle d’embrochage", "Formulaire d’essai"]
+      },
+      "warning": {
+        "ar": "لا تُدخل أو تُخرج إلا والباب مغلق والذراع مثبّت بالكامل. لا تقف أمام العربة أثناء الإدخال، وتوقف فورًا إذا علق الذراع.",
+        "ur": "ریکنگ صرف دروازہ بند اور ہینڈل پوری طرح لگا کر کریں۔ ریکنگ کے دوران ٹرک کے سامنے کھڑے نہ ہوں، اور ہینڈل پھنسے تو فوراً رک جائیں۔",
+        "hi": "रैकिंग सिर्फ़ दरवाज़ा बंद और हैंडल पूरी तरह लगाकर करें। रैकिंग के दौरान ट्रक के सामने खड़े न हों, और हैंडल अटके तो तुरंत रुक जाएँ।",
+        "fr": "N’embrocher qu’avec la porte fermée et la manivelle entièrement engagée. Ne pas se tenir devant le chariot pendant la manœuvre et s’arrêter immédiatement si la manivelle force."
+      }
+    }
+  }
+}

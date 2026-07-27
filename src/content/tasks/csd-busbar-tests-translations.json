@@ -1,0 +1,155 @@
+{
+  "_note": "Translations for csd-busbar-tests.js and its photo variant. Step 1 (safety precautions) is translated inline in src/content/csd-safety.js because it is shared by every commissioning task. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially test voltages, currents and acceptance criteria. English in the .js file is authoritative.",
+  "meta": {
+    "title": {
+      "ar": "اختبارات القضبان الناقلة 13.8 kV",
+      "ur": "13.8 kV بس بار ٹیسٹ",
+      "hi": "13.8 kV बसबार टेस्ट",
+      "fr": "Essais jeux de barres 13,8 kV"
+    },
+    "summary": {
+      "ar": "اختبارات الإدخال في الخدمة لقضبان لوحة 13.8 kV — فحص تطابق الأوجه من الطرفين، ثم مقاومة العزل لكل موصّل.",
+      "ur": "13.8 kV سوئچ گیئر بس بار کے کمیشننگ ٹیسٹ — دونوں سروں کا فیز چیک، پھر ہر کنڈکٹر کی انسولیشن ریزسٹنس۔",
+      "hi": "13.8 kV स्विचगियर बसबार के कमीशनिंग टेस्ट — दोनों सिरों का फ़ेज़ चेक, फिर हर कंडक्टर की इंसुलेशन रेज़िस्टेंस।",
+      "fr": "Essais de mise en service des jeux de barres 13,8 kV — vérification de phase bout à bout, puis résistance d’isolement de chaque conducteur."
+    }
+  },
+  "steps": {
+    "2": {
+      "title": {
+        "ar": "فحص تطابق أوجه القضبان",
+        "ur": "بس بار کا فیز چیک",
+        "hi": "बसबार का फ़ेज़ चेक",
+        "fr": "Vérification de phase des barres"
+      },
+      "instructions": {
+        "ar": [
+          "طبّق جهد اختبار 1 kV تيار مستمر بتوصيل أطراف الميغر عند أحد طرفي القضيب، كما في الشكل.",
+          "أرّض الطرف الآخر عبر مفتاح، وقس المقاومة بإغلاق ذلك المفتاح.",
+          "كرر الاختبار للوجه Y (مع فتح الوجهين R و B) ثم للوجه B (مع فتح الوجهين Y و R).",
+          "سجّل المقاومة المقاسة في نماذج الاختبار. يجب أن تساوي صفرًا، وهو ما يدل على أن الطرفين ينتميان لنفس الوجه.",
+          "فحص ذاتي: الحصول على قراءة صفرية في الأوجه الثلاثة."
+        ],
+        "ur": [
+          "شکل کے مطابق بس بار کے ایک سرے پر میگر کے ٹرمینل جوڑ کر 1 kV DC ٹیسٹ وولٹیج لگائیں۔",
+          "دوسرا سرا ایک سوئچ کے ذریعے ارتھ کریں اور وہ سوئچ بند کر کے مزاحمت ناپیں۔",
+          "یہی ٹیسٹ فیز Y کے لیے (فیز R اور B کھلے رکھ کر) اور پھر فیز B کے لیے (فیز Y اور R کھلے رکھ کر) دہرائیں۔",
+          "ماپی گئی مزاحمت ٹیسٹ فارم میں درج کریں۔ یہ صفر ہونی چاہیے، جو ظاہر کرتا ہے کہ دونوں سرے ایک ہی فیز کے ہیں۔",
+          "سیلف چیک: تینوں فیز پر صفر ریڈنگ ملی ہو۔"
+        ],
+        "hi": [
+          "चित्र के अनुसार बसबार के एक सिरे पर मेगर के टर्मिनल जोड़कर 1 kV DC टेस्ट वोल्टेज लगाएँ।",
+          "दूसरा सिरा एक स्विच के ज़रिए अर्थ करें और वह स्विच बंद करके रेज़िस्टेंस मापें।",
+          "यही टेस्ट फ़ेज़ Y के लिए (फ़ेज़ R और B खुले रखकर) और फिर फ़ेज़ B के लिए (फ़ेज़ Y और R खुले रखकर) दोहराएँ।",
+          "मापी गई रेज़िस्टेंस टेस्ट फ़ॉर्म में दर्ज करें। यह शून्य होनी चाहिए, जो दिखाता है कि दोनों सिरे एक ही फ़ेज़ के हैं।",
+          "सेल्फ़-चेक: तीनों फ़ेज़ पर शून्य रीडिंग मिली हो।"
+        ],
+        "fr": [
+          "Appliquer 1 kV CC en raccordant les bornes du mégohmmètre à une extrémité de la barre, comme sur la figure.",
+          "Mettre l’autre extrémité à la terre au travers d’un interrupteur et mesurer la résistance en fermant celui-ci.",
+          "Répéter l’essai pour la phase Y (phases R et B ouvertes) puis pour la phase B (phases Y et R ouvertes).",
+          "Consigner la résistance mesurée sur les formulaires. Elle doit être égale à zéro, ce qui indique que les deux extrémités appartiennent à la même phase.",
+          "Auto-contrôle : lecture nulle obtenue sur les trois phases."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز قياس عزل Megger",
+          "أسلاك اختبار",
+          "مفتاح قصر",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "Megger IR ٹیسٹ کٹ",
+          "ٹیسٹ لیڈ",
+          "شارٹنگ سوئچ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "Megger IR टेस्ट किट",
+          "टेस्ट लीड",
+          "शॉर्टिंग स्विच",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Kit de mesure d’isolement Megger",
+          "Cordons d’essai",
+          "Interrupteur de court-circuit",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "اعمل على طرف واحد في كل مرة وأبقِ الطرف البعيد تحت سيطرتك. القراءة غير الصفرية تعني أن الطرفين ليسا نفس الوجه — توقف وأبلغ بدلًا من إعادة التوصيل بنفسك.",
+        "ur": "ایک وقت میں ایک سرے پر کام کریں اور دور والا سرا اپنے کنٹرول میں رکھیں۔ غیر صفر ریڈنگ کا مطلب ہے دونوں سرے ایک فیز کے نہیں — رک جائیں اور اطلاع دیں، خود دوبارہ کنکشن نہ بنائیں۔",
+        "hi": "एक बार में एक सिरे पर काम करें और दूर वाला सिरा अपने नियंत्रण में रखें। शून्य के अलावा रीडिंग का मतलब है दोनों सिरे एक फ़ेज़ के नहीं — रुकें और सूचित करें, खुद दोबारा कनेक्शन न बनाएँ।",
+        "fr": "Travailler à une extrémité à la fois et garder l’extrémité opposée sous son propre contrôle. Une lecture non nulle signifie que les extrémités ne sont pas de la même phase — arrêter et le signaler au lieu de reprendre le raccordement soi-même."
+      }
+    },
+    "3": {
+      "title": {
+        "ar": "قياس مقاومة العزل",
+        "ur": "انسولیشن ریزسٹنس کی پیمائش",
+        "hi": "इंसुलेशन रेज़िस्टेंस मापन",
+        "fr": "Mesure de résistance d’isolement"
+      },
+      "instructions": {
+        "ar": [
+          "نفّذ الاختبار حسب مخطط التوصيل بجهد 5 kV تيار مستمر من جهاز قياس العزل/السعة، لمدة دقيقة واحدة.",
+          "اختبر الوجه R أولًا، ثم كرر نفس التوصيل للوجه Y وللوجه B.",
+          "سجّل قيم العزل المقاسة في نماذج الاختبار وقيّمها وفق المعايير المحددة (أكبر من 100 MΩ).",
+          "فحص ذاتي: ثلاث قراءات مسجّلة، كل منها أعلى من 100 MΩ."
+        ],
+        "ur": [
+          "کنکشن ڈایاگرام کے مطابق IR/کیپیسیٹنس ٹیسٹر سے 5 kV DC، 1 منٹ کے لیے لگا کر ٹیسٹ کریں۔",
+          "پہلے فیز R، پھر یہی کنکشن فیز Y اور فیز B کے لیے دہرائیں۔",
+          "ماپی گئی IR قدریں ٹیسٹ فارم میں درج کریں اور مقررہ معیار (100 MΩ سے زیادہ) کے مطابق جانچیں۔",
+          "سیلف چیک: تین ریڈنگ درج ہوں، ہر ایک 100 MΩ سے اوپر۔"
+        ],
+        "hi": [
+          "कनेक्शन डायग्राम के अनुसार IR/कैपेसिटेंस टेस्टर से 5 kV DC, 1 मिनट के लिए लगाकर टेस्ट करें।",
+          "पहले फ़ेज़ R, फिर यही कनेक्शन फ़ेज़ Y और फ़ेज़ B के लिए दोहराएँ।",
+          "मापी गई IR वैल्यू टेस्ट फ़ॉर्म में दर्ज करें और तय मानक (100 MΩ से अधिक) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: तीन रीडिंग दर्ज हों, हर एक 100 MΩ से ऊपर।"
+        ],
+        "fr": [
+          "Réaliser l’essai selon le schéma avec 5 kV CC appliqués par le testeur d’isolement/capacité, pendant 1 minute.",
+          "Essayer d’abord la phase R, puis répéter le même raccordement pour la phase Y et la phase B.",
+          "Consigner les valeurs d’isolement mesurées et les évaluer selon les critères fixés (> 100 MΩ).",
+          "Auto-contrôle : trois valeurs consignées, chacune supérieure à 100 MΩ."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز قياس عزل Megger",
+          "أسلاك اختبار جهد عالٍ",
+          "أسلاك تأريض",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "Megger IR ٹیسٹ کٹ",
+          "HV ٹیسٹ لیڈ",
+          "ارتھنگ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "Megger IR टेस्ट किट",
+          "HV टेस्ट लीड",
+          "अर्थिंग लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Kit de mesure d’isolement Megger",
+          "Cordons HT",
+          "Cordons de terre",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "يحتفظ القضيب بشحنته بعد اختبار 5 kV. فرّغ كل موصّل إلى الأرض واترك عصا التفريغ عليه قبل أن تلمس طرفًا أو تنتقل إلى الوجه التالي.",
+        "ur": "5 kV ٹیسٹ کے بعد بس بار میں چارج باقی رہتا ہے۔ کسی ٹرمینل کو ہاتھ لگانے یا اگلے فیز پر جانے سے پہلے ہر کنڈکٹر کو ارتھ پر ڈسچارج کریں اور ڈسچارج راڈ لگا رہنے دیں۔",
+        "hi": "5 kV टेस्ट के बाद बसबार में चार्ज बचा रहता है। किसी टर्मिनल को छूने या अगले फ़ेज़ पर जाने से पहले हर कंडक्टर को अर्थ पर डिस्चार्ज करें और डिस्चार्ज रॉड लगी रहने दें।",
+        "fr": "Une barre conserve sa charge après un essai à 5 kV. Décharger chaque conducteur à la terre et y laisser la perche de décharge avant de toucher une borne ou de passer à la phase suivante."
+      }
+    }
+  }
+}

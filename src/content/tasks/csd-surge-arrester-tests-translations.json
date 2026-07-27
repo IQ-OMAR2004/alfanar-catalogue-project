@@ -1,0 +1,291 @@
+{
+  "_note": "Translations for csd-surge-arrester-tests.js and its photo variant. Step 1 (safety precautions) is translated inline in src/content/csd-safety.js because it is shared by every commissioning task. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially test voltages, currents and acceptance criteria. English in the .js file is authoritative.",
+  "meta": {
+    "title": {
+      "ar": "اختبارات مانع الصواعق",
+      "ur": "سرج ارسٹر ٹیسٹ",
+      "hi": "सर्ज अरेस्टर टेस्ट",
+      "fr": "Essais de parafoudre"
+    },
+    "summary": {
+      "ar": "اختبارات الإدخال في الخدمة لمانعات الصواعق — مقاومة العزل ومعامل الفقد (tan δ) وتيار التسرّب.",
+      "ur": "سرج ارسٹر کے کمیشننگ ٹیسٹ — انسولیشن ریزسٹنس، ڈسیپیشن فیکٹر (tan δ) اور لیکیج کرنٹ۔",
+      "hi": "सर्ज अरेस्टर के कमीशनिंग टेस्ट — इंसुलेशन रेज़िस्टेंस, डिसिपेशन फ़ैक्टर (tan δ) और लीकेज करंट।",
+      "fr": "Essais de mise en service de parafoudres — isolement, facteur de dissipation (tan δ) et courant de fuite."
+    }
+  },
+  "steps": {
+    "2": {
+      "title": {
+        "ar": "جهّز الجهاز ونظّف العوازل",
+        "ur": "آلہ سیٹ کریں اور بشنگ صاف کریں",
+        "hi": "उपकरण सेट करें और बुशिंग साफ़ करें",
+        "fr": "Installer l’appareil et nettoyer les isolateurs"
+      },
+      "instructions": {
+        "ar": [
+          "ضع جهاز الاختبار المعايَر المراد استخدامه على قاعدة ثابتة ومستوية إلى حد معقول في منطقة جافة.",
+          "تحقق أن ملصق المعايرة ساري المفعول قبل استخدام الجهاز.",
+          "نظّف جيدًا كل عوازل مانعات الصواعق التي ستُختبر.",
+          "فحص ذاتي: الجهاز مستوٍ وثابت، وكل عازل نظيف وجاف."
+        ],
+        "ur": [
+          "استعمال ہونے والا کیلیبریٹڈ ٹیسٹ آلہ خشک جگہ میں مضبوط اور معقول حد تک ہموار بنیاد پر رکھیں۔",
+          "آلہ استعمال کرنے سے پہلے کیلیبریشن لیبل کی مدت جانچیں۔",
+          "جن سرج ارسٹر کا ٹیسٹ کرنا ہے ان کی تمام بشنگ اچھی طرح صاف کریں۔",
+          "سیلف چیک: آلہ ہموار اور مستحکم ہو، ہر بشنگ صاف اور خشک ہو۔"
+        ],
+        "hi": [
+          "इस्तेमाल होने वाला कैलिब्रेटेड टेस्ट उपकरण सूखी जगह में मज़बूत और लगभग समतल आधार पर रखें।",
+          "उपकरण इस्तेमाल करने से पहले कैलिब्रेशन लेबल की वैधता जाँचें।",
+          "जिन सर्ज अरेस्टर का टेस्ट करना है उनकी सभी बुशिंग अच्छी तरह साफ़ करें।",
+          "सेल्फ़-चेक: उपकरण समतल और स्थिर हो, हर बुशिंग साफ़ और सूखी हो।"
+        ],
+        "fr": [
+          "Installer l’appareil d’essai ÉTALONNÉ sur une base ferme et raisonnablement horizontale, dans une zone sèche.",
+          "Vérifier que l’étiquette d’étalonnage est valide avant d’utiliser l’appareil.",
+          "Nettoyer soigneusement tous les isolateurs des parafoudres à essayer.",
+          "Auto-contrôle : appareil de niveau et stable, chaque isolateur propre et sec."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز اختبار معايَر",
+          "قطعة تنظيف",
+          "ميزان تسوية"
+        ],
+        "ur": [
+          "کیلیبریٹڈ ٹیسٹ آلہ",
+          "صفائی کا کپڑا",
+          "اسپرٹ لیول"
+        ],
+        "hi": [
+          "कैलिब्रेटेड टेस्ट उपकरण",
+          "सफ़ाई का कपड़ा",
+          "स्पिरिट लेवल"
+        ],
+        "fr": [
+          "Appareil d’essai étalonné",
+          "Chiffon de nettoyage",
+          "Niveau à bulle"
+        ]
+      },
+      "warning": {
+        "ar": "العازل المتّسخ أو الرطب يضيف تسرّبًا سطحيًا إلى كل قراءة تليه. نظّفه وجفّفه أولًا، وإلا فالنتائج ليست عن مانع الصواعق.",
+        "ur": "میلی یا نم بشنگ بعد کی ہر ریڈنگ میں سطحی لیکیج شامل کر دیتی ہے۔ پہلے صاف اور خشک کریں، ورنہ نتائج ارسٹر کے نہیں ہوں گے۔",
+        "hi": "गंदी या नम बुशिंग बाद की हर रीडिंग में सतही लीकेज जोड़ देती है। पहले साफ़ और सूखा करें, वरना नतीजे अरेस्टर के नहीं होंगे।",
+        "fr": "Un isolateur sale ou humide ajoute une fuite superficielle à toutes les mesures suivantes. Le nettoyer et le sécher d’abord, sinon les résultats ne concernent pas le parafoudre."
+      }
+    },
+    "3": {
+      "title": {
+        "ar": "اختبار مقاومة العزل",
+        "ur": "انسولیشن ریزسٹنس ٹیسٹ",
+        "hi": "इंसुलेशन रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance d’isolement"
+      },
+      "instructions": {
+        "ar": [
+          "نفّذ اختبار مقاومة العزل بجهد تيار مستمر مطبّق مقداره 2.5 kV حسب توصيلات الاختبار.",
+          "لمانع الصواعق أحادي الطبقة استخدم توصيلة الطبقة الواحدة. ولمانع الصواعق متعدد الطبقات نفّذ توصيلة الإجمالي ثم الطبقة السفلى ثم الطبقة العليا بالتتابع.",
+          "كرر توصيلات الاختبار على مانعات الصواعق المعنية للوجهين الآخرين Y و B.",
+          "سجّل نتائج الاختبار في نماذج الاختبار وقيّمها وفق المعايير (أكبر من 1 MΩ).",
+          "فحص ذاتي: كل طبقة وكل وجه مسجّل، وكل قراءة أعلى من 1 MΩ."
+        ],
+        "ur": [
+          "ٹیسٹ کنکشن کے مطابق 2.5 kV DC لگا کر انسولیشن ریزسٹنس ٹیسٹ کریں۔",
+          "سنگل اسٹیک ارسٹر کے لیے سنگل اسٹیک کنکشن استعمال کریں۔ ملٹی اسٹیک کے لیے باری باری اوور آل، لوئر اسٹیک اور اپر اسٹیک کنکشن لیں۔",
+          "متعلقہ ارسٹر پر یہی ٹیسٹ کنکشن باقی دو فیز Y اور B کے لیے دہرائیں۔",
+          "نتائج ٹیسٹ فارم میں درج کریں اور معیار (1 MΩ سے زیادہ) کے مطابق جانچیں۔",
+          "سیلف چیک: ہر اسٹیک اور فیز درج ہو، ہر ریڈنگ 1 MΩ سے اوپر۔"
+        ],
+        "hi": [
+          "टेस्ट कनेक्शन के अनुसार 2.5 kV DC लगाकर इंसुलेशन रेज़िस्टेंस टेस्ट करें।",
+          "सिंगल-स्टैक अरेस्टर के लिए सिंगल-स्टैक कनेक्शन इस्तेमाल करें। मल्टी-स्टैक के लिए बारी-बारी ओवरऑल, लोअर स्टैक और अपर स्टैक कनेक्शन लें।",
+          "संबंधित अरेस्टर पर यही टेस्ट कनेक्शन बाक़ी दो फ़ेज़ Y और B के लिए दोहराएँ।",
+          "नतीजे टेस्ट फ़ॉर्म में दर्ज करें और मानक (1 MΩ से अधिक) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: हर स्टैक और फ़ेज़ दर्ज हो, हर रीडिंग 1 MΩ से ऊपर।"
+        ],
+        "fr": [
+          "Réaliser l’essai de résistance d’isolement sous une tension continue injectée de 2,5 kV, selon les raccordements d’essai.",
+          "Pour un parafoudre monobloc, utiliser le raccordement monobloc. Pour un parafoudre à plusieurs éléments, réaliser tour à tour le raccordement global, l’élément inférieur puis l’élément supérieur.",
+          "Répéter les raccordements sur les parafoudres concernés pour les deux autres phases, Y et B.",
+          "Consigner les résultats sur les formulaires et les évaluer selon les normes (> 1 MΩ).",
+          "Auto-contrôle : chaque élément et chaque phase consignés, chaque valeur supérieure à 1 MΩ."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز قياس عزل (Megger)",
+          "أسلاك اختبار جهد عالٍ",
+          "أسلاك تأريض",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "IR ٹیسٹر (Megger)",
+          "HV ٹیسٹ لیڈ",
+          "ارتھنگ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "IR टेस्टर (Megger)",
+          "HV टेस्ट लीड",
+          "अर्थिंग लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Testeur d’isolement (Megger)",
+          "Cordons HT",
+          "Cordons de terre",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "أسلاك الاختبار تحمل 2.5 kV تيار مستمر. يحتفظ مانع الصواعق بشحنة — فرّغه إلى الأرض بعد كل قياس قبل نقل سلك إلى الطبقة التالية.",
+        "ur": "ٹیسٹ لیڈ میں 2.5 kV DC ہوتا ہے۔ ارسٹر میں چارج باقی رہتا ہے — اگلی اسٹیک پر لیڈ منتقل کرنے سے پہلے ہر پیمائش کے بعد اسے ارتھ پر ڈسچارج کریں۔",
+        "hi": "टेस्ट लीड में 2.5 kV DC रहता है। अरेस्टर में चार्ज बचा रहता है — अगली स्टैक पर लीड ले जाने से पहले हर माप के बाद उसे अर्थ पर डिस्चार्ज करें।",
+        "fr": "Les cordons portent 2,5 kV CC. Un parafoudre conserve sa charge — le décharger à la terre après chaque mesure avant de déplacer un cordon vers l’élément suivant."
+      }
+    },
+    "4": {
+      "title": {
+        "ar": "اختبار معامل الفقد (tan δ)",
+        "ur": "ڈسیپیشن فیکٹر (tan δ) ٹیسٹ",
+        "hi": "डिसिपेशन फ़ैक्टर (tan δ) टेस्ट",
+        "fr": "Essai de facteur de dissipation (tan δ)"
+      },
+      "instructions": {
+        "ar": [
+          "نفّذ اختبار معامل الفقد (tan δ) حسب توصيلات الاختبار، باستخدام جهاز اختبار العزل بمعامل القدرة.",
+          "استخدم توصيلة الطبقة الواحدة أو توصيلة الطبقات المتعددة بما يطابق مانع الصواعق قيد الاختبار.",
+          "كرر توصيلات الاختبار على مانعات الصواعق المعنية للوجهين الآخرين Y و B.",
+          "سجّل نتائج الاختبار في نماذج الاختبار وقيّمها وفق المعايير (0.5%).",
+          "فحص ذاتي: قيمة tan δ مسجّلة لكل مانع صواعق ولكل وجه."
+        ],
+        "ur": [
+          "پاور فیکٹر انسولیشن ٹیسٹ آلے سے، ٹیسٹ کنکشن کے مطابق ڈسیپیشن فیکٹر (tan δ) ٹیسٹ کریں۔",
+          "زیرِ ٹیسٹ ارسٹر کے مطابق سنگل اسٹیک یا ملٹی اسٹیک کنکشن استعمال کریں۔",
+          "متعلقہ ارسٹر پر یہی ٹیسٹ کنکشن باقی دو فیز Y اور B کے لیے دہرائیں۔",
+          "نتائج ٹیسٹ فارم میں درج کریں اور معیار (0.5%) کے مطابق جانچیں۔",
+          "سیلف چیک: ہر ارسٹر اور ہر فیز کے لیے tan δ کی قدر درج ہو۔"
+        ],
+        "hi": [
+          "पावर फ़ैक्टर इंसुलेशन टेस्ट उपकरण से, टेस्ट कनेक्शन के अनुसार डिसिपेशन फ़ैक्टर (tan δ) टेस्ट करें।",
+          "टेस्ट किए जा रहे अरेस्टर के अनुसार सिंगल-स्टैक या मल्टी-स्टैक कनेक्शन इस्तेमाल करें।",
+          "संबंधित अरेस्टर पर यही टेस्ट कनेक्शन बाक़ी दो फ़ेज़ Y और B के लिए दोहराएँ।",
+          "नतीजे टेस्ट फ़ॉर्म में दर्ज करें और मानक (0.5%) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: हर अरेस्टर और हर फ़ेज़ के लिए tan δ की वैल्यू दर्ज हो।"
+        ],
+        "fr": [
+          "Réaliser l’essai de facteur de dissipation (tan δ) selon les raccordements, avec l’équipement d’essai d’isolement à facteur de puissance.",
+          "Utiliser le raccordement monobloc ou multi-éléments selon le parafoudre essayé.",
+          "Répéter les raccordements sur les parafoudres concernés pour les deux autres phases, Y et B.",
+          "Consigner les résultats sur les formulaires et les évaluer selon les normes (0,5 %).",
+          "Auto-contrôle : une valeur de tan δ consignée pour chaque parafoudre et chaque phase."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز اختبار العزل بمعامل القدرة",
+          "سلك جهد عالٍ",
+          "أسلاك تأريض",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "پاور فیکٹر انسولیشن ٹیسٹ آلہ",
+          "HV لیڈ",
+          "ارتھنگ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "पावर फ़ैक्टर इंसुलेशन टेस्ट उपकरण",
+          "HV लीड",
+          "अर्थिंग लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Équipement d’essai à facteur de puissance",
+          "Cordon HT",
+          "Cordons de terre",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "يشغّل جهاز معامل القدرة مانع الصواعق بجهد عالٍ. أبقِ المنطقة مسيَّجة، ودع الجهاز يفرّغ المعدة قبل أن يلمس أحد أي وصلة.",
+        "ur": "پاور فیکٹر سیٹ ارسٹر کو ہائی وولٹیج پر چلاتا ہے۔ علاقہ باڑ لگا رکھیں، اور کسی کے کنکشن چھونے سے پہلے سیٹ کو آلہ ڈسچارج کرنے دیں۔",
+        "hi": "पावर फ़ैक्टर सेट अरेस्टर को हाई वोल्टेज पर चलाता है। क्षेत्र बैरियर किया रखें, और किसी के कनेक्शन छूने से पहले सेट को उपकरण डिस्चार्ज करने दें।",
+        "fr": "L’appareil met le parafoudre sous haute tension. Maintenir la zone balisée et laisser l’appareil décharger l’objet avant que quiconque ne touche un raccordement."
+      }
+    },
+    "5": {
+      "title": {
+        "ar": "اختبار تيار التسرّب",
+        "ur": "لیکیج کرنٹ ٹیسٹ",
+        "hi": "लीकेज करंट टेस्ट",
+        "fr": "Essai de courant de fuite"
+      },
+      "instructions": {
+        "ar": [
+          "وصّل جهاز اختبار الجهد العالي/الفائق بجهده المقنّن إلى مانع الصواعق حسب توصيلة الاختبار.",
+          "افصل الأرضي عن مانع الصواعق حتى يمر تيار التسرّب كاملًا عبر جهاز القياس.",
+          "قس تيار التسرّب للوجه R كما هو مبيّن، مع فصل الأرضي.",
+          "كرر القياس للوجهين Y و B.",
+          "سجّل القيم المقاسة في نماذج الاختبار. يجب ألا يتجاوز تيار التسرّب 30 mA.",
+          "فحص ذاتي: إعادة توصيل الأرضي على كل مانع صواعق قبل مغادرة الموقع."
+        ],
+        "ur": [
+          "ٹیسٹ کنکشن کے مطابق EHV/HV ٹیسٹر کو اس کی ریٹڈ وولٹیج پر سرج ارسٹر سے جوڑیں۔",
+          "ارسٹر سے ارتھ ہٹا دیں تاکہ پورا لیکیج کرنٹ میٹر سے گزرے۔",
+          "ارتھ ہٹا کر، دکھائے گئے طریقے سے فیز R کا لیکیج کرنٹ ناپیں۔",
+          "یہی پیمائش فیز Y اور B کے لیے دہرائیں۔",
+          "ماپی گئی قدریں ٹیسٹ فارم میں درج کریں۔ لیکیج کرنٹ 30 mA سے زیادہ نہیں ہونا چاہیے۔",
+          "سیلف چیک: علاقہ چھوڑنے سے پہلے ہر ارسٹر پر ارتھ دوبارہ لگا دی ہو۔"
+        ],
+        "hi": [
+          "टेस्ट कनेक्शन के अनुसार EHV/HV टेस्टर को उसकी रेटेड वोल्टेज पर सर्ज अरेस्टर से जोड़ें।",
+          "अरेस्टर से अर्थ हटा दें ताकि पूरा लीकेज करंट मीटर से गुज़रे।",
+          "अर्थ हटाकर, दिखाए गए तरीक़े से फ़ेज़ R का लीकेज करंट मापें।",
+          "यही माप फ़ेज़ Y और B के लिए दोहराएँ।",
+          "मापी गई वैल्यू टेस्ट फ़ॉर्म में दर्ज करें। लीकेज करंट 30 mA से ज़्यादा नहीं होना चाहिए।",
+          "सेल्फ़-चेक: क्षेत्र छोड़ने से पहले हर अरेस्टर पर अर्थ दोबारा लगा दी हो।"
+        ],
+        "fr": [
+          "Raccorder le testeur EHT/HT à sa tension assignée au parafoudre, selon le schéma d’essai.",
+          "Débrancher la terre du parafoudre pour que la totalité du courant de fuite passe par l’appareil de mesure.",
+          "Mesurer le courant de fuite de la phase R comme indiqué, terre débranchée.",
+          "Répéter la mesure pour les phases Y et B.",
+          "Consigner les valeurs mesurées sur les formulaires. Le courant de fuite ne doit pas dépasser 30 mA.",
+          "Auto-contrôle : terre rebranchée sur chaque parafoudre avant de quitter la zone."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز اختبار جهد عالٍ/فائق",
+          "أميتر / ملقط قياس",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "EHV/HV ٹیسٹر",
+          "ایمی میٹر / کلیمپ میٹر",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "EHV/HV टेस्टर",
+          "ऐमीटर / क्लैंप मीटर",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Testeur EHT/HT",
+          "Ampèremètre / pince",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "يُفصل أرضي مانع الصواعق عمدًا لهذا القياس، فلا يستطيع المانع أداء وظيفته أثناء الاختبار. أبعد الجميع، خذ القراءة، وأعد توصيل الأرضي فورًا بعدها.",
+        "ur": "اس پیمائش کے لیے ارسٹر کی ارتھ جان بوجھ کر ہٹائی جاتی ہے، اس لیے ٹیسٹ کے دوران ارسٹر اپنا کام نہیں کر سکتا۔ سب کو دور رکھیں، ریڈنگ لیں، اور فوراً بعد ارتھ دوبارہ لگائیں۔",
+        "hi": "इस माप के लिए अरेस्टर की अर्थ जानबूझकर हटाई जाती है, इसलिए टेस्ट के दौरान अरेस्टर अपना काम नहीं कर सकता। सबको दूर रखें, रीडिंग लें, और तुरंत बाद अर्थ दोबारा लगाएँ।",
+        "fr": "La terre du parafoudre est volontairement débranchée pour cette mesure : le parafoudre ne peut donc pas jouer son rôle pendant l’essai. Écarter tout le monde, relever la valeur et rebrancher la terre immédiatement après."
+      }
+    }
+  }
+}

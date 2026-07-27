@@ -442,7 +442,8 @@ const sections = [
     },
   },
   {
-    id: 'close-gas-test', from: 23, to: 25,
+    // Step ids in this task skip 9, so the last id is 26 for 25 steps.
+    id: 'close-gas-test', from: 23, to: 26,
     title: {
       en: 'Close, vacuum, gas & test',
       ar: 'الإغلاق والتفريغ والغاز والاختبار',

@@ -1,0 +1,217 @@
+{
+  "_note": "Translations for csd-es-tests.js and its photo variant. Step 1 (safety precautions) is translated inline in src/content/csd-safety.js because it is shared by every commissioning task. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially test voltages, currents and acceptance criteria. English in the .js file is authoritative.",
+  "meta": {
+    "title": {
+      "ar": "اختبارات مفتاح التأريض 13.8 kV",
+      "ur": "13.8 kV ارتھنگ سوئچ ٹیسٹ",
+      "hi": "13.8 kV अर्थिंग स्विच टेस्ट",
+      "fr": "Essais sectionneur de terre 13,8 kV"
+    },
+    "summary": {
+      "ar": "اختبارات الإدخال في الخدمة لمفتاح تأريض لوحة 13.8 kV — مقاومة العزل ومقاومة التلامس وتوقيت الفتح والغلق.",
+      "ur": "13.8 kV سوئچ گیئر ارتھنگ سوئچ کے کمیشننگ ٹیسٹ — انسولیشن ریزسٹنس، کانٹیکٹ ریزسٹنس اور اوپن/کلوز ٹائمنگ۔",
+      "hi": "13.8 kV स्विचगियर अर्थिंग स्विच के कमीशनिंग टेस्ट — इंसुलेशन रेज़िस्टेंस, कॉन्टैक्ट रेज़िस्टेंस और ओपन/क्लोज़ टाइमिंग।",
+      "fr": "Essais de mise en service d’un sectionneur de terre 13,8 kV — isolement, résistance de contact et chronométrage."
+    }
+  },
+  "steps": {
+    "2": {
+      "title": {
+        "ar": "اختبار مقاومة العزل",
+        "ur": "انسولیشن ریزسٹنس ٹیسٹ",
+        "hi": "इंसुलेशन रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance d’isolement"
+      },
+      "instructions": {
+        "ar": [
+          "انزع سلك التأريض من مفتاح التأريض قبل أن تبدأ.",
+          "احقن 5 kV تيار مستمر لمدة دقيقة واحدة على الوجه R، مع توصيل الوجهين Y و B بالأرض، حسب مخطط التوصيل.",
+          "كرر نفس التوصيل والقياس للوجه Y، ثم للوجه B.",
+          "سجّل القيم المقاسة في نماذج الاختبار وقيّمها وفق المعايير المقبولة (أكبر من 100 MΩ).",
+          "فحص ذاتي: سلك التأريض منزوع، وثلاث قراءات مسجّلة أعلى من 100 MΩ."
+        ],
+        "ur": [
+          "شروع کرنے سے پہلے ارتھنگ سوئچ سے ارتھنگ وائر ہٹا دیں۔",
+          "کنکشن ڈایاگرام کے مطابق فیز R پر 1 منٹ کے لیے 5 kV DC لگائیں، جبکہ فیز Y اور B ارتھ سے جڑے ہوں۔",
+          "یہی کنکشن اور پیمائش فیز Y کے لیے، پھر فیز B کے لیے دہرائیں۔",
+          "ماپی گئی قدریں ٹیسٹ فارم میں درج کریں اور معیار (100 MΩ سے زیادہ) کے مطابق جانچیں۔",
+          "سیلف چیک: ارتھنگ وائر ہٹا ہو، تین ریڈنگ 100 MΩ سے اوپر درج ہوں۔"
+        ],
+        "hi": [
+          "शुरू करने से पहले अर्थिंग स्विच से अर्थिंग वायर हटा दें।",
+          "कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर 1 मिनट के लिए 5 kV DC लगाएँ, जबकि फ़ेज़ Y और B अर्थ से जुड़े हों।",
+          "यही कनेक्शन और माप फ़ेज़ Y के लिए, फिर फ़ेज़ B के लिए दोहराएँ।",
+          "मापी गई वैल्यू टेस्ट फ़ॉर्म में दर्ज करें और मानक (100 MΩ से अधिक) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: अर्थिंग वायर हटा हो, तीन रीडिंग 100 MΩ से ऊपर दर्ज हों।"
+        ],
+        "fr": [
+          "Retirer le câble de terre du sectionneur de terre avant de commencer.",
+          "Injecter 5 kV CC pendant 1 minute sur la phase R, les phases Y et B étant reliées à la terre, selon le schéma.",
+          "Répéter le même raccordement et la même mesure pour la phase Y, puis pour la phase B.",
+          "Consigner les valeurs mesurées et les évaluer selon les critères (> 100 MΩ).",
+          "Auto-contrôle : câble de terre retiré, trois valeurs supérieures à 100 MΩ."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز قياس عزل Megger",
+          "أسلاك اختبار جهد عالٍ",
+          "أسلاك تأريض",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "Megger IR ٹیسٹ کٹ",
+          "HV ٹیسٹ لیڈ",
+          "ارتھنگ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "Megger IR टेस्ट किट",
+          "HV टेस्ट लीड",
+          "अर्थिंग लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Kit de mesure d’isolement Megger",
+          "Cordons HT",
+          "Cordons de terre",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "نزع سلك التأريض يزيل الأرضي الذي يوفّره هذا المفتاح. اعتبر الحجرة قابلة لأن تصبح حية من تلك اللحظة، وأعد سلك التأريض فور انتهاء الاختبار.",
+        "ur": "ارتھنگ وائر ہٹانے سے وہ ارتھ ختم ہو جاتی ہے جو یہ سوئچ دیتا ہے۔ اُس لمحے سے کمپارٹمنٹ کو زندہ ہو سکنے والا سمجھیں، اور ٹیسٹ ختم ہوتے ہی ارتھنگ وائر واپس لگائیں۔",
+        "hi": "अर्थिंग वायर हटाने से वह अर्थ हट जाती है जो यह स्विच देता है। उस पल से कम्पार्टमेंट को जीवित हो सकने वाला मानें, और टेस्ट खत्म होते ही अर्थिंग वायर वापस लगाएँ।",
+        "fr": "Retirer le câble de terre supprime la mise à la terre assurée par ce sectionneur. Considérer le compartiment comme pouvant être mis sous tension dès cet instant et remettre le câble dès la fin de l’essai."
+      }
+    },
+    "3": {
+      "title": {
+        "ar": "اختبار مقاومة التلامس",
+        "ur": "کانٹیکٹ ریزسٹنس ٹیسٹ",
+        "hi": "कॉन्टैक्ट रेज़िस्टेंस टेस्ट",
+        "fr": "Essai de résistance de contact"
+      },
+      "instructions": {
+        "ar": [
+          "احقن 100 A لمدة دقيقة واحدة على الوجه R حسب مخطط التوصيل.",
+          "كرر نفس التوصيل والقياس للوجه Y، ثم للوجه B.",
+          "سجّل القيم المقاسة في نماذج الاختبار وقيّمها وفق المعايير المقبولة (أكبر من 1 GΩ كما هو مطبوع في الدليل — تحقّق من الحد والوحدة الصحيحين في نموذج الاختبار المعتمد قبل قبول النتيجة).",
+          "فحص ذاتي: ثلاث قراءات مسجّلة مقابل المعيار المدوّن في النموذج."
+        ],
+        "ur": [
+          "کنکشن ڈایاگرام کے مطابق فیز R پر 1 منٹ کے لیے 100 A لگائیں۔",
+          "یہی کنکشن اور پیمائش فیز Y کے لیے، پھر فیز B کے لیے دہرائیں۔",
+          "ماپی گئی قدریں ٹیسٹ فارم میں درج کریں اور معیار کے مطابق جانچیں (مینوئل میں چھپا ہوا ‘1 GΩ سے زیادہ’ — نتیجہ قبول کرنے سے پہلے کنٹرولڈ ٹیسٹ فارم پر درست حد اور یونٹ کی تصدیق کریں)۔",
+          "سیلف چیک: فارم کے معیار کے مقابل تین ریڈنگ درج ہوں۔"
+        ],
+        "hi": [
+          "कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर 1 मिनट के लिए 100 A लगाएँ।",
+          "यही कनेक्शन और माप फ़ेज़ Y के लिए, फिर फ़ेज़ B के लिए दोहराएँ।",
+          "मापी गई वैल्यू टेस्ट फ़ॉर्म में दर्ज करें और मानक के अनुसार जाँचें (मैनुअल में छपा ‘1 GΩ से अधिक’ — नतीजा स्वीकार करने से पहले कंट्रोल्ड टेस्ट फ़ॉर्म पर सही सीमा और यूनिट की पुष्टि करें)।",
+          "सेल्फ़-चेक: फ़ॉर्म के मानक के सामने तीन रीडिंग दर्ज हों।"
+        ],
+        "fr": [
+          "Injecter 100 A pendant 1 minute sur la phase R selon le schéma de raccordement.",
+          "Répéter le même raccordement et la même mesure pour la phase Y, puis pour la phase B.",
+          "Consigner les valeurs mesurées et les évaluer selon les critères (« > 1 GΩ » tel qu’imprimé dans le manuel — vérifier la limite et l’unité correctes sur le formulaire contrôlé avant d’accepter le résultat).",
+          "Auto-contrôle : trois valeurs consignées face au critère du formulaire."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "طقم اختبار مقاومة التلامس",
+          "أسلاك تيار ثقيل",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "کانٹیکٹ ریزسٹنس ٹیسٹ کٹ",
+          "ہیوی کرنٹ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "कॉन्टैक्ट रेज़िस्टेंस टेस्ट किट",
+          "हैवी करंट लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Kit de mesure de résistance de contact",
+          "Cordons de forte intensité",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "يسري تيار 100 A في أسلاك الاختبار. أحكم كلتا الوصلتين قبل بدء الحقن — الملقط المرتخي عند هذا التيار يسخن ويشرر.",
+        "ur": "ٹیسٹ لیڈ میں 100 A بہتا ہے۔ کرنٹ لگانے سے پہلے دونوں کنکشن مضبوط کریں — اتنے کرنٹ پر ڈھیلا کلیمپ گرم ہو کر چنگاری دیتا ہے۔",
+        "hi": "टेस्ट लीड में 100 A बहता है। करंट लगाने से पहले दोनों कनेक्शन मज़बूत करें — इतने करंट पर ढीला क्लैंप गरम होकर चिंगारी देता है।",
+        "fr": "100 A circulent dans les cordons. Serrer fermement les deux raccordements avant l’injection — à ce courant, une pince desserrée chauffe et provoque un arc."
+      }
+    },
+    "4": {
+      "title": {
+        "ar": "اختبار توقيت الفتح والغلق",
+        "ur": "اوپن اور کلوز ٹائمنگ ٹیسٹ",
+        "hi": "ओपन और क्लोज़ टाइमिंग टेस्ट",
+        "fr": "Essai de chronométrage ouverture/fermeture"
+      },
+      "instructions": {
+        "ar": [
+          "وصّل المحلّل حسب مخطط التوصيل: التغذية الرئيسية إلى الجهاز، والتلامسات إلى مداخل التوقيت، وملفّي الغلق والفصل إلى موجب وسالب البطارية أو لوحة التيار المستمر.",
+          "نفّذ قياسي توقيت الفتح والغلق.",
+          "اطبع القيم المقاسة وسجّلها في نماذج الاختبار وقيّمها وفق المعايير المقبولة (أقل من 20 msec).",
+          "فحص ذاتي: المطبوعة مرفقة بالنموذج، وكل وجه ضمن 20 msec."
+        ],
+        "ur": [
+          "اینالائزر کو کنکشن ڈایاگرام کے مطابق جوڑیں: مین سپلائی آلے کو، کانٹیکٹ ٹائمنگ ان پٹ کو، اور کلوز و ٹرپ کوائل بیٹری یا DC پینل کے (+) اور (−) کو۔",
+          "اوپن اور کلوز ٹائمنگ کی پیمائش کریں۔",
+          "ماپی گئی قدریں پرنٹ کر کے ٹیسٹ فارم میں درج کریں اور معیار (20 msec سے کم) کے مطابق جانچیں۔",
+          "سیلف چیک: پرنٹ آؤٹ فارم کے ساتھ لگا ہو، ہر فیز 20 msec کے اندر ہو۔"
+        ],
+        "hi": [
+          "एनालाइज़र को कनेक्शन डायग्राम के अनुसार जोड़ें: मेन सप्लाई उपकरण को, कॉन्टैक्ट टाइमिंग इनपुट को, और क्लोज़ व ट्रिप कॉइल बैटरी या DC पैनल के (+) और (−) को।",
+          "ओपन और क्लोज़ टाइमिंग की माप करें।",
+          "मापी गई वैल्यू प्रिंट करके टेस्ट फ़ॉर्म में दर्ज करें और मानक (20 msec से कम) के अनुसार जाँचें।",
+          "सेल्फ़-चेक: प्रिंटआउट फ़ॉर्म के साथ लगा हो, हर फ़ेज़ 20 msec के भीतर हो।"
+        ],
+        "fr": [
+          "Raccorder l’analyseur selon le schéma : alimentation principale vers l’appareil, contacts vers les entrées de chronométrage, bobines de fermeture et de déclenchement vers le (+) et le (−) de la batterie ou du tableau CC.",
+          "Effectuer les mesures de temps d’ouverture et de fermeture.",
+          "Imprimer et consigner les valeurs mesurées et les évaluer selon les critères (< 20 ms).",
+          "Auto-contrôle : impression jointe au formulaire, chaque phase sous 20 ms."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "محلّل قاطع الدائرة",
+          "أسلاك توقيت",
+          "أسلاك الملفات",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "سرکٹ بریکر اینالائزر",
+          "ٹائمنگ لیڈ",
+          "کوائل لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "सर्किट ब्रेकर एनालाइज़र",
+          "टाइमिंग लीड",
+          "कॉइल लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Analyseur de disjoncteur",
+          "Cordons de chronométrage",
+          "Cordons de bobine",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "سيعمل مفتاح التأريض أثناء هذا الاختبار. تأكد أن لا أحد يعمل داخل الحجرة وابتعد عن الآلية قبل إعطاء أول أمر.",
+        "ur": "اس ٹیسٹ کے دوران ارتھنگ سوئچ چلے گا۔ تصدیق کریں کہ کمپارٹمنٹ میں کوئی کام نہیں کر رہا اور پہلا کمانڈ دینے سے پہلے میکانزم سے دور رہیں۔",
+        "hi": "इस टेस्ट के दौरान अर्थिंग स्विच चलेगा। पक्का करें कि कम्पार्टमेंट में कोई काम नहीं कर रहा और पहला कमांड देने से पहले मैकेनिज़्म से दूर रहें।",
+        "fr": "Le sectionneur de terre va manœuvrer pendant cet essai. Vérifier que personne n’intervient dans le compartiment et rester à l’écart du mécanisme avant la première commande."
+      }
+    }
+  }
+}

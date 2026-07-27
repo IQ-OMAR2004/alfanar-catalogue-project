@@ -1,0 +1,159 @@
+{
+  "_note": "Translations for csd-hv-tests.js and its photo variant. Step 1 (safety precautions) is translated inline in src/content/csd-safety.js because it is shared by every commissioning task. MACHINE-DRAFTED — flagged for native-speaker + SME review, especially test voltages, currents and acceptance criteria. English in the .js file is authoritative.",
+  "meta": {
+    "title": {
+      "ar": "اختبارات الجهد العالي للوحة 13.8 kV",
+      "ur": "13.8 kV سوئچ گیئر HV ٹیسٹ",
+      "hi": "13.8 kV स्विचगियर HV टेस्ट",
+      "fr": "Essais HT appareillage 13,8 kV"
+    },
+    "summary": {
+      "ar": "اختبار تحمّل الجهد العالي VLF للوحة 13.8 kV — يُجرى والقاطع مغلق ثم مفتوح، ويُقيَّم بتيار التسرّب.",
+      "ur": "13.8 kV سوئچ گیئر پر VLF ہائی وولٹیج وِد اسٹینڈ — ایک بار بریکر بند اور ایک بار کھلا، لیکیج کرنٹ سے جانچ۔",
+      "hi": "13.8 kV स्विचगियर पर VLF हाई-वोल्टेज विदस्टैंड — एक बार ब्रेकर बंद और एक बार खुला, लीकेज करंट से जाँच।",
+      "fr": "Tenue en tension VLF sur appareillage 13,8 kV — une fois disjoncteur fermé, une fois ouvert, jugée sur le courant de fuite."
+    }
+  },
+  "steps": {
+    "2": {
+      "title": {
+        "ar": "اختبار الجهد العالي VLF — القاطع مغلق",
+        "ur": "VLF ہائی وولٹیج ٹیسٹ — بریکر ON",
+        "hi": "VLF हाई-वोल्टेज टेस्ट — ब्रेकर ON",
+        "fr": "Essai VLF — disjoncteur fermé"
+      },
+      "instructions": {
+        "ar": [
+          "اجعل قاطع الدائرة في وضع التشغيل، وانزع كل أسلاك التأريض، واترك مفتاح التأريض في وضع التشغيل.",
+          "احقن 3Uo (ثلاثة أضعاف الجهد المقنّن ÷ الجذر التربيعي لـ 3) لمدة دقيقة واحدة على الوجه R، مع تأريض الوجهين Y و B، حسب مخطط التوصيل.",
+          "كرر نفس الإجراء للوجهين المتبقيين Y و B.",
+          "سجّل تيار التسرّب لكل وجه. يجب أن يكون مطابقًا لقيمة اختبار المصنع (أقل من 10 ميكروأمبير).",
+          "فحص ذاتي: ثلاث قراءات تسرّب مسجّلة، كل منها أقل من 10 ميكروأمبير."
+        ],
+        "ur": [
+          "سرکٹ بریکر ON کریں، تمام ارتھ وائرنگ ہٹا دیں، اور ارتھ سوئچ ON پوزیشن میں رکھیں۔",
+          "کنکشن ڈایاگرام کے مطابق فیز R پر 1 منٹ کے لیے 3Uo (3 × ریٹڈ وولٹیج ÷ √3) لگائیں، جبکہ فیز Y اور B ارتھ ہوں۔",
+          "یہی طریقہ باقی دو فیز Y اور B کے لیے دہرائیں۔",
+          "ہر فیز کا لیکیج کرنٹ درج کریں۔ یہ فیکٹری ٹیسٹ ویلیو کے مطابق ہونا چاہیے (10 مائیکرو ایمپیئر سے کم)۔",
+          "سیلف چیک: تین لیکیج ریڈنگ درج ہوں، ہر ایک 10 مائیکرو ایمپیئر سے کم۔"
+        ],
+        "hi": [
+          "सर्किट ब्रेकर ON करें, सारी अर्थ वायरिंग हटा दें, और अर्थ स्विच ON पोज़ीशन में रखें।",
+          "कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर 1 मिनट के लिए 3Uo (3 × रेटेड वोल्टेज ÷ √3) लगाएँ, जबकि फ़ेज़ Y और B अर्थ हों।",
+          "यही तरीक़ा बाक़ी दो फ़ेज़ Y और B के लिए दोहराएँ।",
+          "हर फ़ेज़ का लीकेज करंट दर्ज करें। यह फ़ैक्ट्री टेस्ट वैल्यू के अनुसार होना चाहिए (10 माइक्रोऐम्पियर से कम)।",
+          "सेल्फ़-चेक: तीन लीकेज रीडिंग दर्ज हों, हर एक 10 माइक्रोऐम्पियर से कम।"
+        ],
+        "fr": [
+          "Mettre le disjoncteur en position fermée, retirer tout le câblage de terre et laisser le sectionneur de terre en position fermée.",
+          "Injecter 3 Uo (3 × tension assignée / √3) pendant 1 minute sur la phase R, les phases Y et B étant à la terre, selon le schéma.",
+          "Répéter la même procédure pour les deux phases restantes, Y et B.",
+          "Consigner le courant de fuite de chaque phase. Il doit être conforme à la valeur d’essai en usine (< 10 µA).",
+          "Auto-contrôle : trois valeurs de fuite consignées, chacune inférieure à 10 µA."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز اختبار جهد عالٍ VLF",
+          "سلك توصيل جهد عالٍ",
+          "أسلاك تأريض",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "VLF HV ٹیسٹ انسٹرومنٹ",
+          "HV کنکشن لیڈ",
+          "ارتھنگ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "VLF HV टेस्ट इंस्ट्रूमेंट",
+          "HV कनेक्शन लीड",
+          "अर्थिंग लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Appareil d’essai VLF HT",
+          "Cordon de raccordement HT",
+          "Cordons de terre",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "يطبّق هذا الاختبار ثلاثة أضعاف جهد الوجه. لا يجوز وجود أحد داخل المنطقة المسيَّجة أثناء تشغيل الجهاز، ويجب تفريغ المعدة وتأريضها عبر جهاز الاختبار قبل أن يقترب أحد منها.",
+        "ur": "یہ ٹیسٹ فیز وولٹیج سے تین گنا لگاتا ہے۔ سیٹ چالو ہوتے وقت باڑ لگے علاقے میں کوئی نہ ہو، اور کسی کے قریب جانے سے پہلے ٹیسٹ سیٹ کے ذریعے آلے کو ڈسچارج اور ارتھ کیا جائے۔",
+        "hi": "यह टेस्ट फ़ेज़ वोल्टेज से तीन गुना लगाता है। सेट चालू रहते समय बैरियर वाले क्षेत्र में कोई न हो, और किसी के पास जाने से पहले टेस्ट सेट के ज़रिए उपकरण को डिस्चार्ज और अर्थ किया जाए।",
+        "fr": "Cet essai applique trois fois la tension de phase. Personne ne doit se trouver dans la zone balisée pendant la mise sous tension, et l’objet doit être déchargé et mis à la terre par l’appareil d’essai avant toute approche."
+      }
+    },
+    "3": {
+      "title": {
+        "ar": "اختبار الجهد العالي VLF — القاطع مفتوح",
+        "ur": "VLF ہائی وولٹیج ٹیسٹ — بریکر OFF",
+        "hi": "VLF हाई-वोल्टेज टेस्ट — ब्रेकर OFF",
+        "fr": "Essai VLF — disjoncteur ouvert"
+      },
+      "instructions": {
+        "ar": [
+          "اجعل قاطع الدائرة في وضع الإيقاف، وانزع كل أسلاك التأريض، واترك مفتاح التأريض في وضع التشغيل.",
+          "احقن 3Uo (ثلاثة أضعاف الجهد المقنّن ÷ الجذر التربيعي لـ 3) لمدة دقيقة واحدة على الوجه R، مع تأريض الوجهين Y و B، حسب مخطط التوصيل.",
+          "كرر نفس الإجراء للوجهين المتبقيين Y و B.",
+          "سجّل تيار التسرّب لكل وجه. يجب أن يكون مطابقًا لقيمة اختبار المصنع (أقل من 10 ميكروأمبير).",
+          "فحص ذاتي: ثلاث قراءات تسرّب مسجّلة، كل منها أقل من 10 ميكروأمبير."
+        ],
+        "ur": [
+          "سرکٹ بریکر OFF کریں، تمام ارتھ وائرنگ ہٹا دیں، اور ارتھ سوئچ ON پوزیشن میں رکھیں۔",
+          "کنکشن ڈایاگرام کے مطابق فیز R پر 1 منٹ کے لیے 3Uo (3 × ریٹڈ وولٹیج ÷ √3) لگائیں، جبکہ فیز Y اور B ارتھ ہوں۔",
+          "یہی طریقہ باقی دو فیز Y اور B کے لیے دہرائیں۔",
+          "ہر فیز کا لیکیج کرنٹ درج کریں۔ یہ فیکٹری ٹیسٹ ویلیو کے مطابق ہونا چاہیے (10 مائیکرو ایمپیئر سے کم)۔",
+          "سیلف چیک: تین لیکیج ریڈنگ درج ہوں، ہر ایک 10 مائیکرو ایمپیئر سے کم۔"
+        ],
+        "hi": [
+          "सर्किट ब्रेकर OFF करें, सारी अर्थ वायरिंग हटा दें, और अर्थ स्विच ON पोज़ीशन में रखें।",
+          "कनेक्शन डायग्राम के अनुसार फ़ेज़ R पर 1 मिनट के लिए 3Uo (3 × रेटेड वोल्टेज ÷ √3) लगाएँ, जबकि फ़ेज़ Y और B अर्थ हों।",
+          "यही तरीक़ा बाक़ी दो फ़ेज़ Y और B के लिए दोहराएँ।",
+          "हर फ़ेज़ का लीकेज करंट दर्ज करें। यह फ़ैक्ट्री टेस्ट वैल्यू के अनुसार होना चाहिए (10 माइक्रोऐम्पियर से कम)।",
+          "सेल्फ़-चेक: तीन लीकेज रीडिंग दर्ज हों, हर एक 10 माइक्रोऐम्पियर से कम।"
+        ],
+        "fr": [
+          "Mettre le disjoncteur en position ouverte, retirer tout le câblage de terre et laisser le sectionneur de terre en position fermée.",
+          "Injecter 3 Uo (3 × tension assignée / √3) pendant 1 minute sur la phase R, les phases Y et B étant à la terre, selon le schéma.",
+          "Répéter la même procédure pour les deux phases restantes, Y et B.",
+          "Consigner le courant de fuite de chaque phase. Il doit être conforme à la valeur d’essai en usine (< 10 µA).",
+          "Auto-contrôle : trois valeurs de fuite consignées, chacune inférieure à 10 µA."
+        ]
+      },
+      "tools": {
+        "ar": [
+          "جهاز اختبار جهد عالٍ VLF",
+          "سلك توصيل جهد عالٍ",
+          "أسلاك تأريض",
+          "نموذج الاختبار"
+        ],
+        "ur": [
+          "VLF HV ٹیسٹ انسٹرومنٹ",
+          "HV کنکشن لیڈ",
+          "ارتھنگ لیڈ",
+          "ٹیسٹ فارم"
+        ],
+        "hi": [
+          "VLF HV टेस्ट इंस्ट्रूमेंट",
+          "HV कनेक्शन लीड",
+          "अर्थिंग लीड",
+          "टेस्ट फ़ॉर्म"
+        ],
+        "fr": [
+          "Appareil d’essai VLF HT",
+          "Cordon de raccordement HT",
+          "Cordons de terre",
+          "Formulaire d’essai"
+        ]
+      },
+      "warning": {
+        "ar": "مع فتح القاطع يجهد جهد الاختبار أيضًا فجوة التلامس المفتوحة. حافظ على نفس الحواجز والمسافة كما في اختبار القاطع المغلق، ولا تقترب قبل أن يفرّغ الجهاز المعدة.",
+        "ur": "بریکر کھلا ہونے پر ٹیسٹ وولٹیج کھلے کانٹیکٹ گیپ پر بھی زور ڈالتا ہے۔ وہی باڑ اور فاصلہ رکھیں جو بریکر ON والے ٹیسٹ میں تھا، اور سیٹ کے ڈسچارج کرنے سے پہلے قریب نہ جائیں۔",
+        "hi": "ब्रेकर खुला होने पर टेस्ट वोल्टेज खुले कॉन्टैक्ट गैप पर भी ज़ोर डालता है। वही बैरियर और दूरी रखें जो ब्रेकर ON वाले टेस्ट में थी, और सेट के डिस्चार्ज करने से पहले पास न जाएँ।",
+        "fr": "Disjoncteur ouvert, la tension d’essai sollicite aussi la distance de coupure. Conserver les mêmes barrières et la même distance que pour l’essai disjoncteur fermé et ne pas approcher tant que l’appareil n’a pas déchargé l’objet."
+      }
+    }
+  }
+}
