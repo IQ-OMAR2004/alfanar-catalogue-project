@@ -68,22 +68,40 @@ export default function StepAnimation({ paused = false, reduced = false }) {
         <path d="M150 168h58M150 168l9-7M150 168l9 7M208 168l-9-7M208 168l-9 7" stroke={INK} strokeWidth="3" strokeLinecap="round" fill="none" />
       </g>
 
-      {/* 4 — PPE */}
+      {/* 4 — PPE: the four items the poster pictures, on a worker */}
       <g className={reduced ? undefined : anim('cs-s4')} opacity={reduced ? 1 : undefined}>
-        <g transform="translate(214 96)">
-          {/* helmet */}
-          <path d="M-16 16a16 16 0 0 1 32 0z" fill="#E3B505" stroke={INK} strokeWidth="1.8" />
-          <line x1="-20" y1="16" x2="20" y2="16" stroke={INK} strokeWidth="2.4" />
-          {/* face */}
-          <circle cx="0" cy="30" r="11" fill="#E8D5C0" stroke={INK} strokeWidth="1.6" />
-          {/* hi-vis vest */}
-          <path d="M-19 44h38l5 46h-48z" fill="#C7E84F" stroke={INK} strokeWidth="1.8" />
-          <path d="M-11 44v46M11 44v46" stroke="#9AA3AB" strokeWidth="4" />
-          {/* gloves + boots */}
-          <circle cx="-24" cy="80" r="6" fill="#2E86C8" stroke={INK} strokeWidth="1.5" />
-          <circle cx="24" cy="80" r="6" fill="#2E86C8" stroke={INK} strokeWidth="1.5" />
-          <rect x="-18" y="90" width="14" height="20" rx="3" fill="#4A5560" stroke={INK} strokeWidth="1.5" />
-          <rect x="4" y="90" width="14" height="20" rx="3" fill="#4A5560" stroke={INK} strokeWidth="1.5" />
+        <g transform="translate(210 86)">
+          {/* hard hat: shell, brim, ratchet band, moulded rib */}
+          <path d="M-21 19h42a1.6 1.6 0 0 1 0 3.2h-42a1.6 1.6 0 0 1 0-3.2z" fill="#E4A81C" stroke={INK} strokeWidth="1.4" />
+          <path d="M-16 19a16 16 0 0 1 32 0z" fill="#F2BE2C" stroke={INK} strokeWidth="1.6" />
+          <path d="M-16 19a16 16 0 0 1 16-16v16z" fill="rgba(255,255,255,0.45)" />
+          <path d="M0 3.2V19M-7 4.7c-2 4-3 8.9-3 14.3M7 4.7c2 4 3 8.9 3 14.3" fill="none" stroke="#C08E12" strokeWidth="1.2" />
+          <rect x="-10" y="14" width="20" height="4" rx="2" fill="#C08E12" stroke={INK} strokeWidth="1" />
+
+          {/* face + safety glasses */}
+          <ellipse cx="0" cy="33" rx="12" ry="13" fill="#E8D5C0" stroke={INK} strokeWidth="1.5" />
+          <path d="M-13 29h26l-1 2.6h-24z" fill="#5B6873" stroke={INK} strokeWidth="1" />
+          <path d="M-12 31.6h9.5a1 1 0 0 1 .9 1.4l-.4 1.1a2 2 0 0 1-1.9 1.3h-3.6a2.6 2.6 0 0 1-2.5-1.9z"
+            fill="#BFE3F5" fillOpacity="0.9" stroke={INK} strokeWidth="1" />
+          <path d="M12 31.6H2.5a1 1 0 0 0-.9 1.4l.4 1.1a2 2 0 0 0 1.9 1.3h3.6a2.6 2.6 0 0 0 2.5-1.9z"
+            fill="#BFE3F5" fillOpacity="0.9" stroke={INK} strokeWidth="1" />
+
+          {/* hi-vis vest with retro-reflective bands */}
+          <path d="M-13 47 0 52l13-5 8 5-3 10 3 24h-42l3-24-3-10z" fill="#D8E63A" stroke={INK} strokeWidth="1.6" strokeLinejoin="round" />
+          <path d="M-13 47 0 52l-5 34h-16l3-24-3-10z" fill="rgba(255,255,255,0.35)" />
+          <path d="M-8 57 -6 86M8 57 6 86" stroke="#C9D2DA" strokeWidth="3.6" fill="none" />
+          <path d="M-19 68h38" stroke="#C9D2DA" strokeWidth="3.6" fill="none" />
+          <path d="M0 52v34" stroke="#A9B617" strokeWidth="1.2" fill="none" />
+
+          {/* protective gloves */}
+          <path d="M-27 70c-3 0-5 2-5 5v9c0 2 2 4 4 4h5v-18z" fill="#5E9BD1" stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+          <path d="M27 70c3 0 5 2 5 5v9c0 2-2 4-4 4h-5v-18z" fill="#5E9BD1" stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+          <path d="M-32 82h9M23 82h9" stroke="#3E75A6" strokeWidth="1.4" fill="none" />
+
+          {/* safety footwear */}
+          <path d="M-17 86h11v14h9a3 3 0 0 1 3 3v3h-23z" fill="#4A5560" stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+          <path d="M17 86H6v14h-9a3 3 0 0 0-3 3v3h23z" fill="#4A5560" stroke={INK} strokeWidth="1.4" strokeLinejoin="round" />
+          <path d="M-23 103h46" stroke="#2C343B" strokeWidth="3" fill="none" />
         </g>
       </g>
 

@@ -8,8 +8,9 @@ import Credit from '../components/Credit.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
 
 // Second screen: after picking a language, a worker chooses what they came for
-// — to be guided through a job, or to check what PPE their area requires. The
-// same choice stays available everywhere from <SectionSwitcher>.
+// — to be guided through a job, to check what PPE their area requires, or to
+// look something up on the quality side. The same choice stays available
+// everywhere from <SectionSwitcher>.
 export default function SectionGate({ onPick }) {
   const { t } = useI18n()
 
@@ -25,6 +26,12 @@ export default function SectionGate({ onPick }) {
       icon: 'safety',
       title: t('section.safety'),
       sub: t('section.safetySub'),
+    },
+    {
+      id: 'quality',
+      icon: 'quality',
+      title: t('section.quality'),
+      sub: t('section.qualitySub'),
     },
   ]
 

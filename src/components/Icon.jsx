@@ -95,17 +95,6 @@ const PATHS = {
       <path d="M8 20h8M12 17v3" {...P} />
     </>
   ),
-  // Ring main unit: three-way switch cabinet.
-  rmu: (
-    <>
-      <rect x="3" y="3.5" width="18" height="17" rx="1.6" {...P} />
-      <path d="M9 3.5v17M15 3.5v17" {...P} />
-      <circle cx="6" cy="9" r="1.2" {...P} />
-      <circle cx="12" cy="9" r="1.2" {...P} />
-      <circle cx="18" cy="9" r="1.2" {...P} />
-      <path d="M6 11.5v4M12 11.5v4M18 11.5v4" {...P} />
-    </>
-  ),
   // Surge arrester: stack of sheds with an earth lead.
   arrester: (
     <>
@@ -310,6 +299,46 @@ const PATHS = {
       <path d="M6 3h8l4 4v14H6z" {...P} />
       <path d="M14 3v4h4" {...P} />
       <path d="M9 12h6M9 16h4" {...P} />
+    </>
+  ),
+  // Quality section: a certified seal.
+  quality: (
+    <>
+      <circle cx="12" cy="9.6" r="6.6" {...P} />
+      <path d="M9.1 9.6l2 2 3.8-4.2" {...P} />
+      <path d="M8 15.4 6.6 21.6l5.4-2.6 5.4 2.6L16 15.4" {...P} />
+    </>
+  ),
+  // Inspection & test plan: a clipboard with a tick.
+  'clipboard-check': (
+    <>
+      <rect x="4.5" y="4" width="15" height="17.5" rx="1.6" {...P} />
+      <rect x="9" y="2.2" width="6" height="3.4" rx="1.1" {...P} />
+      <path d="M8.4 13.2l2.4 2.4 4.8-5.4" {...P} />
+    </>
+  ),
+  // Punch list: numbered lines being cleared.
+  'punch-list': (
+    <>
+      <rect x="3.6" y="3.6" width="16.8" height="16.8" rx="2" {...P} />
+      <path d="M7.4 8.6h9.2M7.4 12h9.2M7.4 15.4h5.4" {...P} />
+      <path d="M14.6 16.4l1.6 1.6 3.4-3.8" {...P} />
+    </>
+  ),
+  // Defect: a cracked panel.
+  defect: (
+    <>
+      <rect x="3.6" y="3.6" width="16.8" height="16.8" rx="2" {...P} />
+      <path d="M9.6 3.8l2.6 6-4 2.2 4.6 8.2" {...P} />
+      <circle cx="16.6" cy="8.4" r="1" fill="currentColor" stroke="none" />
+    </>
+  ),
+  // Marker pen.
+  marker: (
+    <>
+      <path d="M13.4 3.4l7.2 7.2-9 9H4.4v-7.2z" {...P} />
+      <path d="M11.2 5.6l7.2 7.2" {...P} />
+      <path d="M4.4 19.6h16.2" {...P} />
     </>
   ),
   // Safety section: hard hat over a shield.

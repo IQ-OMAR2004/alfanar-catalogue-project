@@ -8,11 +8,14 @@ import StepView from './screens/StepView.jsx'
 import Complete from './screens/Complete.jsx'
 import SafetyMap from './screens/SafetyMap.jsx'
 import SafetyZone from './screens/SafetyZone.jsx'
+import QualityHome from './screens/QualityHome.jsx'
+import QualityArea from './screens/QualityArea.jsx'
 import CoachOverlay from './components/CoachOverlay.jsx'
 import { useI18n } from './i18n/I18nProvider.jsx'
 import { useDevice } from './device/DeviceProvider.jsx'
 import { getTask, tasks } from './content/index.js'
 import { getZone } from './content/safety/zones.js'
+import { getQualityArea } from './content/quality/index.js'
 import { useKioskGuards } from './hooks/useKioskGuards.js'
 import { useWakeLock } from './hooks/useWakeLock.js'
 import { useFullscreen } from './hooks/useFullscreen.js'
@@ -21,16 +24,17 @@ import { useIdleReset } from './hooks/useIdleReset.js'
 const COACH_KEY = 'alfanar.coachSeen'
 const IDLE_MS = 180000 // 3 min — kiosk auto-reset to task selection
 
-// Lightweight screen state machine (no router needed). Two branches hang off
-// the section gate: the work-instruction side (tasks → index → step → complete)
-// and the safety side (zone map → zone). <SectionSwitcher> moves between them
-// from anywhere.
+// Lightweight screen state machine (no router needed). Three branches hang off
+// the section gate: work instructions (tasks → index → step → complete), safety
+// (zone map → zone) and quality (areas → area). <SectionSwitcher> moves between
+// them from anywhere.
 export default function App() {
   const { chosen, rtl } = useI18n()
   const { isPhone } = useDevice()
   const [screen, setScreen] = useState(chosen ? 'section' : 'gate')
   const [taskId, setTaskId] = useState(null)
   const [zoneId, setZoneId] = useState(null)
+  const [areaId, setAreaId] = useState(null)
   const [startAt, setStartAt] = useState(0) // step index the run begins on
   const [runId, setRunId] = useState(0) // bump to remount StepView (restart)
   const [result, setResult] = useState(null)
@@ -75,6 +79,7 @@ export default function App() {
 
   const task = getTask(taskId)
   const zone = getZone(zoneId)
+  const area = getQualityArea(areaId)
 
   // Picking a task opens its index first — the worker chooses where to start
   // instead of always being dropped on step 1.
@@ -147,22 +152,25 @@ export default function App() {
     }
   }
 
-  // Section switch from anywhere: leaves the current job and lands on the other
-  // side's own entry screen.
+  // Section switch from anywhere: leaves the current job and lands on the
+  // chosen side's own entry screen.
+  const SECTION_HOME = { wi: 'tasks', safety: 'safetyMap', quality: 'qualityHome' }
   const switchSection = (next) => {
     setIndexOpen(false)
     setAutoplay(false)
-    if (next === 'safety') {
-      setScreen('safetyMap')
-    } else {
-      setZoneId(null)
-      setScreen('tasks')
-    }
+    if (next !== 'safety') setZoneId(null)
+    if (next !== 'quality') setAreaId(null)
+    setScreen(SECTION_HOME[next] || 'tasks')
   }
 
   const openZone = (id) => {
     setZoneId(id)
     setScreen('safetyZone')
+  }
+
+  const openArea = (id) => {
+    setAreaId(id)
+    setScreen('qualityArea')
   }
 
   return (
@@ -176,9 +184,7 @@ export default function App() {
 
         {screen === 'section' && (
           <ScreenShell key="section">
-            <SectionGate
-              onPick={(s) => setScreen(s === 'safety' ? 'safetyMap' : 'tasks')}
-            />
+            <SectionGate onPick={(s) => setScreen(SECTION_HOME[s] || 'tasks')} />
           </ScreenShell>
         )}
 
@@ -226,6 +232,22 @@ export default function App() {
         {screen === 'safetyMap' && (
           <ScreenShell key="safetyMap">
             <SafetyMap onPick={openZone} onSwitchSection={switchSection} />
+          </ScreenShell>
+        )}
+
+        {screen === 'qualityHome' && (
+          <ScreenShell key="qualityHome">
+            <QualityHome onPick={openArea} onSwitchSection={switchSection} />
+          </ScreenShell>
+        )}
+
+        {screen === 'qualityArea' && area && (
+          <ScreenShell key={`qualityArea-${areaId}`}>
+            <QualityArea
+              area={area}
+              onBack={() => setScreen('qualityHome')}
+              onSwitchSection={switchSection}
+            />
           </ScreenShell>
         )}
 

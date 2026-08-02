@@ -1,6 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import Icon from '../Icon.jsx'
+import PPEArt, { hasPPEArt } from '../PPEArt.jsx'
 import { useI18n } from '../../i18n/I18nProvider.jsx'
+
+// Full-colour illustration where we have one, line glyph otherwise.
+const Art = ({ name, size }) =>
+  hasPPEArt(name) ? <PPEArt name={name} size={size} /> : <Icon name={name} size={size} />
 
 // VERSION B — "item by item".
 // One piece of PPE at a time, large, with its name and what to do with it. No
@@ -25,7 +30,7 @@ export default function PPESpotlight({ items, index, color, onPick, reduced = fa
           >
             <span className="spotlight-ring" aria-hidden="true" />
             <span className="spotlight-icon">
-              <Icon name={active} size={140} />
+              <Art name={active} size={150} />
             </span>
             <span className="spotlight-no mono">
               {t('safety.step', { current: index + 1, total: items.length })}
@@ -61,7 +66,7 @@ export default function PPESpotlight({ items, index, color, onPick, reduced = fa
               aria-label={t(`ppe.${item}`)}
               aria-current={i === index || undefined}
             >
-              <Icon name={item} size={26} />
+              <Art name={item} size={28} />
             </button>
           </li>
         ))}

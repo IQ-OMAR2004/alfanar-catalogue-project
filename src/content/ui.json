@@ -109,7 +109,8 @@
       "sectionSwitch": "Switch between work instructions and safety",
       "openIndex": "Open the task index",
       "seek": "Go to a step",
-      "zonePick": "Choose zone {n}"
+      "zonePick": "Choose zone {n}",
+      "qualityArea": "Open {name}"
     },
     "common": {
       "placeholder": "Placeholder content — pending SME review",
@@ -119,13 +120,16 @@
     },
     "section": {
       "heading": "What do you need?",
-      "sub": "Choose work instructions or factory safety",
+      "sub": "Choose work instructions, factory safety or quality",
       "wi": "Work instructions",
       "wiSub": "Step-by-step guidance through a job",
       "safety": "Safety",
       "safetySub": "PPE required in each area of the factory",
       "toSafety": "Safety",
-      "toWi": "Work instructions"
+      "toWi": "Work instructions",
+      "quality": "Quality",
+      "qualitySub": "Inspection plans, punch lists, defect reports and marking rules",
+      "toQuality": "Quality"
     },
     "index": {
       "heading": "Where do you want to start?",
@@ -170,6 +174,29 @@
       "insulated_gloves": "Check the insulated gloves for damage, then put them on.",
       "gloves": "Put your work gloves on last, over everything else.",
       "hi_vis": "Put the high-visibility vest on over your clothing and close it."
+    },
+    "quality": {
+      "heading": "Quality",
+      "sub": "What gets inspected, what was found, and what the marks mean",
+      "back": "Back to quality",
+      "original": "Controlled original",
+      "page": "Page {n}",
+      "cleared": "Cleared",
+      "notCleared": "Not cleared",
+      "visual": "Visual observations",
+      "functional": "Functional checks",
+      "marksIntro": "These are the marks used on the work-instruction photographs. They are not decoration — each one changes what you are expected to do at that point.",
+      "bothMarks": "Both marks together",
+      "bothMarksBody": "A torqued joint is only finished when it carries the blue production line AND the red QC line. One line on its own means the joint is still waiting for the other check.",
+      "type": {
+        "W": "Witness",
+        "RC": "Review of certificate"
+      },
+      "state": {
+        "ok": "OK",
+        "damaged": "Damaged",
+        "na": "N/A"
+      }
     }
   },
   "ar": {
@@ -281,7 +308,8 @@
       "sectionSwitch": "التبديل بين تعليمات العمل والسلامة",
       "openIndex": "افتح فهرس المهمة",
       "seek": "انتقل إلى خطوة",
-      "zonePick": "اختر المنطقة {n}"
+      "zonePick": "اختر المنطقة {n}",
+      "qualityArea": "افتح {name}"
     },
     "common": {
       "placeholder": "محتوى مؤقت — بانتظار مراجعة الخبير المختص",
@@ -291,13 +319,16 @@
     },
     "section": {
       "heading": "ماذا تحتاج؟",
-      "sub": "اختر تعليمات العمل أو سلامة المصنع",
+      "sub": "اختر تعليمات العمل أو سلامة المصنع أو الجودة",
       "wi": "تعليمات العمل",
       "wiSub": "إرشاد خطوة بخطوة خلال العمل",
       "safety": "السلامة",
       "safetySub": "مهمات الوقاية المطلوبة في كل منطقة بالمصنع",
       "toSafety": "السلامة",
-      "toWi": "تعليمات العمل"
+      "toWi": "تعليمات العمل",
+      "quality": "الجودة",
+      "qualitySub": "خطط الفحص وقوائم الملاحظات وتقارير العيوب وقواعد العلامات",
+      "toQuality": "الجودة"
     },
     "index": {
       "heading": "من أين تريد أن تبدأ؟",
@@ -342,6 +373,29 @@
       "insulated_gloves": "افحص القفازات العازلة بحثًا عن تلف ثم ارتدِها.",
       "gloves": "ارتدِ قفازات العمل في النهاية، فوق كل شيء آخر.",
       "hi_vis": "ارتدِ السترة عالية الوضوح فوق ملابسك وأغلقها."
+    },
+    "quality": {
+      "heading": "الجودة",
+      "sub": "ما الذي يُفحص، وما الذي وُجد، وماذا تعني العلامات",
+      "back": "العودة إلى الجودة",
+      "original": "الأصل المعتمد",
+      "page": "صفحة {n}",
+      "cleared": "مُغلقة",
+      "notCleared": "غير مُغلقة",
+      "visual": "الملاحظات البصرية",
+      "functional": "الفحوصات الوظيفية",
+      "marksIntro": "هذه هي العلامات المستخدمة على صور تعليمات العمل. ليست زينة — كل علامة تغيّر ما هو مطلوب منك عند تلك النقطة.",
+      "bothMarks": "العلامتان معًا",
+      "bothMarksBody": "لا تكتمل الوصلة المربوطة بالعزم إلا وهي تحمل الخط الأزرق للإنتاج والخط الأحمر للجودة معًا. وجود خط واحد يعني أن الوصلة ما زالت تنتظر الفحص الآخر.",
+      "type": {
+        "W": "حضور ومعاينة",
+        "RC": "مراجعة شهادة"
+      },
+      "state": {
+        "ok": "سليم",
+        "damaged": "تالف",
+        "na": "غير منطبق"
+      }
     }
   },
   "ur": {
@@ -453,7 +507,8 @@
       "sectionSwitch": "ورک انسٹرکشن اور سیفٹی کے درمیان تبدیلی",
       "openIndex": "ٹاسک انڈیکس کھولیں",
       "seek": "کسی قدم پر جائیں",
-      "zonePick": "زون {n} منتخب کریں"
+      "zonePick": "زون {n} منتخب کریں",
+      "qualityArea": "{name} کھولیں"
     },
     "common": {
       "placeholder": "عارضی مواد — ماہر کی نظرثانی کے منتظر",
@@ -463,13 +518,16 @@
     },
     "section": {
       "heading": "آپ کو کیا چاہیے؟",
-      "sub": "ورک انسٹرکشن یا فیکٹری سیفٹی منتخب کریں",
+      "sub": "ورک انسٹرکشن، فیکٹری سیفٹی یا کوالٹی منتخب کریں",
       "wi": "ورک انسٹرکشن",
       "wiSub": "کام میں مرحلہ وار رہنمائی",
       "safety": "سیفٹی",
       "safetySub": "فیکٹری کے ہر علاقے میں مطلوبہ PPE",
       "toSafety": "سیفٹی",
-      "toWi": "ورک انسٹرکشن"
+      "toWi": "ورک انسٹرکشن",
+      "quality": "کوالٹی",
+      "qualitySub": "انسپیکشن پلان، پنچ لسٹ، ڈیفیکٹ رپورٹس اور مارکنگ کے اصول",
+      "toQuality": "کوالٹی"
     },
     "index": {
       "heading": "آپ کہاں سے شروع کرنا چاہتے ہیں؟",
@@ -514,6 +572,29 @@
       "insulated_gloves": "انسولیٹڈ دستانے نقصان کے لیے چیک کریں، پھر پہنیں۔",
       "gloves": "کام کے دستانے سب سے آخر میں، سب کے اوپر پہنیں۔",
       "hi_vis": "ہائی وزیبلٹی جیکٹ اپنے کپڑوں کے اوپر پہنیں اور بند کریں۔"
+    },
+    "quality": {
+      "heading": "کوالٹی",
+      "sub": "کیا جانچا جاتا ہے، کیا ملا، اور نشانات کا کیا مطلب ہے",
+      "back": "کوالٹی پر واپس",
+      "original": "کنٹرولڈ اصل",
+      "page": "صفحہ {n}",
+      "cleared": "کلیئر",
+      "notCleared": "کلیئر نہیں",
+      "visual": "بصری مشاہدات",
+      "functional": "فنکشنل چیک",
+      "marksIntro": "یہ وہ نشانات ہیں جو ورک انسٹرکشن کی تصاویر پر استعمال ہوتے ہیں۔ یہ سجاوٹ نہیں — ہر نشان اُس مقام پر آپ سے متوقع کام بدل دیتا ہے۔",
+      "bothMarks": "دونوں نشان ایک ساتھ",
+      "bothMarksBody": "ٹارک شدہ جوڑ تبھی مکمل ہے جب اس پر نیلی پروڈکشن لکیر اور سرخ QC لکیر دونوں ہوں۔ صرف ایک لکیر کا مطلب ہے جوڑ ابھی دوسرے چیک کا منتظر ہے۔",
+      "type": {
+        "W": "وٹنس",
+        "RC": "سرٹیفکیٹ کا جائزہ"
+      },
+      "state": {
+        "ok": "ٹھیک",
+        "damaged": "خراب",
+        "na": "لاگو نہیں"
+      }
     }
   },
   "hi": {
@@ -625,7 +706,8 @@
       "sectionSwitch": "वर्क इंस्ट्रक्शन और सेफ़्टी के बीच बदलें",
       "openIndex": "टास्क इंडेक्स खोलें",
       "seek": "किसी स्टेप पर जाएँ",
-      "zonePick": "ज़ोन {n} चुनें"
+      "zonePick": "ज़ोन {n} चुनें",
+      "qualityArea": "{name} खोलें"
     },
     "common": {
       "placeholder": "प्लेसहोल्डर सामग्री — SME समीक्षा हेतु लंबित",
@@ -635,13 +717,16 @@
     },
     "section": {
       "heading": "आपको क्या चाहिए?",
-      "sub": "वर्क इंस्ट्रक्शन या फ़ैक्ट्री सेफ़्टी चुनें",
+      "sub": "वर्क इंस्ट्रक्शन, फ़ैक्ट्री सेफ़्टी या क्वालिटी चुनें",
       "wi": "वर्क इंस्ट्रक्शन",
       "wiSub": "काम में चरण-दर-चरण मार्गदर्शन",
       "safety": "सेफ़्टी",
       "safetySub": "फ़ैक्ट्री के हर एरिया में ज़रूरी PPE",
       "toSafety": "सेफ़्टी",
-      "toWi": "वर्क इंस्ट्रक्शन"
+      "toWi": "वर्क इंस्ट्रक्शन",
+      "quality": "क्वालिटी",
+      "qualitySub": "इंस्पेक्शन प्लान, पंच लिस्ट, डिफ़ेक्ट रिपोर्ट और मार्किंग नियम",
+      "toQuality": "क्वालिटी"
     },
     "index": {
       "heading": "आप कहाँ से शुरू करना चाहते हैं?",
@@ -686,6 +771,29 @@
       "insulated_gloves": "इंसुलेटेड दस्ताने नुक़सान के लिए जाँचें, फिर पहनें।",
       "gloves": "काम के दस्ताने सबसे आख़िर में, सबके ऊपर पहनें।",
       "hi_vis": "हाई-विज़िबिलिटी जैकेट अपने कपड़ों के ऊपर पहनें और बंद करें।"
+    },
+    "quality": {
+      "heading": "क्वालिटी",
+      "sub": "क्या जाँचा जाता है, क्या मिला, और निशानों का क्या मतलब है",
+      "back": "क्वालिटी पर वापस",
+      "original": "कंट्रोल्ड मूल",
+      "page": "पेज {n}",
+      "cleared": "क्लियर",
+      "notCleared": "क्लियर नहीं",
+      "visual": "दृश्य अवलोकन",
+      "functional": "फंक्शनल जाँच",
+      "marksIntro": "ये वे निशान हैं जो वर्क इंस्ट्रक्शन की फ़ोटो पर इस्तेमाल होते हैं। ये सजावट नहीं — हर निशान उस जगह आपसे अपेक्षित काम बदल देता है।",
+      "bothMarks": "दोनों निशान साथ",
+      "bothMarksBody": "टॉर्क किया जोड़ तभी पूरा है जब उस पर नीली प्रोडक्शन लकीर और लाल QC लकीर दोनों हों। सिर्फ़ एक लकीर का मतलब है जोड़ अभी दूसरी जाँच का इंतज़ार कर रहा है।",
+      "type": {
+        "W": "विटनेस",
+        "RC": "सर्टिफ़िकेट समीक्षा"
+      },
+      "state": {
+        "ok": "ठीक",
+        "damaged": "खराब",
+        "na": "लागू नहीं"
+      }
     }
   },
   "fr": {
@@ -797,7 +905,8 @@
       "sectionSwitch": "Basculer entre instructions de travail et sécurité",
       "openIndex": "Ouvrir le sommaire de la tâche",
       "seek": "Aller à une opération",
-      "zonePick": "Choisir la zone {n}"
+      "zonePick": "Choisir la zone {n}",
+      "qualityArea": "Ouvrir {name}"
     },
     "common": {
       "placeholder": "Contenu provisoire — en attente de validation par un expert",
@@ -807,13 +916,16 @@
     },
     "section": {
       "heading": "De quoi avez-vous besoin ?",
-      "sub": "Choisissez les instructions de travail ou la sécurité",
+      "sub": "Choisissez les instructions de travail, la sécurité ou la qualité",
       "wi": "Instructions de travail",
       "wiSub": "Guidage pas à pas tout au long du travail",
       "safety": "Sécurité",
       "safetySub": "EPI requis dans chaque zone de l’usine",
       "toSafety": "Sécurité",
-      "toWi": "Instructions de travail"
+      "toWi": "Instructions de travail",
+      "quality": "Qualité",
+      "qualitySub": "Plans d’inspection, réserves, rapports de défauts et règles de repérage",
+      "toQuality": "Qualité"
     },
     "index": {
       "heading": "Où voulez-vous commencer ?",
@@ -858,6 +970,29 @@
       "insulated_gloves": "Vérifier l’absence de dommage sur les gants isolants, puis les mettre.",
       "gloves": "Mettre les gants de travail en dernier, par-dessus le reste.",
       "hi_vis": "Enfiler le gilet haute visibilité par-dessus les vêtements et le fermer."
+    },
+    "quality": {
+      "heading": "Qualité",
+      "sub": "Ce qui est contrôlé, ce qui a été relevé, et ce que signifient les repères",
+      "back": "Retour à la qualité",
+      "original": "Original contrôlé",
+      "page": "Page {n}",
+      "cleared": "Levée",
+      "notCleared": "Non levée",
+      "visual": "Observations visuelles",
+      "functional": "Contrôles fonctionnels",
+      "marksIntro": "Voici les repères utilisés sur les photos des instructions de travail. Ce ne sont pas des décorations — chacun change ce que l’on attend de vous à cet endroit.",
+      "bothMarks": "Les deux repères ensemble",
+      "bothMarksBody": "Un assemblage serré au couple n’est terminé que s’il porte le trait bleu de la production ET le trait rouge du CQ. Un seul trait signifie que l’assemblage attend encore l’autre contrôle.",
+      "type": {
+        "W": "Point d’arrêt",
+        "RC": "Revue de certificat"
+      },
+      "state": {
+        "ok": "Conforme",
+        "damaged": "Endommagé",
+        "na": "S.O."
+      }
     }
   }
 }
