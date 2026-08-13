@@ -7,7 +7,6 @@ import TimeChip from '../components/TimeChip.jsx'
 import SafetyBanner from '../components/SafetyBanner.jsx'
 import PPEBadge from '../components/PPEBadge.jsx'
 import AudioButton from '../components/AudioButton.jsx'
-import ConfirmDialog from '../components/ConfirmDialog.jsx'
 import LangSwitcher from '../components/LangSwitcher.jsx'
 import ModeToggle from '../components/ModeToggle.jsx'
 import DeviceToggle from '../components/DeviceToggle.jsx'
@@ -22,7 +21,8 @@ import { useDevice } from '../device/DeviceProvider.jsx'
 
 // The guided step screen. One full-viewport step at a time: looping animation
 // on one side, instructions on the other, progress header across the top. All
-// navigation flows through <TapZones> (tap / swipe / keys / corner-quit), which
+// navigation flows through <TapZones> (tap / swipe / keys / single-tap corner
+// quit — one press leaves the task, there is no confirmation step), which
 // applies the RTL mirror. See §4 of the brief.
 // How long each step is shown before auto-play advances (adjustable).
 const AUTOPLAY_MS = 10000
@@ -47,7 +47,6 @@ export default function StepView({
   const [dir, setDir] = useState(1) // 1 forward, -1 back (for the slide)
   const [animKey, setAnimKey] = useState(0) // bump to restart the animation
   const [paused, setPaused] = useState(false)
-  const [showQuit, setShowQuit] = useState(false)
   const startedAt = useRef(Date.now())
 
   // The header reserves room for the floating control cluster so the
@@ -251,7 +250,7 @@ export default function StepView({
         onForward={goForward}
         onBack={goBack}
         onReplay={replay}
-        onQuit={() => setShowQuit(true)}
+        onQuit={() => onQuit?.()}
       />
 
       {/* ---- Floating controls (above the tap surface) ------------------- */}
@@ -295,7 +294,7 @@ export default function StepView({
           <button
             type="button"
             className="phone-nav-btn phone-nav-btn--ghost"
-            onClick={() => setShowQuit(true)}
+            onClick={() => onQuit?.()}
             aria-label={t('a11y.quitHint')}
           >
             <Icon name="x" size={24} />
@@ -329,18 +328,6 @@ export default function StepView({
         </nav>
       )}
 
-      <ConfirmDialog
-        open={showQuit}
-        title={t('quit.title')}
-        body={t('quit.body')}
-        confirmLabel={t('quit.confirm')}
-        cancelLabel={t('quit.cancel')}
-        onConfirm={() => {
-          setShowQuit(false)
-          onQuit?.()
-        }}
-        onCancel={() => setShowQuit(false)}
-      />
     </section>
   )
 }

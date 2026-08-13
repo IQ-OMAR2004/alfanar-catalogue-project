@@ -13,7 +13,7 @@ import QualityArea from './screens/QualityArea.jsx'
 import CoachOverlay from './components/CoachOverlay.jsx'
 import { useI18n } from './i18n/I18nProvider.jsx'
 import { useDevice } from './device/DeviceProvider.jsx'
-import { getTask, tasks } from './content/index.js'
+import { folderOfTask, getTask, nextTaskInFolder } from './content/index.js'
 import { getZone } from './content/safety/zones.js'
 import { getQualityArea } from './content/quality/index.js'
 import { useKioskGuards } from './hooks/useKioskGuards.js'
@@ -33,6 +33,7 @@ export default function App() {
   const { isPhone } = useDevice()
   const [screen, setScreen] = useState(chosen ? 'section' : 'gate')
   const [taskId, setTaskId] = useState(null)
+  const [folderId, setFolderId] = useState(null) // work-instruction folder in view
   const [zoneId, setZoneId] = useState(null)
   const [areaId, setAreaId] = useState(null)
   const [startAt, setStartAt] = useState(0) // step index the run begins on
@@ -74,6 +75,10 @@ export default function App() {
     setResult(null)
     setIndexOpen(false)
   }, [])
+
+  // Opening a task remembers which folder it came from, so the auto-play loop
+  // and the "back" path both stay inside it.
+  const rememberFolder = (id) => setFolderId((cur) => cur || folderOfTask(id))
   // Auto-play is itself continuous activity, so the idle reset stands down.
   useIdleReset(backToTasks, { timeoutMs: IDLE_MS, enabled: !isPhone && screen === 'step' && !autoplay })
 
@@ -85,6 +90,7 @@ export default function App() {
   // instead of always being dropped on step 1.
   const openTask = (id) => {
     setTaskId(id)
+    rememberFolder(id)
     setResult(null)
     setScreen('index')
   }
@@ -101,6 +107,7 @@ export default function App() {
 
   const startTask = (id) => {
     setTaskId(id)
+    rememberFolder(id)
     setStartAt(0)
     setResult(null)
     setRunId((r) => r + 1)
@@ -115,17 +122,13 @@ export default function App() {
     setScreen('step')
   }
 
-  // Next task in grid order, wrapping back to the first (the loop).
-  const nextTaskId = (id) => {
-    const i = tasks.findIndex((t) => t.id === id)
-    return tasks.length ? tasks[(i + 1) % tasks.length].id : null
-  }
-
   const completeTask = (res) => {
-    // In auto-play, roll straight into the next task and keep looping;
-    // otherwise show the normal completion screen.
+    // In auto-play, roll straight into the next task IN THE SAME FOLDER and
+    // keep looping there for as long as it is left on — the wall panel outside
+    // the GIS bay never starts showing commissioning tests. Otherwise show the
+    // normal completion screen.
     if (autoplay) {
-      const next = nextTaskId(taskId)
+      const next = nextTaskInFolder(taskId, folderId || folderOfTask(taskId))
       if (next) {
         startTask(next)
         return
@@ -160,6 +163,7 @@ export default function App() {
     setAutoplay(false)
     if (next !== 'safety') setZoneId(null)
     if (next !== 'quality') setAreaId(null)
+    if (next !== 'wi') setFolderId(null)
     setScreen(SECTION_HOME[next] || 'tasks')
   }
 
@@ -190,7 +194,13 @@ export default function App() {
 
         {screen === 'tasks' && (
           <ScreenShell key="tasks">
-            <TaskGrid onStart={openTask} onSwitchSection={switchSection} />
+            <TaskGrid
+              folderId={folderId}
+              onPickFolder={setFolderId}
+              onBackToFolders={() => setFolderId(null)}
+              onStart={openTask}
+              onSwitchSection={switchSection}
+            />
           </ScreenShell>
         )}
 

@@ -6,29 +6,93 @@ import ReviewRibbon from '../components/ReviewRibbon.jsx'
 import SectionSwitcher from '../components/SectionSwitcher.jsx'
 import Credit from '../components/Credit.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
-import { tasks, taskTotalMin } from '../content/index.js'
+import { FOLDERS, folderTasks, taskTotalMin } from '../content/index.js'
 
-// Task selection: a grid of large, glanceable cards. Each shows icon, name,
-// one-line summary, difficulty, step count, total time and required PPE.
-export default function TaskGrid({ onStart, onSwitchSection }) {
+// Task selection, in two levels. With no folder chosen it shows the three
+// folders; inside a folder it shows that folder's tasks. Grouping also gives
+// unattended auto-play its boundary — see nextTaskInFolder in content/index.js.
+export default function TaskGrid({ folderId, onPickFolder, onBackToFolders, onStart, onSwitchSection }) {
   const { t, tr } = useI18n()
+  const folder = FOLDERS.find((f) => f.id === folderId) || null
+
+  if (!folder) {
+    return (
+      <section className="screen tasks">
+        <TopBar>
+          {onSwitchSection && <SectionSwitcher section="wi" onSwitch={onSwitchSection} />}
+        </TopBar>
+
+        <div className="tasks-head">
+          <div>
+            <h1 className="tasks-heading display">{t('folders.heading')}</h1>
+            <p className="tasks-sub">{t('folders.sub')}</p>
+          </div>
+          <ReviewRibbon />
+        </div>
+
+        <ul className="folders-grid">
+          {FOLDERS.map((f, i) => {
+            const list = folderTasks(f.id)
+            const mins = list.reduce((s2, tk) => s2 + (tk.estimatedTotalMin || taskTotalMin(tk)), 0)
+            return (
+              <motion.li
+                key={f.id}
+                initial={{ y: 24, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.07 * i + 0.05, type: 'spring', stiffness: 240, damping: 24 }}
+              >
+                <button
+                  type="button"
+                  className="folder-card"
+                  style={{ '--folder': f.color }}
+                  onClick={() => onPickFolder(f.id)}
+                >
+                  <span className="folder-card-icon">
+                    <Icon name={f.icon} size={46} />
+                  </span>
+                  <span className="folder-card-body">
+                    <span className="folder-card-title display">{tr(f.title)}</span>
+                    <span className="folder-card-sub">{tr(f.sub)}</span>
+                  </span>
+                  <span className="folder-card-meta mono">
+                    {t('folders.tasks', { n: list.length })} · {t('tasks.minutes', { n: mins })}
+                  </span>
+                  <span className="folder-card-go" aria-hidden="true">
+                    <Icon name="chevron-right" size={24} />
+                  </span>
+                </button>
+              </motion.li>
+            )
+          })}
+        </ul>
+
+        <Credit />
+      </section>
+    )
+  }
+
+  const list = folderTasks(folder.id)
 
   return (
-    <section className="screen tasks">
+    <section className="screen tasks" style={{ '--folder': folder.color }}>
       <TopBar>
         {onSwitchSection && <SectionSwitcher section="wi" onSwitch={onSwitchSection} />}
       </TopBar>
 
       <div className="tasks-head">
-        <div>
-          <h1 className="tasks-heading display">{t('tasks.heading')}</h1>
-          <p className="tasks-sub">{t('tasks.sub')}</p>
+        <div className="tasks-head-text">
+          <button type="button" className="folder-back" onClick={onBackToFolders}>
+            <Icon name="chevron-left" size={18} />
+            <span>{t('folders.back')}</span>
+          </button>
+          <h1 className="tasks-heading display">{tr(folder.title)}</h1>
+          <p className="tasks-sub">{tr(folder.sub)}</p>
         </div>
         <ReviewRibbon />
       </div>
 
       <ul className="tasks-grid">
-        {tasks.map((task, i) => {
+        {list.map((task, i) => {
           const total = task.estimatedTotalMin || taskTotalMin(task)
           return (
             <motion.li

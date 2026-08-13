@@ -197,6 +197,12 @@
         "damaged": "Damaged",
         "na": "N/A"
       }
+    },
+    "folders": {
+      "heading": "Choose a folder",
+      "sub": "Work instructions are grouped by the equipment they belong to",
+      "back": "All folders",
+      "tasks": "{n} tasks"
     }
   },
   "ar": {
@@ -396,6 +402,12 @@
         "damaged": "تالف",
         "na": "غير منطبق"
       }
+    },
+    "folders": {
+      "heading": "اختر مجلدًا",
+      "sub": "تعليمات العمل مجمّعة حسب المعدة التي تخصّها",
+      "back": "كل المجلدات",
+      "tasks": "{n} مهام"
     }
   },
   "ur": {
@@ -595,6 +607,12 @@
         "damaged": "خراب",
         "na": "لاگو نہیں"
       }
+    },
+    "folders": {
+      "heading": "فولڈر منتخب کریں",
+      "sub": "ورک انسٹرکشن اُس آلے کے مطابق گروپ کیے گئے ہیں جس سے وہ متعلق ہیں",
+      "back": "تمام فولڈر",
+      "tasks": "{n} ٹاسک"
     }
   },
   "hi": {
@@ -794,6 +812,12 @@
         "damaged": "खराब",
         "na": "लागू नहीं"
       }
+    },
+    "folders": {
+      "heading": "फ़ोल्डर चुनें",
+      "sub": "वर्क इंस्ट्रक्शन उस उपकरण के अनुसार समूहित हैं जिससे वे संबंधित हैं",
+      "back": "सभी फ़ोल्डर",
+      "tasks": "{n} टास्क"
     }
   },
   "fr": {
@@ -993,6 +1017,12 @@
         "damaged": "Endommagé",
         "na": "S.O."
       }
+    },
+    "folders": {
+      "heading": "Choisissez un dossier",
+      "sub": "Les instructions sont regroupées par équipement concerné",
+      "back": "Tous les dossiers",
+      "tasks": "{n} tâches"
     }
   }
 }

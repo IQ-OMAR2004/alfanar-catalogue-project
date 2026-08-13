@@ -3,20 +3,19 @@ import Icon from './Icon.jsx'
 import { useI18n } from '../i18n/I18nProvider.jsx'
 
 // The whole interaction surface for the step screen. Translates physical taps,
-// swipes, keys and the corner-quit gesture into four semantic events, applying
+// swipes, keys and the single-tap corner quit into four semantic events, applying
 // the RTL mirror (decision A): in Arabic/Urdu the "forward" side is the LEFT.
 //
 //   onForward  advance (StepView: next step, or finish on the last step)
 //   onBack     previous step (no-op when canBack is false)
 //   onReplay   restart the animation (center tap)
-//   onQuit     double-tap the bottom-leading corner
+//   onQuit     tap the bottom-leading corner (one press, no confirm)
 //
 // Persistent affordances (faint chevrons, center-replay hint, corner ✕) make
 // the invisible gestures discoverable for first-time / low-literacy workers.
 const TAP_MOVE = 24 // px — above this a pointer gesture counts as a swipe
 const SWIPE_MIN = 46 // px — horizontal distance to register a swipe
 const DEBOUNCE = 280 // ms — ignore repeat forward/back within this window
-const DBL_TAP = 420 // ms — corner double-tap window
 
 export default function TapZones({
   rtl = false,
@@ -32,7 +31,6 @@ export default function TapZones({
   const ref = useRef(null)
   const start = useRef(null)
   const lastAction = useRef(0)
-  const lastCornerTap = useRef(0)
 
   // Physical side ↔ semantic action, mirrored for RTL.
   const fire = (action) => {
@@ -81,14 +79,10 @@ export default function TapZones({
 
     // Tap: classify by position. Corner (quit) wins, then center, then sides.
     if (dist <= TAP_MOVE && tap) {
+      // One tap on the corner quits. It used to need a double tap, which meant
+      // a worker in gloves pressed twice and often gave up on the first.
       if (inCorner(x, y, rect)) {
-        const now = performance.now()
-        if (now - lastCornerTap.current < DBL_TAP) {
-          lastCornerTap.current = 0
-          fire('quit')
-        } else {
-          lastCornerTap.current = now
-        }
+        fire('quit')
         return
       }
       const w = rect.width
