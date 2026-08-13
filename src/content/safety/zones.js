@@ -47,7 +47,7 @@ export const ZONES = [
     name: {
       en: 'Testing',
       ar: 'الاختبار',
-      ur: 'ٹیسٹنگ',
+      ur: 'جانچ',
       hi: 'टेस्टिंग',
       fr: 'Essais',
     },
@@ -61,7 +61,7 @@ export const ZONES = [
     name: {
       en: 'Final assembly',
       ar: 'التجميع النهائي',
-      ur: 'فائنل اسمبلی',
+      ur: 'حتمی اسمبلی',
       hi: 'फ़ाइनल असेंबली',
       fr: 'Assemblage final',
     },
@@ -89,7 +89,7 @@ export const ZONES = [
     name: {
       en: 'Sub-assembly',
       ar: 'التجميع الفرعي',
-      ur: 'سب اسمبلی',
+      ur: 'ذیلی اسمبلی',
       hi: 'सब-असेंबली',
       fr: 'Sous-assemblage',
     },
@@ -106,7 +106,7 @@ export const ZONES = [
     name: {
       en: 'LV box wiring — west',
       ar: 'أسلاك صندوق الجهد المنخفض — غرب',
-      ur: 'LV باکس وائرنگ — مغرب',
+      ur: 'LV ڈبے کی وائرنگ — مغرب',
       hi: 'LV बॉक्स वायरिंग — पश्चिम',
       fr: 'Câblage coffret BT — ouest',
     },
@@ -120,7 +120,7 @@ export const ZONES = [
     name: {
       en: 'LV box wiring — east',
       ar: 'أسلاك صندوق الجهد المنخفض — شرق',
-      ur: 'LV باکس وائرنگ — مشرق',
+      ur: 'LV ڈبے کی وائرنگ — مشرق',
       hi: 'LV बॉक्स वायरिंग — पूर्व',
       fr: 'Câblage coffret BT — est',
     },
@@ -190,7 +190,7 @@ export const ZONES = [
     name: {
       en: 'Sub-store',
       ar: 'المخزن الفرعي',
-      ur: 'سب اسٹور',
+      ur: 'ذیلی اسٹور',
       hi: 'सब-स्टोर',
       fr: 'Magasin secondaire',
     },
@@ -218,7 +218,7 @@ export const ZONES = [
     name: {
       en: 'Mimic area',
       ar: 'منطقة الميميك',
-      ur: 'میمک ایریا',
+      ur: 'میمک حصہ',
       hi: 'मिमिक एरिया',
       fr: 'Zone synoptique',
     },

@@ -70,7 +70,7 @@ const sections = [
   {
     id: 'tests', from: 2, to: 3,
     title: {
-      en: 'Busbar tests', ar: 'اختبارات القضبان الناقلة', ur: 'بس بار ٹیسٹ',
+      en: 'Busbar tests', ar: 'اختبارات القضبان الناقلة', ur: 'بس بار جانچ',
       hi: 'बसबार टेस्ट', fr: 'Essais des jeux de barres',
     },
   },

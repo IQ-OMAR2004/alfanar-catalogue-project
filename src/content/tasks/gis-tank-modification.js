@@ -545,7 +545,7 @@ const sections = [
     title: {
       en: 'QC, testing & packing',
       ar: 'الجودة والاختبار والتغليف',
-      ur: 'QC، ٹیسٹنگ اور پیکنگ',
+      ur: 'QC، جانچ اور پیکنگ',
       hi: 'QC, टेस्टिंग और पैकिंग',
       fr: 'CQ, essais et emballage',
     },

@@ -129,7 +129,7 @@ const sections = [
     title: {
       en: 'Functional checks',
       ar: 'الفحوصات الوظيفية',
-      ur: 'فنکشنل چیک',
+      ur: 'کارکردگی کی جانچ',
       hi: 'फंक्शनल जाँच',
       fr: 'Contrôles fonctionnels',
     },

@@ -41,14 +41,14 @@ export default {
   title: {
     en: 'GIS Full Dismantle & Assemble (WI+)',
     ar: 'التفكيك والتجميع الكامل لخزان GIS (تعليمات العمل +)',
-    ur: 'GIS ٹینک مکمل علیحدگی اور تنصیب (WI+)',
+    ur: 'GIS ٹینک کی مکمل علیحدگی اور تنصیب (WI+)',
     hi: 'GIS टैंक पूर्ण निराकरण और संयोजन (WI+)',
     fr: 'Démontage et assemblage complets GIS (WI+)',
   },
   summary: {
     en: 'The complete 60-step work instruction, shown with the real photographs from the shop floor.',
     ar: 'تعليمات العمل الكاملة المكوّنة من 60 خطوة، معروضة بالصور الحقيقية من أرض المصنع.',
-    ur: 'مکمل 60 مراحل ورک انسٹرکشن، فیکٹری فلور کی اصل تصاویر کے ساتھ۔',
+    ur: '60 مرحلوں والی مکمل کام کی ہدایات، کارخانے کی اصل تصاویر کے ساتھ۔',
     hi: 'संपूर्ण 60-चरण कार्य निर्देश, शॉप फ़्लोर की वास्तविक तस्वीरों के साथ।',
     fr: 'L’instruction de travail complète en 60 étapes, illustrée par les photographies réelles prises à l’atelier.',
   },

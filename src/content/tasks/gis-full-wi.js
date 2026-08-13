@@ -707,7 +707,7 @@ const sections = [
     title: {
       en: 'Solution-1 dismantle',
       ar: 'تفكيك الحل-1',
-      ur: 'سولوشن-1 علیحدگی',
+      ur: 'Solution 1 کی علیحدگی',
       hi: 'सोल्यूशन-1 निराकरण',
       fr: 'Démontage Solution-1',
     },
@@ -717,7 +717,7 @@ const sections = [
     title: {
       en: 'Solution-3 clean & assemble',
       ar: 'تنظيف وتجميع الحل-3',
-      ur: 'سولوشن-3 صفائی و تنصیب',
+      ur: 'Solution 3 کی صفائی و تنصیب',
       hi: 'सोल्यूशन-3 सफ़ाई और संयोजन',
       fr: 'Solution-3 : nettoyage et assemblage',
     },
@@ -737,7 +737,7 @@ const sections = [
     title: {
       en: 'Leak test',
       ar: 'اختبار التسرّب',
-      ur: 'لیک ٹیسٹ',
+      ur: 'لیک جانچ',
       hi: 'लीक टेस्ट',
       fr: 'Test d’étanchéité',
     },

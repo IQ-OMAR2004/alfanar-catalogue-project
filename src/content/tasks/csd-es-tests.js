@@ -87,7 +87,7 @@ const sections = [
   {
     id: 'tests', from: 2, to: 4,
     title: {
-      en: 'Earthing switch tests', ar: 'اختبارات مفتاح التأريض', ur: 'ارتھنگ سوئچ ٹیسٹ',
+      en: 'Earthing switch tests', ar: 'اختبارات مفتاح التأريض', ur: 'ارتھنگ سوئچ جانچ',
       hi: 'अर्थिंग स्विच टेस्ट', fr: 'Essais du sectionneur de terre',
     },
   },

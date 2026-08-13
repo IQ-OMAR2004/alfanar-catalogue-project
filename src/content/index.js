@@ -38,7 +38,7 @@ export const FOLDERS = [
     sub: {
       en: 'The full 60-step dismantle and assemble work instruction',
       ar: 'تعليمات العمل الكاملة للتفكيك والتجميع المكوّنة من 60 خطوة',
-      ur: 'مکمل 60 مراحل علیحدگی اور تنصیب ورک انسٹرکشن',
+      ur: 'علیحدگی اور تنصیب کی مکمل 60 مرحلوں والی کام کی ہدایات',
       hi: 'पूरा 60-चरण निराकरण और संयोजन वर्क इंस्ट्रक्शन',
       fr: 'L’instruction complète de démontage et d’assemblage en 60 étapes',
     },
@@ -62,7 +62,7 @@ export const FOLDERS = [
     sub: {
       en: 'Tank modification and the Solution 1 to Solution 3 transfer',
       ar: 'تعديل الخزان والنقل من الحل 1 إلى الحل 3',
-      ur: 'ٹینک موڈیفکیشن اور سولوشن 1 سے سولوشن 3 منتقلی',
+      ur: 'ٹینک کی ترمیم اور Solution 1 سے Solution 3 منتقلی',
       hi: 'टैंक मॉडिफिकेशन और सोल्यूशन 1 से सोल्यूशन 3 स्थानांतरण',
       fr: 'Modification de cuve et transfert Solution 1 vers Solution 3',
     },
@@ -75,14 +75,14 @@ export const FOLDERS = [
     title: {
       en: 'Testing',
       ar: 'الاختبارات',
-      ur: 'ٹیسٹنگ',
+      ur: 'جانچ',
       hi: 'टेस्टिंग',
       fr: 'Essais',
     },
     sub: {
       en: 'Commissioning tests from the CSD manual, animated and with manual photos',
       ar: 'اختبارات الإدخال في الخدمة من دليل CSD، برسوم متحركة وبصور الدليل',
-      ur: 'CSD مینوئل کے کمیشننگ ٹیسٹ، اینیمیشن اور مینوئل تصاویر کے ساتھ',
+      ur: 'CSD کتابچے کی کمیشننگ جانچ، متحرک تصاویر اور کتابچے کی تصاویر کے ساتھ',
       hi: 'CSD मैनुअल के कमीशनिंग टेस्ट, एनिमेशन और मैनुअल फ़ोटो के साथ',
       fr: 'Essais de mise en service du manuel CSD, animés et avec photos du manuel',
     },

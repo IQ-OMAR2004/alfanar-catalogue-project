@@ -12,14 +12,14 @@ export default photoVariant(base, { 1: 'safety', 3: 'sa-ir', 4: 'sa-tandelta', 5
   title: {
     en: 'Surge Arrester Tests (Manual photos)',
     ar: 'اختبارات مانع الصواعق (صور الدليل)',
-    ur: 'سرج ارسٹر ٹیسٹ (مینوئل تصاویر)',
+    ur: 'سرج ارسٹر جانچ (کتابچے کی تصاویر)',
     hi: 'सर्ज अरेस्टर टेस्ट (मैनुअल फ़ोटो)',
     fr: 'Essais parafoudre (photos du manuel)',
   },
   summary: {
     en: 'The same surge arrester tests, shown with the connection diagrams printed in the commissioning manual.',
     ar: 'نفس اختبارات مانع الصواعق، معروضة بمخططات التوصيل المطبوعة في الدليل.',
-    ur: 'وہی سرج ارسٹر ٹیسٹ، مینوئل میں چھپے کنکشن ڈایاگرام کے ساتھ۔',
+    ur: 'وہی سرج ارسٹر جانچ، کتابچے میں چھپے جوڑ کے خاکوں کے ساتھ۔',
     hi: 'वही सर्ज अरेस्टर टेस्ट, मैनुअल में छपे कनेक्शन डायग्राम के साथ।',
     fr: 'Les mêmes essais de parafoudre, illustrés par les schémas du manuel.',
   },

@@ -406,7 +406,7 @@ const sections = [
     title: {
       en: 'Dismantle the Solution 1 tank',
       ar: 'تفكيك خزان الحل 1',
-      ur: 'سولوشن 1 ٹینک کی علیحدگی',
+      ur: 'Solution 1 ٹینک کی علیحدگی',
       hi: 'सोल्यूशन 1 टैंक का निराकरण',
       fr: 'Démonter la cuve Solution 1',
     },
@@ -416,7 +416,7 @@ const sections = [
     title: {
       en: 'Scrap & clear',
       ar: 'الخردة والإخلاء',
-      ur: 'اسکریپ اور صفائی',
+      ur: 'ردی اور صفائی',
       hi: 'स्क्रैप और सफ़ाई',
       fr: 'Rebut et évacuation',
     },
@@ -426,7 +426,7 @@ const sections = [
     title: {
       en: 'Prepare the Solution 3 tank',
       ar: 'تحضير خزان الحل 3',
-      ur: 'سولوشن 3 ٹینک کی تیاری',
+      ur: 'Solution 3 ٹینک کی تیاری',
       hi: 'सोल्यूशन 3 टैंक की तैयारी',
       fr: 'Préparer la cuve Solution 3',
     },
@@ -436,7 +436,7 @@ const sections = [
     title: {
       en: 'Assemble into the Solution 3 tank',
       ar: 'التجميع داخل خزان الحل 3',
-      ur: 'سولوشن 3 ٹینک میں تنصیب',
+      ur: 'Solution 3 ٹینک میں تنصیب',
       hi: 'सोल्यूशन 3 टैंक में संयोजन',
       fr: 'Assembler dans la cuve Solution 3',
     },
@@ -447,7 +447,7 @@ const sections = [
     title: {
       en: 'Close, vacuum, gas & test',
       ar: 'الإغلاق والتفريغ والغاز والاختبار',
-      ur: 'بندش، ویکیوم، گیس اور ٹیسٹ',
+      ur: 'بندش، ویکیوم، گیس اور جانچ',
       hi: 'बंद करना, वैक्यूम, गैस और टेस्ट',
       fr: 'Fermeture, vide, gaz et essais',
     },

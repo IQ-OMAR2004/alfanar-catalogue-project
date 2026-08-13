@@ -12,14 +12,14 @@ export default photoVariant(base, { 1: 'safety', 2: 'cb-ir', 3: 'cb-cr', 4: 'cb-
   title: {
     en: '13.8 kV CB Tests (Manual photos)',
     ar: 'اختبارات قاطع 13.8 kV (صور الدليل)',
-    ur: '13.8 kV CB ٹیسٹ (مینوئل تصاویر)',
+    ur: '13.8 kV CB جانچ (کتابچے کی تصاویر)',
     hi: '13.8 kV CB टेस्ट (मैनुअल फ़ोटो)',
     fr: 'Essais disjoncteur 13,8 kV (photos du manuel)',
   },
   summary: {
     en: 'The same circuit breaker tests, shown with the connection diagrams printed in the commissioning manual.',
     ar: 'نفس اختبارات القاطع، معروضة بمخططات التوصيل المطبوعة في دليل الإدخال في الخدمة.',
-    ur: 'وہی سرکٹ بریکر ٹیسٹ، کمیشننگ مینوئل میں چھپے کنکشن ڈایاگرام کے ساتھ۔',
+    ur: 'وہی سرکٹ بریکر جانچ، کمیشننگ کتابچے میں چھپے جوڑ کے خاکوں کے ساتھ۔',
     hi: 'वही सर्किट ब्रेकर टेस्ट, कमीशनिंग मैनुअल में छपे कनेक्शन डायग्राम के साथ।',
     fr: 'Les mêmes essais de disjoncteur, illustrés par les schémas de raccordement du manuel.',
   },

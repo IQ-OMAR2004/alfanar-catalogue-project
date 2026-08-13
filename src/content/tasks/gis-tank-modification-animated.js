@@ -31,7 +31,7 @@ export default {
   summary: {
     en: 'The full GIS tank procedure — every step shown as a clear looping animation.',
     ar: 'إجراء خزان GIS كاملاً — كل خطوة معروضة كرسم متحرك واضح ومتكرر.',
-    ur: 'مکمل GIS ٹینک طریقہ کار — ہر مرحلہ ایک واضح، بار بار چلنے والی اینیمیشن کے طور پر۔',
+    ur: 'مکمل GIS ٹینک طریقہ کار — ہر مرحلہ ایک واضح، بار بار چلنے والی متحرک تصویر کے طور پر۔',
     hi: 'संपूर्ण GIS टैंक प्रक्रिया — हर चरण एक स्पष्ट लूपिंग एनिमेशन के रूप में।',
     fr: 'La procédure GIS complète — chaque étape présentée sous forme d’animation claire et répétée.',
   },

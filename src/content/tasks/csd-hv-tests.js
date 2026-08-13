@@ -72,7 +72,7 @@ const sections = [
   {
     id: 'vlf', from: 2, to: 3,
     title: {
-      en: 'VLF withstand test', ar: 'اختبار التحمل VLF', ur: 'VLF وِد اسٹینڈ ٹیسٹ',
+      en: 'VLF withstand test', ar: 'اختبار التحمل VLF', ur: 'VLF برداشت جانچ',
       hi: 'VLF विदस्टैंड टेस्ट', fr: 'Essai de tenue VLF',
     },
   },
