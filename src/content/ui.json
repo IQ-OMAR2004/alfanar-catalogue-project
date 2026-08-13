@@ -47,12 +47,6 @@
       "next": "Next",
       "previous": "Back"
     },
-    "quit": {
-      "title": "Quit task?",
-      "body": "Progress will be lost.",
-      "confirm": "Yes, quit",
-      "cancel": "No, stay"
-    },
     "coach": {
       "title": "How to navigate",
       "tapRight": "Tap the right side for the next step",
@@ -60,7 +54,7 @@
       "tapForward": "Tap this side for the next step",
       "tapBack": "Tap this side to go back",
       "center": "Tap the center to replay the animation",
-      "quit": "Double-tap the corner to quit",
+      "quit": "Tap the corner once to quit",
       "gotIt": "Got it"
     },
     "complete": {
@@ -252,12 +246,6 @@
       "next": "التالي",
       "previous": "السابق"
     },
-    "quit": {
-      "title": "إنهاء المهمة؟",
-      "body": "سيتم فقدان التقدّم.",
-      "confirm": "نعم، أنهِ",
-      "cancel": "لا، ابقَ"
-    },
     "coach": {
       "title": "كيفية التنقّل",
       "tapRight": "انقر على الجانب الأيمن للخطوة التالية",
@@ -265,7 +253,7 @@
       "tapForward": "انقر هذا الجانب للخطوة التالية",
       "tapBack": "انقر هذا الجانب للرجوع",
       "center": "انقر في الوسط لإعادة تشغيل الحركة",
-      "quit": "انقر مرّتين على الزاوية للإنهاء",
+      "quit": "انقر مرّة واحدة على الزاوية للإنهاء",
       "gotIt": "فهمت"
     },
     "complete": {
@@ -457,12 +445,6 @@
       "next": "اگلا",
       "previous": "پچھلا"
     },
-    "quit": {
-      "title": "کام ختم کریں؟",
-      "body": "پیش رفت ضائع ہو جائے گی۔",
-      "confirm": "ہاں، ختم کریں",
-      "cancel": "نہیں، رکیں"
-    },
     "coach": {
       "title": "نیویگیشن کا طریقہ",
       "tapRight": "اگلے مرحلے کے لیے دائیں طرف ٹیپ کریں",
@@ -470,7 +452,7 @@
       "tapForward": "اگلے مرحلے کے لیے اس طرف ٹیپ کریں",
       "tapBack": "واپس جانے کے لیے اس طرف ٹیپ کریں",
       "center": "حرکت دوبارہ چلانے کے لیے درمیان میں ٹیپ کریں",
-      "quit": "ختم کرنے کے لیے کونے پر دو بار ٹیپ کریں",
+      "quit": "ختم کرنے کے لیے کونے پر ایک بار ٹیپ کریں",
       "gotIt": "سمجھ گیا"
     },
     "complete": {
@@ -662,12 +644,6 @@
       "next": "आगे",
       "previous": "पीछे"
     },
-    "quit": {
-      "title": "कार्य छोड़ें?",
-      "body": "प्रगति खो जाएगी।",
-      "confirm": "हाँ, छोड़ें",
-      "cancel": "नहीं, रुकें"
-    },
     "coach": {
       "title": "नेविगेट कैसे करें",
       "tapRight": "अगले चरण के लिए दाईं ओर टैप करें",
@@ -675,7 +651,7 @@
       "tapForward": "अगले चरण के लिए इस ओर टैप करें",
       "tapBack": "पीछे जाने के लिए इस ओर टैप करें",
       "center": "एनिमेशन फिर चलाने के लिए बीच में टैप करें",
-      "quit": "छोड़ने के लिए कोने पर दो बार टैप करें",
+      "quit": "छोड़ने के लिए कोने पर एक बार टैप करें",
       "gotIt": "समझ गया"
     },
     "complete": {
@@ -867,12 +843,6 @@
       "next": "Suivant",
       "previous": "Retour"
     },
-    "quit": {
-      "title": "Quitter la tâche ?",
-      "body": "La progression sera perdue.",
-      "confirm": "Oui, quitter",
-      "cancel": "Non, rester"
-    },
     "coach": {
       "title": "Comment naviguer",
       "tapRight": "Appuyez à droite pour l’étape suivante",
@@ -880,7 +850,7 @@
       "tapForward": "Appuyez de ce côté pour l’étape suivante",
       "tapBack": "Appuyez de ce côté pour revenir",
       "center": "Appuyez au centre pour revoir l’animation",
-      "quit": "Appuyez deux fois dans le coin pour quitter",
+      "quit": "Appuyez une fois dans le coin pour quitter",
       "gotIt": "J’ai compris"
     },
     "complete": {

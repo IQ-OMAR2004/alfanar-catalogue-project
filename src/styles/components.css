@@ -660,44 +660,6 @@
   pointer-events: none;
 }
 
-/* ------------------------------- Dialog ---------------------------------- */
-.dialog-scrim {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background: var(--scrim);
-  backdrop-filter: blur(4px);
-}
-.dialog {
-  inline-size: min(520px, 92vw);
-  background: var(--panel-2);
-  border: 1px solid var(--line-2);
-  border-radius: var(--r-lg);
-  box-shadow: var(--shadow-glow-lg);
-  padding: clamp(28px, 4vw, 44px);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-}
-.dialog-icon {
-  display: grid;
-  place-items: center;
-  inline-size: 72px;
-  block-size: 72px;
-  border-radius: 50%;
-}
-.dialog-icon--warn { background: var(--warn-tint); color: var(--warn); }
-.dialog-icon--info { background: var(--beacon-soft); color: var(--accent); }
-.dialog-title { font-size: 28px; }
-.dialog-body { font-size: 18px; color: var(--ink2); }
-.dialog-actions { display: flex; gap: 14px; margin-block-start: 12px; flex-wrap: wrap; justify-content: center; }
-.dialog-actions .btn { flex: 1 1 auto; min-inline-size: 180px; }
-
 /* --------------------------- Coach overlay ------------------------------- */
 .coach {
   position: absolute;
